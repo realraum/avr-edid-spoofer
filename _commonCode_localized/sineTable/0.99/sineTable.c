@@ -3,7 +3,7 @@
 #include "sineTable.h"
 
 #if (_SINE_TYPE_ == 8)
-int8_t sineTable[129] PROGMEM = {
+int8_t const sineTable[129] PROGMEM = {
 	0, \
 	2, 3, 5, 6, 8, \
 	9, 11, 12, 14, 16, \

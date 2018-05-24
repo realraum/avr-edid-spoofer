@@ -26,12 +26,31 @@
 // They'll be converted to dual-pixel values as appropriate...
 // (And apparently some of the math divides it in half then later
 //  multiplies it by 2... so best not to have odd values here)
-#define PIX_CLK_GPU	(100000000UL)
+// #define PIX_CLK_GPU	(100000000UL)
+#define PIX_CLK_GPU	(84000000UL)
 
-#define H_ACTIVE_GPU	(1400)		//Active pixels
+/*
+Bbsod1: laut wiki ist die richtige modeline für den beamer: "1280x800@60" 83.91 1280 1312 1624 1656 800 816 824 841
+d.h.:  pixelclock: 89.91 Hz, auflösung: 1280x800,  h_sync: 1312, h_sync_end: 1624 h_blank_end: 1656,  v_sync: 816 v_sync_end: 824  v_blanking:841
+width: 1280
+frontPorch: 1312 (32)
+syncPulse: 1624  (312)
+backPorch: 1656  (32)
+
+height: 800
+frontPorch 816 (16)
+syncPulse: 824 (8)
+backPorch: 841 (17)
+
+*/
+
+#define H_ACTIVE_GPU	(1280)		//Active pixels
+// #define H_FP_GPU		(32)			//Front Porch
+// #define H_WIDTH_GPU	(312)			//Sync Width
+// #define H_BP_GPU		(32)			//Back Porch
 #define H_FP_GPU		(32)			//Front Porch
-#define H_WIDTH_GPU	(32)			//Sync Width
-#define H_BP_GPU		(160)			//Back Porch
+#define H_WIDTH_GPU	(64)			//Sync Width
+#define H_BP_GPU		(32)			//Back Porch
 //a/o v48:
 //Oddly, 16,16,64 worked with SwitchResX, but *here* they caused a
 // horizontal shift... 120 seems to have fixed it.
@@ -42,16 +61,19 @@
 // 16,16,120 seems to work, but every once in a while I see a glitch in
 // terminal (sharp contrast, I guess)
 
-#define V_ACTIVE_GPU	(1050)		//Active Rows
-#define V_FP_GPU		(0)			//Front Porch
-#define V_WIDTH_GPU	(2)			//Sync Rows
-#define V_BP_GPU		(6)			//Back Porch
+#define V_ACTIVE_GPU	(800)		//Active Rows
+// #define V_FP_GPU		(16)			//Front Porch
+// #define V_WIDTH_GPU	(8)			//Sync Rows
+// #define V_BP_GPU		(17)			//Back Porch
+#define V_FP_GPU		(15)			//Front Porch
+#define V_WIDTH_GPU	(8)			//Sync Rows
+#define V_BP_GPU		(16)			//Back Porch
 
 
 
 //If you want to have alternate-timings available, set this TRUE and enter
 //the alternate-values below.
-#define ALT_TIMING	TRUE
+#define ALT_TIMING	FALSE
 
 
 
@@ -541,10 +563,22 @@ uint8_t edidArray[EDIDARRAYLENGTH] =
 //	[0x41]=	0,		//0x00	5	Vert Sync Pulse Width = 5 lines
 						//SPWG: "Horiz Vert Sync Offset/Width upper 2 bits"
 
-#if( ((THFP)&0xffffff00) | ((THW)&0xffffff00) \
-		| ((TVFP)&0xfffffff0) | ((TVW)&0xfffffff0) )
+#if( ((THFP)&0xffffff00)  )
 	#error "Byte 0x41 (HSYNC/VSYNC Offset/Pulsewidth upper bits NYI"
 #endif
+
+#if( ((THW)&0xffffff00)  )
+	#error "Byte 0x41 (HSYNC/VSYNC Offset/Pulsewidth upper bits NYI"
+#endif
+
+#if(  ((TVFP)&0xfffffff0)  )
+	#error "Byte 0x41 (HSYNC/VSYNC Offset/Pulsewidth upper bits NYI"
+#endif
+
+#if(  ((TVW)&0xfffffff0) )
+	#error "Byte 0x41 (HSYNC/VSYNC Offset/Pulsewidth upper bits NYI"
+#endif
+
 
 	[0x41]=	0,
 

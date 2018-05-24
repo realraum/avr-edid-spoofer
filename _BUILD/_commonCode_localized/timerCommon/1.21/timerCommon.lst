@@ -1,90 +1,127 @@
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 1
+GAS LISTING /tmp/cckXFZXx.s 			page 1
 
 
    1               		.file	"timerCommon.c"
-   2               	__SREG__ = 0x3f
-   3               	__SP_H__ = 0x3e
-   4               	__SP_L__ = 0x3d
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
    5               	__tmp_reg__ = 0
    6               	__zero_reg__ = 1
-   7               		.global __do_copy_data
-   8               		.global __do_clear_bss
-   9               		.stabs	"/Users/meh/_avrProjects/LCDreIDer/51-lowerRefresh/",100,0,2,.Ltext0
-  10               		.stabs	"_commonCode_localized/timerCommon/1.21/timerCommon.c",100,0,2,.Ltext0
-  11               		.text
-  12               	.Ltext0:
-  13               		.stabs	"gcc2_compiled.",60,0,0,0
-  14               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,1,0
-  15               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,1,0
-  16               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,1,0
-  17               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,1,0
-  18               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,1,0
-  19               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,1,
-  20               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,1,0
-  21               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,1,0
-  22               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,1,0
-  23               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,1,0
-  24               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,1,0
-  25               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,1,0
-  26               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,1,0
-  27               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,1,0
-  28               		.stabs	"void:t(0,15)=(0,15)",128,0,1,0
-  29               		.stabs	"_commonCode_localized/timerCommon/1.21/timerCommon.h",130,0,0,0
-  30               		.stabs	"/usr/local/lib/gcc/avr/4.4.5/../../../../avr/include/avr/interrupt.h",130,0,0,0
-  31               		.stabs	"/usr/local/lib/gcc/avr/4.4.5/../../../../avr/include/avr/io.h",130,0,0,0
-  32               		.stabs	"/usr/local/lib/gcc/avr/4.4.5/../../../../avr/include/avr/sfr_defs.h",130,0,0,0
-  33               		.stabs	"/usr/local/lib/gcc/avr/4.4.5/../../../../avr/include/inttypes.h",130,0,0,0
-  34               		.stabs	"/usr/local/lib/gcc/avr/4.4.5/../../../../avr/include/stdint.h",130,0,0,0
-  35               		.stabs	"int8_t:t(6,1)=(0,10)",128,0,121,0
-  36               		.stabs	"uint8_t:t(6,2)=(0,11)",128,0,122,0
-  37               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,123,0
-  38               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,124,0
-  39               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,125,0
-  40               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,126,0
-  41               		.stabs	"int64_t:t(6,7)=(0,6)",128,0,128,0
-  42               		.stabs	"uint64_t:t(6,8)=(0,7)",128,0,129,0
-  43               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,142,0
-  44               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,147,0
-  45               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,159,0
-  46               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,164,0
-  47               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,169,0
-  48               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,174,0
-  49               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,179,0
-  50               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,184,0
-  51               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,192,0
-  52               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,199,0
-  53               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,213,0
-  54               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,218,0
-  55               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,223,0
-  56               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,228,0
-  57               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,233,0
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 2
+   7               		.stabs	"/home/bernhard/source/avr-edid-spoofer/",100,0,2,.Ltext0
+   8               		.stabs	"_commonCode_localized/timerCommon/1.21/timerCommon.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"__int128:t(0,6)=@s128;r(0,6);02000000000000000000000000000000000000000000;0177777777777777
+  18               		.stabs	"__int128 unsigned:t(0,7)=@s128;r(0,7);0;03777777777777777777777777777777777777777777;",128
+  19               		.stabs	"long long int:t(0,8)=@s64;r(0,8);01000000000000000000000;00777777777777777777777;",128,0,0
+  20               		.stabs	"long long unsigned int:t(0,9)=@s64;r(0,9);0;01777777777777777777777;",128,0,0,0
+  21               		.stabs	"short int:t(0,10)=r(0,10);-32768;32767;",128,0,0,0
+  22               		.stabs	"short unsigned int:t(0,11)=r(0,11);0;0177777;",128,0,0,0
+  23               		.stabs	"signed char:t(0,12)=@s8;r(0,12);-128;127;",128,0,0,0
+  24               		.stabs	"unsigned char:t(0,13)=@s8;r(0,13);0;255;",128,0,0,0
+  25               		.stabs	"float:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"double:t(0,15)=r(0,1);4;0;",128,0,0,0
+  27               		.stabs	"long double:t(0,16)=r(0,1);4;0;",128,0,0,0
+  28               		.stabs	"short _Fract:t(0,17)=r(0,1);1;0;",128,0,0,0
+  29               		.stabs	"_Fract:t(0,18)=r(0,1);2;0;",128,0,0,0
+  30               		.stabs	"long _Fract:t(0,19)=r(0,1);4;0;",128,0,0,0
+  31               		.stabs	"long long _Fract:t(0,20)=r(0,1);8;0;",128,0,0,0
+  32               		.stabs	"unsigned short _Fract:t(0,21)=r(0,1);1;0;",128,0,0,0
+  33               		.stabs	"unsigned _Fract:t(0,22)=r(0,1);2;0;",128,0,0,0
+  34               		.stabs	"unsigned long _Fract:t(0,23)=r(0,1);4;0;",128,0,0,0
+  35               		.stabs	"unsigned long long _Fract:t(0,24)=r(0,1);8;0;",128,0,0,0
+  36               		.stabs	"_Sat short _Fract:t(0,25)=r(0,1);1;0;",128,0,0,0
+  37               		.stabs	"_Sat _Fract:t(0,26)=r(0,1);2;0;",128,0,0,0
+  38               		.stabs	"_Sat long _Fract:t(0,27)=r(0,1);4;0;",128,0,0,0
+  39               		.stabs	"_Sat long long _Fract:t(0,28)=r(0,1);8;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned short _Fract:t(0,29)=r(0,1);1;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned _Fract:t(0,30)=r(0,1);2;0;",128,0,0,0
+  42               		.stabs	"_Sat unsigned long _Fract:t(0,31)=r(0,1);4;0;",128,0,0,0
+  43               		.stabs	"_Sat unsigned long long _Fract:t(0,32)=r(0,1);8;0;",128,0,0,0
+  44               		.stabs	"short _Accum:t(0,33)=r(0,1);2;0;",128,0,0,0
+  45               		.stabs	"_Accum:t(0,34)=r(0,1);4;0;",128,0,0,0
+  46               		.stabs	"long _Accum:t(0,35)=r(0,1);8;0;",128,0,0,0
+  47               		.stabs	"long long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
+  48               		.stabs	"unsigned short _Accum:t(0,37)=r(0,1);2;0;",128,0,0,0
+  49               		.stabs	"unsigned _Accum:t(0,38)=r(0,1);4;0;",128,0,0,0
+  50               		.stabs	"unsigned long _Accum:t(0,39)=r(0,1);8;0;",128,0,0,0
+  51               		.stabs	"unsigned long long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
+  52               		.stabs	"_Sat short _Accum:t(0,41)=r(0,1);2;0;",128,0,0,0
+  53               		.stabs	"_Sat _Accum:t(0,42)=r(0,1);4;0;",128,0,0,0
+  54               		.stabs	"_Sat long _Accum:t(0,43)=r(0,1);8;0;",128,0,0,0
+  55               		.stabs	"_Sat long long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned short _Accum:t(0,45)=r(0,1);2;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned _Accum:t(0,46)=r(0,1);4;0;",128,0,0,0
+GAS LISTING /tmp/cckXFZXx.s 			page 2
 
 
-  58               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,238,0
-  59               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,246,0
-  60               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,253,0
-  61               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,273,0
-  62               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,278,0
-  63               		.stabn	162,0,0,0
-  64               		.stabs	"int_farptr_t:t(5,1)=(6,5)",128,0,77,0
-  65               		.stabs	"uint_farptr_t:t(5,2)=(6,6)",128,0,81,0
-  66               		.stabn	162,0,0,0
-  67               		.stabn	162,0,0,0
-  68               		.stabs	"/usr/local/lib/gcc/avr/4.4.5/../../../../avr/include/avr/fuse.h",130,0,0,0
-  69               		.stabs	"__fuse_t:t(7,1)=(7,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
-  70               		.stabn	162,0,0,0
-  71               		.stabn	162,0,0,0
-  72               		.stabn	162,0,0,0
-  73               		.stabn	162,0,0,0
-  74               		.stabs	"timer_setOutputModes:F(6,2)",36,0,88,timer_setOutputModes
-  75               		.stabs	"timerNum:P(6,2)",64,0,88,24
-  76               		.stabs	"outputChannels:P(6,2)",64,0,88,22
-  77               		.stabs	"outputMode:P(6,2)",64,0,89,20
-  78               	.global	timer_setOutputModes
-  79               		.type	timer_setOutputModes, @function
-  80               	timer_setOutputModes:
-  81               		.stabd	46,0,0
+  58               		.stabs	"_Sat unsigned long _Accum:t(0,47)=r(0,1);8;0;",128,0,0,0
+  59               		.stabs	"_Sat unsigned long long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
+  60               		.stabs	"void:t(0,49)=(0,49)",128,0,0,0
+  61               		.stabs	"_commonCode_localized/timerCommon/1.21/timerCommon.h",130,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/avr/interrupt.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  65               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  66               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stdint.h",130,0,0,0
+  67               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  68               		.stabs	"int8_t:t(7,1)=(0,12)",128,0,125,0
+  69               		.stabs	"uint8_t:t(7,2)=(0,13)",128,0,126,0
+  70               		.stabs	"int16_t:t(7,3)=(0,1)",128,0,127,0
+  71               		.stabs	"uint16_t:t(7,4)=(0,4)",128,0,128,0
+  72               		.stabs	"int32_t:t(7,5)=(0,3)",128,0,129,0
+  73               		.stabs	"uint32_t:t(7,6)=(0,5)",128,0,130,0
+  74               		.stabs	"int64_t:t(7,7)=(0,8)",128,0,132,0
+  75               		.stabs	"uint64_t:t(7,8)=(0,9)",128,0,133,0
+  76               		.stabs	"intptr_t:t(7,9)=(7,3)",128,0,146,0
+  77               		.stabs	"uintptr_t:t(7,10)=(7,4)",128,0,151,0
+  78               		.stabs	"int_least8_t:t(7,11)=(7,1)",128,0,163,0
+  79               		.stabs	"uint_least8_t:t(7,12)=(7,2)",128,0,168,0
+  80               		.stabs	"int_least16_t:t(7,13)=(7,3)",128,0,173,0
+  81               		.stabs	"uint_least16_t:t(7,14)=(7,4)",128,0,178,0
+  82               		.stabs	"int_least32_t:t(7,15)=(7,5)",128,0,183,0
+  83               		.stabs	"uint_least32_t:t(7,16)=(7,6)",128,0,188,0
+  84               		.stabs	"int_least64_t:t(7,17)=(7,7)",128,0,196,0
+  85               		.stabs	"uint_least64_t:t(7,18)=(7,8)",128,0,203,0
+  86               		.stabs	"int_fast8_t:t(7,19)=(7,1)",128,0,217,0
+  87               		.stabs	"uint_fast8_t:t(7,20)=(7,2)",128,0,222,0
+  88               		.stabs	"int_fast16_t:t(7,21)=(7,3)",128,0,227,0
+  89               		.stabs	"uint_fast16_t:t(7,22)=(7,4)",128,0,232,0
+  90               		.stabs	"int_fast32_t:t(7,23)=(7,5)",128,0,237,0
+  91               		.stabs	"uint_fast32_t:t(7,24)=(7,6)",128,0,242,0
+  92               		.stabs	"int_fast64_t:t(7,25)=(7,7)",128,0,250,0
+  93               		.stabs	"uint_fast64_t:t(7,26)=(7,8)",128,0,257,0
+  94               		.stabs	"intmax_t:t(7,27)=(7,7)",128,0,277,0
+  95               		.stabs	"uintmax_t:t(7,28)=(7,8)",128,0,282,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"int_farptr_t:t(5,1)=(7,5)",128,0,77,0
+  99               		.stabs	"uint_farptr_t:t(5,2)=(7,6)",128,0,81,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 103               		.stabs	"__fuse_t:t(8,1)=(8,2)=s3low:(0,13),0,8;high:(0,13),8,8;extended:(0,13),16,8;;",128,0,244,0
+ 104               		.stabn	162,0,0,0
+ 105               		.stabn	162,0,0,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabn	162,0,0,0
+ 108               		.stabs	"timer_setOutputModes:F(7,2)",36,0,88,timer_setOutputModes
+ 109               		.stabs	"timerNum:P(7,2)",64,0,88,24
+ 110               		.stabs	"outputChannels:P(7,2)",64,0,88,22
+ 111               		.stabs	"outputMode:P(7,2)",64,0,89,20
+ 112               	.global	timer_setOutputModes
+ 113               		.type	timer_setOutputModes, @function
+ 114               	timer_setOutputModes:
+GAS LISTING /tmp/cckXFZXx.s 			page 3
+
+
+ 115               		.stabd	46,0,0
    1:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //timerCommon 1.20-1
    2:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #include "timerCommon.h"
    3:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
@@ -118,9 +155,6 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
   31:_commonCode_localized/timerCommon/1.21/timerCommon.c ****  #define T3_CSReg	TCCR3
   32:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #endif
   33:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #if defined(TCCR3B)
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 3
-
-
   34:_commonCode_localized/timerCommon/1.21/timerCommon.c ****  #define T3_CSReg	TCCR3B
   35:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #endif
   36:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
@@ -144,6 +178,9 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
   54:_commonCode_localized/timerCommon/1.21/timerCommon.c ****  #define CSALT_DIV64	0x04
   55:_commonCode_localized/timerCommon/1.21/timerCommon.c ****  #define CSALT_DIV128	0x05
   56:_commonCode_localized/timerCommon/1.21/timerCommon.c ****  #define CSALT_DIV256	0x06
+GAS LISTING /tmp/cckXFZXx.s 			page 4
+
+
   57:_commonCode_localized/timerCommon/1.21/timerCommon.c ****  #define CSALT_DIV1024	0x07
   58:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #endif
   59:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //Internal use only... Actual value to be written to the _CSReg
@@ -178,47 +215,43 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
   88:_commonCode_localized/timerCommon/1.21/timerCommon.c **** uint8_t timer_setOutputModes(uint8_t timerNum, uint8_t outputChannels, \
   89:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 										uint8_t outputMode)
   90:_commonCode_localized/timerCommon/1.21/timerCommon.c **** {
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 4
-
-
-  82               		.stabn	68,0,90,.LM0-.LFBB1
-  83               	.LM0:
-  84               	.LFBB1:
-  85               	/* prologue: function */
-  86               	/* frame size = 0 */
+ 116               		.stabn	68,0,90,.LM0-.LFBB1
+ 117               	.LM0:
+ 118               	.LFBB1:
+ 119               	/* prologue: function */
+ 120               	/* frame size = 0 */
+ 121               	/* stack size = 0 */
+ 122               	.L__stack_usage = 0
   91:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	uint8_t channelNums;
   92:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
   93:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	//This is not be-all-end-all testing, but helps...
   94:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	if(timerNum >= MAXTIMERS)
-  87               		.stabn	68,0,94,.LM1-.LFBB1
-  88               	.LM1:
-  89 0000 8430      		cpi r24,lo8(4)
-  90 0002 00F0      		brlo .L2
-  91 0004 81E0      		ldi r24,lo8(1)
-  92 0006 0895      		ret
-  93               	.L2:
+ 123               		.stabn	68,0,94,.LM1-.LFBB1
+ 124               	.LM1:
+ 125 0000 8430      		cpi r24,lo8(4)
+ 126 0002 00F4      		brsh .L10
   95:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		return 1;
   96:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	if(outputChannels >= 0x0f) //MAXCHANNELSPERTIMER)
-  94               		.stabn	68,0,96,.LM2-.LFBB1
-  95               	.LM2:
-  96 0008 6F30      		cpi r22,lo8(15)
-  97 000a 00F0      		brlo .L4
-  98 000c 82E0      		ldi r24,lo8(2)
-  99 000e 0895      		ret
- 100               	.L4:
+ 127               		.stabn	68,0,96,.LM2-.LFBB1
+ 128               	.LM2:
+ 129 0004 6F30      		cpi r22,lo8(15)
+ 130 0006 00F4      		brsh .L11
   97:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		return 2;
   98:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
+GAS LISTING /tmp/cckXFZXx.s 			page 5
+
+
   99:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	//For the sake of our brute-force switch statement...
  100:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	//Combine the timer number and channel into a single variable...
  101:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	//The high nibble contains the timer number, 
  102:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	// the low contains the channel numbers as a mask (A=0x1,B=0x2,C=0x3...)
  103:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	channelNums = (timerNum<<4) | outputChannels;
- 101               		.stabn	68,0,103,.LM3-.LFBB1
- 102               	.LM3:
- 103 0010 8295      		swap r24
- 104 0012 807F      		andi r24,lo8(-16)
- 105 0014 862B      		or r24,r22
- 106               	.LBB2:
+ 131               		.stabn	68,0,103,.LM3-.LFBB1
+ 132               	.LM3:
+ 133 0008 8295      		swap r24
+ 134 000a 807F      		andi r24,lo8(-16)
+ 135 000c 682B      		or r22,r24
+ 136               	.LBB2:
  104:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	
  105:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	uint8_t i;
  106:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
@@ -238,9 +271,6 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  120:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//Timer 0
  121:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		  #if defined(T0_COMReg)
  122:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #if defined(OUT_OC0)
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 5
-
-
  123:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			case OUT_OC0:
  124:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				writeMasked((outputMode<<COM_SHIFT), COM_MASK, T0_COMReg);
  125:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
@@ -248,88 +278,76 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  127:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #if defined(OUT_OC0A)
  128:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			case OUT_OC0A:
  129:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				writeMasked((outputMode<<COMA_SHIFT), COMA_MASK, T0_COMReg);
- 107               		.stabn	68,0,129,.LM4-.LFBB1
- 108               	.LM4:
- 109 0016 50E0      		ldi r21,lo8(0)
- 110 0018 342F      		mov r19,r20
- 111 001a 3295      		swap r19
- 112 001c 330F      		lsl r19
- 113 001e 330F      		lsl r19
- 114 0020 307C      		andi r19,lo8(-64)
+ 137               		.stabn	68,0,129,.LM4-.LFBB1
+ 138               	.LM4:
+ 139 000e 50E0      		ldi r21,0
+ 140 0010 742F      		mov r23,r20
+ 141 0012 7295      		swap r23
+ 142 0014 770F      		lsl r23
+ 143 0016 770F      		lsl r23
+ 144 0018 707C      		andi r23,lo8(-64)
  130:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
  131:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #endif
  132:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #if defined(OUT_OC0B)
  133:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			case OUT_OC0B:
  134:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				writeMasked((outputMode<<COMB_SHIFT), COMB_MASK, T0_COMReg);
- 115               		.stabn	68,0,134,.LM5-.LFBB1
- 116               	.LM5:
- 117 0022 94E0      		ldi r25,4
- 118 0024 440F      	1:	lsl r20
- 119 0026 551F      		rol r21
- 120 0028 9A95      		dec r25
- 121 002a 01F4      		brne 1b
- 122 002c 4073      		andi r20,lo8(48)
- 123 002e 60E0      		ldi r22,lo8(0)
- 124 0030 70E0      		ldi r23,hi8(0)
- 125 0032 21E0      		ldi r18,lo8(1)
- 126               	.L12:
- 110:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		uint8_t channelNum = channelNums & (0xf0 | i);
- 127               		.stabn	68,0,110,.LM6-.LFBB1
- 128               	.LM6:
- 129 0034 922F      		mov r25,r18
- 130 0036 906F      		ori r25,lo8(-16)
- 131 0038 9823      		and r25,r24
- 114:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		if((channelNum & 0x0f) == 0)
- 132               		.stabn	68,0,114,.LM7-.LFBB1
- 133               	.LM7:
- 134 003a E92F      		mov r30,r25
- 135 003c F0E0      		ldi r31,lo8(0)
- 136 003e EF70      		andi r30,lo8(15)
- 137 0040 F070      		andi r31,hi8(15)
- 138 0042 3097      		sbiw r30,0
- 139 0044 01F0      		breq .L5
- 118:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		switch(channelNum)
- 140               		.stabn	68,0,118,.LM8-.LFBB1
- 141               	.LM8:
- 142 0046 9230      		cpi r25,lo8(2)
- 143 0048 01F0      		breq .L8
- 144 004a 9330      		cpi r25,lo8(3)
- 145 004c 00F4      		brsh .L11
- 146 004e 9130      		cpi r25,lo8(1)
- 147 0050 01F4      		brne .L6
- 148 0052 00C0      		rjmp .L19
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 6
+ 145               		.stabn	68,0,134,.LM5-.LFBB1
+ 146               	.LM5:
+ 147 001a 84E0      		ldi r24,4
+ 148               		1:
+ 149 001c 440F      		lsl r20
+ 150 001e 551F      		rol r21
+ 151 0020 8A95      		dec r24
+GAS LISTING /tmp/cckXFZXx.s 			page 6
 
 
- 149               	.L11:
- 150 0054 9131      		cpi r25,lo8(17)
- 151 0056 01F0      		breq .L9
- 152 0058 9231      		cpi r25,lo8(18)
- 153 005a 01F0      		breq .L10
- 154               	.L6:
- 155 005c 83E0      		ldi r24,lo8(3)
- 156 005e 0895      		ret
- 157               	.L19:
- 129:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				writeMasked((outputMode<<COMA_SHIFT), COMA_MASK, T0_COMReg);
- 158               		.stabn	68,0,129,.LM9-.LFBB1
- 159               	.LM9:
- 160 0060 9AB5      		in r25,74-0x20
- 161 0062 9F73      		andi r25,lo8(63)
- 162 0064 932B      		or r25,r19
- 163 0066 00C0      		rjmp .L15
- 164               	.L8:
- 165               		.stabn	68,0,134,.LM10-.LFBB1
- 166               	.LM10:
- 167 0068 9AB5      		in r25,74-0x20
- 168 006a 9F7C      		andi r25,lo8(-49)
- 169 006c 942B      		or r25,r20
- 170               	.L15:
- 171 006e 9ABD      		out 74-0x20,r25
+ 152 0022 01F4      		brne 1b
+ 153 0024 4073      		andi r20,lo8(48)
+ 154 0026 24E0      		ldi r18,lo8(4)
+ 155 0028 30E0      		ldi r19,0
+ 156               	.LBE2:
+ 108:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	{
+ 157               		.stabn	68,0,108,.LM6-.LFBB1
+ 158               	.LM6:
+ 159 002a 81E0      		ldi r24,lo8(1)
+ 160               	.L9:
+ 161               	.LBB3:
+ 110:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
+ 162               		.stabn	68,0,110,.LM7-.LFBB1
+ 163               	.LM7:
+ 164 002c 982F      		mov r25,r24
+ 165 002e 906F      		ori r25,lo8(-16)
+ 166 0030 9623      		and r25,r22
+ 114:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			continue;
+ 167               		.stabn	68,0,114,.LM8-.LFBB1
+ 168               	.LM8:
+ 169 0032 592F      		mov r21,r25
+ 170 0034 5F70      		andi r21,lo8(15)
+ 171 0036 01F0      		breq .L3
+ 118:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		{	
+ 172               		.stabn	68,0,118,.LM9-.LFBB1
+ 173               	.LM9:
+ 174 0038 9230      		cpi r25,lo8(2)
+ 175 003a 01F0      		breq .L4
+ 176 003c 00F4      		brsh .L5
+ 177 003e 9130      		cpi r25,lo8(1)
+ 178 0040 01F4      		brne .L12
+ 129:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
+ 179               		.stabn	68,0,129,.LM10-.LFBB1
+ 180               	.LM10:
+ 181 0042 9AB5      		in r25,0x2a
+ 182 0044 9F73      		andi r25,lo8(63)
+ 183 0046 972B      		or r25,r23
+ 184 0048 00C0      		rjmp .L17
+ 185               	.L5:
+ 118:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		{	
+ 186               		.stabn	68,0,118,.LM11-.LFBB1
+ 187               	.LM11:
+ 188 004a 9131      		cpi r25,lo8(17)
+ 189 004c 01F0      		breq .L7
+ 190 004e 9231      		cpi r25,lo8(18)
+ 191 0050 01F4      		brne .L12
  135:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
- 172               		.stabn	68,0,135,.LM11-.LFBB1
- 173               	.LM11:
- 174 0070 00C0      		rjmp .L5
- 175               	.L9:
  136:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #endif
  137:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		  #endif
  138:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//Timer 1
@@ -340,42 +358,55 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  143:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
  144:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #endif
  145:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #if defined(OUT_OC1A)
+GAS LISTING /tmp/cckXFZXx.s 			page 7
+
+
  146:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			case OUT_OC1A:
  147:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				writeMasked((outputMode<<COMA_SHIFT), COMA_MASK, T1_COMReg);
- 176               		.stabn	68,0,147,.LM12-.LFBB1
- 177               	.LM12:
- 178 0072 90B7      		in r25,80-0x20
- 179 0074 9F73      		andi r25,lo8(63)
- 180 0076 932B      		or r25,r19
- 181 0078 00C0      		rjmp .L16
- 182               	.L10:
  148:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
  149:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #endif
  150:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #if defined(OUT_OC1B)
  151:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			case OUT_OC1B:
  152:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				writeMasked((outputMode<<COMB_SHIFT), COMB_MASK, T1_COMReg);
- 183               		.stabn	68,0,152,.LM13-.LFBB1
- 184               	.LM13:
- 185 007a 90B7      		in r25,80-0x20
- 186 007c 9F7C      		andi r25,lo8(-49)
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 7
-
-
- 187 007e 942B      		or r25,r20
- 188               	.L16:
- 189 0080 90BF      		out 80-0x20,r25
- 190               	.L5:
- 191               	.LBE2:
- 108:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	for(i=1; i<=8; i<<=1)
- 192               		.stabn	68,0,108,.LM14-.LFBB1
- 193               	.LM14:
- 194 0082 220F      		lsl r18
- 195 0084 6F5F      		subi r22,lo8(-(1))
- 196 0086 7F4F      		sbci r23,hi8(-(1))
- 197 0088 6430      		cpi r22,4
- 198 008a 7105      		cpc r23,__zero_reg__
- 199 008c 01F4      		brne .L12
- 200 008e 80E0      		ldi r24,lo8(0)
+ 192               		.stabn	68,0,152,.LM12-.LFBB1
+ 193               	.LM12:
+ 194 0052 90B7      		in r25,0x30
+ 195 0054 9F7C      		andi r25,lo8(-49)
+ 196 0056 942B      		or r25,r20
+ 197 0058 00C0      		rjmp .L18
+ 198               	.L4:
+ 134:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
+ 199               		.stabn	68,0,134,.LM13-.LFBB1
+ 200               	.LM13:
+ 201 005a 9AB5      		in r25,0x2a
+ 202 005c 9F7C      		andi r25,lo8(-49)
+ 203 005e 942B      		or r25,r20
+ 204               	.L17:
+ 205 0060 9ABD      		out 0x2a,r25
+ 135:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
+ 206               		.stabn	68,0,135,.LM14-.LFBB1
+ 207               	.LM14:
+ 208 0062 00C0      		rjmp .L3
+ 209               	.L7:
+ 147:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
+ 210               		.stabn	68,0,147,.LM15-.LFBB1
+ 211               	.LM15:
+ 212 0064 90B7      		in r25,0x30
+ 213 0066 9F73      		andi r25,lo8(63)
+ 214 0068 972B      		or r25,r23
+ 215               	.L18:
+ 216               		.stabn	68,0,152,.LM16-.LFBB1
+ 217               	.LM16:
+ 218 006a 90BF      		out 0x30,r25
+ 219               	.L3:
+ 220               	.LBE3:
+ 108:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	{
+ 221               		.stabn	68,0,108,.LM17-.LFBB1
+ 222               	.LM17:
+ 223 006c 880F      		lsl r24
+ 224 006e 2150      		subi r18,1
+ 225 0070 3109      		sbc r19,__zero_reg__
+ 226 0072 01F4      		brne .L9
  153:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
  154:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #endif
  155:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			#if defined(OUT_OC1D) //so far only on the Tiny861...
@@ -387,6 +418,9 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  161:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//Timer 2
  162:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		  #if defined(T2_COMReg)
  163:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #if defined(OUT_OC2)
+GAS LISTING /tmp/cckXFZXx.s 			page 8
+
+
  164:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			case OUT_OC2:
  165:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				writeMasked((outputMode<<COM_SHIFT), COM_MASK, T2_COMReg);
  166:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
@@ -418,9 +452,6 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  192:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			case OUT_OC3B:
  193:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				writeMasked((outputMode<<COMB_SHIFT), COMB_MASK, T3_COMReg);
  194:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 8
-
-
  195:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #endif
  196:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		  #endif
  197:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//The selected timer and channel combination doesn't exist...
@@ -430,28 +461,60 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  201:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		}
  202:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	}
  203:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	return 0;
+ 227               		.stabn	68,0,203,.LM18-.LFBB1
+ 228               	.LM18:
+ 229 0074 80E0      		ldi r24,0
+ 230 0076 0895      		ret
+ 231               	.L10:
+  95:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	if(outputChannels >= 0x0f) //MAXCHANNELSPERTIMER)
+ 232               		.stabn	68,0,95,.LM19-.LFBB1
+ 233               	.LM19:
+ 234 0078 81E0      		ldi r24,lo8(1)
+ 235 007a 0895      		ret
+ 236               	.L11:
+  97:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
+ 237               		.stabn	68,0,97,.LM20-.LFBB1
+ 238               	.LM20:
+ 239 007c 82E0      		ldi r24,lo8(2)
+ 240 007e 0895      		ret
+ 241               	.L12:
+GAS LISTING /tmp/cckXFZXx.s 			page 9
+
+
+ 242               	.LBB4:
+ 199:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
+ 243               		.stabn	68,0,199,.LM21-.LFBB1
+ 244               	.LM21:
+ 245 0080 83E0      		ldi r24,lo8(3)
+ 246               	.LBE4:
  204:_commonCode_localized/timerCommon/1.21/timerCommon.c **** }
- 201               		.stabn	68,0,204,.LM15-.LFBB1
- 202               	.LM15:
- 203 0090 0895      		ret
- 204               		.size	timer_setOutputModes, .-timer_setOutputModes
- 205               		.stabs	"channelNums:r(6,2)",64,0,91,24
- 206               		.stabs	"i:r(6,2)",64,0,105,18
- 207               		.stabn	192,0,0,.LFBB1-.LFBB1
- 208               		.stabs	"channelNum:r(6,2)",64,0,110,25
- 209               		.stabn	192,0,0,.LBB2-.LFBB1
- 210               		.stabn	224,0,0,.LBE2-.LFBB1
- 211               		.stabn	224,0,0,.Lscope1-.LFBB1
- 212               	.Lscope1:
- 213               		.stabs	"",36,0,0,.Lscope1-.LFBB1
- 214               		.stabd	78,0,0
- 215               		.stabs	"timer_selectDivisor:F(6,2)",36,0,210,timer_selectDivisor
- 216               		.stabs	"timerNum:P(6,2)",64,0,210,24
- 217               		.stabs	"clockDiv:P(6,2)",64,0,210,22
- 218               	.global	timer_selectDivisor
- 219               		.type	timer_selectDivisor, @function
- 220               	timer_selectDivisor:
- 221               		.stabd	46,0,0
+ 247               		.stabn	68,0,204,.LM22-.LFBB1
+ 248               	.LM22:
+ 249 0082 0895      		ret
+ 250               		.size	timer_setOutputModes, .-timer_setOutputModes
+ 251               		.stabs	"channelNums:r(7,2)",64,0,91,22
+ 252               		.stabs	"i:r(7,2)",64,0,105,24
+ 253               		.stabn	192,0,0,.LFBB1-.LFBB1
+ 254               		.stabs	"channelNum:r(7,2)",64,0,110,25
+ 255               		.stabn	192,0,0,.LBB2-.LFBB1
+ 256               		.stabn	224,0,0,.LBE2-.LFBB1
+ 257               		.stabs	"channelNum:r(7,2)",64,0,110,25
+ 258               		.stabn	192,0,0,.LBB3-.LFBB1
+ 259               		.stabn	224,0,0,.LBE3-.LFBB1
+ 260               		.stabs	"channelNum:r(7,2)",64,0,110,25
+ 261               		.stabn	192,0,0,.LBB4-.LFBB1
+ 262               		.stabn	224,0,0,.LBE4-.LFBB1
+ 263               		.stabn	224,0,0,.Lscope1-.LFBB1
+ 264               	.Lscope1:
+ 265               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 266               		.stabd	78,0,0
+ 267               		.stabs	"timer_selectDivisor:F(7,2)",36,0,210,timer_selectDivisor
+ 268               		.stabs	"timerNum:P(7,2)",64,0,210,24
+ 269               		.stabs	"clockDiv:P(7,2)",64,0,210,22
+ 270               	.global	timer_selectDivisor
+ 271               		.type	timer_selectDivisor, @function
+ 272               	timer_selectDivisor:
+ 273               		.stabd	46,0,0
  205:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #endif
  206:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
  207:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //Selecting a clock source is independent of the number of channels... 
@@ -459,88 +522,98 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  209:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #if (!defined(TIMER_SELECTDIVISOR_UNUSED) || !TIMER_SELECTDIVISOR_UNUSED)
  210:_commonCode_localized/timerCommon/1.21/timerCommon.c **** uint8_t timer_selectDivisor(uint8_t timerNum, uint8_t clockDiv)
  211:_commonCode_localized/timerCommon/1.21/timerCommon.c **** {
- 222               		.stabn	68,0,211,.LM16-.LFBB2
- 223               	.LM16:
- 224               	.LFBB2:
- 225               	/* prologue: function */
- 226               	/* frame size = 0 */
+ 274               		.stabn	68,0,211,.LM23-.LFBB2
+ 275               	.LM23:
+ 276               	.LFBB2:
+ 277               	/* prologue: function */
+ 278               	/* frame size = 0 */
+ 279               	/* stack size = 0 */
+ 280               	.L__stack_usage = 0
  212:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	uint8_t csbits;
  213:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	
  214:_commonCode_localized/timerCommon/1.21/timerCommon.c ****   #if defined(CSOBS)
  215:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	if(timerNum == 0 || timerNum == 1 || timerNum == 3)//IS_CSTYP(timerNum) || IS_CSOBS(timerNum))
  216:_commonCode_localized/timerCommon/1.21/timerCommon.c ****   #else
  217:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	if(IS_CSTYP(timerNum))
- 227               		.stabn	68,0,217,.LM17-.LFBB2
- 228               	.LM17:
- 229 0092 8230      		cpi r24,lo8(2)
- 230 0094 00F4      		brsh .L21
+ 281               		.stabn	68,0,217,.LM24-.LFBB2
+ 282               	.LM24:
+ 283 0084 8230      		cpi r24,lo8(2)
+GAS LISTING /tmp/cckXFZXx.s 			page 10
+
+
+ 284 0086 00F4      		brsh .L31
+ 285               	.LBB7:
+ 286               	.LBB8:
  218:_commonCode_localized/timerCommon/1.21/timerCommon.c ****   #endif
  219:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	{
  220:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		switch(clockDiv)
- 231               		.stabn	68,0,220,.LM18-.LFBB2
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 9
-
-
- 232               	.LM18:
- 233 0096 6630      		cpi r22,lo8(6)
- 234 0098 01F0      		breq .L24
- 235 009a 6730      		cpi r22,lo8(7)
- 236 009c 00F4      		brsh .L27
- 237 009e 6623      		tst r22
- 238 00a0 01F0      		breq .L22
- 239 00a2 6330      		cpi r22,lo8(3)
- 240 00a4 01F4      		brne .L21
- 241 00a6 00C0      		rjmp .L36
- 242               	.L27:
- 243 00a8 6830      		cpi r22,lo8(8)
- 244 00aa 01F0      		breq .L25
- 245 00ac 6A30      		cpi r22,lo8(10)
- 246 00ae 01F4      		brne .L21
- 247 00b0 00C0      		rjmp .L37
- 248               	.L36:
- 249 00b2 92E0      		ldi r25,lo8(2)
- 250 00b4 00C0      		rjmp .L28
- 251               	.L22:
- 252 00b6 91E0      		ldi r25,lo8(1)
- 253 00b8 00C0      		rjmp .L28
- 254               	.L24:
- 255 00ba 93E0      		ldi r25,lo8(3)
+ 287               		.stabn	68,0,220,.LM25-.LFBB2
+ 288               	.LM25:
+ 289 0088 6630      		cpi r22,lo8(6)
+ 290 008a 01F0      		breq .L22
+ 291 008c 00F4      		brsh .L23
+ 292 008e 6623      		tst r22
+ 293 0090 01F0      		breq .L32
+ 294 0092 6330      		cpi r22,lo8(3)
+ 295 0094 01F4      		brne .L31
  221:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		{
  222:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			case CLKDIV1:
  223:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				csbits = CSTYP_DIV1;	
  224:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
  225:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			case CLKDIV8:
  226:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				csbits = CSTYP_DIV8;
+ 296               		.stabn	68,0,226,.LM26-.LFBB2
+ 297               	.LM26:
+ 298 0096 92E0      		ldi r25,lo8(2)
+ 299 0098 00C0      		rjmp .L24
+ 300               	.L23:
+ 220:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		{
+ 301               		.stabn	68,0,220,.LM27-.LFBB2
+ 302               	.LM27:
+ 303 009a 6830      		cpi r22,lo8(8)
+ 304 009c 01F0      		breq .L26
+ 305 009e 6A30      		cpi r22,lo8(10)
+ 306 00a0 01F4      		brne .L31
  227:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
  228:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			case CLKDIV64:
  229:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				csbits = CSTYP_DIV64;	
  230:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
- 256               		.stabn	68,0,230,.LM19-.LFBB2
- 257               	.LM19:
- 258 00bc 00C0      		rjmp .L28
- 259               	.L25:
- 260 00be 94E0      		ldi r25,lo8(4)
  231:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			case CLKDIV256:
  232:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				csbits = CSTYP_DIV256;	
  233:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
- 261               		.stabn	68,0,233,.LM20-.LFBB2
- 262               	.LM20:
- 263 00c0 00C0      		rjmp .L28
- 264               	.L37:
- 265 00c2 95E0      		ldi r25,lo8(5)
- 266               	.L28:
- 267 00c4 9770      		andi r25,lo8(7)
  234:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			case CLKDIV1024:
  235:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				csbits = CSTYP_DIV1024; 
+ 307               		.stabn	68,0,235,.LM28-.LFBB2
+ 308               	.LM28:
+ 309 00a2 95E0      		ldi r25,lo8(5)
+ 310 00a4 00C0      		rjmp .L24
+ 311               	.L22:
+ 229:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
+ 312               		.stabn	68,0,229,.LM29-.LFBB2
+ 313               	.LM29:
+ 314 00a6 93E0      		ldi r25,lo8(3)
+ 315 00a8 00C0      		rjmp .L24
+ 316               	.L26:
+ 232:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
+ 317               		.stabn	68,0,232,.LM30-.LFBB2
+ 318               	.LM30:
+ 319 00aa 94E0      		ldi r25,lo8(4)
+GAS LISTING /tmp/cckXFZXx.s 			page 11
+
+
+ 320 00ac 00C0      		rjmp .L24
+ 321               	.L32:
+ 223:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
+ 322               		.stabn	68,0,223,.LM31-.LFBB2
+ 323               	.LM31:
+ 324 00ae 91E0      		ldi r25,lo8(1)
+ 325               	.L24:
  236:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
  237:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			default:
  238:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			  #if defined(CSOBS)
  239:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				if(IS_CSOBS(timerNum))	
  240:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				{
  241:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 					if(clockDiv == CLKDIV16)	
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 10
-
-
  242:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 						csbits = CSOBS_DIV16;
  243:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 					else if(clockDiv == CLKDIV32)
  244:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 						csbits = CSOBS_DIV32;
@@ -585,48 +658,42 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  283:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				return 1;	
  284:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
  285:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		}
+GAS LISTING /tmp/cckXFZXx.s 			page 12
+
+
  286:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	}
  287:_commonCode_localized/timerCommon/1.21/timerCommon.c ****   #endif
  288:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	else 
  289:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		return 1;	
  290:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
  291:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	switch(timerNum)
- 268               		.stabn	68,0,291,.LM21-.LFBB2
- 269               	.LM21:
- 270 00c6 8130      		cpi r24,lo8(1)
- 271 00c8 01F0      		breq .L30
+ 326               		.stabn	68,0,291,.LM32-.LFBB2
+ 327               	.LM32:
+ 328 00b0 8130      		cpi r24,lo8(1)
+ 329 00b2 01F0      		breq .L29
  292:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	{
  293:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		//Assume Timer0 and Timer1 exist (see setWGM)
  294:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 0:
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 11
-
-
  295:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writeMasked(csbits, CSMASK, T0_CSReg);
- 272               		.stabn	68,0,295,.LM22-.LFBB2
- 273               	.LM22:
- 274 00ca 83B7      		in r24,83-0x20
- 275 00cc 887F      		andi r24,lo8(-8)
- 276 00ce 892B      		or r24,r25
- 277 00d0 83BF      		out 83-0x20,r24
- 278 00d2 00C0      		rjmp .L33
- 279               	.L30:
+ 330               		.stabn	68,0,295,.LM33-.LFBB2
+ 331               	.LM33:
+ 332 00b4 83B7      		in r24,0x33
+ 333 00b6 887F      		andi r24,lo8(-8)
+ 334 00b8 982B      		or r25,r24
+ 335 00ba 93BF      		out 0x33,r25
+ 336 00bc 00C0      		rjmp .L33
+ 337               	.L29:
  296:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
  297:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 1:
  298:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writeMasked(csbits, CSMASK, T1_CSReg);
- 280               		.stabn	68,0,298,.LM23-.LFBB2
- 281               	.LM23:
- 282 00d4 80B7      		in r24,80-0x20
- 283 00d6 887F      		andi r24,lo8(-8)
- 284 00d8 892B      		or r24,r25
- 285 00da 80BF      		out 80-0x20,r24
- 286               	.L33:
- 287 00dc 80E0      		ldi r24,lo8(0)
+ 338               		.stabn	68,0,298,.LM34-.LFBB2
+ 339               	.LM34:
+ 340 00be 80B7      		in r24,0x30
+ 341 00c0 887F      		andi r24,lo8(-8)
+ 342 00c2 982B      		or r25,r24
+ 343 00c4 90BF      		out 0x30,r25
+ 344               	.L33:
  299:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
- 288               		.stabn	68,0,299,.LM24-.LFBB2
- 289               	.LM24:
- 290 00de 0895      		ret
- 291               	.L21:
- 292 00e0 81E0      		ldi r24,lo8(1)
  300:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		//From here, only compile for timers that exist as expected...
  301:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		#if defined(T2_CSReg)
  302:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 2:
@@ -644,27 +711,38 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  314:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	}
  315:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	
  316:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	return 0;
+ 345               		.stabn	68,0,316,.LM35-.LFBB2
+ 346               	.LM35:
+ 347 00c6 80E0      		ldi r24,0
+ 348 00c8 0895      		ret
+ 349               	.L31:
+ 251:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			  #endif
+ 350               		.stabn	68,0,251,.LM36-.LFBB2
+GAS LISTING /tmp/cckXFZXx.s 			page 13
+
+
+ 351               	.LM36:
+ 352 00ca 81E0      		ldi r24,lo8(1)
+ 353               	.LBE8:
+ 354               	.LBE7:
  317:_commonCode_localized/timerCommon/1.21/timerCommon.c **** }
- 293               		.stabn	68,0,317,.LM25-.LFBB2
- 294               	.LM25:
- 295 00e2 0895      		ret
- 296               		.size	timer_selectDivisor, .-timer_selectDivisor
- 297               		.stabs	"csbits:r(6,2)",64,0,212,25
- 298               		.stabn	192,0,0,.LFBB2-.LFBB2
- 299               		.stabn	224,0,0,.Lscope2-.LFBB2
- 300               	.Lscope2:
- 301               		.stabs	"",36,0,0,.Lscope2-.LFBB2
- 302               		.stabd	78,0,0
- 303               		.stabs	"timer_setWGM:F(6,2)",36,0,325,timer_setWGM
- 304               		.stabs	"timerNum:P(6,2)",64,0,325,24
- 305               		.stabs	"wgm:P(6,2)",64,0,325,22
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 12
-
-
- 306               	.global	timer_setWGM
- 307               		.type	timer_setWGM, @function
- 308               	timer_setWGM:
- 309               		.stabd	46,0,0
+ 355               		.stabn	68,0,317,.LM37-.LFBB2
+ 356               	.LM37:
+ 357 00cc 0895      		ret
+ 358               		.size	timer_selectDivisor, .-timer_selectDivisor
+ 359               		.stabs	"csbits:r(7,2)",64,0,212,25
+ 360               		.stabn	192,0,0,.LBB8-.LFBB2
+ 361               		.stabn	224,0,0,.LBE8-.LFBB2
+ 362               	.Lscope2:
+ 363               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 364               		.stabd	78,0,0
+ 365               		.stabs	"timer_setWGM:F(7,2)",36,0,325,timer_setWGM
+ 366               		.stabs	"timerNum:P(7,2)",64,0,325,24
+ 367               		.stabs	"wgm:P(7,2)",64,0,325,22
+ 368               	.global	timer_setWGM
+ 369               		.type	timer_setWGM, @function
+ 370               	timer_setWGM:
+ 371               		.stabd	46,0,0
  318:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #endif
  319:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
  320:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //Set the Waveform Generation Mode...
@@ -674,11 +752,13 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  324:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #if(!defined(TIMER_SETWGM_UNUSED) || !TIMER_SETWGM_UNUSED)
  325:_commonCode_localized/timerCommon/1.21/timerCommon.c **** uint8_t timer_setWGM(uint8_t timerNum, uint8_t wgm)
  326:_commonCode_localized/timerCommon/1.21/timerCommon.c **** {
- 310               		.stabn	68,0,326,.LM26-.LFBB3
- 311               	.LM26:
- 312               	.LFBB3:
- 313               	/* prologue: function */
- 314               	/* frame size = 0 */
+ 372               		.stabn	68,0,326,.LM38-.LFBB3
+ 373               	.LM38:
+ 374               	.LFBB3:
+ 375               	/* prologue: function */
+ 376               	/* frame size = 0 */
+ 377               	/* stack size = 0 */
+ 378               	.L__stack_usage = 0
  327:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	uint8_t wgmLb = getbit(0, wgm);
  328:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	uint8_t wgmHb = getbit(1, wgm);
  329:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	
@@ -692,17 +772,20 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  337:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	//Make sure the chosen WGM will be written to the WGM bits properly, as implemented below...
  338:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	// Only modes 0-3 are implemented...
  339:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	if(wgm > 0x03)
- 315               		.stabn	68,0,339,.LM27-.LFBB3
- 316               	.LM27:
- 317 00e4 6430      		cpi r22,lo8(4)
- 318 00e6 00F4      		brsh .L39
+ 379               		.stabn	68,0,339,.LM39-.LFBB3
+ 380               	.LM39:
+ 381 00ce 6430      		cpi r22,lo8(4)
+ 382 00d0 00F4      		brsh .L42
  340:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		return 1;
  341:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	
+GAS LISTING /tmp/cckXFZXx.s 			page 14
+
+
  342:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	switch(timerNum)
- 319               		.stabn	68,0,342,.LM28-.LFBB3
- 320               	.LM28:
- 321 00e8 8823      		tst r24
- 322 00ea 01F4      		brne .L39
+ 383               		.stabn	68,0,342,.LM40-.LFBB3
+ 384               	.LM40:
+ 385 00d2 8111      		cpse r24,__zero_reg__
+ 386 00d4 00C0      		rjmp .L42
  343:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	{
  344:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		//Assuming every AVR has a Timer0... 
  345:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		//(an error will occur otherwise, and this can be updated accordingly)
@@ -718,44 +801,55 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  355:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//Whatever .stab is, this single change reduces it by 36Bytes
  356:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(WGM00, T0_WGMReg, wgmHb);
  357:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			writeMasked(wgmHb, (1<<WGM00), T0_WGMReg);
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 13
-
-
  358:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #else
  359:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//This seems to be the "universal" WGM Timer0 settings
  360:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(WGM00, T0_WGMReg, wgmLb);
- 323               		.stabn	68,0,360,.LM29-.LFBB3
- 324               	.LM29:
- 325 00ec 862F      		mov r24,r22
- 326 00ee 8170      		andi r24,lo8(1)
- 327 00f0 01F0      		breq .L41
- 328 00f2 8AB5      		in r24,74-0x20
- 329 00f4 8160      		ori r24,lo8(1)
- 330 00f6 00C0      		rjmp .L46
- 331               	.L41:
- 332 00f8 8AB5      		in r24,74-0x20
- 333 00fa 8E7F      		andi r24,lo8(-2)
- 334               	.L46:
- 335 00fc 8ABD      		out 74-0x20,r24
- 336 00fe 8AB5      		in r24,74-0x20
+ 387               		.stabn	68,0,360,.LM41-.LFBB3
+ 388               	.LM41:
+ 389 00d6 8AB5      		in r24,0x2a
+ 390 00d8 60FF      		sbrs r22,0
+ 391 00da 00C0      		rjmp .L37
+ 392               		.stabn	68,0,360,.LM42-.LFBB3
+ 393               	.LM42:
+ 394 00dc 8160      		ori r24,lo8(1)
+ 395 00de 00C0      		rjmp .L43
+ 396               	.L37:
+ 397               		.stabn	68,0,360,.LM43-.LFBB3
+ 398               	.LM43:
+ 399 00e0 8E7F      		andi r24,lo8(-2)
+ 400               	.L43:
+ 401 00e2 8ABD      		out 0x2a,r24
+ 328:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	
+ 402               		.stabn	68,0,328,.LM44-.LFBB3
+ 403               	.LM44:
+ 404 00e4 6695      		lsr r22
+ 405               	.LBB11:
+ 406               	.LBB12:
  361:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(WGM01, T0_WGMReg, wgmHb);
- 337               		.stabn	68,0,361,.LM30-.LFBB3
- 338               	.LM30:
- 339 0100 6270      		andi r22,lo8(2)
- 340 0102 01F0      		breq .L43
- 341 0104 8AB5      		in r24,74-0x20
- 342 0106 8260      		ori r24,lo8(2)
- 343 0108 00C0      		rjmp .L47
- 344               	.L43:
- 345 010a 8AB5      		in r24,74-0x20
- 346 010c 8D7F      		andi r24,lo8(-3)
- 347               	.L47:
- 348 010e 8ABD      		out 74-0x20,r24
- 349 0110 8AB5      		in r24,74-0x20
- 350 0112 80E0      		ldi r24,lo8(0)
- 351 0114 0895      		ret
- 352               	.L39:
- 353 0116 81E0      		ldi r24,lo8(1)
+ 407               		.stabn	68,0,361,.LM45-.LFBB3
+ 408               	.LM45:
+ 409 00e6 8AB5      		in r24,0x2a
+ 410               	.LBE12:
+ 411               	.LBE11:
+ 412 00e8 6623      		tst r22
+ 413 00ea 01F0      		breq .L39
+ 414               	.LBB14:
+ 415               	.LBB13:
+ 416               		.stabn	68,0,361,.LM46-.LFBB3
+ 417               	.LM46:
+ 418 00ec 8260      		ori r24,lo8(2)
+GAS LISTING /tmp/cckXFZXx.s 			page 15
+
+
+ 419 00ee 00C0      		rjmp .L44
+ 420               	.L39:
+ 421               	.LBE13:
+ 422               	.LBE14:
+ 423               		.stabn	68,0,361,.LM47-.LFBB3
+ 424               	.LM47:
+ 425 00f0 8D7F      		andi r24,lo8(-3)
+ 426               	.L44:
+ 427 00f2 8ABD      		out 0x2a,r24
  362:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			writeMasked(wgmLb, (1<<WGM00), T0_WGMReg);
  363:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			writeMasked(wgmHb, (1<<WGM01), T0_WGMReg);
  364:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #endif
@@ -778,9 +872,6 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  381:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //				wgmLb = 0xff;
  382:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
  383:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			switch(wgm)
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 14
-
-
  384:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			{
  385:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //   Moving this case with default saved 10 text and 4 data bytes!
  386:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //				case WGM_FAST_PWM:
@@ -807,6 +898,9 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  407:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//NOTE: TinyX61s' WGM bits are both in TCCR1D (very unusual)
  408:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(WGM10, TCCR1D, wgmLb);
  409:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(WGM11, TCCR1D, wgmHb);
+GAS LISTING /tmp/cckXFZXx.s 			page 16
+
+
  410:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			writeMasked(wgmLb, (1<<WGM10), TCCR1D);
  411:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			writeMasked(wgmHb, (1<<WGM11), TCCR1D);
  412:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #elif (!defined(WGM10) || !defined(WGM12) || !defined(TCCR1A) \
@@ -838,9 +932,6 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  438:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(WGM30, TCCR3A, wgmLb);
  439:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(WGM32, TCCR3B, wgmHb);
  440:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			writeMasked(wgmLb, (1<<WGM30), TCCR3A);
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 15
-
-
  441:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			writeMasked(wgmHb, (1<<WGM32), TCCR3B);
  442:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
  443:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	  #endif
@@ -850,83 +941,113 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  447:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	}
  448:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	
  449:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	return 0;
+ 428               		.stabn	68,0,449,.LM48-.LFBB3
+ 429               	.LM48:
+ 430 00f4 80E0      		ldi r24,0
+ 431 00f6 0895      		ret
+ 432               	.L42:
+ 417:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #else
+ 433               		.stabn	68,0,417,.LM49-.LFBB3
+ 434               	.LM49:
+ 435 00f8 81E0      		ldi r24,lo8(1)
  450:_commonCode_localized/timerCommon/1.21/timerCommon.c **** }
- 354               		.stabn	68,0,450,.LM31-.LFBB3
- 355               	.LM31:
- 356 0118 0895      		ret
- 357               		.size	timer_setWGM, .-timer_setWGM
- 358               	.Lscope3:
- 359               		.stabs	"",36,0,0,.Lscope3-.LFBB3
- 360               		.stabd	78,0,0
- 361               		.stabs	"timer_init:F(6,2)",36,0,72,timer_init
- 362               		.stabs	"timerNum:P(6,2)",64,0,72,17
- 363               		.stabs	"clockDiv:P(6,2)",64,0,72,16
- 364               		.stabs	"wgm:P(6,2)",64,0,72,20
- 365               	.global	timer_init
- 366               		.type	timer_init, @function
- 367               	timer_init:
- 368               		.stabd	46,0,0
-  73:_commonCode_localized/timerCommon/1.21/timerCommon.c **** {
- 369               		.stabn	68,0,73,.LM32-.LFBB4
- 370               	.LM32:
- 371               	.LFBB4:
- 372 011a 0F93      		push r16
- 373 011c 1F93      		push r17
- 374               	/* prologue: function */
- 375               	/* frame size = 0 */
- 376 011e 182F      		mov r17,r24
- 377 0120 062F      		mov r16,r22
- 378               	.LBB3:
-  75:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	ERR_HANDLE_NUM(1,				\
- 379               		.stabn	68,0,75,.LM33-.LFBB4
- 380               	.LM33:
- 381 0122 642F      		mov r22,r20
- 382 0124 00D0      		rcall timer_setWGM
- 383 0126 8823      		tst r24
- 384 0128 01F0      		breq .L49
- 385 012a 8061      		ori r24,lo8(16)
- 386 012c 00C0      		rjmp .L50
- 387               	.L49:
- 388               	.LBE3:
- 389               	.LBB4:
-  79:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	ERR_HANDLE_NUM(2,							\
- 390               		.stabn	68,0,79,.LM34-.LFBB4
- 391               	.LM34:
- 392 012e 812F      		mov r24,r17
- 393 0130 602F      		mov r22,r16
- 394 0132 00D0      		rcall timer_selectDivisor
- 395 0134 8111      		cpse r24,__zero_reg__
- 396 0136 8062      		ori r24,lo8(32)
- 397               	.L50:
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 16
+ 436               		.stabn	68,0,450,.LM50-.LFBB3
+ 437               	.LM50:
+ 438 00fa 0895      		ret
+ 439               		.size	timer_setWGM, .-timer_setWGM
+ 440               		.stabs	"wgmHb:r(7,2)",64,0,328,22
+ 441               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 442               		.stabn	224,0,0,.Lscope3-.LFBB3
+GAS LISTING /tmp/cckXFZXx.s 			page 17
 
 
- 398               	/* epilogue start */
- 399               	.LBE4:
-  83:_commonCode_localized/timerCommon/1.21/timerCommon.c **** }
- 400               		.stabn	68,0,83,.LM35-.LFBB4
- 401               	.LM35:
- 402 0138 1F91      		pop r17
- 403 013a 0F91      		pop r16
- 404 013c 0895      		ret
- 405               		.size	timer_init, .-timer_init
- 406               		.stabs	"err_val:r(6,2)",64,0,75,24
- 407               		.stabn	192,0,0,.LBB3-.LFBB4
- 408               		.stabn	224,0,0,.LBE3-.LFBB4
- 409               		.stabs	"err_val:r(6,2)",64,0,79,24
- 410               		.stabn	192,0,0,.LBB4-.LFBB4
- 411               		.stabn	224,0,0,.LBE4-.LFBB4
- 412               	.Lscope4:
- 413               		.stabs	"",36,0,0,.Lscope4-.LFBB4
- 414               		.stabd	78,0,0
- 415               		.stabs	"timer_compareMatchIntSetup:F(6,2)",36,0,460,timer_compareMatchIntSetup
- 416               		.stabs	"timerNum:P(6,2)",64,0,460,24
- 417               		.stabs	"outputChannel:P(6,2)",64,0,460,22
- 418               		.stabs	"enable:P(6,2)",64,0,461,20
- 419               	.global	timer_compareMatchIntSetup
- 420               		.type	timer_compareMatchIntSetup, @function
- 421               	timer_compareMatchIntSetup:
- 422               		.stabd	46,0,0
+ 443               	.Lscope3:
+ 444               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 445               		.stabd	78,0,0
+ 446               		.stabs	"timer_init:F(7,2)",36,0,72,timer_init
+ 447               		.stabs	"timerNum:P(7,2)",64,0,72,28
+ 448               		.stabs	"clockDiv:P(7,2)",64,0,72,29
+ 449               		.stabs	"wgm:P(7,2)",64,0,72,20
+ 450               	.global	timer_init
+ 451               		.type	timer_init, @function
+ 452               	timer_init:
+ 453               		.stabd	46,0,0
+  73:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	//set the waveform mode
+ 454               		.stabn	68,0,73,.LM51-.LFBB4
+ 455               	.LM51:
+ 456               	.LFBB4:
+ 457 00fc CF93      		push r28
+ 458 00fe DF93      		push r29
+ 459               	/* prologue: function */
+ 460               	/* frame size = 0 */
+ 461               	/* stack size = 2 */
+ 462               	.L__stack_usage = 2
+ 463 0100 C82F      		mov r28,r24
+ 464 0102 D62F      		mov r29,r22
+ 465               	.LBB15:
+  75:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		timer_setWGM(timerNum, wgm)	);
+ 466               		.stabn	68,0,75,.LM52-.LFBB4
+ 467               	.LM52:
+ 468 0104 642F      		mov r22,r20
+ 469 0106 00D0      		rcall timer_setWGM
+ 470 0108 8823      		tst r24
+ 471 010a 01F0      		breq .L46
+  75:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		timer_setWGM(timerNum, wgm)	);
+ 472               		.stabn	68,0,75,.LM53-.LFBB4
+ 473               	.LM53:
+ 474 010c 8061      		ori r24,lo8(16)
+ 475 010e 00C0      		rjmp .L47
+ 476               	.L46:
+ 477               	.LBE15:
+ 478               	.LBB16:
+  79:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		timer_selectDivisor(timerNum, clockDiv)	);
+ 479               		.stabn	68,0,79,.LM54-.LFBB4
+ 480               	.LM54:
+ 481 0110 6D2F      		mov r22,r29
+ 482 0112 8C2F      		mov r24,r28
+ 483 0114 00D0      		rcall timer_selectDivisor
+ 484 0116 8823      		tst r24
+ 485 0118 01F0      		breq .L48
+  79:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		timer_selectDivisor(timerNum, clockDiv)	);
+ 486               		.stabn	68,0,79,.LM55-.LFBB4
+ 487               	.LM55:
+ 488 011a 8062      		ori r24,lo8(32)
+ 489 011c 00C0      		rjmp .L47
+ 490               	.L48:
+ 491               	.LBE16:
+  82:_commonCode_localized/timerCommon/1.21/timerCommon.c **** }
+ 492               		.stabn	68,0,82,.LM56-.LFBB4
+ 493               	.LM56:
+GAS LISTING /tmp/cckXFZXx.s 			page 18
+
+
+ 494 011e 80E0      		ldi r24,0
+ 495               	.L47:
+ 496               	/* epilogue start */
+  83:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #endif
+ 497               		.stabn	68,0,83,.LM57-.LFBB4
+ 498               	.LM57:
+ 499 0120 DF91      		pop r29
+ 500 0122 CF91      		pop r28
+ 501 0124 0895      		ret
+ 502               		.size	timer_init, .-timer_init
+ 503               		.stabs	"err_val:r(7,2)",64,0,75,24
+ 504               		.stabn	192,0,0,.LBB15-.LFBB4
+ 505               		.stabn	224,0,0,.LBE15-.LFBB4
+ 506               		.stabs	"err_val:r(7,2)",64,0,79,24
+ 507               		.stabn	192,0,0,.LBB16-.LFBB4
+ 508               		.stabn	224,0,0,.LBE16-.LFBB4
+ 509               	.Lscope4:
+ 510               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 511               		.stabd	78,0,0
+ 512               		.stabs	"timer_compareMatchIntSetup:F(7,2)",36,0,460,timer_compareMatchIntSetup
+ 513               		.stabs	"timerNum:P(7,2)",64,0,460,24
+ 514               		.stabs	"outputChannel:P(7,2)",64,0,460,22
+ 515               		.stabs	"enable:P(7,2)",64,0,461,20
+ 516               	.global	timer_compareMatchIntSetup
+ 517               		.type	timer_compareMatchIntSetup, @function
+ 518               	timer_compareMatchIntSetup:
+ 519               		.stabd	46,0,0
  451:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #endif
  452:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
  453:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //timer_intEnable(type) could be created, assuming similarities between OCIEn/OCFn and TOIEn/TOVn a
@@ -939,37 +1060,30 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  460:_commonCode_localized/timerCommon/1.21/timerCommon.c **** uint8_t timer_compareMatchIntSetup(uint8_t timerNum, uint8_t outputChannel,\
  461:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	  												uint8_t enable)
  462:_commonCode_localized/timerCommon/1.21/timerCommon.c **** {
- 423               		.stabn	68,0,462,.LM36-.LFBB5
- 424               	.LM36:
- 425               	.LFBB5:
- 426               	/* prologue: function */
- 427               	/* frame size = 0 */
+ 520               		.stabn	68,0,462,.LM58-.LFBB5
+ 521               	.LM58:
+ 522               	.LFBB5:
+ 523               	/* prologue: function */
+ 524               	/* frame size = 0 */
+ 525               	/* stack size = 0 */
+ 526               	.L__stack_usage = 0
  463:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	uint8_t channelNum;
  464:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
  465:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	if(timerNum >= MAXTIMERS)
- 428               		.stabn	68,0,465,.LM37-.LFBB5
- 429               	.LM37:
- 430 013e 8430      		cpi r24,lo8(4)
- 431 0140 00F0      		brlo .L54
- 432 0142 81E0      		ldi r24,lo8(1)
- 433 0144 0895      		ret
- 434               	.L54:
+ 527               		.stabn	68,0,465,.LM59-.LFBB5
+ 528               	.LM59:
+ 529 0126 8430      		cpi r24,lo8(4)
+ 530 0128 00F4      		brsh .L65
  466:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		return 1;
  467:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
  468:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	if(outputChannel >= 2) //MAXCHANNELSPERTIMER)
- 435               		.stabn	68,0,468,.LM38-.LFBB5
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 17
+ 531               		.stabn	68,0,468,.LM60-.LFBB5
+GAS LISTING /tmp/cckXFZXx.s 			page 19
 
 
- 436               	.LM38:
- 437 0146 6230      		cpi r22,lo8(2)
- 438 0148 00F0      		brlo .L56
- 439 014a 82E0      		ldi r24,lo8(2)
- 440 014c 0895      		ret
- 441               	.L56:
- 442 014e 4423      		tst r20
- 443 0150 01F0      		breq .L58
- 444 0152 41E0      		ldi r20,lo8(1)
+ 532               	.LM60:
+ 533 012a 6230      		cpi r22,lo8(2)
+ 534 012c 00F4      		brsh .L66
  469:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		return 2;
  470:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
  471:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	//writebit (used later) does not currently handle TRUE and FALSE properly, just 0 and 1...
@@ -981,49 +1095,52 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  477:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	//Combine the timer number and channel into a single variable...
  478:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	//The high nibble contains the timer number, and the low contains the channel number (A=0,B=1)
  479:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	channelNum = (timerNum<<4) + outputChannel;
+ 535               		.stabn	68,0,479,.LM61-.LFBB5
+ 536               	.LM61:
+ 537 012e 8295      		swap r24
+ 538 0130 807F      		andi r24,lo8(-16)
+ 539 0132 680F      		add r22,r24
  480:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
  481:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	//Don't clear interrupts before disabling this one, or that defeats the purpose!
  482:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	// But do clear so we don't get unexpected overflows on init
  483:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	if(enable)
+ 540               		.stabn	68,0,483,.LM62-.LFBB5
+ 541               	.LM62:
+ 542 0134 4423      		tst r20
+ 543 0136 01F0      		breq .L51
  484:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		cli();
- 445               		.stabn	68,0,484,.LM39-.LFBB5
- 446               	.LM39:
- 447               	/* #APP */
- 448               	 ;  484 "_commonCode_localized/timerCommon/1.21/timerCommon.c" 1
- 449 0154 F894      		cli
- 450               	 ;  0 "" 2
- 451               	/* #NOAPP */
- 452               	.L58:
+ 544               		.stabn	68,0,484,.LM63-.LFBB5
+ 545               	.LM63:
+ 546               	/* #APP */
+ 547               	 ;  484 "_commonCode_localized/timerCommon/1.21/timerCommon.c" 1
+ 548 0138 F894      		cli
+ 549               	 ;  0 "" 2
  485:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	
  486:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	switch(channelNum)
- 453               		.stabn	68,0,486,.LM40-.LFBB5
- 454               	.LM40:
- 455 0156 8295      		swap r24
- 456 0158 807F      		andi r24,lo8(-16)
- 457 015a 860F      		add r24,r22
- 458 015c 8130      		cpi r24,lo8(1)
- 459 015e 01F0      		breq .L61
- 460 0160 8130      		cpi r24,lo8(1)
- 461 0162 00F0      		brlo .L60
- 462 0164 8031      		cpi r24,lo8(16)
- 463 0166 01F0      		breq .L62
- 464 0168 8131      		cpi r24,lo8(17)
- 465 016a 01F0      		breq .L63
- 466 016c 83E0      		ldi r24,lo8(3)
- 467 016e 0895      		ret
- 468               	.L60:
+ 550               		.stabn	68,0,486,.LM64-.LFBB5
+ 551               	.LM64:
+ 552               	/* #NOAPP */
+ 553 013a 6130      		cpi r22,lo8(1)
+ 554 013c 01F0      		breq .L52
+ 555 013e 00F0      		brlo .L53
+ 556 0140 6031      		cpi r22,lo8(16)
+ 557 0142 01F0      		breq .L54
+ 558 0144 6131      		cpi r22,lo8(17)
+ 559 0146 01F0      		breq .L55
+ 560 0148 00C0      		rjmp .L72
+ 561               	.L53:
  487:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	{
  488:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	  #if defined(T0_TIMSK)
  489:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		//Case 0x00 is either OC0 or OC0A...
  490:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	   #if defined(OCIE0)
  491:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 0x00:
  492:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//Enable the overflow interrupt (don't forget to create a handler!)
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 18
-
-
  493:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			setbit(OCIE0, T0_TIMSK);
  494:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(OCIE0, T0_TIMSK, enable);
  495:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//Clear the overflow flag (OCD)...
+GAS LISTING /tmp/cckXFZXx.s 			page 20
+
+
  496:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(OCF0, T0_TIFR);
  497:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
  498:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	   #endif
@@ -1031,62 +1148,59 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  500:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 0x00:
  501:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			setbit(OCIE0A, T0_TIMSK);
  502:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(OCIE0A, T0_TIMSK, enable);
- 469               		.stabn	68,0,502,.LM41-.LFBB5
- 470               	.LM41:
- 471 0170 4423      		tst r20
- 472 0172 01F0      		breq .L64
- 473 0174 89B7      		in r24,89-0x20
- 474 0176 8061      		ori r24,lo8(16)
- 475 0178 00C0      		rjmp .L75
- 476               	.L64:
- 477 017a 89B7      		in r24,89-0x20
- 478 017c 8F7E      		andi r24,lo8(-17)
- 479               	.L75:
- 480 017e 89BF      		out 89-0x20,r24
- 481 0180 89B7      		in r24,89-0x20
+ 562               		.stabn	68,0,502,.LM65-.LFBB5
+ 563               	.LM65:
+ 564 014a 89B7      		in r24,0x39
+ 565 014c 8061      		ori r24,lo8(16)
+ 566 014e 00C0      		rjmp .L73
+ 567               	.L51:
+ 486:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	{
+ 568               		.stabn	68,0,486,.LM66-.LFBB5
+ 569               	.LM66:
+ 570 0150 6130      		cpi r22,lo8(1)
+ 571 0152 01F0      		breq .L59
+ 572 0154 00F4      		brsh .L78
+ 573               		.stabn	68,0,502,.LM67-.LFBB5
+ 574               	.LM67:
+ 575 0156 89B7      		in r24,0x39
+ 576 0158 8F7E      		andi r24,lo8(-17)
+ 577               	.L73:
+ 578 015a 89BF      		out 0x39,r24
  503:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			// My OCD bit me in the ass, this was set to TIMSK by mistake(?)
  504:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(OCF0A, T0_TIFR);
- 482               		.stabn	68,0,504,.LM42-.LFBB5
- 483               	.LM42:
- 484 0182 88B7      		in r24,88-0x20
- 485 0184 8061      		ori r24,lo8(16)
- 486 0186 00C0      		rjmp .L79
- 487               	.L61:
+ 579               		.stabn	68,0,504,.LM68-.LFBB5
+ 580               	.LM68:
+ 581 015c 88B7      		in r24,0x38
+ 582 015e 8061      		ori r24,lo8(16)
+ 583 0160 00C0      		rjmp .L77
+ 584               	.L52:
  505:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
  506:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	   #endif
  507:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	   #if defined(OCIE0B)
  508:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 0x01:
  509:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			setbit(OCIE0B, T0_TIMSK);
  510:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(OCIE0B, T0_TIMSK, enable);
- 488               		.stabn	68,0,510,.LM43-.LFBB5
- 489               	.LM43:
- 490 0188 4423      		tst r20
- 491 018a 01F0      		breq .L67
- 492 018c 89B7      		in r24,89-0x20
- 493 018e 8860      		ori r24,lo8(8)
- 494 0190 00C0      		rjmp .L76
- 495               	.L67:
- 496 0192 89B7      		in r24,89-0x20
- 497 0194 877F      		andi r24,lo8(-9)
- 498               	.L76:
- 499 0196 89BF      		out 89-0x20,r24
- 500 0198 89B7      		in r24,89-0x20
+ 585               		.stabn	68,0,510,.LM69-.LFBB5
+ 586               	.LM69:
+ 587 0162 89B7      		in r24,0x39
+ 588 0164 8860      		ori r24,lo8(8)
+ 589               	.L74:
+ 590 0166 89BF      		out 0x39,r24
  511:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			// As was this...
  512:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(OCF0B, T0_TIFR);
- 501               		.stabn	68,0,512,.LM44-.LFBB5
- 502               	.LM44:
- 503 019a 88B7      		in r24,88-0x20
- 504 019c 8860      		ori r24,lo8(8)
- 505 019e 00C0      		rjmp .L79
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 19
-
-
- 506               	.L62:
+ 591               		.stabn	68,0,512,.LM70-.LFBB5
+ 592               	.LM70:
+ 593 0168 88B7      		in r24,0x38
+ 594 016a 8860      		ori r24,lo8(8)
+ 595               	.L77:
  513:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
  514:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	   #endif
  515:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	  #endif
  516:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	  #if defined(T1_TIMSK)
  517:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	   #if defined(OCIE1)
+GAS LISTING /tmp/cckXFZXx.s 			page 21
+
+
  518:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 0x10:
  519:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			setbit(OCIE1, T1_TIMSK);
  520:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(OCIE1, T1_TIMSK, enable);
@@ -1097,55 +1211,17 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  525:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 0x10:
  526:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			setbit(OCIE1A, T1_TIMSK);
  527:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(OCIE1A, T1_TIMSK, enable);
- 507               		.stabn	68,0,527,.LM45-.LFBB5
- 508               	.LM45:
- 509 01a0 4423      		tst r20
- 510 01a2 01F0      		breq .L69
- 511 01a4 89B7      		in r24,89-0x20
- 512 01a6 8064      		ori r24,lo8(64)
- 513 01a8 00C0      		rjmp .L77
- 514               	.L69:
- 515 01aa 89B7      		in r24,89-0x20
- 516 01ac 8F7B      		andi r24,lo8(-65)
- 517               	.L77:
- 518 01ae 89BF      		out 89-0x20,r24
- 519 01b0 89B7      		in r24,89-0x20
  528:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(OCF1A, T1_TIFR);
- 520               		.stabn	68,0,528,.LM46-.LFBB5
- 521               	.LM46:
- 522 01b2 88B7      		in r24,88-0x20
- 523 01b4 8064      		ori r24,lo8(64)
- 524 01b6 00C0      		rjmp .L79
- 525               	.L63:
  529:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
  530:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	   #endif
  531:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	   #if defined(OCIE1B)
  532:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 0x11:
  533:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			setbit(OCIE1B, T1_TIMSK);
  534:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(OCIE1B, T1_TIMSK, enable);
- 526               		.stabn	68,0,534,.LM47-.LFBB5
- 527               	.LM47:
- 528 01b8 4423      		tst r20
- 529 01ba 01F0      		breq .L71
- 530 01bc 89B7      		in r24,89-0x20
- 531 01be 8062      		ori r24,lo8(32)
- 532 01c0 00C0      		rjmp .L78
- 533               	.L71:
- 534 01c2 89B7      		in r24,89-0x20
- 535 01c4 8F7D      		andi r24,lo8(-33)
- 536               	.L78:
- 537 01c6 89BF      		out 89-0x20,r24
- 538 01c8 89B7      		in r24,89-0x20
  535:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(OCF1B, T1_TIFR);
- 539               		.stabn	68,0,535,.LM48-.LFBB5
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 20
-
-
- 540               	.LM48:
- 541 01ca 88B7      		in r24,88-0x20
- 542 01cc 8062      		ori r24,lo8(32)
- 543               	.L79:
- 544 01ce 88BF      		out 88-0x20,r24
+ 596               		.stabn	68,0,535,.LM71-.LFBB5
+ 597               	.LM71:
+ 598 016c 88BF      		out 0x38,r24
  536:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
  537:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	   #endif
  538:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	  #endif
@@ -1182,6 +1258,9 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  569:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	   #endif
  570:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	   #if defined(OCIE3A)
  571:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	    case 0x30:
+GAS LISTING /tmp/cckXFZXx.s 			page 22
+
+
  572:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			setbit(OCIE3A, T3_TIMSK);
  573:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(OCIE3A, T3_TIMSK, enable);
  574:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(OCF3A, T3_TIFR);
@@ -1198,114 +1277,193 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  585:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		default:
  586:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			return 3;
  587:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 21
-
-
  588:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	}
  589:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	
  590:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	//Don't reenable interrupts here if disabling... just leave them as they were....
  591:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	// but do enable for init...
  592:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	if(enable)
- 545               		.stabn	68,0,592,.LM49-.LFBB5
- 546               	.LM49:
- 547 01d0 4423      		tst r20
- 548 01d2 01F4      		brne .L73
- 549 01d4 80E0      		ldi r24,lo8(0)
- 550 01d6 0895      		ret
- 551               	.L73:
+ 599               		.stabn	68,0,592,.LM72-.LFBB5
+ 600               	.LM72:
+ 601 016e 4423      		tst r20
+ 602 0170 01F0      		breq .L68
  593:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		sei();
- 552               		.stabn	68,0,593,.LM50-.LFBB5
- 553               	.LM50:
- 554               	/* #APP */
- 555               	 ;  593 "_commonCode_localized/timerCommon/1.21/timerCommon.c" 1
- 556 01d8 7894      		sei
- 557               	 ;  0 "" 2
- 558               	/* #NOAPP */
- 559 01da 80E0      		ldi r24,lo8(0)
+ 603               		.stabn	68,0,593,.LM73-.LFBB5
+ 604               	.LM73:
+ 605               	/* #APP */
+ 606               	 ;  593 "_commonCode_localized/timerCommon/1.21/timerCommon.c" 1
+ 607 0172 7894      		sei
+ 608               	 ;  0 "" 2
+ 609               	/* #NOAPP */
+ 610 0174 00C0      		rjmp .L68
+ 611               	.L65:
+ 466:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
+ 612               		.stabn	68,0,466,.LM74-.LFBB5
+ 613               	.LM74:
+ 614 0176 81E0      		ldi r24,lo8(1)
+ 615 0178 0895      		ret
+ 616               	.L66:
+ 469:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
+ 617               		.stabn	68,0,469,.LM75-.LFBB5
+ 618               	.LM75:
+ 619 017a 82E0      		ldi r24,lo8(2)
+ 620 017c 0895      		ret
+ 621               	.L68:
  594:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	
  595:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	return 0;
+ 622               		.stabn	68,0,595,.LM76-.LFBB5
+ 623               	.LM76:
+ 624 017e 80E0      		ldi r24,0
+ 625 0180 0895      		ret
+ 626               	.L72:
+ 586:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
+ 627               		.stabn	68,0,586,.LM77-.LFBB5
+ 628               	.LM77:
+GAS LISTING /tmp/cckXFZXx.s 			page 23
+
+
+ 629 0182 83E0      		ldi r24,lo8(3)
+ 630 0184 0895      		ret
+ 631               	.L78:
+ 486:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	{
+ 632               		.stabn	68,0,486,.LM78-.LFBB5
+ 633               	.LM78:
+ 634 0186 6031      		cpi r22,lo8(16)
+ 635 0188 01F0      		breq .L60
+ 636 018a 6131      		cpi r22,lo8(17)
+ 637 018c 01F4      		brne .L72
+ 534:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(OCF1B, T1_TIFR);
+ 638               		.stabn	68,0,534,.LM79-.LFBB5
+ 639               	.LM79:
+ 640 018e 89B7      		in r24,0x39
+ 641 0190 8F7D      		andi r24,lo8(-33)
+ 642 0192 00C0      		rjmp .L76
+ 643               	.L59:
+ 510:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			// As was this...
+ 644               		.stabn	68,0,510,.LM80-.LFBB5
+ 645               	.LM80:
+ 646 0194 89B7      		in r24,0x39
+ 647 0196 877F      		andi r24,lo8(-9)
+ 648 0198 00C0      		rjmp .L74
+ 649               	.L54:
+ 527:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(OCF1A, T1_TIFR);
+ 650               		.stabn	68,0,527,.LM81-.LFBB5
+ 651               	.LM81:
+ 652 019a 89B7      		in r24,0x39
+ 653 019c 8064      		ori r24,lo8(64)
+ 654 019e 00C0      		rjmp .L75
+ 655               	.L60:
+ 656 01a0 89B7      		in r24,0x39
+ 657 01a2 8F7B      		andi r24,lo8(-65)
+ 658               	.L75:
+ 659 01a4 89BF      		out 0x39,r24
+ 528:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
+ 660               		.stabn	68,0,528,.LM82-.LFBB5
+ 661               	.LM82:
+ 662 01a6 88B7      		in r24,0x38
+ 663 01a8 8064      		ori r24,lo8(64)
+ 664 01aa 00C0      		rjmp .L77
+ 665               	.L55:
+ 534:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(OCF1B, T1_TIFR);
+ 666               		.stabn	68,0,534,.LM83-.LFBB5
+ 667               	.LM83:
+ 668 01ac 89B7      		in r24,0x39
+ 669 01ae 8062      		ori r24,lo8(32)
+ 670               	.L76:
+ 671 01b0 89BF      		out 0x39,r24
+ 535:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
+ 672               		.stabn	68,0,535,.LM84-.LFBB5
+ 673               	.LM84:
+ 674 01b2 88B7      		in r24,0x38
+ 675 01b4 8062      		ori r24,lo8(32)
+ 676 01b6 00C0      		rjmp .L77
+ 677               		.size	timer_compareMatchIntSetup, .-timer_compareMatchIntSetup
+ 678               		.stabs	"channelNum:r(7,2)",64,0,463,22
+GAS LISTING /tmp/cckXFZXx.s 			page 24
+
+
+ 679               		.stabn	192,0,0,.LFBB5-.LFBB5
+ 680               		.stabn	224,0,0,.Lscope5-.LFBB5
+ 681               	.Lscope5:
+ 682               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 683               		.stabd	78,0,0
+ 684               		.stabs	"timer_overflowIntEnable:F(7,2)",36,0,601,timer_overflowIntEnable
+ 685               		.stabs	"timerNum:P(7,2)",64,0,601,24
+ 686               	.global	timer_overflowIntEnable
+ 687               		.type	timer_overflowIntEnable, @function
+ 688               	timer_overflowIntEnable:
+ 689               		.stabd	46,0,0
  596:_commonCode_localized/timerCommon/1.21/timerCommon.c **** }
- 560               		.stabn	68,0,596,.LM51-.LFBB5
- 561               	.LM51:
- 562 01dc 0895      		ret
- 563               		.size	timer_compareMatchIntSetup, .-timer_compareMatchIntSetup
- 564               	.Lscope5:
- 565               		.stabs	"",36,0,0,.Lscope5-.LFBB5
- 566               		.stabd	78,0,0
- 567               		.stabs	"timer_overflowIntEnable:F(6,2)",36,0,601,timer_overflowIntEnable
- 568               		.stabs	"timerNum:P(6,2)",64,0,601,24
- 569               	.global	timer_overflowIntEnable
- 570               		.type	timer_overflowIntEnable, @function
- 571               	timer_overflowIntEnable:
- 572               		.stabd	46,0,0
  597:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #endif
  598:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
  599:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #if (!defined(TIMER_OVERFLOWINTENABLE_UNUSED) \
  600:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		      || !TIMER_OVERFLOWINTENABLE_UNUSED)
  601:_commonCode_localized/timerCommon/1.21/timerCommon.c **** uint8_t timer_overflowIntEnable(uint8_t timerNum)
  602:_commonCode_localized/timerCommon/1.21/timerCommon.c **** {
- 573               		.stabn	68,0,602,.LM52-.LFBB6
- 574               	.LM52:
- 575               	.LFBB6:
- 576               	/* prologue: function */
- 577               	/* frame size = 0 */
+ 690               		.stabn	68,0,602,.LM85-.LFBB6
+ 691               	.LM85:
+ 692               	.LFBB6:
+ 693               	/* prologue: function */
+ 694               	/* frame size = 0 */
+ 695               	/* stack size = 0 */
+ 696               	.L__stack_usage = 0
  603:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	cli();
- 578               		.stabn	68,0,603,.LM53-.LFBB6
- 579               	.LM53:
- 580               	/* #APP */
- 581               	 ;  603 "_commonCode_localized/timerCommon/1.21/timerCommon.c" 1
- 582 01de F894      		cli
- 583               	 ;  0 "" 2
+ 697               		.stabn	68,0,603,.LM86-.LFBB6
+ 698               	.LM86:
+ 699               	/* #APP */
+ 700               	 ;  603 "_commonCode_localized/timerCommon/1.21/timerCommon.c" 1
+ 701 01b8 F894      		cli
+ 702               	 ;  0 "" 2
  604:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	
  605:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	switch(timerNum)
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 22
-
-
- 584               		.stabn	68,0,605,.LM54-.LFBB6
- 585               	.LM54:
- 586               	/* #NOAPP */
- 587 01e0 8823      		tst r24
- 588 01e2 01F0      		breq .L82
- 589 01e4 8130      		cpi r24,lo8(1)
- 590 01e6 01F0      		breq .L83
- 591 01e8 81E0      		ldi r24,lo8(1)
- 592 01ea 0895      		ret
- 593               	.L82:
+ 703               		.stabn	68,0,605,.LM87-.LFBB6
+ 704               	.LM87:
+ 705               	/* #NOAPP */
+ 706 01ba 8823      		tst r24
+ 707 01bc 01F0      		breq .L81
+ 708 01be 8130      		cpi r24,lo8(1)
+ 709 01c0 01F4      		brne .L87
  606:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	{
  607:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		#if defined(T0_TIMSK)
  608:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 0:
  609:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//Enable the overflow interrupt (don't forget to create a handler!)
  610:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(TOIE0, T0_TIMSK);
- 594               		.stabn	68,0,610,.LM55-.LFBB6
- 595               	.LM55:
- 596 01ec 89B7      		in r24,89-0x20
- 597 01ee 8260      		ori r24,lo8(2)
- 598 01f0 89BF      		out 89-0x20,r24
  611:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//Clear the overflow flag (OCD)...
  612:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(TOV0, T0_TIFR);
- 599               		.stabn	68,0,612,.LM56-.LFBB6
- 600               	.LM56:
- 601 01f2 88B7      		in r24,88-0x20
- 602 01f4 8260      		ori r24,lo8(2)
- 603 01f6 00C0      		rjmp .L87
- 604               	.L83:
  613:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break; 
  614:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		#endif
  615:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		#if defined(T1_TIMSK)
  616:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 1:
  617:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(TOIE1, T1_TIMSK);
- 605               		.stabn	68,0,617,.LM57-.LFBB6
- 606               	.LM57:
- 607 01f8 89B7      		in r24,89-0x20
- 608 01fa 8460      		ori r24,lo8(4)
- 609 01fc 89BF      		out 89-0x20,r24
+ 710               		.stabn	68,0,617,.LM88-.LFBB6
+ 711               	.LM88:
+ 712 01c2 89B7      		in r24,0x39
+ 713 01c4 8460      		ori r24,lo8(4)
+GAS LISTING /tmp/cckXFZXx.s 			page 25
+
+
+ 714 01c6 89BF      		out 0x39,r24
  618:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(TOV1, T1_TIFR);
- 610               		.stabn	68,0,618,.LM58-.LFBB6
- 611               	.LM58:
- 612 01fe 88B7      		in r24,88-0x20
- 613 0200 8460      		ori r24,lo8(4)
- 614               	.L87:
- 615 0202 88BF      		out 88-0x20,r24
+ 715               		.stabn	68,0,618,.LM89-.LFBB6
+ 716               	.LM89:
+ 717 01c8 88B7      		in r24,0x38
+ 718 01ca 8460      		ori r24,lo8(4)
+ 719 01cc 00C0      		rjmp .L86
+ 720               	.L81:
+ 610:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//Clear the overflow flag (OCD)...
+ 721               		.stabn	68,0,610,.LM90-.LFBB6
+ 722               	.LM90:
+ 723 01ce 89B7      		in r24,0x39
+ 724 01d0 8260      		ori r24,lo8(2)
+ 725 01d2 89BF      		out 0x39,r24
+ 612:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break; 
+ 726               		.stabn	68,0,612,.LM91-.LFBB6
+ 727               	.LM91:
+ 728 01d4 88B7      		in r24,0x38
+ 729 01d6 8260      		ori r24,lo8(2)
+ 730               	.L86:
+ 731               		.stabn	68,0,618,.LM92-.LFBB6
+ 732               	.LM92:
+ 733 01d8 88BF      		out 0x38,r24
  619:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
  620:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		#endif
  621:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		#if defined(T2_TIMSK)
@@ -1318,9 +1476,6 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  628:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 3:
  629:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(TOIE3, T3_TIMSK);
  630:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(TOV3, T3_TIFR);
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 23
-
-
  631:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
  632:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		#endif
  633:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		default:
@@ -1328,43 +1483,53 @@ GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			pag
  635:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	}
  636:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	
  637:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	sei();
- 616               		.stabn	68,0,637,.LM59-.LFBB6
- 617               	.LM59:
- 618               	/* #APP */
- 619               	 ;  637 "_commonCode_localized/timerCommon/1.21/timerCommon.c" 1
- 620 0204 7894      		sei
- 621               	 ;  0 "" 2
- 622               	/* #NOAPP */
- 623 0206 80E0      		ldi r24,lo8(0)
+ 734               		.stabn	68,0,637,.LM93-.LFBB6
+ 735               	.LM93:
+ 736               	/* #APP */
+ 737               	 ;  637 "_commonCode_localized/timerCommon/1.21/timerCommon.c" 1
+ 738 01da 7894      		sei
+ 739               	 ;  0 "" 2
  638:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	
  639:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	return 0;
+ 740               		.stabn	68,0,639,.LM94-.LFBB6
+ 741               	.LM94:
+ 742               	/* #NOAPP */
+ 743 01dc 80E0      		ldi r24,0
+ 744 01de 0895      		ret
+ 745               	.L87:
+ 634:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	}
+GAS LISTING /tmp/cckXFZXx.s 			page 26
+
+
+ 746               		.stabn	68,0,634,.LM95-.LFBB6
+ 747               	.LM95:
+ 748 01e0 81E0      		ldi r24,lo8(1)
  640:_commonCode_localized/timerCommon/1.21/timerCommon.c **** }
- 624               		.stabn	68,0,640,.LM60-.LFBB6
- 625               	.LM60:
- 626 0208 0895      		ret
- 627               		.size	timer_overflowIntEnable, .-timer_overflowIntEnable
- 628               	.Lscope6:
- 629               		.stabs	"",36,0,0,.Lscope6-.LFBB6
- 630               		.stabd	78,0,0
- 631               		.stabs	"",100,0,0,.Letext0
- 632               	.Letext0:
-GAS LISTING /var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s 			page 24
+ 749               		.stabn	68,0,640,.LM96-.LFBB6
+ 750               	.LM96:
+ 751 01e2 0895      		ret
+ 752               		.size	timer_overflowIntEnable, .-timer_overflowIntEnable
+ 753               	.Lscope6:
+ 754               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 755               		.stabd	78,0,0
+ 756               		.stabs	"",100,0,0,.Letext0
+ 757               	.Letext0:
+ 758               		.ident	"GCC: (GNU) 5.4.0"
+GAS LISTING /tmp/cckXFZXx.s 			page 27
 
 
 DEFINED SYMBOLS
-                            *ABS*:00000000 timerCommon.c
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s:2      *ABS*:0000003f __SREG__
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s:3      *ABS*:0000003e __SP_H__
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s:4      *ABS*:0000003d __SP_L__
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s:5      *ABS*:00000000 __tmp_reg__
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s:6      *ABS*:00000001 __zero_reg__
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s:80     .text:00000000 timer_setOutputModes
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s:220    .text:00000092 timer_selectDivisor
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s:308    .text:000000e4 timer_setWGM
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s:367    .text:0000011a timer_init
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s:421    .text:0000013e timer_compareMatchIntSetup
-/var/folders/yG/yGnXnnFGGj4hKA71DL26EU+++TI/-Tmp-//ccTReogr.s:571    .text:000001de timer_overflowIntEnable
+                            *ABS*:0000000000000000 timerCommon.c
+     /tmp/cckXFZXx.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cckXFZXx.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cckXFZXx.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cckXFZXx.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cckXFZXx.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cckXFZXx.s:114    .text:0000000000000000 timer_setOutputModes
+     /tmp/cckXFZXx.s:272    .text:0000000000000084 timer_selectDivisor
+     /tmp/cckXFZXx.s:370    .text:00000000000000ce timer_setWGM
+     /tmp/cckXFZXx.s:452    .text:00000000000000fc timer_init
+     /tmp/cckXFZXx.s:518    .text:0000000000000126 timer_compareMatchIntSetup
+     /tmp/cckXFZXx.s:688    .text:00000000000001b8 timer_overflowIntEnable
 
-UNDEFINED SYMBOLS
-__do_copy_data
-__do_clear_bss
+NO UNDEFINED SYMBOLS

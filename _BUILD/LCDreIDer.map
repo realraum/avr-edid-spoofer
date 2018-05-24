@@ -1,19 +1,19 @@
-Archive member included because of file (symbol)
+Archive member included to satisfy reference by file (symbol)
 
-/usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_mulhi3.o)
+/usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_mulhi3.o)
                               _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o (__mulhi3)
-/usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_udivmodqi4.o)
+/usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodqi4.o)
                               _BUILD/main.o (__udivmodqi4)
-/usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_udivmodhi4.o)
+/usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodhi4.o)
                               _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o (__udivmodhi4)
-/usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_divmodhi4.o)
+/usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_divmodhi4.o)
                               _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o (__divmodhi4)
-/usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_exit.o)
-                              /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o (exit)
-/usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_copy_data.o)
-                              _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o (__do_copy_data)
-/usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_clear_bss.o)
-                              _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o (__do_clear_bss)
+/usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o (exit)
+/usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+                              _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o (__do_copy_data)
+/usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
+                              _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o (__do_clear_bss)
 
 Allocating common symbols
 Common symbol       size              file
@@ -24,23 +24,37 @@ heartModulator      0x4               _BUILD/_commonCode_localized/heartbeat/1.2
 Memory Configuration
 
 Name             Origin             Length             Attributes
-text             0x00000000         0x00002000         xr
-data             0x00800060         0x0000ffa0         rw !x
-eeprom           0x00810000         0x00010000         rw !x
-*default*        0x00000000         0xffffffff
+text             0x0000000000000000 0x0000000000002000 xr
+data             0x0000000000800060 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000003 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
 
 Linker script and memory map
 
-LOAD /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
 LOAD _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
 LOAD _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
 LOAD _BUILD/_commonCode_localized/hfModulation/1.00/hfModulation.o
 LOAD _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
 LOAD _BUILD/_commonCode_localized/timerCommon/1.21/timerCommon.o
 LOAD _BUILD/main.o
-LOAD /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a
-LOAD /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/libc.a
-LOAD /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a
+START GROUP
+LOAD /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/libm.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/libc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/libattiny85.a
+END GROUP
+                0x0000000000002000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x2000
+                0x000000000000ffa0                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                0x0000000000010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x0000000000000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
 
 .hash
  *(.hash)
@@ -132,53 +146,56 @@ LOAD /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0xb3a
+.text           0x0000000000000000      0xac6
  *(.vectors)
- .vectors       0x00000000       0x1e /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-                0x00000000                __vectors
-                0x00000000                __vector_default
+ .vectors       0x0000000000000000       0x1e /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
  *(.vectors)
  *(.progmem.gcc*)
- *(.progmem*)
- .progmem.data  0x0000001e       0x81 _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
-                0x0000001e                sineTable
- .progmem.data  0x0000009f       0x20 _BUILD/main.o
-                0x0000009f                header
-                0x000000c0                . = ALIGN (0x2)
- *fill*         0x000000bf        0x1 00
-                0x000000c0                __trampolines_start = .
+                0x000000000000001e                . = ALIGN (0x2)
+                0x000000000000001e                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x000000c0        0x0 linker stubs
+ .trampolines   0x000000000000001e        0x0 linker stubs
  *(.trampolines*)
-                0x000000c0                __trampolines_end = .
+                0x000000000000001e                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem*)
+ .progmem.data  0x000000000000001e       0x81 _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
+                0x000000000000001e                sineTable
+ .progmem.data  0x000000000000009f       0x20 _BUILD/main.o
+                0x000000000000009f                header
+                0x00000000000000c0                . = ALIGN (0x2)
+ *fill*         0x00000000000000bf        0x1 
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x000000c0                __ctors_start = .
+                0x00000000000000c0                __ctors_start = .
  *(.ctors)
-                0x000000c0                __ctors_end = .
-                0x000000c0                __dtors_start = .
+                0x00000000000000c0                __ctors_end = .
+                0x00000000000000c0                __dtors_start = .
  *(.dtors)
-                0x000000c0                __dtors_end = .
+                0x00000000000000c0                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x000000c0        0x0 /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-                0x000000c0                __init
+ .init0         0x00000000000000c0        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+                0x00000000000000c0                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x000000c0        0xc /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
+ .init2         0x00000000000000c0        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x000000cc       0x16 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_copy_data.o)
-                0x000000cc                __do_copy_data
- .init4         0x000000e2       0x10 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_clear_bss.o)
-                0x000000e2                __do_clear_bss
+ .init4         0x00000000000000cc       0x16 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+                0x00000000000000cc                __do_copy_data
+ .init4         0x00000000000000e2       0x10 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
+                0x00000000000000e2                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -189,89 +206,174 @@ LOAD /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x000000f2        0x4 /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
+ .init9         0x00000000000000f2        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
  *(.init9)
  *(.text)
- .text          0x000000f6        0x2 /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-                0x000000f6                __vector_8
-                0x000000f6                __vector_12
-                0x000000f6                __bad_interrupt
-                0x000000f6                __vector_6
-                0x000000f6                __vector_3
-                0x000000f6                __vector_11
-                0x000000f6                __vector_7
-                0x000000f6                __vector_5
-                0x000000f6                __vector_4
-                0x000000f6                __vector_9
-                0x000000f6                __vector_2
-                0x000000f6                __vector_1
- .text          0x000000f8       0x5c _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
-                0x000000f8                quadrantizeTheta
-                0x00000134                sineRaw8
- .text          0x00000154      0x212 _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
-                0x00000154                setHeartRate
-                0x0000016e                getHeartRate
-                0x00000180                getNextDesired
-                0x000001b8                set_heartBlink
-                0x000001be                blinkHeart
-                0x00000298                heartPinInputPoll
-                0x000002aa                heartClear
-                0x000002b4                heartUpdate
-                0x00000318                heartupdate
-                0x0000031c                init_heartBeat
- .text          0x00000366       0x5a _BUILD/_commonCode_localized/hfModulation/1.00/hfModulation.o
-                0x00000366                hfm_setup
-                0x0000037e                hfm_setPower
-                0x00000390                hfm_nextOutput
- .text          0x000003c0      0x126 _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
-                0x000003c0                __vector_10
-                0x0000040a                dmsWaitFn
-                0x0000048a                dmsGetTime
-                0x000004aa                dmsGetFrac
-                0x000004c2                init_dmsTimer
- .text          0x000004e6      0x20a _BUILD/_commonCode_localized/timerCommon/1.21/timerCommon.o
-                0x000004e6                timer_setOutputModes
-                0x00000578                timer_selectDivisor
-                0x000005ca                timer_setWGM
-                0x00000600                timer_init
-                0x00000624                timer_compareMatchIntSetup
-                0x000006c4                timer_overflowIntEnable
- .text          0x000006f0      0x3bc _BUILD/main.o
-                0x000006f0                usi_i2c_awaitStart
-                0x00000706                usi_i2c_awaitStartSCL
-                0x0000071a                usi_i2c_slaveInit
-                0x0000071e                __vector_13
-                0x00000756                edid_checkSummer
-                0x00000770                updateLEDs
-                0x000007e0                updateLEDFader
-                0x00000884                main
-                0x000008d0                __vector_14
- .text          0x00000aac        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_mulhi3.o)
- .text          0x00000aac        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_udivmodqi4.o)
- .text          0x00000aac        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_udivmodhi4.o)
- .text          0x00000aac        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_divmodhi4.o)
- .text          0x00000aac        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_exit.o)
- .text          0x00000aac        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_copy_data.o)
- .text          0x00000aac        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_clear_bss.o)
-                0x00000aac                . = ALIGN (0x2)
+ .text          0x00000000000000f6        0x2 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+                0x00000000000000f6                __vector_1
+                0x00000000000000f6                __vector_12
+                0x00000000000000f6                __bad_interrupt
+                0x00000000000000f6                __vector_6
+                0x00000000000000f6                __vector_3
+                0x00000000000000f6                __vector_11
+                0x00000000000000f6                __vector_7
+                0x00000000000000f6                __vector_5
+                0x00000000000000f6                __vector_4
+                0x00000000000000f6                __vector_9
+                0x00000000000000f6                __vector_2
+                0x00000000000000f6                __vector_8
+ .text          0x00000000000000f8       0x52 _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
+                0x00000000000000f8                quadrantizeTheta
+                0x000000000000012a                sineRaw8
+ .text          0x000000000000014a      0x20c _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
+                0x000000000000014a                setHeartRate
+                0x0000000000000164                getHeartRate
+                0x0000000000000176                heartClear
+                0x000000000000017e                init_heartBeat
+                0x00000000000001da                getNextDesired
+                0x0000000000000212                set_heartBlink
+                0x0000000000000218                blinkHeart
+                0x00000000000002d6                heartUpdate
+                0x0000000000000342                heartupdate
+                0x0000000000000344                heartPinInputPoll
+ .text          0x0000000000000356       0x4c _BUILD/_commonCode_localized/hfModulation/1.00/hfModulation.o
+                0x0000000000000356                hfm_setPower
+                0x0000000000000368                hfm_setup
+                0x0000000000000372                hfm_nextOutput
+ .text          0x00000000000003a2       0xf8 _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
+                0x00000000000003a2                __vector_10
+                0x00000000000003ec                init_dmsTimer
+                0x000000000000040e                dmsGetTime
+                0x000000000000042a                dmsWaitFn
+                0x0000000000000482                dmsGetFrac
+ .text          0x000000000000049a      0x1e4 _BUILD/_commonCode_localized/timerCommon/1.21/timerCommon.o
+                0x000000000000049a                timer_setOutputModes
+                0x000000000000051e                timer_selectDivisor
+                0x0000000000000568                timer_setWGM
+                0x0000000000000596                timer_init
+                0x00000000000005c0                timer_compareMatchIntSetup
+                0x0000000000000652                timer_overflowIntEnable
+ .text          0x000000000000067e      0x376 _BUILD/main.o
+                0x000000000000067e                usi_i2c_awaitStart
+                0x0000000000000694                usi_i2c_awaitStartSCL
+                0x00000000000006a8                usi_i2c_slaveInit
+                0x00000000000006aa                __vector_13
+                0x00000000000006fe                __vector_14
+                0x00000000000008d8                edid_checkSummer
+                0x00000000000008f2                updateLEDs
+                0x0000000000000956                updateLEDFader
+ .text          0x00000000000009f4        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_mulhi3.o)
+ .text          0x00000000000009f4        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodqi4.o)
+ .text          0x00000000000009f4        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodhi4.o)
+ .text          0x00000000000009f4        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_divmodhi4.o)
+ .text          0x00000000000009f4        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
+ .text          0x00000000000009f4        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+ .text          0x00000000000009f4        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
+                0x00000000000009f4                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x00000aac       0x24 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_mulhi3.o)
-                0x00000aac                __mulhi3
- .text.libgcc   0x00000ad0       0x18 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_udivmodqi4.o)
-                0x00000ad0                __udivmodqi4
- .text.libgcc   0x00000ae8       0x28 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_udivmodhi4.o)
-                0x00000ae8                __udivmodhi4
- .text.libgcc   0x00000b10       0x26 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_divmodhi4.o)
-                0x00000b10                __divmodhi4
-                0x00000b10                _div
- .text.libgcc   0x00000b36        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_exit.o)
- .text.libgcc   0x00000b36        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_copy_data.o)
- .text.libgcc   0x00000b36        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_clear_bss.o)
-                0x00000b36                . = ALIGN (0x2)
+ .text.startup  0x00000000000009f4       0x46 _BUILD/main.o
+                0x00000000000009f4                main
+ .text.libgcc.mul
+                0x0000000000000a3a       0x22 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_mulhi3.o)
+                0x0000000000000a3a                __mulhi3
+ .text.libgcc.div
+                0x0000000000000a5c        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_mulhi3.o)
+ .text.libgcc   0x0000000000000a5c        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_mulhi3.o)
+ .text.libgcc.prologue
+                0x0000000000000a5c        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_mulhi3.o)
+ .text.libgcc.builtins
+                0x0000000000000a5c        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_mulhi3.o)
+ .text.libgcc.fmul
+                0x0000000000000a5c        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_mulhi3.o)
+ .text.libgcc.fixed
+                0x0000000000000a5c        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_mulhi3.o)
+ .text.libgcc.mul
+                0x0000000000000a5c        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.div
+                0x0000000000000a5c       0x18 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodqi4.o)
+                0x0000000000000a5c                __udivmodqi4
+ .text.libgcc   0x0000000000000a74        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.prologue
+                0x0000000000000a74        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.builtins
+                0x0000000000000a74        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.fmul
+                0x0000000000000a74        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.fixed
+                0x0000000000000a74        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.mul
+                0x0000000000000a74        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.div
+                0x0000000000000a74       0x28 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodhi4.o)
+                0x0000000000000a74                __udivmodhi4
+ .text.libgcc   0x0000000000000a9c        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000000a9c        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000000a9c        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000000a9c        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000000a9c        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000000a9c        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_divmodhi4.o)
+ .text.libgcc.div
+                0x0000000000000a9c       0x26 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_divmodhi4.o)
+                0x0000000000000a9c                __divmodhi4
+                0x0000000000000a9c                _div
+ .text.libgcc   0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_divmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_divmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_divmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_divmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
+                0x0000000000000ac2                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000b36        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_exit.o)
-                0x00000b36                exit
-                0x00000b36                _exit
+ .fini9         0x0000000000000ac2        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
+                0x0000000000000ac2                exit
+                0x0000000000000ac2                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -290,111 +392,124 @@ LOAD /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000b36        0x4 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_exit.o)
+ .fini0         0x0000000000000ac2        0x4 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
  *(.fini0)
-                0x00000b3a                _etext = .
+                0x0000000000000ac6                _etext = .
 
-.data           0x00800060       0x88 load address 0x00000b3a
-                0x00800060                PROVIDE (__data_start, .)
+.data           0x0000000000800060       0x88 load address 0x0000000000000ac6
+                0x0000000000800060                PROVIDE (__data_start, .)
  *(.data)
- .data          0x00800060        0x0 /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
- .data          0x00800060        0x0 _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
- .data          0x00800060        0x3 _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
-                0x00800060                heartStepTime
- .data          0x00800063        0x0 _BUILD/_commonCode_localized/hfModulation/1.00/hfModulation.o
- .data          0x00800063        0x2 _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
-                0x00800063                dmsNumUpdates
-                0x00800064                dmsIncrementSize
- .data          0x00800065        0x0 _BUILD/_commonCode_localized/timerCommon/1.21/timerCommon.o
- .data          0x00800065       0x83 _BUILD/main.o
-                0x00800065                edidArray
-                0x008000e5                usi_i2c_byteToTransmit
- .data          0x008000e8        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_mulhi3.o)
- .data          0x008000e8        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_udivmodqi4.o)
- .data          0x008000e8        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_udivmodhi4.o)
- .data          0x008000e8        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_divmodhi4.o)
- .data          0x008000e8        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_exit.o)
- .data          0x008000e8        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_copy_data.o)
- .data          0x008000e8        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_clear_bss.o)
+ .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+ .data          0x0000000000800060        0x0 _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
+ .data          0x0000000000800060        0x3 _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
+                0x0000000000800061                heartStepTime
+ .data          0x0000000000800063        0x0 _BUILD/_commonCode_localized/hfModulation/1.00/hfModulation.o
+ .data          0x0000000000800063        0x2 _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
+                0x0000000000800063                dmsIncrementSize
+                0x0000000000800064                dmsNumUpdates
+ .data          0x0000000000800065        0x0 _BUILD/_commonCode_localized/timerCommon/1.21/timerCommon.o
+ .data          0x0000000000800065       0x83 _BUILD/main.o
+                0x0000000000800067                usi_i2c_byteToTransmit
+                0x0000000000800068                edidArray
+ .data          0x00000000008000e8        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_mulhi3.o)
+ .data          0x00000000008000e8        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodqi4.o)
+ .data          0x00000000008000e8        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodhi4.o)
+ .data          0x00000000008000e8        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_divmodhi4.o)
+ .data          0x00000000008000e8        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
+ .data          0x00000000008000e8        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+ .data          0x00000000008000e8        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
  *(.data*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x008000e8                . = ALIGN (0x2)
-                0x008000e8                _edata = .
-                0x008000e8                PROVIDE (__data_end, .)
+                0x00000000008000e8                . = ALIGN (0x2)
+                0x00000000008000e8                _edata = .
+                0x00000000008000e8                PROVIDE (__data_end, .)
 
-.bss            0x008000e8       0x2d
-                0x008000e8                PROVIDE (__bss_start, .)
+.bss            0x00000000008000e8       0x2a
+                0x00000000008000e8                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x008000e8        0x0 /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
- .bss           0x008000e8        0x0 _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
- .bss           0x008000e8        0x7 _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
-                0x008000e8                heartBlink
- .bss           0x008000ef        0x0 _BUILD/_commonCode_localized/hfModulation/1.00/hfModulation.o
- .bss           0x008000ef        0x5 _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
-                0x008000ef                dmsCount
-                0x008000f3                dmsFrac
- .bss           0x008000f4        0x0 _BUILD/_commonCode_localized/timerCommon/1.21/timerCommon.o
- .bss           0x008000f4       0x11 _BUILD/main.o
-                0x008000f4                ledState
-                0x008000f7                ledIndex
-                0x008000f8                edidArrayIndex
-                0x008000f9                usi_i2c_state
-                0x008000fa                usi_i2c_readFromSlave
-                0x008000fb                usi_i2c_requestedAddres
-                0x008000fc                usi_i2c_receivedByte
-                0x008000fd                heartBlinkInternal
-                0x008000fe                usi_i2c_requestedAddress
-                0x008000ff                byteNum
-                0x00800100                ledsControlled
- .bss           0x00800105        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_mulhi3.o)
- .bss           0x00800105        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_udivmodqi4.o)
- .bss           0x00800105        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_udivmodhi4.o)
- .bss           0x00800105        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_divmodhi4.o)
- .bss           0x00800105        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_exit.o)
- .bss           0x00800105        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_copy_data.o)
- .bss           0x00800105        0x0 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_clear_bss.o)
+ .bss           0x00000000008000e8        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+ .bss           0x00000000008000e8        0x0 _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
+ .bss           0x00000000008000e8        0x7 _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
+                0x00000000008000e8                heartBlink
+ .bss           0x00000000008000ef        0x0 _BUILD/_commonCode_localized/hfModulation/1.00/hfModulation.o
+ .bss           0x00000000008000ef        0x5 _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
+                0x00000000008000ef                dmsFrac
+                0x00000000008000f0                dmsCount
+ .bss           0x00000000008000f4        0x0 _BUILD/_commonCode_localized/timerCommon/1.21/timerCommon.o
+ .bss           0x00000000008000f4        0xe _BUILD/main.o
+                0x00000000008000f4                ledsControlled
+                0x00000000008000f5                byteNum
+                0x00000000008000f6                usi_i2c_requestedAddress
+                0x00000000008000f7                heartBlinkInternal
+                0x00000000008000f8                usi_i2c_receivedByte
+                0x00000000008000f9                usi_i2c_requestedAddres
+                0x00000000008000fa                usi_i2c_readFromSlave
+                0x00000000008000fb                usi_i2c_state
+                0x00000000008000fc                edidArrayIndex
+                0x00000000008000fd                ledIndex
+                0x00000000008000fe                ledState
+ .bss           0x0000000000800102        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_mulhi3.o)
+ .bss           0x0000000000800102        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodqi4.o)
+ .bss           0x0000000000800102        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000800102        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_divmodhi4.o)
+ .bss           0x0000000000800102        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
+ .bss           0x0000000000800102        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+ .bss           0x0000000000800102        0x0 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
  *(.bss*)
  *(COMMON)
- COMMON         0x00800105        0x4 _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
-                0x00800105                heartModulator
- COMMON         0x00800109        0xc _BUILD/main.o
-                0x00800109                ledHFM
-                0x00800115                PROVIDE (__bss_end, .)
-                0x00000b3a                __data_load_start = LOADADDR (.data)
-                0x00000bc2                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x0000000000800102        0x4 _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
+                0x0000000000800102                heartModulator
+ COMMON         0x0000000000800106        0xc _BUILD/main.o
+                0x0000000000800106                ledHFM
+                0x0000000000800112                PROVIDE (__bss_end, .)
+                0x0000000000000ac6                __data_load_start = LOADADDR (.data)
+                0x0000000000000b4e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800115        0x0
-                0x00800115                PROVIDE (__noinit_start, .)
+.noinit         0x0000000000800112        0x0
+                [!provide]                        PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800115                PROVIDE (__noinit_end, .)
-                0x00800115                _end = .
-                0x00800115                PROVIDE (__heap_start, .)
+                [!provide]                        PROVIDE (__noinit_end, .)
+                0x0000000000800112                _end = .
+                [!provide]                        PROVIDE (__heap_start, .)
 
-.eeprom         0x00810000        0x0
+.eeprom         0x0000000000810000        0x0
  *(.eeprom*)
-                0x00810000                __eeprom_end = .
+                0x0000000000810000                __eeprom_end = .
 
-.stab           0x00000000     0x2d9c
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab           0x0000000000000000     0x31c8
  *(.stab)
- .stab          0x00000000      0x6cc /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
- .stab          0x000006cc      0x534 _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
-                                0x540 (size before relaxing)
- .stab          0x00000c00      0x840 _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
-                                0x9f0 (size before relaxing)
- .stab          0x00001440      0x2c4 _BUILD/_commonCode_localized/hfModulation/1.00/hfModulation.o
-                                0x42c (size before relaxing)
- .stab          0x00001704      0x498 _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
-                                0x648 (size before relaxing)
- .stab          0x00001b9c      0x6a8 _BUILD/_commonCode_localized/timerCommon/1.21/timerCommon.o
-                                0x870 (size before relaxing)
- .stab          0x00002244      0xb58 _BUILD/main.o
-                                0xe28 (size before relaxing)
+ .stab          0x0000000000000000      0x684 _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
+ .stab          0x0000000000000684      0x9b4 _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
+                                        0xb70 (size before relaxing)
+ .stab          0x0000000000001038      0x468 _BUILD/_commonCode_localized/hfModulation/1.00/hfModulation.o
+                                        0x5dc (size before relaxing)
+ .stab          0x00000000000014a0      0x5d0 _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
+                                        0x78c (size before relaxing)
+ .stab          0x0000000000001a70      0xa8c _BUILD/_commonCode_localized/timerCommon/1.21/timerCommon.o
+                                        0xc60 (size before relaxing)
+ .stab          0x00000000000024fc      0xccc _BUILD/main.o
+                                        0xf24 (size before relaxing)
 
-.stabstr        0x00000000     0x166f
+.stabstr        0x0000000000000000     0x194b
  *(.stabstr)
- .stabstr       0x00000000     0x166f /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
+ .stabstr       0x0000000000000000     0x194b _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
 
 .stab.excl
  *(.stab.excl)
@@ -408,8 +523,23 @@ LOAD /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a
 .stab.indexstr
  *(.stab.indexstr)
 
-.comment
+.comment        0x0000000000000000       0x11
  *(.comment)
+ .comment       0x0000000000000000       0x11 _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000011       0x12 _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
+ .comment       0x0000000000000011       0x12 _BUILD/_commonCode_localized/hfModulation/1.00/hfModulation.o
+ .comment       0x0000000000000011       0x12 _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
+ .comment       0x0000000000000011       0x12 _BUILD/_commonCode_localized/timerCommon/1.21/timerCommon.o
+ .comment       0x0000000000000011       0x12 _BUILD/main.o
+
+.note.gnu.avr.deviceinfo
+                0x0000000000000000       0x3c
+ .note.gnu.avr.deviceinfo
+                0x0000000000000000       0x3c /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
 
 .debug
  *(.debug)
@@ -429,88 +559,107 @@ LOAD /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info
- *(.debug_info)
- *(.gnu.linkonce.wi.*)
+.debug_info     0x0000000000000000      0x420
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0x420 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
 
-.debug_abbrev
+.debug_abbrev   0x0000000000000000      0x3e8
  *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x3e8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
 
-.debug_line
- *(.debug_line)
+.debug_line     0x0000000000000000       0x1a
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
 
 .debug_frame
  *(.debug_frame)
 
-.debug_str
+.debug_str      0x0000000000000000      0x169
  *(.debug_str)
+ .debug_str     0x0000000000000000      0x169 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
 
 .debug_loc
  *(.debug_loc)
 
 .debug_macinfo
  *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
 OUTPUT(_BUILD/LCDreIDer.elf elf32-avr)
 LOAD linker stubs
 
 Cross Reference Table
 
 Symbol                                            File
-__bad_interrupt                                   /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__bss_end                                         /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_clear_bss.o)
-__bss_start                                       /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_clear_bss.o)
-__data_end                                        /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_copy_data.o)
-__data_load_start                                 /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_copy_data.o)
-__data_start                                      /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_copy_data.o)
-__divmodhi4                                       /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_divmodhi4.o)
+__FUSE_REGION_LENGTH__                            /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__bad_interrupt                                   /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__bss_end                                         /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
+__bss_start                                       /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
+__data_end                                        /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+__data_load_start                                 /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+__data_start                                      /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
+__divmodhi4                                       /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_divmodhi4.o)
                                                   _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
                                                   _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
-__do_clear_bss                                    /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_clear_bss.o)
+__do_clear_bss                                    /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_clear_bss.o)
                                                   _BUILD/main.o
-                                                  _BUILD/_commonCode_localized/timerCommon/1.21/timerCommon.o
-                                                  _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
-                                                  _BUILD/_commonCode_localized/hfModulation/1.00/hfModulation.o
-                                                  _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
-                                                  _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
-__do_copy_data                                    /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_copy_data.o)
-                                                  _BUILD/main.o
-                                                  _BUILD/_commonCode_localized/timerCommon/1.21/timerCommon.o
-                                                  _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
-                                                  _BUILD/_commonCode_localized/hfModulation/1.00/hfModulation.o
-                                                  _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
-                                                  _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
-__heap_end                                        /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__init                                            /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__mulhi3                                          /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_mulhi3.o)
-                                                  _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
-__stack                                           /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__udivmodhi4                                      /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_udivmodhi4.o)
-                                                  /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_divmodhi4.o)
                                                   _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
                                                   _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
-__udivmodqi4                                      /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_udivmodqi4.o)
+__do_copy_data                                    /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_copy_data.o)
                                                   _BUILD/main.o
-__vector_1                                        /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
+                                                  _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
+                                                  _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
+__heap_end                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__init                                            /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__mulhi3                                          /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_mulhi3.o)
+                                                  _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
+__stack                                           /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__udivmodhi4                                      /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodhi4.o)
+                                                  /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_divmodhi4.o)
+                                                  _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
+                                                  _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
+__udivmodqi4                                      /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_udivmodqi4.o)
+                                                  _BUILD/main.o
+__vector_1                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
 __vector_10                                       _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
-                                                  /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__vector_11                                       /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__vector_12                                       /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__vector_11                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__vector_12                                       /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
 __vector_13                                       _BUILD/main.o
-                                                  /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
 __vector_14                                       _BUILD/main.o
-                                                  /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__vector_2                                        /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__vector_3                                        /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__vector_4                                        /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__vector_5                                        /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__vector_6                                        /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__vector_7                                        /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__vector_8                                        /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__vector_9                                        /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__vector_default                                  /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-__vectors                                         /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
-_div                                              /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_divmodhi4.o)
-_exit                                             /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_exit.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__vector_2                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__vector_3                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__vector_4                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__vector_5                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__vector_6                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__vector_7                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__vector_8                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__vector_9                                        /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__vector_default                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+__vectors                                         /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
+_div                                              /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_divmodhi4.o)
+_exit                                             /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
 blinkHeart                                        _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
 byteNum                                           _BUILD/main.o
 dmsCount                                          _BUILD/_commonCode_localized/dmsTimer/1.13/dmsTimer.o
@@ -524,8 +673,8 @@ dmsWaitFn                                         _BUILD/_commonCode_localized/d
 edidArray                                         _BUILD/main.o
 edidArrayIndex                                    _BUILD/main.o
 edid_checkSummer                                  _BUILD/main.o
-exit                                              /usr/local/lib/gcc/avr/4.4.5/avr25/libgcc.a(_exit.o)
-                                                  /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
+exit                                              /usr/lib/gcc/avr/5.4.0/avr25/libgcc.a(_exit.o)
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
 getHeartRate                                      _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
 getNextDesired                                    _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
 header                                            _BUILD/main.o
@@ -557,7 +706,7 @@ ledIndex                                          _BUILD/main.o
 ledState                                          _BUILD/main.o
 ledsControlled                                    _BUILD/main.o
 main                                              _BUILD/main.o
-                                                  /usr/local/lib/gcc/avr/4.4.5/../../../../avr/lib/avr25/crttn45.o
+                                                  /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr25/crtattiny85.o
 quadrantizeTheta                                  _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
 setHeartRate                                      _BUILD/_commonCode_localized/heartbeat/1.21/heartbeat.o
                                                   _BUILD/main.o

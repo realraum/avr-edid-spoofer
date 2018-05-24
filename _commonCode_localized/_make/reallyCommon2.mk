@@ -206,7 +206,8 @@ VER_TITLE = $(call notdirx,$(PWD))
 # Extract the version number from the project directory
 # e.g. ~/projectTitle/ver-description -> VER_NUM = ver
 # e.g.2 ~/threePinIDer/47i-speedupExperiments10 -> VER_NUM = 47i
-VER_NUM = $(shell temp="$(VER_TITLE)";echo $${temp%%-*})
+#VER_NUM = $(shell temp="$(VER_TITLE)";echo $${temp%%-*})
+VER_NUM = 66
 
 
 #COMMON_DIRS is used for making a tarball...

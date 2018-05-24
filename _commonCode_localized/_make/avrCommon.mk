@@ -285,7 +285,7 @@ projInfo:
 	@echo "   headerOpt[] = \" $(PROJ_OPT_HDR) \";" >> projInfo.h
 	@echo "#else //projInfo Shortened" >> projInfo.h
 	@echo " uint8_t __attribute__ ((progmem)) \\" >> projInfo.h
-	@echo "   header[] = \"$(ORIGINALTARGET)$(VER_NUM) $(shell date "+%Y-%m-%d %H:%M:%S")\";" >> projInfo.h
+	@echo "   const header[] = \"$(ORIGINALTARGET)$(VER_NUM) $(shell date "+%Y-%m-%d %H:%M:%S")\";" >> projInfo.h
 	@echo "#endif" >> projInfo.h
 	@echo >> projInfo.h
 	@echo "//For internal use..." >> projInfo.h

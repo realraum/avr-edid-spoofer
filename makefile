@@ -4,7 +4,7 @@
 # if needed after common.mk is included Reference ORIGINALTARGET...
 TARGET = LCDreIDer
 
-MCU = attiny45
+MCU = attiny85
 
 FCPU = 8000000UL
 
