@@ -27,11 +27,12 @@
 // (And apparently some of the math divides it in half then later
 //  multiplies it by 2... so best not to have odd values here)
 // #define PIX_CLK_GPU	(100000000UL)
-#define PIX_CLK_GPU	(84000000UL)
+//#define PIX_CLK_GPU	(84000000UL)
+#define PIX_CLK_GPU	(83910000UL)
 
 /*
 Bbsod1: laut wiki ist die richtige modeline für den beamer: "1280x800@60" 83.91 1280 1312 1624 1656 800 816 824 841
-d.h.:  pixelclock: 89.91 Hz, auflösung: 1280x800,  h_sync: 1312, h_sync_end: 1624 h_blank_end: 1656,  v_sync: 816 v_sync_end: 824  v_blanking:841
+d.h.:  pixelclock: 83.91 Hz, auflösung: 1280x800,  h_sync: 1312, h_sync_end: 1624 h_blank_end: 1656,  v_sync: 816 v_sync_end: 824  v_blanking:841
 width: 1280
 frontPorch: 1312 (32)
 syncPulse: 1624  (312)
@@ -48,9 +49,9 @@ backPorch: 841 (17)
 // #define H_FP_GPU		(32)			//Front Porch
 // #define H_WIDTH_GPU	(312)			//Sync Width
 // #define H_BP_GPU		(32)			//Back Porch
-#define H_FP_GPU		(32)			//Front Porch
-#define H_WIDTH_GPU	(64)			//Sync Width
-#define H_BP_GPU		(32)			//Back Porch
+#define H_FP_GPU		(64)			//Front Porch
+#define H_WIDTH_GPU	(248)			//Sync Width
+#define H_BP_GPU		(64)			//Back Porch
 //a/o v48:
 //Oddly, 16,16,64 worked with SwitchResX, but *here* they caused a
 // horizontal shift... 120 seems to have fixed it.
@@ -67,7 +68,7 @@ backPorch: 841 (17)
 // #define V_BP_GPU		(17)			//Back Porch
 #define V_FP_GPU		(15)			//Front Porch
 #define V_WIDTH_GPU	(8)			//Sync Rows
-#define V_BP_GPU		(16)			//Back Porch
+#define V_BP_GPU		(17)			//Back Porch
 
 
 

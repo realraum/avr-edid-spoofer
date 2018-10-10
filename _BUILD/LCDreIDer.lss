@@ -11,19 +11,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
   3 .stab         000031c8  00000000  00000000  00000be4  2**2
                   CONTENTS, READONLY, DEBUGGING
-  4 .stabstr      0000194b  00000000  00000000  00003dac  2**0
+  4 .stabstr      0000198b  00000000  00000000  00003dac  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .comment      00000011  00000000  00000000  000056f7  2**0
+  5 .comment      00000011  00000000  00000000  00005737  2**0
                   CONTENTS, READONLY
-  6 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00005708  2**2
+  6 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00005748  2**2
                   CONTENTS, READONLY
-  7 .debug_info   00000420  00000000  00000000  00005744  2**0
+  7 .debug_info   00000420  00000000  00000000  00005784  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_abbrev 000003e8  00000000  00000000  00005b64  2**0
+  8 .debug_abbrev 000003e8  00000000  00000000  00005ba4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_line   0000001a  00000000  00000000  00005f4c  2**0
+  9 .debug_line   0000001a  00000000  00000000  00005f8c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000169  00000000  00000000  00005f66  2**0
+ 10 .debug_str    00000169  00000000  00000000  00005fa6  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -115,7 +115,7 @@ Disassembly of section .text:
 
 0000009f <header>:
   9f:	4c 43 44 72 65 49 44 65 72 36 36 20 32 30 31 38     LCDreIDer66 2018
-  af:	2d 30 35 2d 32 35 20 30 31 3a 33 30 3a 35 32 00     -05-25 01:30:52.
+  af:	2d 31 30 2d 31 31 20 30 31 3a 32 38 3a 34 33 00     -10-11 01:28:43.
   bf:	00                                                  .
 
 000000c0 <__ctors_end>:
@@ -159,49 +159,22 @@ Disassembly of section .text:
   f6:	84 cf       	rjmp	.-248    	; 0x0 <__vectors>
 
 000000f8 <quadrantizeTheta>:
-// negative values returned here are to be absoluted, first
-// but they indicate that the resulting sine value is to be negated
-theta_t quadrantizeTheta(theta_t theta)
-{
-
-	theta %= SINE_2PI;
   f8:	60 e0       	ldi	r22, 0x00	; 0
   fa:	72 e0       	ldi	r23, 0x02	; 2
   fc:	cf d4       	rcall	.+2462   	; 0xa9c <__divmodhi4>
-
-	if(theta < 0)
   fe:	97 fd       	sbrc	r25, 7
-		theta = SINE_2PI + theta;
  100:	9e 5f       	subi	r25, 0xFE	; 254
-
-//For more accurate realtimeishness, it might be worthwhile to reverse this order...
-	
-	//in the first quadrant, just take the sine value from the table
-	if(theta < SINE_SIZE-1) //128)
  102:	80 38       	cpi	r24, 0x80	; 128
  104:	91 05       	cpc	r25, r1
  106:	84 f0       	brlt	.+32     	; 0x128 <quadrantizeTheta+0x30>
-	{
-		//theta=theta;
-	}	
-	//in the second quadrant, mirror theta and subtract the offset
-	else if(theta < SINE_SIZE2) //256)
  108:	8f 3f       	cpi	r24, 0xFF	; 255
  10a:	91 05       	cpc	r25, r1
  10c:	29 f0       	breq	.+10     	; 0x118 <quadrantizeTheta+0x20>
  10e:	24 f0       	brlt	.+8      	; 0x118 <quadrantizeTheta+0x20>
-	{
-		theta=SINE_SIZE2-theta;
-		//return pgm_read_sine(sineTable[SINE_SIZE2-theta]); //256-theta]);
-	}
-	//in the third quadrant, mirror the value and subtract the offset
-	else if(theta < SINE_SIZE3) //384)
  110:	80 38       	cpi	r24, 0x80	; 128
  112:	51 e0       	ldi	r21, 0x01	; 1
  114:	95 07       	cpc	r25, r21
  116:	3c f4       	brge	.+14     	; 0x126 <quadrantizeTheta+0x2e>
-	{
-		theta=-(theta-SINE_SIZE2);
  118:	20 e0       	ldi	r18, 0x00	; 0
  11a:	31 e0       	ldi	r19, 0x01	; 1
  11c:	a9 01       	movw	r20, r18
@@ -209,83 +182,31 @@ theta_t quadrantizeTheta(theta_t theta)
  120:	59 0b       	sbc	r21, r25
  122:	ca 01       	movw	r24, r20
  124:	08 95       	ret
-		//return -(sine_t)pgm_read_sine(sineTable[theta-SINE_SIZE2]); //256]);
-	}
-	//in the fourth quadrant, mirror both theta and the value and subtract the offset...
-	else
-	{
-		theta=-(SINE_SIZE4-theta);
  126:	92 50       	subi	r25, 0x02	; 2
-		//negative=TRUE;
-		//return -(sine_t)pgm_read_sine(sineTable[SINE_SIZE4-theta]); //512-theta]);
-	}
-
-	return theta;
-}
  128:	08 95       	ret
 
 0000012a <sineRaw8>:
-	   return -(int8_t)pgm_read_sine8(sineTable[SINE_SIZE4-theta]); 
-	*/
-
-	//And doing this here, reduced from 3844 to 3770
-	uint8_t negative = FALSE;
-	theta=quadrantizeTheta(theta);
  12a:	e6 df       	rcall	.-52     	; 0xf8 <quadrantizeTheta>
-
-	if(theta < 0)
  12c:	97 ff       	sbrs	r25, 7
  12e:	05 c0       	rjmp	.+10     	; 0x13a <sineRaw8+0x10>
-	{
-		theta = -theta;
  130:	91 95       	neg	r25
  132:	81 95       	neg	r24
  134:	91 09       	sbc	r25, r1
-		negative = TRUE;
  136:	21 e0       	ldi	r18, 0x01	; 1
  138:	01 c0       	rjmp	.+2      	; 0x13c <sineRaw8+0x12>
-	else
-	   return -(int8_t)pgm_read_sine8(sineTable[SINE_SIZE4-theta]); 
-	*/
-
-	//And doing this here, reduced from 3844 to 3770
-	uint8_t negative = FALSE;
  13a:	20 e0       	ldi	r18, 0x00	; 0
-	{
-		theta = -theta;
-		negative = TRUE;
-	}
-
-	int8_t sine=pgm_read_sine8(sineTable[theta]);
  13c:	fc 01       	movw	r30, r24
  13e:	e2 5e       	subi	r30, 0xE2	; 226
  140:	ff 4f       	sbci	r31, 0xFF	; 255
  142:	84 91       	lpm	r24, Z
-
-	if(negative)
  144:	21 11       	cpse	r18, r1
-		sine = -sine;
  146:	81 95       	neg	r24
-	return sine;
-}
  148:	08 95       	ret
 
 0000014a <setHeartRate>:
-
-void setHeartRate(uint8_t rate)
-{
-//	heartRate = rate;
-	
-	if(rate == 0)
  14a:	81 11       	cpse	r24, r1
  14c:	01 c0       	rjmp	.+2      	; 0x150 <setHeartRate+0x6>
-		rate = 1;
  14e:	81 e0       	ldi	r24, 0x01	; 1
-		
-	#if (_HEART_DMS_)
-
-#warning "Relevant Everywhere: dms6sec_t used in heartbeat, yet a full cycle is 8 seconds, and nevermind blinks! This might need changing!"
-    heartStepTime = (HEARTSTEPTIME/rate);
  150:	68 2f       	mov	r22, r24
  152:	70 e0       	ldi	r23, 0x00	; 0
  154:	8c e9       	ldi	r24, 0x9C	; 156
@@ -296,43 +217,21 @@ void setHeartRate(uint8_t rate)
  162:	08 95       	ret
 
 00000164 <getHeartRate>:
-
-#if (!defined(HEART_GETRATE_UNUSED) || !HEART_GETRATE_UNUSED)
-uint8_t getHeartRate(void)
-{
-	#if (_HEART_DMS_)
-	 return HEARTSTEPTIME/heartStepTime;
  164:	60 91 61 00 	lds	r22, 0x0061	; 0x800061 <heartStepTime>
  168:	70 91 62 00 	lds	r23, 0x0062	; 0x800062 <heartStepTime+0x1>
  16c:	8c e9       	ldi	r24, 0x9C	; 156
  16e:	90 e0       	ldi	r25, 0x00	; 0
  170:	81 d4       	rcall	.+2306   	; 0xa74 <__udivmodhi4>
  172:	86 2f       	mov	r24, r22
-	#else
-	 return HEART_ITERATIONCOUNT/heartStepTime;
-	#endif
-}
  174:	08 95       	ret
 
 00000176 <heartClear>:
-}
-#endif
-
-void heartClear(void)
-{
-	hfm_setPower(&heartModulator, 0);
  176:	60 e0       	ldi	r22, 0x00	; 0
  178:	82 e0       	ldi	r24, 0x02	; 2
  17a:	91 e0       	ldi	r25, 0x01	; 1
  17c:	ec c0       	rjmp	.+472    	; 0x356 <hfm_setPower>
 
 0000017e <init_heartBeat>:
-	//DDR = H,out
-	setoutVar(heartBeatPin, heartPIN);
-#else
-void init_heartBeat(void)
-{
-	wdt_reset();
  17e:	a8 95       	wdr
 void wdt_disable (void)
 {
@@ -348,235 +247,94 @@ void wdt_disable (void)
  18a:	81 bd       	out	0x21, r24	; 33
  18c:	11 bc       	out	0x21, r1	; 33
  18e:	0f be       	out	0x3f, r0	; 63
-	wdt_disable();
-	clrpinPORT(HEART_PINNUM, HEART_PINPORT);
  190:	c1 98       	cbi	0x18, 1	; 24
-	setoutPORT(HEART_PINNUM, HEART_PINPORT);
  192:	b9 9a       	sbi	0x17, 1	; 23
-#endif
-
-
-
-//	hfm_setPower(&heartModulator, 0);
-	hfm_setup(&heartModulator, 0, HEART_MAXBRIGHT);
  194:	4f ef       	ldi	r20, 0xFF	; 255
  196:	60 e0       	ldi	r22, 0x00	; 0
  198:	82 e0       	ldi	r24, 0x02	; 2
  19a:	91 e0       	ldi	r25, 0x01	; 1
  19c:	e5 d0       	rcall	.+458    	; 0x368 <hfm_setup>
-		rate = 1;
-		
-	#if (_HEART_DMS_)
-
-#warning "Relevant Everywhere: dms6sec_t used in heartbeat, yet a full cycle is 8 seconds, and nevermind blinks! This might need changing!"
-    heartStepTime = (HEARTSTEPTIME/rate);
  19e:	8c e9       	ldi	r24, 0x9C	; 156
  1a0:	90 e0       	ldi	r25, 0x00	; 0
  1a2:	90 93 62 00 	sts	0x0062, r25	; 0x800062 <heartStepTime+0x1>
  1a6:	80 93 61 00 	sts	0x0061, r24	; 0x800061 <heartStepTime>
-	
-#if (_HEART_DMS_)
- #if (_DMS_EXTERNALUPDATE_)
-	//dmsTimer should be initialized elsewhere based on the rate of dmsUpdate calls...
- #else 
-	init_dmsTimer();
  1aa:	20 d1       	rcall	.+576    	; 0x3ec <init_dmsTimer>
-	// IF the reset occurred, the WDTimer is reset to 16ms!
-	// IF wdt_reset() isn't called before then, it will get stuck resetting!
-	//!!!! This can happen even if the WDT is NEVER ENABLED
-	// esp. if the bit is set during a brown-out...
-	//Could also check ! Power-On, and/or brownout... 
-	if(getbit(WDRF, MCUStatReg))
  1ac:	04 b6       	in	r0, 0x34	; 52
  1ae:	03 fe       	sbrs	r0, 3
  1b0:	06 c0       	rjmp	.+12     	; 0x1be <init_heartBeat+0x40>
-		rate = 1;
-		
-	#if (_HEART_DMS_)
-
-#warning "Relevant Everywhere: dms6sec_t used in heartbeat, yet a full cycle is 8 seconds, and nevermind blinks! This might need changing!"
-    heartStepTime = (HEARTSTEPTIME/rate);
  1b2:	84 e0       	ldi	r24, 0x04	; 4
  1b4:	90 e0       	ldi	r25, 0x00	; 0
  1b6:	90 93 62 00 	sts	0x0062, r25	; 0x800062 <heartStepTime+0x1>
  1ba:	80 93 61 00 	sts	0x0061, r24	; 0x800061 <heartStepTime>
-		{
-			heartUpdate();
-		}
-*/
-	}
-	if(!getbit(PORF, MCUStatReg))
  1be:	04 b6       	in	r0, 0x34	; 52
  1c0:	00 fc       	sbrc	r0, 0
  1c2:	09 c0       	rjmp	.+18     	; 0x1d6 <init_heartBeat+0x58>
-	{
-		//It seems unusual that a brown-out wouldn't occur on power-up... takes time to charge caps, etc.
-		//only check this if PowerOnReset was already cleared from a previous run
-		if(getbit(BORF, MCUStatReg))
  1c4:	04 b6       	in	r0, 0x34	; 52
  1c6:	02 fe       	sbrs	r0, 2
  1c8:	06 c0       	rjmp	.+12     	; 0x1d6 <init_heartBeat+0x58>
-		rate = 1;
-		
-	#if (_HEART_DMS_)
-
-#warning "Relevant Everywhere: dms6sec_t used in heartbeat, yet a full cycle is 8 seconds, and nevermind blinks! This might need changing!"
-    heartStepTime = (HEARTSTEPTIME/rate);
  1ca:	89 e0       	ldi	r24, 0x09	; 9
  1cc:	90 e0       	ldi	r25, 0x00	; 0
  1ce:	90 93 62 00 	sts	0x0062, r25	; 0x800062 <heartStepTime+0x1>
  1d2:	80 93 61 00 	sts	0x0061, r24	; 0x800061 <heartStepTime>
-			setHeartRate(16);
-		}
-	}
-	//Clear the reset flags so we can see next time...
-//	MCUSR = 0x0f;
-	MCUStatReg = 0;
  1d6:	14 be       	out	0x34, r1	; 52
  1d8:	08 95       	ret
 
 000001da <getNextDesired>:
-//So main is still running, but the heart isn't incrementing!
-// So do the watchdog reset here...
-
-//!!! Check This with WDT...
-//#warning "at what heart_reset() rate will getNextDesired never be called?"
-	wdt_reset();
  1da:	a8 95       	wdr
-
-	desired = (uint8_t)(heartModulator.power);
  1dc:	20 91 05 01 	lds	r18, 0x0105	; 0x800105 <heartModulator+0x3>
-
-	desired += direction;
  1e0:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__data_start>
  1e4:	08 2e       	mov	r0, r24
  1e6:	00 0c       	add	r0, r0
  1e8:	99 0b       	sbc	r25, r25
  1ea:	82 0f       	add	r24, r18
  1ec:	91 1d       	adc	r25, r1
-	
-	//Slightly slower not to have these internal to above, but also safer...
-	
-	if(desired >= HEART_MAXBRIGHT)
  1ee:	8f 3f       	cpi	r24, 0xFF	; 255
  1f0:	91 05       	cpc	r25, r1
  1f2:	34 f0       	brlt	.+12     	; 0x200 <getNextDesired+0x26>
-	{
-		desired = HEART_MAXBRIGHT;
-		direction = -1;
  1f4:	8f ef       	ldi	r24, 0xFF	; 255
  1f6:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__data_start>
-	
-	//Slightly slower not to have these internal to above, but also safer...
-	
-	if(desired >= HEART_MAXBRIGHT)
-	{
-		desired = HEART_MAXBRIGHT;
  1fa:	8f ef       	ldi	r24, 0xFF	; 255
  1fc:	90 e0       	ldi	r25, 0x00	; 0
  1fe:	08 95       	ret
-		direction = -1;
-	}	
-
-	if(desired <= 0)
  200:	18 16       	cp	r1, r24
  202:	19 06       	cpc	r1, r25
  204:	2c f0       	brlt	.+10     	; 0x210 <getNextDesired+0x36>
-	{
-		desired = 0;
-		direction = +1;
  206:	81 e0       	ldi	r24, 0x01	; 1
  208:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__data_start>
-		direction = -1;
-	}	
-
-	if(desired <= 0)
-	{
-		desired = 0;
  20c:	80 e0       	ldi	r24, 0x00	; 0
  20e:	90 e0       	ldi	r25, 0x00	; 0
-		direction = +1;
-	}
-	
-	return (uint8_t)desired;
-}
  210:	08 95       	ret
 
 00000212 <set_heartBlink>:
-uint8_t heartBlink = 0;
-//#define TOGGLETIME	(250*DMS_MS)
-
-void set_heartBlink(uint8_t count)
-{
-	heartBlink = count;
  212:	80 93 e8 00 	sts	0x00E8, r24	; 0x8000e8 <__data_end>
  216:	08 95       	ret
 
 00000218 <blinkHeart>:
-#if (_HEART_DMS_)
-#define TOGGLETIME   (250*DMS_MS)
-
-#warning "This may get cut, if the blink-rate is longer than 6sec!"
-uint8_t blinkHeart(dms6sec_t currentTime)
-{
  218:	cf 92       	push	r12
  21a:	df 92       	push	r13
  21c:	ef 92       	push	r14
  21e:	ff 92       	push	r15
  220:	9c 01       	movw	r18, r24
-	// This is True or False depending on 
-	//  whether thisNibble is the high nibble
-	static uint8_t highNibble = 0;
-	
-
-	uint8_t thisNibble = heartBlink;
  222:	80 91 e8 00 	lds	r24, 0x00E8	; 0x8000e8 <__data_end>
  226:	48 2f       	mov	r20, r24
  228:	40 7f       	andi	r20, 0xF0	; 240
  22a:	98 2f       	mov	r25, r24
  22c:	9f 70       	andi	r25, 0x0F	; 15
-
-	//If both nibbles are filled, process them as specified
-	if((heartBlink & 0xf0) && (heartBlink & 0x0f))
  22e:	44 23       	and	r20, r20
  230:	31 f0       	breq	.+12     	; 0x23e <blinkHeart+0x26>
  232:	91 11       	cpse	r25, r1
  234:	07 c0       	rjmp	.+14     	; 0x244 <blinkHeart+0x2c>
-	// to avoid long delays and hopefully make it easier to determine which
-	// nibble is filled...
-	else if(heartBlink & 0x0f)
-		highNibble = 0;
-	else if(heartBlink & 0xf0)
-		highNibble = 1;
  236:	41 e0       	ldi	r20, 0x01	; 1
  238:	40 93 ee 00 	sts	0x00EE, r20	; 0x8000ee <highNibble.1728>
  23c:	03 c0       	rjmp	.+6      	; 0x244 <blinkHeart+0x2c>
-	{	//Fall through and toggle...
-	}
-	//Otherwise just process the one that's filled
-	// to avoid long delays and hopefully make it easier to determine which
-	// nibble is filled...
-	else if(heartBlink & 0x0f)
  23e:	91 11       	cpse	r25, r1
-		highNibble = 0;
  240:	10 92 ee 00 	sts	0x00EE, r1	; 0x8000ee <highNibble.1728>
-	else if(heartBlink & 0xf0)
-		highNibble = 1;
-
-	//Fill the appropriate nibble for blinking...
-	if(highNibble)
  244:	40 91 ee 00 	lds	r20, 0x00EE	; 0x8000ee <highNibble.1728>
  248:	44 23       	and	r20, r20
  24a:	19 f0       	breq	.+6      	; 0x252 <blinkHeart+0x3a>
-		thisNibble = (thisNibble & 0xf0) >> 4;
  24c:	98 2f       	mov	r25, r24
  24e:	92 95       	swap	r25
  250:	9f 70       	andi	r25, 0x0F	; 15
-	else
-		thisNibble = (thisNibble & 0x0f);
-
-	//Blink the proper number of times
-	if((toggleCount>>1) < thisNibble)
  252:	80 91 ed 00 	lds	r24, 0x00ED	; 0x8000ed <toggleCount.1727>
  256:	58 2f       	mov	r21, r24
  258:	56 95       	lsr	r21
@@ -584,27 +342,17 @@ uint8_t blinkHeart(dms6sec_t currentTime)
  25e:	70 91 ec 00 	lds	r23, 0x00EC	; 0x8000ec <lastToggleTime.1726+0x1>
  262:	59 17       	cp	r21, r25
  264:	70 f4       	brcc	.+28     	; 0x282 <__stack+0x23>
-	{
-		if(currentTime - lastToggleTime > TOGGLETIME)
  266:	a9 01       	movw	r20, r18
  268:	46 1b       	sub	r20, r22
  26a:	57 0b       	sbc	r21, r23
  26c:	45 3c       	cpi	r20, 0xC5	; 197
  26e:	59 40       	sbci	r21, 0x09	; 9
  270:	48 f1       	brcs	.+82     	; 0x2c4 <__stack+0x65>
-		{
-			lastToggleTime = currentTime;
  272:	30 93 ec 00 	sts	0x00EC, r19	; 0x8000ec <lastToggleTime.1726+0x1>
  276:	20 93 eb 00 	sts	0x00EB, r18	; 0x8000eb <lastToggleTime.1726>
-			toggleCount++;
  27a:	8f 5f       	subi	r24, 0xFF	; 255
  27c:	80 93 ed 00 	sts	0x00ED, r24	; 0x8000ed <toggleCount.1727>
  280:	21 c0       	rjmp	.+66     	; 0x2c4 <__stack+0x65>
-		}
-	}
-	//Wait for a while
-#warning "There may be some integer promotion issues here..."
-	else if(currentTime - lastToggleTime > 
  282:	69 01       	movw	r12, r18
  284:	c6 1a       	sub	r12, r22
  286:	d7 0a       	sbc	r13, r23
@@ -627,26 +375,15 @@ uint8_t blinkHeart(dms6sec_t currentTime)
  2a8:	ae 05       	cpc	r26, r14
  2aa:	bf 05       	cpc	r27, r15
  2ac:	58 f4       	brcc	.+22     	; 0x2c4 <__stack+0x65>
-						(((uint32_t)(TOGGLETIME * 8))<<(highNibble)))
-	{
-		toggleCount = 0;
  2ae:	10 92 ed 00 	sts	0x00ED, r1	; 0x8000ed <toggleCount.1727>
-		lastToggleTime = currentTime;
  2b2:	30 93 ec 00 	sts	0x00EC, r19	; 0x8000ec <lastToggleTime.1726+0x1>
  2b6:	20 93 eb 00 	sts	0x00EB, r18	; 0x8000eb <lastToggleTime.1726>
-		//Only valid if both nibbles are filled (see above)
-		highNibble = !highNibble;
  2ba:	81 e0       	ldi	r24, 0x01	; 1
  2bc:	41 11       	cpse	r20, r1
  2be:	80 e0       	ldi	r24, 0x00	; 0
  2c0:	80 93 ee 00 	sts	0x00EE, r24	; 0x8000ee <highNibble.1728>
  2c4:	80 91 ed 00 	lds	r24, 0x00ED	; 0x8000ed <toggleCount.1727>
  2c8:	80 95       	com	r24
-	}
-
-	//(actually, the new value, at this point... but will be the last soon)
-	return !getbit(0, toggleCount);
-}
  2ca:	81 70       	andi	r24, 0x01	; 1
  2cc:	ff 90       	pop	r15
  2ce:	ef 90       	pop	r14
@@ -655,29 +392,13 @@ uint8_t blinkHeart(dms6sec_t currentTime)
  2d4:	08 95       	ret
 
 000002d6 <heartUpdate>:
-
-
-uint8_t heartUpdate(void)
-{	
  2d6:	cf 92       	push	r12
  2d8:	df 92       	push	r13
  2da:	ef 92       	push	r14
  2dc:	ff 92       	push	r15
-	static dms6sec_t lastTime = 0;
-	
-//	uint32_t currentTime;
-	dms6sec_t currentTime;
-	
-	currentTime = dmsGetTime();
  2de:	97 d0       	rcall	.+302    	; 0x40e <dmsGetTime>
  2e0:	6b 01       	movw	r12, r22
  2e2:	7c 01       	movw	r14, r24
-//	if(currentTime - lastTime > (HEART_ITERATIONCOUNT>>heartRate))
-	//heartStepTime is number of updates, no corelation with actual seconds..
-//#warning "heartStepTime without dms is untested"
-#endif
-
-	if((currentTime - lastTime) > heartStepTime)
  2e4:	80 91 e9 00 	lds	r24, 0x00E9	; 0x8000e9 <lastTime.1733>
  2e8:	90 91 ea 00 	lds	r25, 0x00EA	; 0x8000ea <lastTime.1733+0x1>
  2ec:	96 01       	movw	r18, r12
@@ -688,66 +409,31 @@ uint8_t heartUpdate(void)
  2fa:	82 17       	cp	r24, r18
  2fc:	93 07       	cpc	r25, r19
  2fe:	48 f4       	brcc	.+18     	; 0x312 <heartUpdate+0x3c>
-	{
-		lastTime = currentTime;
  300:	d0 92 ea 00 	sts	0x00EA, r13	; 0x8000ea <lastTime.1733+0x1>
  304:	c0 92 e9 00 	sts	0x00E9, r12	; 0x8000e9 <lastTime.1733>
-
-		hfm_setPower(&heartModulator, getNextDesired());
  308:	68 df       	rcall	.-304    	; 0x1da <getNextDesired>
  30a:	68 2f       	mov	r22, r24
  30c:	82 e0       	ldi	r24, 0x02	; 2
  30e:	91 e0       	ldi	r25, 0x01	; 1
  310:	22 d0       	rcall	.+68     	; 0x356 <hfm_setPower>
-//				(If IN is tied LOW, the LED will be OFF)
-	//determine whether the LED should be on or off based on the HFM
-	// return TRUE if the pin is available as an input
-	uint8_t ledVal;
-
-	if(heartBlink)
  312:	80 91 e8 00 	lds	r24, 0x00E8	; 0x8000e8 <__data_end>
  316:	88 23       	and	r24, r24
  318:	19 f0       	breq	.+6      	; 0x320 <heartUpdate+0x4a>
-		ledVal = blinkHeart(currentTime);
  31a:	c6 01       	movw	r24, r12
  31c:	7d df       	rcall	.-262    	; 0x218 <blinkHeart>
  31e:	03 c0       	rjmp	.+6      	; 0x326 <heartUpdate+0x50>
-		//ledVal = blinkHeart((dms6sec_t)currentTime);
-	else
-		ledVal = hfm_nextOutput(&heartModulator);
  320:	82 e0       	ldi	r24, 0x02	; 2
  322:	91 e0       	ldi	r25, 0x01	; 1
  324:	26 d0       	rcall	.+76     	; 0x372 <hfm_nextOutput>
-
-	if(ledVal)
  326:	88 23       	and	r24, r24
  328:	21 f0       	breq	.+8      	; 0x332 <heartUpdate+0x5c>
-			setoutVar(heartBeatPin, heartPIN);
-			setpinVar(heartBeatPin, heartPIN);
-		}
-#else
- #if (HEART_LEDCONNECTION == LED_DIRECT_HIGH)
-		setinPORT(HEART_PINNUM, HEART_PINPORT);
  32a:	b9 98       	cbi	0x17, 1	; 23
-		setpuPORT(HEART_PINNUM, HEART_PINPORT);
  32c:	c1 9a       	sbi	0x18, 1	; 24
  32e:	81 e0       	ldi	r24, 0x01	; 1
  330:	03 c0       	rjmp	.+6      	; 0x338 <heartUpdate+0x62>
-		//PORT = L
-		clrpinVar(heartBeatPin, heartPIN);
-		//DDR = H,out
-		setoutVar(heartBeatPin, heartPIN);
-#else
-		clrpinPORT(HEART_PINNUM, HEART_PINPORT);
  332:	c1 98       	cbi	0x18, 1	; 24
-		setoutPORT(HEART_PINNUM, HEART_PINPORT);
  334:	b9 9a       	sbi	0x17, 1	; 23
-#endif
-		return FALSE;
  336:	80 e0       	ldi	r24, 0x00	; 0
-	}
-
-}
  338:	ff 90       	pop	r15
  33a:	ef 90       	pop	r14
  33c:	df 90       	pop	r13
@@ -755,108 +441,44 @@ uint8_t heartUpdate(void)
  340:	08 95       	ret
 
 00000342 <heartupdate>:
-#endif
-
-#if (!defined(DMS_WAITFN_UNUSED) || !DMS_WAITFN_UNUSED)
-void heartupdate(void)
-{
-	heartUpdate();
  342:	c9 cf       	rjmp	.-110    	; 0x2d6 <heartUpdate>
 
 00000344 <heartPinInputPoll>:
-	   asm("nop;");
-	}
-
-	pinState = getpinVar(heartBeatPin, heartPIN);
-#else
-	setinPORT(HEART_PINNUM, HEART_PINPORT);
  344:	b9 98       	cbi	0x17, 1	; 23
-	setpuPORT(HEART_PINNUM, HEART_PINPORT);
  346:	c1 9a       	sbi	0x18, 1	; 24
-	//Insert a delay to allow the pull-up to rise...
-	uint8_t delay;
-	for(delay = 0; delay < HEART_PULLUP_DELAY; delay++)
-	{
-		//Necessary or this'll be optimised-out
-		asm("nop;");
  348:	00 00       	nop
  34a:	00 00       	nop
  34c:	00 00       	nop
-	}
-
-	pinState = getpinPORT(HEART_PINNUM, HEART_PINPORT);
  34e:	86 b3       	in	r24, 0x16	; 22
-	// to assure valid/safe values of PORT and DDR...
-	//Return the pin to the heartbeat
-//	setoutVar(heartBeatPin, heartPIN);
-
-	return pinState;
-}
  350:	86 95       	lsr	r24
  352:	81 70       	andi	r24, 0x01	; 1
  354:	08 95       	ret
 
 00000356 <hfm_setPower>:
-// This needs to be set, initially! 
-//   either init it in the hfm variable declaration
-//   or use hfm_setup (ideal)
-// however, sometimes it needs to be variable, thus hfm_setup (above)
-void hfm_setPower(hfm_t	*modulator, uint8_t power)
-{
  356:	fc 01       	movw	r30, r24
-	//Don't allow power values > 1, otherwise who knows what'll happen...
-	//(This is probably unnecessary, but whatev)
-	//It's not, actually, if power's greater than maxPower, the values never reset
-	// This is trouble, e.g. in heartbeat, where modulator.power is read
-	if(power <= (modulator->maxPower))
  358:	82 81       	ldd	r24, Z+2	; 0x02
  35a:	86 17       	cp	r24, r22
  35c:	10 f0       	brcs	.+4      	; 0x362 <hfm_setPower+0xc>
-		modulator->power = power;
  35e:	63 83       	std	Z+3, r22	; 0x03
  360:	08 95       	ret
-	else
-		modulator->power = modulator->maxPower;
  362:	82 81       	ldd	r24, Z+2	; 0x02
  364:	83 83       	std	Z+3, r24	; 0x03
  366:	08 95       	ret
 
 00000368 <hfm_setup>:
-//Mainly just for setting up the maxPower (divisor)
-// [can] use hfm_setPower otherwise...
-// can't tell how to get away without using hfm_setup once
-void hfm_setup(hfm_t *modulator, uint8_t power, uint8_t maxPower)
-{
-	modulator->desiredSum = 0;
  368:	fc 01       	movw	r30, r24
  36a:	11 82       	std	Z+1, r1	; 0x01
  36c:	10 82       	st	Z, r1
-	modulator->maxPower = maxPower;
  36e:	42 83       	std	Z+2, r20	; 0x02
-	hfm_setPower(modulator, power);
  370:	f2 cf       	rjmp	.-28     	; 0x356 <hfm_setPower>
 
 00000372 <hfm_nextOutput>:
-}
-
-//Returns 0 if the "output" should be "off" in this cycle
-//		  1 if the "output" should be "on"  in this cycle
-uint8_t hfm_nextOutput(hfm_t *modulator)
-{
  372:	fc 01       	movw	r30, r24
-	// IF desired == 255, we want it never to clr...
-	//		but running will be 0 the first time
-	//		and we'll therefore if... set == good
-	//		and later we'll runningSum == desiredSum (above) 
-	//    and reset and if again
-	if(modulator->desiredSum > 0)
  374:	80 81       	ld	r24, Z
  376:	91 81       	ldd	r25, Z+1	; 0x01
  378:	18 16       	cp	r1, r24
  37a:	19 06       	cpc	r1, r25
  37c:	4c f4       	brge	.+18     	; 0x390 <hfm_nextOutput+0x1e>
-	{
-		(modulator->desiredSum) -= (modulator->maxPower); //0xff;
  37e:	22 81       	ldd	r18, Z+2	; 0x02
  380:	80 81       	ld	r24, Z
  382:	91 81       	ldd	r25, Z+1	; 0x01
@@ -864,18 +486,9 @@ uint8_t hfm_nextOutput(hfm_t *modulator)
  386:	91 09       	sbc	r25, r1
  388:	91 83       	std	Z+1, r25	; 0x01
  38a:	80 83       	st	Z, r24
-		toReturn = TRUE;
  38c:	81 e0       	ldi	r24, 0x01	; 1
  38e:	01 c0       	rjmp	.+2      	; 0x392 <hfm_nextOutput+0x20>
-	}
-	else	//avg == desired is handled at the start... (except 0-case which works here too)
-	{
-		//Don't modify runningSum, wait until desiredSum catches up...
-		toReturn = FALSE;
  390:	80 e0       	ldi	r24, 0x00	; 0
-	}
-	
-	(modulator->desiredSum) += (modulator->power);
  392:	93 81       	ldd	r25, Z+3	; 0x03
  394:	20 81       	ld	r18, Z
  396:	31 81       	ldd	r19, Z+1	; 0x01
@@ -883,21 +496,9 @@ uint8_t hfm_nextOutput(hfm_t *modulator)
  39a:	31 1d       	adc	r19, r1
  39c:	31 83       	std	Z+1, r19	; 0x01
  39e:	20 83       	st	Z, r18
-		modulator->runningSum = 0;
-		modulator->desiredSum = 0;
-	}
-*/	
-	return toReturn;
-}
  3a0:	08 95       	ret
 
 000003a2 <__vector_10>:
- #elif defined(TIMER0_COMPA_vect)
-SIGNAL(TIMER0_COMPA_vect)
- #else
-  #error "this MCU not yet supported"
- #endif
-{
  3a2:	1f 92       	push	r1
  3a4:	0f 92       	push	r0
  3a6:	0f b6       	in	r0, 0x3f	; 63
@@ -907,7 +508,6 @@ SIGNAL(TIMER0_COMPA_vect)
  3ae:	9f 93       	push	r25
  3b0:	af 93       	push	r26
  3b2:	bf 93       	push	r27
-	dmsCount++;
  3b4:	80 91 f0 00 	lds	r24, 0x00F0	; 0x8000f0 <dmsCount>
  3b8:	90 91 f1 00 	lds	r25, 0x00F1	; 0x8000f1 <dmsCount+0x1>
  3bc:	a0 91 f2 00 	lds	r26, 0x00F2	; 0x8000f2 <dmsCount+0x2>
@@ -919,7 +519,6 @@ SIGNAL(TIMER0_COMPA_vect)
  3ce:	90 93 f1 00 	sts	0x00F1, r25	; 0x8000f1 <dmsCount+0x1>
  3d2:	a0 93 f2 00 	sts	0x00F2, r26	; 0x8000f2 <dmsCount+0x2>
  3d6:	b0 93 f3 00 	sts	0x00F3, r27	; 0x8000f3 <dmsCount+0x3>
-}
  3da:	bf 91       	pop	r27
  3dc:	af 91       	pop	r26
  3de:	9f 91       	pop	r25
@@ -931,87 +530,34 @@ SIGNAL(TIMER0_COMPA_vect)
  3ea:	18 95       	reti
 
 000003ec <init_dmsTimer>:
-
-void init_dmsTimer(void)
-{
-#if (!defined(DMS_FRAC_UNUSED) || !DMS_FRAC_UNUSED)
-	dmsNumUpdates = _DMS_OCR_VAL_;
  3ec:	83 e6       	ldi	r24, 0x63	; 99
  3ee:	80 93 64 00 	sts	0x0064, r24	; 0x800064 <dmsNumUpdates>
-		 // = (uint8_t)((uint32_t)F_CPU / 
-		 //        (uint32_t)(1<<_DMS_CLKDIV_)/(uint32_t)10000);
-	dmsIncrementSize = 1;
  3f2:	91 e0       	ldi	r25, 0x01	; 1
  3f4:	90 93 63 00 	sts	0x0063, r25	; 0x800063 <dmsIncrementSize>
-	//Init_timer0CompareInt(_DMS_CLKDIV_, 10000);
- #if defined(OCR0)
-	OCR0 = _DMS_OCR_VAL_; //dmsNumUpdates;
-	//OCR0 = (uint8_t)((uint32_t)F_CPU/(uint32_t)(1<<_DMS_CLKDIV_)/(uint32_t)10000);
- #elif defined(OCR0A)
-	OCR0A = _DMS_OCR_VAL_; //dmsNumUpdates;
  3f8:	89 bd       	out	0x29, r24	; 41
-	//OCR0A = (uint8_t)((uint32_t)F_CPU/(uint32_t)(1<<_DMS_CLKDIV_)/(uint32_t)10000);
- #else
-  #error "DMS doesn't yet support this processor with dedicated Timer0, try DMS_EXTERNAL_UPDATE"
- #endif
-
-	timer_setWGM(0, WGM_CLR_ON_COMPARE);
  3fa:	62 e0       	ldi	r22, 0x02	; 2
  3fc:	80 e0       	ldi	r24, 0x00	; 0
  3fe:	b4 d0       	rcall	.+360    	; 0x568 <timer_setWGM>
-	timer_selectDivisor(0, _DMS_CLKDIV_);
  400:	63 e0       	ldi	r22, 0x03	; 3
  402:	80 e0       	ldi	r24, 0x00	; 0
  404:	8c d0       	rcall	.+280    	; 0x51e <timer_selectDivisor>
-	timer_compareMatchIntEnable(0, OUT_CHANNELA);
  406:	41 e0       	ldi	r20, 0x01	; 1
  408:	60 e0       	ldi	r22, 0x00	; 0
  40a:	80 e0       	ldi	r24, 0x00	; 0
  40c:	d9 c0       	rjmp	.+434    	; 0x5c0 <timer_compareMatchIntSetup>
 
 0000040e <dmsGetTime>:
-	// If a dmsUpdate (timer interrupt) occurs DURING a read of dmsCount
-	//  dmsCount could be scrambled:
-	//  e.g. 0x00ff -> 0x0100 could return 0x1ff or possibly 0x0000
-	//  since each byte is handled separately (?)
-	// THIS IS NEW as of glTest and UNTESTED in AVR.
-	dms_cli();
  40e:	f8 94       	cli
-	//  I think the SAFE way to handle this is to read dmsCount, then dmsFrac
-	//  then reread dmsCount (after interrupts are reenabled)
-  #if (!defined(DMS_FRAC_UNUSED) || !DMS_FRAC_UNUSED)
-   #warning "dmsFrac may not be properly-synced with dmsCount"
-	#if defined(TCNT0)
-	 dmsFrac = TCNT0;
  410:	82 b7       	in	r24, 0x32	; 50
  412:	80 93 ef 00 	sts	0x00EF, r24	; 0x8000ef <dmsFrac>
-	 dmsFrac = TCNT0L;
-	#else
-	 #error "TCNT0 is not available... untested MCU!"
-	#endif
-  #endif
-   time=dmsCount;
  416:	60 91 f0 00 	lds	r22, 0x00F0	; 0x8000f0 <dmsCount>
  41a:	70 91 f1 00 	lds	r23, 0x00F1	; 0x8000f1 <dmsCount+0x1>
  41e:	80 91 f2 00 	lds	r24, 0x00F2	; 0x8000f2 <dmsCount+0x2>
  422:	90 91 f3 00 	lds	r25, 0x00F3	; 0x8000f3 <dmsCount+0x3>
-	dms_sei();
  426:	78 94       	sei
-	dmsFrac = now.tv_usec%100;
-  #endif
-	//This *WILL* overflow, but it should still work.... (?)
-	return (dms4day_t)((now.tv_sec*DMS_SEC) + (now.tv_usec/100));
- #endif
-}
  428:	08 95       	ret
 
 0000042a <dmsWaitFn>:
-//pt2Function = DoIt;      // short form
-//pt2Function = &DoMore;   // correct assignment using address operator
-
-#if (!defined(DMS_WAITFN_UNUSED) || !DMS_WAITFN_UNUSED)
-void dmsWaitFn(uint32_t time, void (*p_waitFn)(void))		//Wait time deci-milliseconds
-{
  42a:	8f 92       	push	r8
  42c:	9f 92       	push	r9
  42e:	af 92       	push	r10
@@ -1025,14 +571,9 @@ void dmsWaitFn(uint32_t time, void (*p_waitFn)(void))		//Wait time deci-millisec
  43e:	4b 01       	movw	r8, r22
  440:	5c 01       	movw	r10, r24
  442:	ea 01       	movw	r28, r20
-	uint32_t startTime;
-	
-	startTime = dmsGetTime();
  444:	e4 df       	rcall	.-56     	; 0x40e <dmsGetTime>
  446:	6b 01       	movw	r12, r22
  448:	7c 01       	movw	r14, r24
-	
-	while(dmsGetTime() - startTime < time)
  44a:	e1 df       	rcall	.-62     	; 0x40e <dmsGetTime>
  44c:	dc 01       	movw	r26, r24
  44e:	cb 01       	movw	r24, r22
@@ -1045,28 +586,11 @@ void dmsWaitFn(uint32_t time, void (*p_waitFn)(void))		//Wait time deci-millisec
  45c:	aa 05       	cpc	r26, r10
  45e:	bb 05       	cpc	r27, r11
  460:	28 f4       	brcc	.+10     	; 0x46c <dmsWaitFn+0x42>
-		//else
-		//   printf("Pointer not initialized!!\n");
-
-		//WTF was I thinking?
-      //if(*waitFn != 0)
-		if(p_waitFn != 0)
  462:	20 97       	sbiw	r28, 0x00	; 0
  464:	91 f3       	breq	.-28     	; 0x44a <dmsWaitFn+0x20>
-			// 2.5 calling a function using a function pointer
-			//int result1 = pt2Function    (12, 'a', 'b');          // C short way
-			//int result2 = (*pt2Function) (12, 'a', 'b');          // C
-			
-			//waitFn();
-			(*p_waitFn)();
  466:	fe 01       	movw	r30, r28
  468:	09 95       	icall
  46a:	ef cf       	rjmp	.-34     	; 0x44a <dmsWaitFn+0x20>
-		}
-
-	}
-
-}
  46c:	df 91       	pop	r29
  46e:	cf 91       	pop	r28
  470:	ff 90       	pop	r15
@@ -1080,12 +604,6 @@ void dmsWaitFn(uint32_t time, void (*p_waitFn)(void))		//Wait time deci-millisec
  480:	08 95       	ret
 
 00000482 <dmsGetFrac>:
-//Returns 0-99 (100ths of a DMS or us) 
-//CURRENTLY ONLY VALID FOR incrementSize = 1. (timer0, PC)
-// (must use xyT for externalUpdate...)
-uint8_t dmsGetFrac(void)
-{
-	return (uint8_t)((uint16_t)(dmsFrac) * (uint16_t)100  / (uint16_t)dmsNumUpdates);
  482:	80 91 ef 00 	lds	r24, 0x00EF	; 0x8000ef <dmsFrac>
  486:	90 e0       	ldi	r25, 0x00	; 0
  488:	64 e6       	ldi	r22, 0x64	; 100
@@ -1095,48 +613,22 @@ uint8_t dmsGetFrac(void)
  492:	70 e0       	ldi	r23, 0x00	; 0
  494:	ef d2       	rcall	.+1502   	; 0xa74 <__udivmodhi4>
  496:	86 2f       	mov	r24, r22
-}
  498:	08 95       	ret
 
 0000049a <timer_setOutputModes>:
-										uint8_t outputMode)
-{
-	uint8_t channelNums;
-
-	//This is not be-all-end-all testing, but helps...
-	if(timerNum >= MAXTIMERS)
  49a:	84 30       	cpi	r24, 0x04	; 4
  49c:	d0 f5       	brcc	.+116    	; 0x512 <timer_setOutputModes+0x78>
-		return 1;
-	if(outputChannels >= 0x0f) //MAXCHANNELSPERTIMER)
  49e:	6f 30       	cpi	r22, 0x0F	; 15
  4a0:	d0 f5       	brcc	.+116    	; 0x516 <timer_setOutputModes+0x7c>
-
-	//For the sake of our brute-force switch statement...
-	//Combine the timer number and channel into a single variable...
-	//The high nibble contains the timer number, 
-	// the low contains the channel numbers as a mask (A=0x1,B=0x2,C=0x3...)
-	channelNums = (timerNum<<4) | outputChannels;
  4a2:	82 95       	swap	r24
  4a4:	80 7f       	andi	r24, 0xF0	; 240
  4a6:	68 2b       	or	r22, r24
-				writeMasked((outputMode<<COM_SHIFT), COM_MASK, T0_COMReg);
-				break;
-		   #endif
-		   #if defined(OUT_OC0A)
-			case OUT_OC0A:
-				writeMasked((outputMode<<COMA_SHIFT), COMA_MASK, T0_COMReg);
  4a8:	50 e0       	ldi	r21, 0x00	; 0
  4aa:	74 2f       	mov	r23, r20
  4ac:	72 95       	swap	r23
  4ae:	77 0f       	add	r23, r23
  4b0:	77 0f       	add	r23, r23
  4b2:	70 7c       	andi	r23, 0xC0	; 192
-				break;
-		   #endif
-		   #if defined(OUT_OC0B)
-			case OUT_OC0B:
-				writeMasked((outputMode<<COMB_SHIFT), COMB_MASK, T0_COMReg);
  4b4:	84 e0       	ldi	r24, 0x04	; 4
  4b6:	44 0f       	add	r20, r20
  4b8:	55 1f       	adc	r21, r21
@@ -1145,147 +637,55 @@ uint8_t dmsGetFrac(void)
  4be:	40 73       	andi	r20, 0x30	; 48
  4c0:	24 e0       	ldi	r18, 0x04	; 4
  4c2:	30 e0       	ldi	r19, 0x00	; 0
-	channelNums = (timerNum<<4) | outputChannels;
-	
-	uint8_t i;
-
-	//Handle each output in the mask...
-	for(i=1; i<=8; i<<=1)
  4c4:	81 e0       	ldi	r24, 0x01	; 1
-	{
-		uint8_t channelNum = channelNums & (0xf0 | i);
  4c6:	98 2f       	mov	r25, r24
  4c8:	90 6f       	ori	r25, 0xF0	; 240
  4ca:	96 23       	and	r25, r22
-
-		//Don't bother with the switch statement if the for loop is testing
-		// a channel that's not being enabled (in the mask)
-		if((channelNum & 0x0f) == 0)
  4cc:	59 2f       	mov	r21, r25
  4ce:	5f 70       	andi	r21, 0x0F	; 15
  4d0:	d1 f0       	breq	.+52     	; 0x506 <timer_setOutputModes+0x6c>
-			continue;
-
-
-		switch(channelNum)
  4d2:	92 30       	cpi	r25, 0x02	; 2
  4d4:	79 f0       	breq	.+30     	; 0x4f4 <timer_setOutputModes+0x5a>
  4d6:	30 f4       	brcc	.+12     	; 0x4e4 <timer_setOutputModes+0x4a>
  4d8:	91 30       	cpi	r25, 0x01	; 1
  4da:	f9 f4       	brne	.+62     	; 0x51a <timer_setOutputModes+0x80>
-				writeMasked((outputMode<<COM_SHIFT), COM_MASK, T0_COMReg);
-				break;
-		   #endif
-		   #if defined(OUT_OC0A)
-			case OUT_OC0A:
-				writeMasked((outputMode<<COMA_SHIFT), COMA_MASK, T0_COMReg);
  4dc:	9a b5       	in	r25, 0x2a	; 42
  4de:	9f 73       	andi	r25, 0x3F	; 63
  4e0:	97 2b       	or	r25, r23
  4e2:	0b c0       	rjmp	.+22     	; 0x4fa <timer_setOutputModes+0x60>
-		// a channel that's not being enabled (in the mask)
-		if((channelNum & 0x0f) == 0)
-			continue;
-
-
-		switch(channelNum)
  4e4:	91 31       	cpi	r25, 0x11	; 17
  4e6:	59 f0       	breq	.+22     	; 0x4fe <timer_setOutputModes+0x64>
  4e8:	92 31       	cpi	r25, 0x12	; 18
  4ea:	b9 f4       	brne	.+46     	; 0x51a <timer_setOutputModes+0x80>
-				writeMasked((outputMode<<COMA_SHIFT), COMA_MASK, T1_COMReg);
-				break;
-		   #endif
-		   #if defined(OUT_OC1B)
-			case OUT_OC1B:
-				writeMasked((outputMode<<COMB_SHIFT), COMB_MASK, T1_COMReg);
  4ec:	90 b7       	in	r25, 0x30	; 48
  4ee:	9f 7c       	andi	r25, 0xCF	; 207
  4f0:	94 2b       	or	r25, r20
  4f2:	08 c0       	rjmp	.+16     	; 0x504 <timer_setOutputModes+0x6a>
-				writeMasked((outputMode<<COMA_SHIFT), COMA_MASK, T0_COMReg);
-				break;
-		   #endif
-		   #if defined(OUT_OC0B)
-			case OUT_OC0B:
-				writeMasked((outputMode<<COMB_SHIFT), COMB_MASK, T0_COMReg);
  4f4:	9a b5       	in	r25, 0x2a	; 42
  4f6:	9f 7c       	andi	r25, 0xCF	; 207
  4f8:	94 2b       	or	r25, r20
  4fa:	9a bd       	out	0x2a, r25	; 42
-				break;
  4fc:	04 c0       	rjmp	.+8      	; 0x506 <timer_setOutputModes+0x6c>
-				writeMasked((outputMode<<COM_SHIFT), COM_MASK, T1_COMReg);
-				break;
-		   #endif
-		   #if defined(OUT_OC1A)
-			case OUT_OC1A:
-				writeMasked((outputMode<<COMA_SHIFT), COMA_MASK, T1_COMReg);
  4fe:	90 b7       	in	r25, 0x30	; 48
  500:	9f 73       	andi	r25, 0x3F	; 63
  502:	97 2b       	or	r25, r23
-				break;
-		   #endif
-		   #if defined(OUT_OC1B)
-			case OUT_OC1B:
-				writeMasked((outputMode<<COMB_SHIFT), COMB_MASK, T1_COMReg);
  504:	90 bf       	out	0x30, r25	; 48
-	channelNums = (timerNum<<4) | outputChannels;
-	
-	uint8_t i;
-
-	//Handle each output in the mask...
-	for(i=1; i<=8; i<<=1)
  506:	88 0f       	add	r24, r24
  508:	21 50       	subi	r18, 0x01	; 1
  50a:	31 09       	sbc	r19, r1
  50c:	e1 f6       	brne	.-72     	; 0x4c6 <timer_setOutputModes+0x2c>
-			default:
-				return 3;
-				break;
-		}
-	}
-	return 0;
  50e:	80 e0       	ldi	r24, 0x00	; 0
  510:	08 95       	ret
-{
-	uint8_t channelNums;
-
-	//This is not be-all-end-all testing, but helps...
-	if(timerNum >= MAXTIMERS)
-		return 1;
  512:	81 e0       	ldi	r24, 0x01	; 1
  514:	08 95       	ret
-	if(outputChannels >= 0x0f) //MAXCHANNELSPERTIMER)
-		return 2;
  516:	82 e0       	ldi	r24, 0x02	; 2
  518:	08 95       	ret
-				break;
-		   #endif
-		  #endif
-			//The selected timer and channel combination doesn't exist...
-			default:
-				return 3;
  51a:	83 e0       	ldi	r24, 0x03	; 3
-				break;
-		}
-	}
-	return 0;
-}
  51c:	08 95       	ret
 
 0000051e <timer_selectDivisor>:
-	uint8_t csbits;
-	
-  #if defined(CSOBS)
-	if(timerNum == 0 || timerNum == 1 || timerNum == 3)//IS_CSTYP(timerNum) || IS_CSOBS(timerNum))
-  #else
-	if(IS_CSTYP(timerNum))
  51e:	82 30       	cpi	r24, 0x02	; 2
  520:	08 f5       	brcc	.+66     	; 0x564 <timer_selectDivisor+0x46>
-  #endif
-	{
-		switch(clockDiv)
  522:	66 30       	cpi	r22, 0x06	; 6
  524:	69 f0       	breq	.+26     	; 0x540 <timer_selectDivisor+0x22>
  526:	30 f4       	brcc	.+12     	; 0x534 <timer_selectDivisor+0x16>
@@ -1293,119 +693,40 @@ uint8_t dmsGetFrac(void)
  52a:	71 f0       	breq	.+28     	; 0x548 <timer_selectDivisor+0x2a>
  52c:	63 30       	cpi	r22, 0x03	; 3
  52e:	d1 f4       	brne	.+52     	; 0x564 <timer_selectDivisor+0x46>
-		{
-			case CLKDIV1:
-				csbits = CSTYP_DIV1;	
-				break;
-			case CLKDIV8:
-				csbits = CSTYP_DIV8;
  530:	92 e0       	ldi	r25, 0x02	; 2
  532:	0b c0       	rjmp	.+22     	; 0x54a <timer_selectDivisor+0x2c>
-	if(timerNum == 0 || timerNum == 1 || timerNum == 3)//IS_CSTYP(timerNum) || IS_CSOBS(timerNum))
-  #else
-	if(IS_CSTYP(timerNum))
-  #endif
-	{
-		switch(clockDiv)
  534:	68 30       	cpi	r22, 0x08	; 8
  536:	31 f0       	breq	.+12     	; 0x544 <timer_selectDivisor+0x26>
  538:	6a 30       	cpi	r22, 0x0A	; 10
  53a:	a1 f4       	brne	.+40     	; 0x564 <timer_selectDivisor+0x46>
-				break;
-			case CLKDIV256:
-				csbits = CSTYP_DIV256;	
-				break;
-			case CLKDIV1024:
-				csbits = CSTYP_DIV1024; 
  53c:	95 e0       	ldi	r25, 0x05	; 5
  53e:	05 c0       	rjmp	.+10     	; 0x54a <timer_selectDivisor+0x2c>
-				break;
-			case CLKDIV8:
-				csbits = CSTYP_DIV8;
-				break;
-			case CLKDIV64:
-				csbits = CSTYP_DIV64;	
  540:	93 e0       	ldi	r25, 0x03	; 3
  542:	03 c0       	rjmp	.+6      	; 0x54a <timer_selectDivisor+0x2c>
-				break;
-			case CLKDIV256:
-				csbits = CSTYP_DIV256;	
  544:	94 e0       	ldi	r25, 0x04	; 4
  546:	01 c0       	rjmp	.+2      	; 0x54a <timer_selectDivisor+0x2c>
-  #endif
-	{
-		switch(clockDiv)
-		{
-			case CLKDIV1:
-				csbits = CSTYP_DIV1;	
  548:	91 e0       	ldi	r25, 0x01	; 1
-	}
-  #endif
-	else 
-		return 1;	
-
-	switch(timerNum)
  54a:	81 30       	cpi	r24, 0x01	; 1
  54c:	29 f0       	breq	.+10     	; 0x558 <timer_selectDivisor+0x3a>
-	{
-		//Assume Timer0 and Timer1 exist (see setWGM)
-		case 0:
-			writeMasked(csbits, CSMASK, T0_CSReg);
  54e:	83 b7       	in	r24, 0x33	; 51
  550:	88 7f       	andi	r24, 0xF8	; 248
  552:	98 2b       	or	r25, r24
  554:	93 bf       	out	0x33, r25	; 51
  556:	04 c0       	rjmp	.+8      	; 0x560 <timer_selectDivisor+0x42>
-			break;
-		case 1:
-			writeMasked(csbits, CSMASK, T1_CSReg);
  558:	80 b7       	in	r24, 0x30	; 48
  55a:	88 7f       	andi	r24, 0xF8	; 248
  55c:	98 2b       	or	r25, r24
  55e:	90 bf       	out	0x30, r25	; 48
-		default:
-			return 1;
-			break;
-	}
-	
-	return 0;
  560:	80 e0       	ldi	r24, 0x00	; 0
  562:	08 95       	ret
-						return 1;	
-				}
-				else
-					return 1;
-			  #else
-				return 1;
  564:	81 e0       	ldi	r24, 0x01	; 1
-			return 1;
-			break;
-	}
-	
-	return 0;
-}
  566:	08 95       	ret
 
 00000568 <timer_setWGM>:
-//	wgmLb *= 0xff;
-//	wgmHb *= 0xff;
-
-	//Make sure the chosen WGM will be written to the WGM bits properly, as implemented below...
-	// Only modes 0-3 are implemented...
-	if(wgm > 0x03)
  568:	64 30       	cpi	r22, 0x04	; 4
  56a:	98 f4       	brcc	.+38     	; 0x592 <timer_setWGM+0x2a>
-		return 1;
-	
-	switch(timerNum)
  56c:	81 11       	cpse	r24, r1
  56e:	11 c0       	rjmp	.+34     	; 0x592 <timer_setWGM+0x2a>
-			//Whatever .stab is, this single change reduces it by 36Bytes
-			writebit(WGM00, T0_WGMReg, wgmHb);
-//			writeMasked(wgmHb, (1<<WGM00), T0_WGMReg);
-#else
-			//This seems to be the "universal" WGM Timer0 settings
-			writebit(WGM00, T0_WGMReg, wgmLb);
  570:	8a b5       	in	r24, 0x2a	; 42
  572:	60 ff       	sbrs	r22, 0
  574:	02 c0       	rjmp	.+4      	; 0x57a <timer_setWGM+0x12>
@@ -1413,19 +734,7 @@ uint8_t dmsGetFrac(void)
  578:	01 c0       	rjmp	.+2      	; 0x57c <timer_setWGM+0x14>
  57a:	8e 7f       	andi	r24, 0xFE	; 254
  57c:	8a bd       	out	0x2a, r24	; 42
-// Returns 0 if no error
-#if(!defined(TIMER_SETWGM_UNUSED) || !TIMER_SETWGM_UNUSED)
-uint8_t timer_setWGM(uint8_t timerNum, uint8_t wgm)
-{
-	uint8_t wgmLb = getbit(0, wgm);
-	uint8_t wgmHb = getbit(1, wgm);
  57e:	66 95       	lsr	r22
-			writebit(WGM00, T0_WGMReg, wgmHb);
-//			writeMasked(wgmHb, (1<<WGM00), T0_WGMReg);
-#else
-			//This seems to be the "universal" WGM Timer0 settings
-			writebit(WGM00, T0_WGMReg, wgmLb);
-			writebit(WGM01, T0_WGMReg, wgmHb);
  580:	8a b5       	in	r24, 0x2a	; 42
  582:	66 23       	and	r22, r22
  584:	11 f0       	breq	.+4      	; 0x58a <timer_setWGM+0x22>
@@ -1433,52 +742,22 @@ uint8_t timer_setWGM(uint8_t timerNum, uint8_t wgm)
  588:	01 c0       	rjmp	.+2      	; 0x58c <timer_setWGM+0x24>
  58a:	8d 7f       	andi	r24, 0xFD	; 253
  58c:	8a bd       	out	0x2a, r24	; 42
-		default:
-			return 1;
-			break;
-	}
-	
-	return 0;
  58e:	80 e0       	ldi	r24, 0x00	; 0
  590:	08 95       	ret
-#elif (!defined(WGM10) || !defined(WGM12) || !defined(TCCR1A) \
-		|| !defined(TCCR1B))   //defined(_AVR_IOTNx5_H_)
- #warning "This device's Timer1 doesn't appear to have (normal) WGM modes."
- #warning " Or, at least, I haven't figured out how to implement them yet"
- #warning " calls to timer_setWGM(1,...) will error"
-			return 1;
  592:	81 e0       	ldi	r24, 0x01	; 1
-			return 1;
-			break;
-	}
-	
-	return 0;
-}
  594:	08 95       	ret
 
 00000596 <timer_init>:
-
-//Roughly equivalent to the ol' Init_timerX(clkDiv, wgm)
-//Return 0 if no error...
-#if (!defined(TIMER_INIT_UNUSED) || !TIMER_INIT_UNUSED)
-uint8_t timer_init(uint8_t timerNum, uint8_t clockDiv, uint8_t wgm)
-{
  596:	cf 93       	push	r28
  598:	df 93       	push	r29
  59a:	c8 2f       	mov	r28, r24
  59c:	d6 2f       	mov	r29, r22
-	//set the waveform mode
-	ERR_HANDLE_NUM(1,				\
  59e:	64 2f       	mov	r22, r20
  5a0:	e3 df       	rcall	.-58     	; 0x568 <timer_setWGM>
  5a2:	88 23       	and	r24, r24
  5a4:	11 f0       	breq	.+4      	; 0x5aa <timer_init+0x14>
  5a6:	80 61       	ori	r24, 0x10	; 16
  5a8:	08 c0       	rjmp	.+16     	; 0x5ba <timer_init+0x24>
-		timer_setWGM(timerNum, wgm)	);
-
-	//select the clock
-	ERR_HANDLE_NUM(2,							\
  5aa:	6d 2f       	mov	r22, r29
  5ac:	8c 2f       	mov	r24, r28
  5ae:	b7 df       	rcall	.-146    	; 0x51e <timer_selectDivisor>
@@ -1486,48 +765,22 @@ uint8_t timer_init(uint8_t timerNum, uint8_t clockDiv, uint8_t wgm)
  5b2:	11 f0       	breq	.+4      	; 0x5b8 <timer_init+0x22>
  5b4:	80 62       	ori	r24, 0x20	; 32
  5b6:	01 c0       	rjmp	.+2      	; 0x5ba <timer_init+0x24>
-		timer_selectDivisor(timerNum, clockDiv)	);
-		
-	return 0;
  5b8:	80 e0       	ldi	r24, 0x00	; 0
-}
  5ba:	df 91       	pop	r29
  5bc:	cf 91       	pop	r28
  5be:	08 95       	ret
 
 000005c0 <timer_compareMatchIntSetup>:
-uint8_t timer_compareMatchIntSetup(uint8_t timerNum, uint8_t outputChannel,\
-	  												uint8_t enable)
-{
-	uint8_t channelNum;
-
-	if(timerNum >= MAXTIMERS)
  5c0:	84 30       	cpi	r24, 0x04	; 4
  5c2:	30 f5       	brcc	.+76     	; 0x610 <timer_compareMatchIntSetup+0x50>
-		return 1;
-
-	if(outputChannel >= 2) //MAXCHANNELSPERTIMER)
  5c4:	62 30       	cpi	r22, 0x02	; 2
  5c6:	30 f5       	brcc	.+76     	; 0x614 <timer_compareMatchIntSetup+0x54>
-		enable = 1;
-	
-	//For the sake of our brute-force switch statement...
-	//Combine the timer number and channel into a single variable...
-	//The high nibble contains the timer number, and the low contains the channel number (A=0,B=1)
-	channelNum = (timerNum<<4) + outputChannel;
  5c8:	82 95       	swap	r24
  5ca:	80 7f       	andi	r24, 0xF0	; 240
  5cc:	68 0f       	add	r22, r24
-
-	//Don't clear interrupts before disabling this one, or that defeats the purpose!
-	// But do clear so we don't get unexpected overflows on init
-	if(enable)
  5ce:	44 23       	and	r20, r20
  5d0:	61 f0       	breq	.+24     	; 0x5ea <timer_compareMatchIntSetup+0x2a>
-		cli();
  5d2:	f8 94       	cli
-	
-	switch(channelNum)
  5d4:	61 30       	cpi	r22, 0x01	; 1
  5d6:	91 f0       	breq	.+36     	; 0x5fc <timer_compareMatchIntSetup+0x3c>
  5d8:	28 f0       	brcs	.+10     	; 0x5e4 <timer_compareMatchIntSetup+0x24>
@@ -1536,227 +789,84 @@ uint8_t timer_compareMatchIntSetup(uint8_t timerNum, uint8_t outputChannel,\
  5de:	61 31       	cpi	r22, 0x11	; 17
  5e0:	91 f1       	breq	.+100    	; 0x646 <timer_compareMatchIntSetup+0x86>
  5e2:	1c c0       	rjmp	.+56     	; 0x61c <timer_compareMatchIntSetup+0x5c>
-			break;
-	   #endif
-	   #if defined(OCIE0A)
-		case 0x00:
-//			setbit(OCIE0A, T0_TIMSK);
-			writebit(OCIE0A, T0_TIMSK, enable);
  5e4:	89 b7       	in	r24, 0x39	; 57
  5e6:	80 61       	ori	r24, 0x10	; 16
  5e8:	05 c0       	rjmp	.+10     	; 0x5f4 <timer_compareMatchIntSetup+0x34>
-	//Don't clear interrupts before disabling this one, or that defeats the purpose!
-	// But do clear so we don't get unexpected overflows on init
-	if(enable)
-		cli();
-	
-	switch(channelNum)
  5ea:	61 30       	cpi	r22, 0x01	; 1
  5ec:	01 f1       	breq	.+64     	; 0x62e <timer_compareMatchIntSetup+0x6e>
  5ee:	c0 f4       	brcc	.+48     	; 0x620 <timer_compareMatchIntSetup+0x60>
-			break;
-	   #endif
-	   #if defined(OCIE0A)
-		case 0x00:
-//			setbit(OCIE0A, T0_TIMSK);
-			writebit(OCIE0A, T0_TIMSK, enable);
  5f0:	89 b7       	in	r24, 0x39	; 57
  5f2:	8f 7e       	andi	r24, 0xEF	; 239
  5f4:	89 bf       	out	0x39, r24	; 57
-			// My OCD bit me in the ass, this was set to TIMSK by mistake(?)
-			setbit(OCF0A, T0_TIFR);
  5f6:	88 b7       	in	r24, 0x38	; 56
  5f8:	80 61       	ori	r24, 0x10	; 16
  5fa:	05 c0       	rjmp	.+10     	; 0x606 <timer_compareMatchIntSetup+0x46>
-			break;
-	   #endif
-	   #if defined(OCIE0B)
-		case 0x01:
-//			setbit(OCIE0B, T0_TIMSK);
-			writebit(OCIE0B, T0_TIMSK, enable);
  5fc:	89 b7       	in	r24, 0x39	; 57
  5fe:	88 60       	ori	r24, 0x08	; 8
  600:	89 bf       	out	0x39, r24	; 57
-			// As was this...
-			setbit(OCF0B, T0_TIFR);
  602:	88 b7       	in	r24, 0x38	; 56
  604:	88 60       	ori	r24, 0x08	; 8
-	   #endif
-	   #if defined(OCIE1B)
-		case 0x11:
-//			setbit(OCIE1B, T1_TIMSK);
-			writebit(OCIE1B, T1_TIMSK, enable);
-			setbit(OCF1B, T1_TIFR);
  606:	88 bf       	out	0x38, r24	; 56
-			break;
-	}
-	
-	//Don't reenable interrupts here if disabling... just leave them as they were....
-	// but do enable for init...
-	if(enable)
  608:	44 23       	and	r20, r20
  60a:	31 f0       	breq	.+12     	; 0x618 <timer_compareMatchIntSetup+0x58>
-		sei();
  60c:	78 94       	sei
  60e:	04 c0       	rjmp	.+8      	; 0x618 <timer_compareMatchIntSetup+0x58>
-	  												uint8_t enable)
-{
-	uint8_t channelNum;
-
-	if(timerNum >= MAXTIMERS)
-		return 1;
  610:	81 e0       	ldi	r24, 0x01	; 1
  612:	08 95       	ret
-
-	if(outputChannel >= 2) //MAXCHANNELSPERTIMER)
-		return 2;
  614:	82 e0       	ldi	r24, 0x02	; 2
  616:	08 95       	ret
-	//Don't reenable interrupts here if disabling... just leave them as they were....
-	// but do enable for init...
-	if(enable)
-		sei();
-	
-	return 0;
  618:	80 e0       	ldi	r24, 0x00	; 0
  61a:	08 95       	ret
-			setbit(OCF3B, T3_TIFR);
-			break;
-	   #endif
-	  #endif
-		default:
-			return 3;
  61c:	83 e0       	ldi	r24, 0x03	; 3
  61e:	08 95       	ret
-	//Don't clear interrupts before disabling this one, or that defeats the purpose!
-	// But do clear so we don't get unexpected overflows on init
-	if(enable)
-		cli();
-	
-	switch(channelNum)
  620:	60 31       	cpi	r22, 0x10	; 16
  622:	59 f0       	breq	.+22     	; 0x63a <timer_compareMatchIntSetup+0x7a>
  624:	61 31       	cpi	r22, 0x11	; 17
  626:	d1 f7       	brne	.-12     	; 0x61c <timer_compareMatchIntSetup+0x5c>
-			break;
-	   #endif
-	   #if defined(OCIE1B)
-		case 0x11:
-//			setbit(OCIE1B, T1_TIMSK);
-			writebit(OCIE1B, T1_TIMSK, enable);
  628:	89 b7       	in	r24, 0x39	; 57
  62a:	8f 7d       	andi	r24, 0xDF	; 223
  62c:	0e c0       	rjmp	.+28     	; 0x64a <timer_compareMatchIntSetup+0x8a>
-			break;
-	   #endif
-	   #if defined(OCIE0B)
-		case 0x01:
-//			setbit(OCIE0B, T0_TIMSK);
-			writebit(OCIE0B, T0_TIMSK, enable);
  62e:	89 b7       	in	r24, 0x39	; 57
  630:	87 7f       	andi	r24, 0xF7	; 247
  632:	e6 cf       	rjmp	.-52     	; 0x600 <timer_compareMatchIntSetup+0x40>
-			break;
-	   #endif
-	   #if defined(OCIE1A)
-		case 0x10:
-//			setbit(OCIE1A, T1_TIMSK);
-			writebit(OCIE1A, T1_TIMSK, enable);
  634:	89 b7       	in	r24, 0x39	; 57
  636:	80 64       	ori	r24, 0x40	; 64
  638:	02 c0       	rjmp	.+4      	; 0x63e <timer_compareMatchIntSetup+0x7e>
  63a:	89 b7       	in	r24, 0x39	; 57
  63c:	8f 7b       	andi	r24, 0xBF	; 191
  63e:	89 bf       	out	0x39, r24	; 57
-			setbit(OCF1A, T1_TIFR);
  640:	88 b7       	in	r24, 0x38	; 56
  642:	80 64       	ori	r24, 0x40	; 64
  644:	e0 cf       	rjmp	.-64     	; 0x606 <timer_compareMatchIntSetup+0x46>
-			break;
-	   #endif
-	   #if defined(OCIE1B)
-		case 0x11:
-//			setbit(OCIE1B, T1_TIMSK);
-			writebit(OCIE1B, T1_TIMSK, enable);
  646:	89 b7       	in	r24, 0x39	; 57
  648:	80 62       	ori	r24, 0x20	; 32
  64a:	89 bf       	out	0x39, r24	; 57
-			setbit(OCF1B, T1_TIFR);
  64c:	88 b7       	in	r24, 0x38	; 56
  64e:	80 62       	ori	r24, 0x20	; 32
  650:	da cf       	rjmp	.-76     	; 0x606 <timer_compareMatchIntSetup+0x46>
 
 00000652 <timer_overflowIntEnable>:
-
-#if (!defined(TIMER_OVERFLOWINTENABLE_UNUSED) \
-		      || !TIMER_OVERFLOWINTENABLE_UNUSED)
-uint8_t timer_overflowIntEnable(uint8_t timerNum)
-{
-	cli();
  652:	f8 94       	cli
-	
-	switch(timerNum)
  654:	88 23       	and	r24, r24
  656:	41 f0       	breq	.+16     	; 0x668 <timer_overflowIntEnable+0x16>
  658:	81 30       	cpi	r24, 0x01	; 1
  65a:	79 f4       	brne	.+30     	; 0x67a <timer_overflowIntEnable+0x28>
-			setbit(TOV0, T0_TIFR);
-			break; 
-		#endif
-		#if defined(T1_TIMSK)
-		case 1:
-			setbit(TOIE1, T1_TIMSK);
  65c:	89 b7       	in	r24, 0x39	; 57
  65e:	84 60       	ori	r24, 0x04	; 4
  660:	89 bf       	out	0x39, r24	; 57
-			setbit(TOV1, T1_TIFR);
  662:	88 b7       	in	r24, 0x38	; 56
  664:	84 60       	ori	r24, 0x04	; 4
  666:	05 c0       	rjmp	.+10     	; 0x672 <timer_overflowIntEnable+0x20>
-	switch(timerNum)
-	{
-		#if defined(T0_TIMSK)
-		case 0:
-			//Enable the overflow interrupt (don't forget to create a handler!)
-			setbit(TOIE0, T0_TIMSK);
  668:	89 b7       	in	r24, 0x39	; 57
  66a:	82 60       	ori	r24, 0x02	; 2
  66c:	89 bf       	out	0x39, r24	; 57
-			//Clear the overflow flag (OCD)...
-			setbit(TOV0, T0_TIFR);
  66e:	88 b7       	in	r24, 0x38	; 56
  670:	82 60       	ori	r24, 0x02	; 2
-			break; 
-		#endif
-		#if defined(T1_TIMSK)
-		case 1:
-			setbit(TOIE1, T1_TIMSK);
-			setbit(TOV1, T1_TIFR);
  672:	88 bf       	out	0x38, r24	; 56
-		#endif
-		default:
-			return 1;
-	}
-	
-	sei();
  674:	78 94       	sei
-	
-	return 0;
  676:	80 e0       	ldi	r24, 0x00	; 0
  678:	08 95       	ret
-			setbit(TOIE3, T3_TIMSK);
-			setbit(TOV3, T3_TIFR);
-			break;
-		#endif
-		default:
-			return 1;
  67a:	81 e0       	ldi	r24, 0x01	; 1
-	}
-	
-	sei();
-	
-	return 0;
-}
  67c:	08 95       	ret
 
 0000067e <usi_i2c_awaitStart>:

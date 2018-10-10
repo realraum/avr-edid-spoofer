@@ -507,9 +507,9 @@ END GROUP
  .stab          0x00000000000024fc      0xccc _BUILD/main.o
                                         0xf24 (size before relaxing)
 
-.stabstr        0x0000000000000000     0x194b
+.stabstr        0x0000000000000000     0x198b
  *(.stabstr)
- .stabstr       0x0000000000000000     0x194b _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
+ .stabstr       0x0000000000000000     0x198b _BUILD/_commonCode_localized/sineTable/0.99/sineTable.o
 
 .stab.excl
  *(.stab.excl)

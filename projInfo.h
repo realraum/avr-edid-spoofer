@@ -6,14 +6,14 @@
 
 #if (!defined(PROJINFO_SHORT) || !PROJINFO_SHORT)
  uint8_t __attribute__ ((progmem)) \
-   header0[] = " /home/bernhard/source/avr-edid-spoofer ";
+   header0[] = " /home/bernhard/Dropbox/r3/edid_spoofing_cable/avr-edid-spoofer ";
  uint8_t __attribute__ ((progmem)) \
-   header1[] = " Fr Mai 25 01:30:52 CEST 2018 ";
+   header1[] = " Do Okt 11 01:28:50 CEST 2018 ";
  uint8_t __attribute__ ((progmem)) \
    headerOpt[] = " WDT_DIS=TRUE ";
 #else //projInfo Shortened
  uint8_t __attribute__ ((progmem)) \
-   const header[] = "LCDreIDer66 2018-05-25 01:30:52";
+   const header[] = "LCDreIDer66 2018-10-11 01:28:50";
 #endif
 
 //For internal use...
