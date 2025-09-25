@@ -1,4 +1,4 @@
-GAS LISTING /tmp/cccuIJas.s 			page 1
+GAS LISTING /tmp/cck3Rhtk.s 			page 1
 
 
    1               		.file	"hfModulation.c"
@@ -7,7 +7,7 @@ GAS LISTING /tmp/cccuIJas.s 			page 1
    4               	__SREG__ = 0x3f
    5               	__tmp_reg__ = 0
    6               	__zero_reg__ = 1
-   7               		.stabs	"/home/bernhard/source/avr-edid-spoofer/",100,0,2,.Ltext0
+   7               		.stabs	"/home/bernhard/Dropbox/r3/edid_spoofing_cable/avr-edid-spoofer/",100,0,2,.Ltext0
    8               		.stabs	"_commonCode_localized/hfModulation/1.00/hfModulation.c",100,0,2,.Ltext0
    9               		.text
   10               	.Ltext0:
@@ -28,84 +28,85 @@ GAS LISTING /tmp/cccuIJas.s 			page 1
   25               		.stabs	"float:t(0,14)=r(0,1);4;0;",128,0,0,0
   26               		.stabs	"double:t(0,15)=r(0,1);4;0;",128,0,0,0
   27               		.stabs	"long double:t(0,16)=r(0,1);4;0;",128,0,0,0
-  28               		.stabs	"short _Fract:t(0,17)=r(0,1);1;0;",128,0,0,0
-  29               		.stabs	"_Fract:t(0,18)=r(0,1);2;0;",128,0,0,0
-  30               		.stabs	"long _Fract:t(0,19)=r(0,1);4;0;",128,0,0,0
-  31               		.stabs	"long long _Fract:t(0,20)=r(0,1);8;0;",128,0,0,0
-  32               		.stabs	"unsigned short _Fract:t(0,21)=r(0,1);1;0;",128,0,0,0
-  33               		.stabs	"unsigned _Fract:t(0,22)=r(0,1);2;0;",128,0,0,0
-  34               		.stabs	"unsigned long _Fract:t(0,23)=r(0,1);4;0;",128,0,0,0
-  35               		.stabs	"unsigned long long _Fract:t(0,24)=r(0,1);8;0;",128,0,0,0
-  36               		.stabs	"_Sat short _Fract:t(0,25)=r(0,1);1;0;",128,0,0,0
-  37               		.stabs	"_Sat _Fract:t(0,26)=r(0,1);2;0;",128,0,0,0
-  38               		.stabs	"_Sat long _Fract:t(0,27)=r(0,1);4;0;",128,0,0,0
-  39               		.stabs	"_Sat long long _Fract:t(0,28)=r(0,1);8;0;",128,0,0,0
-  40               		.stabs	"_Sat unsigned short _Fract:t(0,29)=r(0,1);1;0;",128,0,0,0
-  41               		.stabs	"_Sat unsigned _Fract:t(0,30)=r(0,1);2;0;",128,0,0,0
-  42               		.stabs	"_Sat unsigned long _Fract:t(0,31)=r(0,1);4;0;",128,0,0,0
-  43               		.stabs	"_Sat unsigned long long _Fract:t(0,32)=r(0,1);8;0;",128,0,0,0
-  44               		.stabs	"short _Accum:t(0,33)=r(0,1);2;0;",128,0,0,0
-  45               		.stabs	"_Accum:t(0,34)=r(0,1);4;0;",128,0,0,0
-  46               		.stabs	"long _Accum:t(0,35)=r(0,1);8;0;",128,0,0,0
-  47               		.stabs	"long long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
-  48               		.stabs	"unsigned short _Accum:t(0,37)=r(0,1);2;0;",128,0,0,0
-  49               		.stabs	"unsigned _Accum:t(0,38)=r(0,1);4;0;",128,0,0,0
-  50               		.stabs	"unsigned long _Accum:t(0,39)=r(0,1);8;0;",128,0,0,0
-  51               		.stabs	"unsigned long long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
-  52               		.stabs	"_Sat short _Accum:t(0,41)=r(0,1);2;0;",128,0,0,0
-  53               		.stabs	"_Sat _Accum:t(0,42)=r(0,1);4;0;",128,0,0,0
-  54               		.stabs	"_Sat long _Accum:t(0,43)=r(0,1);8;0;",128,0,0,0
-  55               		.stabs	"_Sat long long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
-  56               		.stabs	"_Sat unsigned short _Accum:t(0,45)=r(0,1);2;0;",128,0,0,0
-  57               		.stabs	"_Sat unsigned _Accum:t(0,46)=r(0,1);4;0;",128,0,0,0
-GAS LISTING /tmp/cccuIJas.s 			page 2
+  28               		.stabs	"_Float32:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"short _Fract:t(0,18)=r(0,1);1;0;",128,0,0,0
+  30               		.stabs	"_Fract:t(0,19)=r(0,1);2;0;",128,0,0,0
+  31               		.stabs	"long _Fract:t(0,20)=r(0,1);4;0;",128,0,0,0
+  32               		.stabs	"long long _Fract:t(0,21)=r(0,1);8;0;",128,0,0,0
+  33               		.stabs	"unsigned short _Fract:t(0,22)=r(0,1);1;0;",128,0,0,0
+  34               		.stabs	"unsigned _Fract:t(0,23)=r(0,1);2;0;",128,0,0,0
+  35               		.stabs	"unsigned long _Fract:t(0,24)=r(0,1);4;0;",128,0,0,0
+  36               		.stabs	"unsigned long long _Fract:t(0,25)=r(0,1);8;0;",128,0,0,0
+  37               		.stabs	"_Sat short _Fract:t(0,26)=r(0,1);1;0;",128,0,0,0
+  38               		.stabs	"_Sat _Fract:t(0,27)=r(0,1);2;0;",128,0,0,0
+  39               		.stabs	"_Sat long _Fract:t(0,28)=r(0,1);4;0;",128,0,0,0
+  40               		.stabs	"_Sat long long _Fract:t(0,29)=r(0,1);8;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned short _Fract:t(0,30)=r(0,1);1;0;",128,0,0,0
+  42               		.stabs	"_Sat unsigned _Fract:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Sat unsigned long _Fract:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"_Sat unsigned long long _Fract:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"short _Accum:t(0,34)=r(0,1);2;0;",128,0,0,0
+  46               		.stabs	"_Accum:t(0,35)=r(0,1);4;0;",128,0,0,0
+  47               		.stabs	"long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
+  48               		.stabs	"long long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned short _Accum:t(0,38)=r(0,1);2;0;",128,0,0,0
+  50               		.stabs	"unsigned _Accum:t(0,39)=r(0,1);4;0;",128,0,0,0
+  51               		.stabs	"unsigned long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
+  52               		.stabs	"unsigned long long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat short _Accum:t(0,42)=r(0,1);2;0;",128,0,0,0
+  54               		.stabs	"_Sat _Accum:t(0,43)=r(0,1);4;0;",128,0,0,0
+  55               		.stabs	"_Sat long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
+  56               		.stabs	"_Sat long long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned short _Accum:t(0,46)=r(0,1);2;0;",128,0,0,0
+GAS LISTING /tmp/cck3Rhtk.s 			page 2
 
 
-  58               		.stabs	"_Sat unsigned long _Accum:t(0,47)=r(0,1);8;0;",128,0,0,0
-  59               		.stabs	"_Sat unsigned long long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
-  60               		.stabs	"void:t(0,49)=(0,49)",128,0,0,0
-  61               		.stabs	"_commonCode_localized/hfModulation/1.00/hfModulation.h",130,0,0,0
-  62               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stdint.h",130,0,0,0
-  63               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
-  64               		.stabs	"int8_t:t(3,1)=(0,12)",128,0,125,0
-  65               		.stabs	"uint8_t:t(3,2)=(0,13)",128,0,126,0
-  66               		.stabs	"int16_t:t(3,3)=(0,1)",128,0,127,0
-  67               		.stabs	"uint16_t:t(3,4)=(0,4)",128,0,128,0
-  68               		.stabs	"int32_t:t(3,5)=(0,3)",128,0,129,0
-  69               		.stabs	"uint32_t:t(3,6)=(0,5)",128,0,130,0
-  70               		.stabs	"int64_t:t(3,7)=(0,8)",128,0,132,0
-  71               		.stabs	"uint64_t:t(3,8)=(0,9)",128,0,133,0
-  72               		.stabs	"intptr_t:t(3,9)=(3,3)",128,0,146,0
-  73               		.stabs	"uintptr_t:t(3,10)=(3,4)",128,0,151,0
-  74               		.stabs	"int_least8_t:t(3,11)=(3,1)",128,0,163,0
-  75               		.stabs	"uint_least8_t:t(3,12)=(3,2)",128,0,168,0
-  76               		.stabs	"int_least16_t:t(3,13)=(3,3)",128,0,173,0
-  77               		.stabs	"uint_least16_t:t(3,14)=(3,4)",128,0,178,0
-  78               		.stabs	"int_least32_t:t(3,15)=(3,5)",128,0,183,0
-  79               		.stabs	"uint_least32_t:t(3,16)=(3,6)",128,0,188,0
-  80               		.stabs	"int_least64_t:t(3,17)=(3,7)",128,0,196,0
-  81               		.stabs	"uint_least64_t:t(3,18)=(3,8)",128,0,203,0
-  82               		.stabs	"int_fast8_t:t(3,19)=(3,1)",128,0,217,0
-  83               		.stabs	"uint_fast8_t:t(3,20)=(3,2)",128,0,222,0
-  84               		.stabs	"int_fast16_t:t(3,21)=(3,3)",128,0,227,0
-  85               		.stabs	"uint_fast16_t:t(3,22)=(3,4)",128,0,232,0
-  86               		.stabs	"int_fast32_t:t(3,23)=(3,5)",128,0,237,0
-  87               		.stabs	"uint_fast32_t:t(3,24)=(3,6)",128,0,242,0
-  88               		.stabs	"int_fast64_t:t(3,25)=(3,7)",128,0,250,0
-  89               		.stabs	"uint_fast64_t:t(3,26)=(3,8)",128,0,257,0
-  90               		.stabs	"intmax_t:t(3,27)=(3,7)",128,0,277,0
-  91               		.stabs	"uintmax_t:t(3,28)=(3,8)",128,0,282,0
-  92               		.stabn	162,0,0,0
+  58               		.stabs	"_Sat unsigned _Accum:t(0,47)=r(0,1);4;0;",128,0,0,0
+  59               		.stabs	"_Sat unsigned long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
+  60               		.stabs	"_Sat unsigned long long _Accum:t(0,49)=r(0,1);8;0;",128,0,0,0
+  61               		.stabs	"void:t(0,50)=(0,50)",128,0,0,0
+  62               		.stabs	"_commonCode_localized/hfModulation/1.00/hfModulation.h",130,0,0,0
+  63               		.stabs	"/usr/lib/gcc/avr/7.3.0/include/stdint.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  65               		.stabs	"int8_t:t(3,1)=(0,12)",128,0,125,0
+  66               		.stabs	"uint8_t:t(3,2)=(0,13)",128,0,126,0
+  67               		.stabs	"int16_t:t(3,3)=(0,1)",128,0,127,0
+  68               		.stabs	"uint16_t:t(3,4)=(0,4)",128,0,128,0
+  69               		.stabs	"int32_t:t(3,5)=(0,3)",128,0,129,0
+  70               		.stabs	"uint32_t:t(3,6)=(0,5)",128,0,130,0
+  71               		.stabs	"int64_t:t(3,7)=(0,8)",128,0,132,0
+  72               		.stabs	"uint64_t:t(3,8)=(0,9)",128,0,133,0
+  73               		.stabs	"intptr_t:t(3,9)=(3,3)",128,0,146,0
+  74               		.stabs	"uintptr_t:t(3,10)=(3,4)",128,0,151,0
+  75               		.stabs	"int_least8_t:t(3,11)=(3,1)",128,0,163,0
+  76               		.stabs	"uint_least8_t:t(3,12)=(3,2)",128,0,168,0
+  77               		.stabs	"int_least16_t:t(3,13)=(3,3)",128,0,173,0
+  78               		.stabs	"uint_least16_t:t(3,14)=(3,4)",128,0,178,0
+  79               		.stabs	"int_least32_t:t(3,15)=(3,5)",128,0,183,0
+  80               		.stabs	"uint_least32_t:t(3,16)=(3,6)",128,0,188,0
+  81               		.stabs	"int_least64_t:t(3,17)=(3,7)",128,0,196,0
+  82               		.stabs	"uint_least64_t:t(3,18)=(3,8)",128,0,203,0
+  83               		.stabs	"int_fast8_t:t(3,19)=(3,1)",128,0,217,0
+  84               		.stabs	"uint_fast8_t:t(3,20)=(3,2)",128,0,222,0
+  85               		.stabs	"int_fast16_t:t(3,21)=(3,3)",128,0,227,0
+  86               		.stabs	"uint_fast16_t:t(3,22)=(3,4)",128,0,232,0
+  87               		.stabs	"int_fast32_t:t(3,23)=(3,5)",128,0,237,0
+  88               		.stabs	"uint_fast32_t:t(3,24)=(3,6)",128,0,242,0
+  89               		.stabs	"int_fast64_t:t(3,25)=(3,7)",128,0,250,0
+  90               		.stabs	"uint_fast64_t:t(3,26)=(3,8)",128,0,257,0
+  91               		.stabs	"intmax_t:t(3,27)=(3,7)",128,0,277,0
+  92               		.stabs	"uintmax_t:t(3,28)=(3,8)",128,0,282,0
   93               		.stabn	162,0,0,0
-  94               		.stabs	"hfm_t:t(1,1)=(1,2)=B(1,3)=s4desiredSum:(3,3),0,16;maxPower:(3,2),16,8;power:(3,2),24,8;;",
-  95               		.stabn	162,0,0,0
-  96               		.stabs	"hfm_setPower:F(0,49)",36,0,49,hfm_setPower
-  97               		.stabs	"modulator:P(0,50)=*(1,1)",64,0,49,30
-  98               		.stabs	"power:P(3,2)",64,0,49,22
-  99               	.global	hfm_setPower
- 100               		.type	hfm_setPower, @function
- 101               	hfm_setPower:
- 102               		.stabd	46,0,0
+  94               		.stabn	162,0,0,0
+  95               		.stabs	"hfm_t:t(1,1)=(1,2)=B(1,3)=s4desiredSum:(3,3),0,16;maxPower:(3,2),16,8;power:(3,2),24,8;;",
+  96               		.stabn	162,0,0,0
+  97               		.stabs	"hfm_setPower:F(0,50)",36,0,49,hfm_setPower
+  98               		.stabs	"modulator:P(0,51)=*(1,1)",64,0,49,30
+  99               		.stabs	"power:P(3,2)",64,0,49,22
+ 100               	.global	hfm_setPower
+ 101               		.type	hfm_setPower, @function
+ 102               	hfm_setPower:
+ 103               		.stabd	46,0,0
    1:_commonCode_localized/hfModulation/1.00/hfModulation.c **** //high frequency modulation .94
    2:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 
    3:_commonCode_localized/hfModulation/1.00/hfModulation.c **** #include "hfModulation.h"
@@ -117,10 +118,10 @@ GAS LISTING /tmp/cccuIJas.s 			page 1
    9:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 
   10:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 
   11:_commonCode_localized/hfModulation/1.00/hfModulation.c **** /* Basic algorithm concept:
+GAS LISTING /tmp/cck3Rhtk.s 			page 3
+
+
   12:_commonCode_localized/hfModulation/1.00/hfModulation.c ****  *	///increment numSteps (no longer necessary)
-GAS LISTING /tmp/cccuIJas.s 			page 3
-
-
   13:_commonCode_localized/hfModulation/1.00/hfModulation.c ****  * 
   14:_commonCode_localized/hfModulation/1.00/hfModulation.c ****  *	- if the desired value is equal to the current average
   15:_commonCode_localized/hfModulation/1.00/hfModulation.c ****  *		- restart (repeat the same pattern again, the overall average will then be the same...)
@@ -159,88 +160,41 @@ GAS LISTING /tmp/cccuIJas.s 			page 1
   48:_commonCode_localized/hfModulation/1.00/hfModulation.c **** // however, sometimes it needs to be variable, thus hfm_setup (above)
   49:_commonCode_localized/hfModulation/1.00/hfModulation.c **** void hfm_setPower(hfm_t	*modulator, uint8_t power)
   50:_commonCode_localized/hfModulation/1.00/hfModulation.c **** {
- 103               		.stabn	68,0,50,.LM0-.LFBB1
- 104               	.LM0:
- 105               	.LFBB1:
- 106               	/* prologue: function */
- 107               	/* frame size = 0 */
- 108               	/* stack size = 0 */
- 109               	.L__stack_usage = 0
- 110 0000 FC01      		movw r30,r24
+ 104               		.stabn	68,0,50,.LM0-.LFBB1
+ 105               	.LM0:
+ 106               	.LFBB1:
+ 107               	/* prologue: function */
+ 108               	/* frame size = 0 */
+ 109               	/* stack size = 0 */
+ 110               	.L__stack_usage = 0
+ 111 0000 FC01      		movw r30,r24
   51:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	//Don't allow power values > 1, otherwise who knows what'll happen...
   52:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	//(This is probably unnecessary, but whatev)
   53:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	//It's not, actually, if power's greater than maxPower, the values never reset
   54:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	// This is trouble, e.g. in heartbeat, where modulator.power is read
   55:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	if(power <= (modulator->maxPower))
- 111               		.stabn	68,0,55,.LM1-.LFBB1
- 112               	.LM1:
- 113 0002 8281      		ldd r24,Z+2
- 114 0004 8617      		cp r24,r22
- 115 0006 00F0      		brlo .L2
+ 112               		.stabn	68,0,55,.LM1-.LFBB1
+ 113               	.LM1:
+ 114 0002 8281      		ldd r24,Z+2
+ 115 0004 8617      		cp r24,r22
+ 116 0006 00F0      		brlo .L2
+GAS LISTING /tmp/cck3Rhtk.s 			page 4
+
+
   56:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 		modulator->power = power;
-GAS LISTING /tmp/cccuIJas.s 			page 4
-
-
- 116               		.stabn	68,0,56,.LM2-.LFBB1
- 117               	.LM2:
- 118 0008 6383      		std Z+3,r22
- 119 000a 0895      		ret
- 120               	.L2:
+ 117               		.stabn	68,0,56,.LM2-.LFBB1
+ 118               	.LM2:
+ 119 0008 6383      		std Z+3,r22
+ 120 000a 0895      		ret
+ 121               	.L2:
   57:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	else
   58:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 		modulator->power = modulator->maxPower;
- 121               		.stabn	68,0,58,.LM3-.LFBB1
- 122               	.LM3:
- 123 000c 8281      		ldd r24,Z+2
- 124 000e 8383      		std Z+3,r24
- 125 0010 0895      		ret
- 126               		.size	hfm_setPower, .-hfm_setPower
- 127               	.Lscope1:
- 128               		.stabs	"",36,0,0,.Lscope1-.LFBB1
- 129               		.stabd	78,0,0
- 130               		.stabs	"hfm_setup:F(0,49)",36,0,37,hfm_setup
- 131               		.stabs	"modulator:P(0,50)",64,0,37,24
- 132               		.stabs	"power:P(3,2)",64,0,37,22
- 133               		.stabs	"maxPower:P(3,2)",64,0,37,20
- 134               	.global	hfm_setup
- 135               		.type	hfm_setup, @function
- 136               	hfm_setup:
- 137               		.stabd	46,0,0
-  38:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	modulator->desiredSum = 0;
- 138               		.stabn	68,0,38,.LM4-.LFBB2
- 139               	.LM4:
- 140               	.LFBB2:
- 141               	/* prologue: function */
- 142               	/* frame size = 0 */
- 143               	/* stack size = 0 */
- 144               	.L__stack_usage = 0
-  39:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	modulator->maxPower = maxPower;
- 145               		.stabn	68,0,39,.LM5-.LFBB2
- 146               	.LM5:
- 147 0012 FC01      		movw r30,r24
- 148 0014 1182      		std Z+1,__zero_reg__
- 149 0016 1082      		st Z,__zero_reg__
-  40:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	hfm_setPower(modulator, power);
- 150               		.stabn	68,0,40,.LM6-.LFBB2
- 151               	.LM6:
- 152 0018 4283      		std Z+2,r20
-  41:_commonCode_localized/hfModulation/1.00/hfModulation.c **** }
- 153               		.stabn	68,0,41,.LM7-.LFBB2
- 154               	.LM7:
- 155 001a 00C0      		rjmp hfm_setPower
- 156               		.size	hfm_setup, .-hfm_setup
- 157               	.Lscope2:
- 158               		.stabs	"",36,0,0,.Lscope2-.LFBB2
- 159               		.stabd	78,0,0
- 160               		.stabs	"hfm_nextOutput:F(3,2)",36,0,73,hfm_nextOutput
- 161               		.stabs	"modulator:P(0,50)",64,0,73,30
- 162               	.global	hfm_nextOutput
- 163               		.type	hfm_nextOutput, @function
- 164               	hfm_nextOutput:
- 165               		.stabd	46,0,0
+ 122               		.stabn	68,0,58,.LM3-.LFBB1
+ 123               	.LM3:
+ 124 000c 8281      		ldd r24,Z+2
+ 125 000e 8383      		std Z+3,r24
+ 126               	/* epilogue start */
   59:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 		
-GAS LISTING /tmp/cccuIJas.s 			page 5
-
-
   60:_commonCode_localized/hfModulation/1.00/hfModulation.c **** //	modulator->stepNumber = 0;
   61:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 
   62:_commonCode_localized/hfModulation/1.00/hfModulation.c **** //0.94 This is just a test... It should be OK, but it hasn't been
@@ -251,19 +205,69 @@ GAS LISTING /tmp/cccuIJas.s 			page 1
   67:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	//0.94-2 should also no longer be necessary:
   68:_commonCode_localized/hfModulation/1.00/hfModulation.c **** //	modulator->desiredSum = 0;
   69:_commonCode_localized/hfModulation/1.00/hfModulation.c **** }
+ 127               		.stabn	68,0,69,.LM4-.LFBB1
+ 128               	.LM4:
+ 129 0010 0895      		ret
+ 130               		.size	hfm_setPower, .-hfm_setPower
+ 131               	.Lscope1:
+ 132               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 133               		.stabd	78,0,0
+ 134               		.stabs	"hfm_setup:F(0,50)",36,0,37,hfm_setup
+ 135               		.stabs	"modulator:P(0,51)",64,0,37,24
+ 136               		.stabs	"power:P(3,2)",64,0,37,22
+ 137               		.stabs	"maxPower:P(3,2)",64,0,37,20
+ 138               	.global	hfm_setup
+ 139               		.type	hfm_setup, @function
+ 140               	hfm_setup:
+ 141               		.stabd	46,0,0
+  38:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	modulator->desiredSum = 0;
+ 142               		.stabn	68,0,38,.LM5-.LFBB2
+ 143               	.LM5:
+ 144               	.LFBB2:
+ 145               	/* prologue: function */
+ 146               	/* frame size = 0 */
+ 147               	/* stack size = 0 */
+ 148               	.L__stack_usage = 0
+  39:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	modulator->maxPower = maxPower;
+ 149               		.stabn	68,0,39,.LM6-.LFBB2
+ 150               	.LM6:
+ 151 0012 FC01      		movw r30,r24
+ 152 0014 1182      		std Z+1,__zero_reg__
+ 153 0016 1082      		st Z,__zero_reg__
+  40:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	hfm_setPower(modulator, power);
+ 154               		.stabn	68,0,40,.LM7-.LFBB2
+ 155               	.LM7:
+ 156 0018 4283      		std Z+2,r20
+GAS LISTING /tmp/cck3Rhtk.s 			page 5
+
+
+  41:_commonCode_localized/hfModulation/1.00/hfModulation.c **** }
+ 157               		.stabn	68,0,41,.LM8-.LFBB2
+ 158               	.LM8:
+ 159 001a 00C0      		rjmp hfm_setPower
+ 160               		.size	hfm_setup, .-hfm_setup
+ 161               	.Lscope2:
+ 162               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 163               		.stabd	78,0,0
+ 164               		.stabs	"hfm_nextOutput:F(3,2)",36,0,73,hfm_nextOutput
+ 165               		.stabs	"modulator:P(0,51)",64,0,73,30
+ 166               	.global	hfm_nextOutput
+ 167               		.type	hfm_nextOutput, @function
+ 168               	hfm_nextOutput:
+ 169               		.stabd	46,0,0
   70:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 
   71:_commonCode_localized/hfModulation/1.00/hfModulation.c **** //Returns 0 if the "output" should be "off" in this cycle
   72:_commonCode_localized/hfModulation/1.00/hfModulation.c **** //		  1 if the "output" should be "on"  in this cycle
   73:_commonCode_localized/hfModulation/1.00/hfModulation.c **** uint8_t hfm_nextOutput(hfm_t *modulator)
   74:_commonCode_localized/hfModulation/1.00/hfModulation.c **** {
- 166               		.stabn	68,0,74,.LM8-.LFBB3
- 167               	.LM8:
- 168               	.LFBB3:
- 169               	/* prologue: function */
- 170               	/* frame size = 0 */
- 171               	/* stack size = 0 */
- 172               	.L__stack_usage = 0
- 173 001c FC01      		movw r30,r24
+ 170               		.stabn	68,0,74,.LM9-.LFBB3
+ 171               	.LM9:
+ 172               	.LFBB3:
+ 173               	/* prologue: function */
+ 174               	/* frame size = 0 */
+ 175               	/* stack size = 0 */
+ 176               	.L__stack_usage = 0
+ 177 001c FC01      		movw r30,r24
   75:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	uint8_t toReturn;
   76:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	
   77:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	//The first time, this will be == desired*1... 
@@ -283,54 +287,51 @@ GAS LISTING /tmp/cccuIJas.s 			page 1
   91:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	//		and later we'll runningSum == desiredSum (above) 
   92:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	//    and reset and if again
   93:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	if(modulator->desiredSum > 0)
- 174               		.stabn	68,0,93,.LM9-.LFBB3
- 175               	.LM9:
- 176 001e 8081      		ld r24,Z
- 177 0020 9181      		ldd r25,Z+1
- 178 0022 1816      		cp __zero_reg__,r24
- 179 0024 1906      		cpc __zero_reg__,r25
- 180 0026 04F4      		brge .L8
+ 178               		.stabn	68,0,93,.LM10-.LFBB3
+ 179               	.LM10:
+ 180 001e 8081      		ld r24,Z
+ 181 0020 9181      		ldd r25,Z+1
+ 182 0022 1816      		cp __zero_reg__,r24
+ 183 0024 1906      		cpc __zero_reg__,r25
+ 184 0026 04F4      		brge .L7
   94:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	{
   95:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 		(modulator->desiredSum) -= (modulator->maxPower); //0xff;
- 181               		.stabn	68,0,95,.LM10-.LFBB3
- 182               	.LM10:
- 183 0028 2281      		ldd r18,Z+2
- 184 002a 8081      		ld r24,Z
- 185 002c 9181      		ldd r25,Z+1
- 186 002e 821B      		sub r24,r18
-GAS LISTING /tmp/cccuIJas.s 			page 6
+ 185               		.stabn	68,0,95,.LM11-.LFBB3
+ 186               	.LM11:
+GAS LISTING /tmp/cck3Rhtk.s 			page 6
 
 
- 187 0030 9109      		sbc r25,__zero_reg__
- 188 0032 9183      		std Z+1,r25
- 189 0034 8083      		st Z,r24
+ 187 0028 2281      		ldd r18,Z+2
+ 188 002a 8081      		ld r24,Z
+ 189 002c 9181      		ldd r25,Z+1
+ 190 002e 821B      		sub r24,r18
+ 191 0030 9109      		sbc r25,__zero_reg__
+ 192 0032 9183      		std Z+1,r25
+ 193 0034 8083      		st Z,r24
   96:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 		toReturn = TRUE;
- 190               		.stabn	68,0,96,.LM11-.LFBB3
- 191               	.LM11:
- 192 0036 81E0      		ldi r24,lo8(1)
- 193 0038 00C0      		rjmp .L7
- 194               	.L8:
+ 194               		.stabn	68,0,96,.LM12-.LFBB3
+ 195               	.LM12:
+ 196 0036 81E0      		ldi r24,lo8(1)
+ 197               	.L6:
   97:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	}
   98:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	else	//avg == desired is handled at the start... (except 0-case which works here too)
   99:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	{
  100:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 		//Don't modify runningSum, wait until desiredSum catches up...
  101:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 		toReturn = FALSE;
- 195               		.stabn	68,0,101,.LM12-.LFBB3
- 196               	.LM12:
- 197 003a 80E0      		ldi r24,0
- 198               	.L7:
  102:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	}
  103:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	
  104:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	(modulator->desiredSum) += (modulator->power);
- 199               		.stabn	68,0,104,.LM13-.LFBB3
- 200               	.LM13:
- 201 003c 9381      		ldd r25,Z+3
- 202 003e 2081      		ld r18,Z
- 203 0040 3181      		ldd r19,Z+1
- 204 0042 290F      		add r18,r25
- 205 0044 311D      		adc r19,__zero_reg__
- 206 0046 3183      		std Z+1,r19
- 207 0048 2083      		st Z,r18
+ 198               		.stabn	68,0,104,.LM13-.LFBB3
+ 199               	.LM13:
+ 200 0038 2381      		ldd r18,Z+3
+ 201 003a 4081      		ld r20,Z
+ 202 003c 5181      		ldd r21,Z+1
+ 203 003e 240F      		add r18,r20
+ 204 0040 352F      		mov r19,r21
+ 205 0042 311D      		adc r19,__zero_reg__
+ 206 0044 3183      		std Z+1,r19
+ 207 0046 2083      		st Z,r18
+ 208               	/* epilogue start */
  105:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 
  106:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	
  107:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	
@@ -347,34 +348,40 @@ GAS LISTING /tmp/cccuIJas.s 			page 1
  118:_commonCode_localized/hfModulation/1.00/hfModulation.c **** */	
  119:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	return toReturn;
  120:_commonCode_localized/hfModulation/1.00/hfModulation.c **** }
- 208               		.stabn	68,0,120,.LM14-.LFBB3
- 209               	.LM14:
- 210 004a 0895      		ret
- 211               		.size	hfm_nextOutput, .-hfm_nextOutput
- 212               		.stabs	"toReturn:r(3,2)",64,0,75,24
- 213               		.stabn	192,0,0,.LFBB3-.LFBB3
- 214               		.stabn	224,0,0,.Lscope3-.LFBB3
- 215               	.Lscope3:
- 216               		.stabs	"",36,0,0,.Lscope3-.LFBB3
- 217               		.stabd	78,0,0
- 218               		.stabs	"",100,0,0,.Letext0
-GAS LISTING /tmp/cccuIJas.s 			page 7
+ 209               		.stabn	68,0,120,.LM14-.LFBB3
+ 210               	.LM14:
+ 211 0048 0895      		ret
+ 212               	.L7:
+ 101:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 	}
+ 213               		.stabn	68,0,101,.LM15-.LFBB3
+ 214               	.LM15:
+ 215 004a 80E0      		ldi r24,0
+ 216 004c 00C0      		rjmp .L6
+ 217               		.size	hfm_nextOutput, .-hfm_nextOutput
+GAS LISTING /tmp/cck3Rhtk.s 			page 7
 
 
- 219               	.Letext0:
- 220               		.ident	"GCC: (GNU) 5.4.0"
-GAS LISTING /tmp/cccuIJas.s 			page 8
+ 218               		.stabs	"toReturn:r(3,2)",64,0,75,24
+ 219               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 220               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 221               	.Lscope3:
+ 222               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 223               		.stabd	78,0,0
+ 224               		.stabs	"",100,0,0,.Letext0
+ 225               	.Letext0:
+ 226               		.ident	"GCC: (GNU) 7.3.0"
+GAS LISTING /tmp/cck3Rhtk.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 hfModulation.c
-     /tmp/cccuIJas.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/cccuIJas.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/cccuIJas.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/cccuIJas.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/cccuIJas.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/cccuIJas.s:101    .text:0000000000000000 hfm_setPower
-     /tmp/cccuIJas.s:136    .text:0000000000000012 hfm_setup
-     /tmp/cccuIJas.s:164    .text:000000000000001c hfm_nextOutput
+     /tmp/cck3Rhtk.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cck3Rhtk.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cck3Rhtk.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cck3Rhtk.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cck3Rhtk.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cck3Rhtk.s:102    .text:0000000000000000 hfm_setPower
+     /tmp/cck3Rhtk.s:140    .text:0000000000000012 hfm_setup
+     /tmp/cck3Rhtk.s:168    .text:000000000000001c hfm_nextOutput
 
 NO UNDEFINED SYMBOLS

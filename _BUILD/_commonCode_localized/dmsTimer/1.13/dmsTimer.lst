@@ -1,4 +1,4 @@
-GAS LISTING /tmp/ccNi6rFu.s 			page 1
+GAS LISTING /tmp/ccw0acXv.s 			page 1
 
 
    1               		.file	"dmsTimer.c"
@@ -7,7 +7,7 @@ GAS LISTING /tmp/ccNi6rFu.s 			page 1
    4               	__SREG__ = 0x3f
    5               	__tmp_reg__ = 0
    6               	__zero_reg__ = 1
-   7               		.stabs	"/home/bernhard/source/avr-edid-spoofer/",100,0,2,.Ltext0
+   7               		.stabs	"/home/bernhard/Dropbox/r3/edid_spoofing_cable/avr-edid-spoofer/",100,0,2,.Ltext0
    8               		.stabs	"_commonCode_localized/dmsTimer/1.13/dmsTimer.c",100,0,2,.Ltext0
    9               		.text
   10               	.Ltext0:
@@ -28,100 +28,101 @@ GAS LISTING /tmp/ccNi6rFu.s 			page 1
   25               		.stabs	"float:t(0,14)=r(0,1);4;0;",128,0,0,0
   26               		.stabs	"double:t(0,15)=r(0,1);4;0;",128,0,0,0
   27               		.stabs	"long double:t(0,16)=r(0,1);4;0;",128,0,0,0
-  28               		.stabs	"short _Fract:t(0,17)=r(0,1);1;0;",128,0,0,0
-  29               		.stabs	"_Fract:t(0,18)=r(0,1);2;0;",128,0,0,0
-  30               		.stabs	"long _Fract:t(0,19)=r(0,1);4;0;",128,0,0,0
-  31               		.stabs	"long long _Fract:t(0,20)=r(0,1);8;0;",128,0,0,0
-  32               		.stabs	"unsigned short _Fract:t(0,21)=r(0,1);1;0;",128,0,0,0
-  33               		.stabs	"unsigned _Fract:t(0,22)=r(0,1);2;0;",128,0,0,0
-  34               		.stabs	"unsigned long _Fract:t(0,23)=r(0,1);4;0;",128,0,0,0
-  35               		.stabs	"unsigned long long _Fract:t(0,24)=r(0,1);8;0;",128,0,0,0
-  36               		.stabs	"_Sat short _Fract:t(0,25)=r(0,1);1;0;",128,0,0,0
-  37               		.stabs	"_Sat _Fract:t(0,26)=r(0,1);2;0;",128,0,0,0
-  38               		.stabs	"_Sat long _Fract:t(0,27)=r(0,1);4;0;",128,0,0,0
-  39               		.stabs	"_Sat long long _Fract:t(0,28)=r(0,1);8;0;",128,0,0,0
-  40               		.stabs	"_Sat unsigned short _Fract:t(0,29)=r(0,1);1;0;",128,0,0,0
-  41               		.stabs	"_Sat unsigned _Fract:t(0,30)=r(0,1);2;0;",128,0,0,0
-  42               		.stabs	"_Sat unsigned long _Fract:t(0,31)=r(0,1);4;0;",128,0,0,0
-  43               		.stabs	"_Sat unsigned long long _Fract:t(0,32)=r(0,1);8;0;",128,0,0,0
-  44               		.stabs	"short _Accum:t(0,33)=r(0,1);2;0;",128,0,0,0
-  45               		.stabs	"_Accum:t(0,34)=r(0,1);4;0;",128,0,0,0
-  46               		.stabs	"long _Accum:t(0,35)=r(0,1);8;0;",128,0,0,0
-  47               		.stabs	"long long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
-  48               		.stabs	"unsigned short _Accum:t(0,37)=r(0,1);2;0;",128,0,0,0
-  49               		.stabs	"unsigned _Accum:t(0,38)=r(0,1);4;0;",128,0,0,0
-  50               		.stabs	"unsigned long _Accum:t(0,39)=r(0,1);8;0;",128,0,0,0
-  51               		.stabs	"unsigned long long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
-  52               		.stabs	"_Sat short _Accum:t(0,41)=r(0,1);2;0;",128,0,0,0
-  53               		.stabs	"_Sat _Accum:t(0,42)=r(0,1);4;0;",128,0,0,0
-  54               		.stabs	"_Sat long _Accum:t(0,43)=r(0,1);8;0;",128,0,0,0
-  55               		.stabs	"_Sat long long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
-  56               		.stabs	"_Sat unsigned short _Accum:t(0,45)=r(0,1);2;0;",128,0,0,0
-  57               		.stabs	"_Sat unsigned _Accum:t(0,46)=r(0,1);4;0;",128,0,0,0
-GAS LISTING /tmp/ccNi6rFu.s 			page 2
+  28               		.stabs	"_Float32:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"short _Fract:t(0,18)=r(0,1);1;0;",128,0,0,0
+  30               		.stabs	"_Fract:t(0,19)=r(0,1);2;0;",128,0,0,0
+  31               		.stabs	"long _Fract:t(0,20)=r(0,1);4;0;",128,0,0,0
+  32               		.stabs	"long long _Fract:t(0,21)=r(0,1);8;0;",128,0,0,0
+  33               		.stabs	"unsigned short _Fract:t(0,22)=r(0,1);1;0;",128,0,0,0
+  34               		.stabs	"unsigned _Fract:t(0,23)=r(0,1);2;0;",128,0,0,0
+  35               		.stabs	"unsigned long _Fract:t(0,24)=r(0,1);4;0;",128,0,0,0
+  36               		.stabs	"unsigned long long _Fract:t(0,25)=r(0,1);8;0;",128,0,0,0
+  37               		.stabs	"_Sat short _Fract:t(0,26)=r(0,1);1;0;",128,0,0,0
+  38               		.stabs	"_Sat _Fract:t(0,27)=r(0,1);2;0;",128,0,0,0
+  39               		.stabs	"_Sat long _Fract:t(0,28)=r(0,1);4;0;",128,0,0,0
+  40               		.stabs	"_Sat long long _Fract:t(0,29)=r(0,1);8;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned short _Fract:t(0,30)=r(0,1);1;0;",128,0,0,0
+  42               		.stabs	"_Sat unsigned _Fract:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Sat unsigned long _Fract:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"_Sat unsigned long long _Fract:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"short _Accum:t(0,34)=r(0,1);2;0;",128,0,0,0
+  46               		.stabs	"_Accum:t(0,35)=r(0,1);4;0;",128,0,0,0
+  47               		.stabs	"long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
+  48               		.stabs	"long long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned short _Accum:t(0,38)=r(0,1);2;0;",128,0,0,0
+  50               		.stabs	"unsigned _Accum:t(0,39)=r(0,1);4;0;",128,0,0,0
+  51               		.stabs	"unsigned long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
+  52               		.stabs	"unsigned long long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat short _Accum:t(0,42)=r(0,1);2;0;",128,0,0,0
+  54               		.stabs	"_Sat _Accum:t(0,43)=r(0,1);4;0;",128,0,0,0
+  55               		.stabs	"_Sat long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
+  56               		.stabs	"_Sat long long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned short _Accum:t(0,46)=r(0,1);2;0;",128,0,0,0
+GAS LISTING /tmp/ccw0acXv.s 			page 2
 
 
-  58               		.stabs	"_Sat unsigned long _Accum:t(0,47)=r(0,1);8;0;",128,0,0,0
-  59               		.stabs	"_Sat unsigned long long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
-  60               		.stabs	"void:t(0,49)=(0,49)",128,0,0,0
-  61               		.stabs	"_commonCode_localized/dmsTimer/1.13/dmsTimer.h",130,0,0,0
-  62               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
-  63               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stdint.h",130,0,0,0
-  64               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
-  65               		.stabs	"int8_t:t(4,1)=(0,12)",128,0,125,0
-  66               		.stabs	"uint8_t:t(4,2)=(0,13)",128,0,126,0
-  67               		.stabs	"int16_t:t(4,3)=(0,1)",128,0,127,0
-  68               		.stabs	"uint16_t:t(4,4)=(0,4)",128,0,128,0
-  69               		.stabs	"int32_t:t(4,5)=(0,3)",128,0,129,0
-  70               		.stabs	"uint32_t:t(4,6)=(0,5)",128,0,130,0
-  71               		.stabs	"int64_t:t(4,7)=(0,8)",128,0,132,0
-  72               		.stabs	"uint64_t:t(4,8)=(0,9)",128,0,133,0
-  73               		.stabs	"intptr_t:t(4,9)=(4,3)",128,0,146,0
-  74               		.stabs	"uintptr_t:t(4,10)=(4,4)",128,0,151,0
-  75               		.stabs	"int_least8_t:t(4,11)=(4,1)",128,0,163,0
-  76               		.stabs	"uint_least8_t:t(4,12)=(4,2)",128,0,168,0
-  77               		.stabs	"int_least16_t:t(4,13)=(4,3)",128,0,173,0
-  78               		.stabs	"uint_least16_t:t(4,14)=(4,4)",128,0,178,0
-  79               		.stabs	"int_least32_t:t(4,15)=(4,5)",128,0,183,0
-  80               		.stabs	"uint_least32_t:t(4,16)=(4,6)",128,0,188,0
-  81               		.stabs	"int_least64_t:t(4,17)=(4,7)",128,0,196,0
-  82               		.stabs	"uint_least64_t:t(4,18)=(4,8)",128,0,203,0
-  83               		.stabs	"int_fast8_t:t(4,19)=(4,1)",128,0,217,0
-  84               		.stabs	"uint_fast8_t:t(4,20)=(4,2)",128,0,222,0
-  85               		.stabs	"int_fast16_t:t(4,21)=(4,3)",128,0,227,0
-  86               		.stabs	"uint_fast16_t:t(4,22)=(4,4)",128,0,232,0
-  87               		.stabs	"int_fast32_t:t(4,23)=(4,5)",128,0,237,0
-  88               		.stabs	"uint_fast32_t:t(4,24)=(4,6)",128,0,242,0
-  89               		.stabs	"int_fast64_t:t(4,25)=(4,7)",128,0,250,0
-  90               		.stabs	"uint_fast64_t:t(4,26)=(4,8)",128,0,257,0
-  91               		.stabs	"intmax_t:t(4,27)=(4,7)",128,0,277,0
-  92               		.stabs	"uintmax_t:t(4,28)=(4,8)",128,0,282,0
-  93               		.stabn	162,0,0,0
+  58               		.stabs	"_Sat unsigned _Accum:t(0,47)=r(0,1);4;0;",128,0,0,0
+  59               		.stabs	"_Sat unsigned long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
+  60               		.stabs	"_Sat unsigned long long _Accum:t(0,49)=r(0,1);8;0;",128,0,0,0
+  61               		.stabs	"void:t(0,50)=(0,50)",128,0,0,0
+  62               		.stabs	"_commonCode_localized/dmsTimer/1.13/dmsTimer.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  64               		.stabs	"/usr/lib/gcc/avr/7.3.0/include/stdint.h",130,0,0,0
+  65               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  66               		.stabs	"int8_t:t(4,1)=(0,12)",128,0,125,0
+  67               		.stabs	"uint8_t:t(4,2)=(0,13)",128,0,126,0
+  68               		.stabs	"int16_t:t(4,3)=(0,1)",128,0,127,0
+  69               		.stabs	"uint16_t:t(4,4)=(0,4)",128,0,128,0
+  70               		.stabs	"int32_t:t(4,5)=(0,3)",128,0,129,0
+  71               		.stabs	"uint32_t:t(4,6)=(0,5)",128,0,130,0
+  72               		.stabs	"int64_t:t(4,7)=(0,8)",128,0,132,0
+  73               		.stabs	"uint64_t:t(4,8)=(0,9)",128,0,133,0
+  74               		.stabs	"intptr_t:t(4,9)=(4,3)",128,0,146,0
+  75               		.stabs	"uintptr_t:t(4,10)=(4,4)",128,0,151,0
+  76               		.stabs	"int_least8_t:t(4,11)=(4,1)",128,0,163,0
+  77               		.stabs	"uint_least8_t:t(4,12)=(4,2)",128,0,168,0
+  78               		.stabs	"int_least16_t:t(4,13)=(4,3)",128,0,173,0
+  79               		.stabs	"uint_least16_t:t(4,14)=(4,4)",128,0,178,0
+  80               		.stabs	"int_least32_t:t(4,15)=(4,5)",128,0,183,0
+  81               		.stabs	"uint_least32_t:t(4,16)=(4,6)",128,0,188,0
+  82               		.stabs	"int_least64_t:t(4,17)=(4,7)",128,0,196,0
+  83               		.stabs	"uint_least64_t:t(4,18)=(4,8)",128,0,203,0
+  84               		.stabs	"int_fast8_t:t(4,19)=(4,1)",128,0,217,0
+  85               		.stabs	"uint_fast8_t:t(4,20)=(4,2)",128,0,222,0
+  86               		.stabs	"int_fast16_t:t(4,21)=(4,3)",128,0,227,0
+  87               		.stabs	"uint_fast16_t:t(4,22)=(4,4)",128,0,232,0
+  88               		.stabs	"int_fast32_t:t(4,23)=(4,5)",128,0,237,0
+  89               		.stabs	"uint_fast32_t:t(4,24)=(4,6)",128,0,242,0
+  90               		.stabs	"int_fast64_t:t(4,25)=(4,7)",128,0,250,0
+  91               		.stabs	"uint_fast64_t:t(4,26)=(4,8)",128,0,257,0
+  92               		.stabs	"intmax_t:t(4,27)=(4,7)",128,0,277,0
+  93               		.stabs	"uintmax_t:t(4,28)=(4,8)",128,0,282,0
   94               		.stabn	162,0,0,0
-  95               		.stabs	"int_farptr_t:t(2,1)=(4,5)",128,0,77,0
-  96               		.stabs	"uint_farptr_t:t(2,2)=(4,6)",128,0,81,0
-  97               		.stabn	162,0,0,0
-  98               		.stabs	"dms6sec_t:t(1,1)=(4,4)",128,0,81,0
-  99               		.stabs	"dms4day_t:t(1,2)=(4,6)",128,0,83,0
- 100               		.stabs	"dmsMax_t:t(1,3)=(4,6)",128,0,84,0
- 101               		.stabs	"./_commonCode_localized/timerCommon/1.21/timerCommon.h",130,0,0,0
- 102               		.stabs	"/usr/lib/avr/include/avr/interrupt.h",130,0,0,0
- 103               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
- 104               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
- 105               		.stabs	"__fuse_t:t(8,1)=(8,2)=s3low:(0,13),0,8;high:(0,13),8,8;extended:(0,13),16,8;;",128,0,244,0
- 106               		.stabn	162,0,0,0
+  95               		.stabn	162,0,0,0
+  96               		.stabs	"int_farptr_t:t(2,1)=(4,5)",128,0,77,0
+  97               		.stabs	"uint_farptr_t:t(2,2)=(4,6)",128,0,81,0
+  98               		.stabn	162,0,0,0
+  99               		.stabs	"dms6sec_t:t(1,1)=(4,4)",128,0,81,0
+ 100               		.stabs	"dms4day_t:t(1,2)=(4,6)",128,0,83,0
+ 101               		.stabs	"dmsMax_t:t(1,3)=(4,6)",128,0,84,0
+ 102               		.stabs	"./_commonCode_localized/timerCommon/1.21/timerCommon.h",130,0,0,0
+ 103               		.stabs	"/usr/lib/avr/include/avr/interrupt.h",130,0,0,0
+ 104               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+ 105               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 106               		.stabs	"__fuse_t:t(8,1)=(8,2)=s3low:(0,13),0,8;high:(0,13),8,8;extended:(0,13),16,8;;",128,0,244,0
  107               		.stabn	162,0,0,0
  108               		.stabn	162,0,0,0
  109               		.stabn	162,0,0,0
  110               		.stabn	162,0,0,0
- 111               		.stabs	"__vector_10:F(0,49)",36,0,46,__vector_10
- 112               	.global	__vector_10
- 113               		.type	__vector_10, @function
- 114               	__vector_10:
-GAS LISTING /tmp/ccNi6rFu.s 			page 3
+ 111               		.stabn	162,0,0,0
+ 112               		.stabs	"__vector_10:F(0,50)",36,0,46,__vector_10
+ 113               	.global	__vector_10
+ 114               		.type	__vector_10, @function
+GAS LISTING /tmp/ccw0acXv.s 			page 3
 
 
- 115               		.stabd	46,0,0
+ 115               	__vector_10:
+ 116               		.stabd	46,0,0
    1:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** #include "dmsTimer.h"
    2:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 
    3:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** //#if (defined(__COMPILING_AVR_LIBC__) || (_DMS_EXTERNALUPDATE_))
@@ -176,87 +177,87 @@ GAS LISTING /tmp/ccNi6rFu.s 			page 1
   52:_commonCode_localized/dmsTimer/1.13/dmsTimer.c ****   #error "this MCU not yet supported"
   53:_commonCode_localized/dmsTimer/1.13/dmsTimer.c ****  #endif
   54:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** {
- 116               		.stabn	68,0,54,.LM0-.LFBB1
- 117               	.LM0:
-GAS LISTING /tmp/ccNi6rFu.s 			page 4
+ 117               		.stabn	68,0,54,.LM0-.LFBB1
+GAS LISTING /tmp/ccw0acXv.s 			page 4
 
 
- 118               	.LFBB1:
- 119 0000 1F92      		push r1
- 120 0002 0F92      		push r0
- 121 0004 0FB6      		in r0,__SREG__
- 122 0006 0F92      		push r0
- 123 0008 1124      		clr __zero_reg__
- 124 000a 8F93      		push r24
- 125 000c 9F93      		push r25
- 126 000e AF93      		push r26
- 127 0010 BF93      		push r27
- 128               	/* prologue: Signal */
- 129               	/* frame size = 0 */
- 130               	/* stack size = 7 */
- 131               	.L__stack_usage = 7
+ 118               	.LM0:
+ 119               	.LFBB1:
+ 120 0000 1F92      		push r1
+ 121 0002 0F92      		push r0
+ 122 0004 0FB6      		in r0,__SREG__
+ 123 0006 0F92      		push r0
+ 124 0008 1124      		clr __zero_reg__
+ 125 000a 8F93      		push r24
+ 126 000c 9F93      		push r25
+ 127 000e AF93      		push r26
+ 128 0010 BF93      		push r27
+ 129               	/* prologue: Signal */
+ 130               	/* frame size = 0 */
+ 131               	/* stack size = 7 */
+ 132               	.L__stack_usage = 7
   55:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	dmsCount++;
- 132               		.stabn	68,0,55,.LM1-.LFBB1
- 133               	.LM1:
- 134 0012 8091 0000 		lds r24,dmsCount
- 135 0016 9091 0000 		lds r25,dmsCount+1
- 136 001a A091 0000 		lds r26,dmsCount+2
- 137 001e B091 0000 		lds r27,dmsCount+3
- 138 0022 0196      		adiw r24,1
- 139 0024 A11D      		adc r26,__zero_reg__
- 140 0026 B11D      		adc r27,__zero_reg__
- 141 0028 8093 0000 		sts dmsCount,r24
- 142 002c 9093 0000 		sts dmsCount+1,r25
- 143 0030 A093 0000 		sts dmsCount+2,r26
- 144 0034 B093 0000 		sts dmsCount+3,r27
- 145               	/* epilogue start */
+ 133               		.stabn	68,0,55,.LM1-.LFBB1
+ 134               	.LM1:
+ 135 0012 8091 0000 		lds r24,dmsCount
+ 136 0016 9091 0000 		lds r25,dmsCount+1
+ 137 001a A091 0000 		lds r26,dmsCount+2
+ 138 001e B091 0000 		lds r27,dmsCount+3
+ 139 0022 0196      		adiw r24,1
+ 140 0024 A11D      		adc r26,__zero_reg__
+ 141 0026 B11D      		adc r27,__zero_reg__
+ 142 0028 8093 0000 		sts dmsCount,r24
+ 143 002c 9093 0000 		sts dmsCount+1,r25
+ 144 0030 A093 0000 		sts dmsCount+2,r26
+ 145 0034 B093 0000 		sts dmsCount+3,r27
+ 146               	/* epilogue start */
   56:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** }
- 146               		.stabn	68,0,56,.LM2-.LFBB1
- 147               	.LM2:
- 148 0038 BF91      		pop r27
- 149 003a AF91      		pop r26
- 150 003c 9F91      		pop r25
- 151 003e 8F91      		pop r24
- 152 0040 0F90      		pop r0
- 153 0042 0FBE      		out __SREG__,r0
- 154 0044 0F90      		pop r0
- 155 0046 1F90      		pop r1
- 156 0048 1895      		reti
- 157               		.size	__vector_10, .-__vector_10
- 158               	.Lscope1:
- 159               		.stabs	"",36,0,0,.Lscope1-.LFBB1
- 160               		.stabd	78,0,0
- 161               		.stabs	"init_dmsTimer:F(0,49)",36,0,58,init_dmsTimer
- 162               	.global	init_dmsTimer
- 163               		.type	init_dmsTimer, @function
- 164               	init_dmsTimer:
- 165               		.stabd	46,0,0
+ 147               		.stabn	68,0,56,.LM2-.LFBB1
+ 148               	.LM2:
+ 149 0038 BF91      		pop r27
+ 150 003a AF91      		pop r26
+ 151 003c 9F91      		pop r25
+ 152 003e 8F91      		pop r24
+ 153 0040 0F90      		pop r0
+ 154 0042 0FBE      		out __SREG__,r0
+ 155 0044 0F90      		pop r0
+ 156 0046 1F90      		pop r1
+ 157 0048 1895      		reti
+ 158               		.size	__vector_10, .-__vector_10
+ 159               	.Lscope1:
+ 160               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 161               		.stabd	78,0,0
+ 162               		.stabs	"init_dmsTimer:F(0,50)",36,0,58,init_dmsTimer
+ 163               	.global	init_dmsTimer
+ 164               		.type	init_dmsTimer, @function
+ 165               	init_dmsTimer:
+ 166               		.stabd	46,0,0
   57:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 
   58:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** void init_dmsTimer(void)
   59:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** {
- 166               		.stabn	68,0,59,.LM3-.LFBB2
- 167               	.LM3:
- 168               	.LFBB2:
- 169               	/* prologue: function */
-GAS LISTING /tmp/ccNi6rFu.s 			page 5
+ 167               		.stabn	68,0,59,.LM3-.LFBB2
+ 168               	.LM3:
+ 169               	.LFBB2:
+GAS LISTING /tmp/ccw0acXv.s 			page 5
 
 
- 170               	/* frame size = 0 */
- 171               	/* stack size = 0 */
- 172               	.L__stack_usage = 0
+ 170               	/* prologue: function */
+ 171               	/* frame size = 0 */
+ 172               	/* stack size = 0 */
+ 173               	.L__stack_usage = 0
   60:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** #if (!defined(DMS_FRAC_UNUSED) || !DMS_FRAC_UNUSED)
   61:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	dmsNumUpdates = _DMS_OCR_VAL_;
- 173               		.stabn	68,0,61,.LM4-.LFBB2
- 174               	.LM4:
- 175 004a 83E6      		ldi r24,lo8(99)
- 176 004c 8093 0000 		sts dmsNumUpdates,r24
+ 174               		.stabn	68,0,61,.LM4-.LFBB2
+ 175               	.LM4:
+ 176 004a 83E6      		ldi r24,lo8(99)
+ 177 004c 8093 0000 		sts dmsNumUpdates,r24
   62:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 		 // = (uint8_t)((uint32_t)F_CPU / 
   63:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 		 //        (uint32_t)(1<<_DMS_CLKDIV_)/(uint32_t)10000);
   64:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	dmsIncrementSize = 1;
- 177               		.stabn	68,0,64,.LM5-.LFBB2
- 178               	.LM5:
- 179 0050 91E0      		ldi r25,lo8(1)
- 180 0052 9093 0000 		sts dmsIncrementSize,r25
+ 178               		.stabn	68,0,64,.LM5-.LFBB2
+ 179               	.LM5:
+ 180 0050 91E0      		ldi r25,lo8(1)
+ 181 0052 9093 0000 		sts dmsIncrementSize,r25
   65:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** #endif
   66:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 
   67:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	//Init_timer0Int(CLKDIV64);
@@ -270,45 +271,45 @@ GAS LISTING /tmp/ccNi6rFu.s 			page 1
   75:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	//OCR0 = (uint8_t)((uint32_t)F_CPU/(uint32_t)(1<<_DMS_CLKDIV_)/(uint32_t)10000);
   76:_commonCode_localized/dmsTimer/1.13/dmsTimer.c ****  #elif defined(OCR0A)
   77:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	OCR0A = _DMS_OCR_VAL_; //dmsNumUpdates;
- 181               		.stabn	68,0,77,.LM6-.LFBB2
- 182               	.LM6:
- 183 0056 89BD      		out 0x29,r24
+ 182               		.stabn	68,0,77,.LM6-.LFBB2
+ 183               	.LM6:
+ 184 0056 89BD      		out 0x29,r24
   78:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	//OCR0A = (uint8_t)((uint32_t)F_CPU/(uint32_t)(1<<_DMS_CLKDIV_)/(uint32_t)10000);
   79:_commonCode_localized/dmsTimer/1.13/dmsTimer.c ****  #else
   80:_commonCode_localized/dmsTimer/1.13/dmsTimer.c ****   #error "DMS doesn't yet support this processor with dedicated Timer0, try DMS_EXTERNAL_UPDATE"
   81:_commonCode_localized/dmsTimer/1.13/dmsTimer.c ****  #endif
   82:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 
   83:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	timer_setWGM(0, WGM_CLR_ON_COMPARE);
- 184               		.stabn	68,0,83,.LM7-.LFBB2
- 185               	.LM7:
- 186 0058 62E0      		ldi r22,lo8(2)
- 187 005a 80E0      		ldi r24,0
- 188 005c 00D0      		rcall timer_setWGM
+ 185               		.stabn	68,0,83,.LM7-.LFBB2
+ 186               	.LM7:
+ 187 0058 62E0      		ldi r22,lo8(2)
+ 188 005a 80E0      		ldi r24,0
+ 189 005c 00D0      		rcall timer_setWGM
   84:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	timer_selectDivisor(0, _DMS_CLKDIV_);
- 189               		.stabn	68,0,84,.LM8-.LFBB2
- 190               	.LM8:
- 191 005e 63E0      		ldi r22,lo8(3)
- 192 0060 80E0      		ldi r24,0
- 193 0062 00D0      		rcall timer_selectDivisor
+ 190               		.stabn	68,0,84,.LM8-.LFBB2
+ 191               	.LM8:
+ 192 005e 63E0      		ldi r22,lo8(3)
+ 193 0060 80E0      		ldi r24,0
+ 194 0062 00D0      		rcall timer_selectDivisor
   85:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	timer_compareMatchIntEnable(0, OUT_CHANNELA);
- 194               		.stabn	68,0,85,.LM9-.LFBB2
- 195               	.LM9:
- 196 0064 41E0      		ldi r20,lo8(1)
- 197 0066 60E0      		ldi r22,0
- 198 0068 80E0      		ldi r24,0
- 199 006a 00C0      		rjmp timer_compareMatchIntSetup
- 200               		.size	init_dmsTimer, .-init_dmsTimer
-GAS LISTING /tmp/ccNi6rFu.s 			page 6
+ 195               		.stabn	68,0,85,.LM9-.LFBB2
+ 196               	.LM9:
+ 197 0064 41E0      		ldi r20,lo8(1)
+ 198 0066 60E0      		ldi r22,0
+ 199 0068 80E0      		ldi r24,0
+ 200 006a 00C0      		rjmp timer_compareMatchIntSetup
+GAS LISTING /tmp/ccw0acXv.s 			page 6
 
 
- 201               	.Lscope2:
- 202               		.stabs	"",36,0,0,.Lscope2-.LFBB2
- 203               		.stabd	78,0,0
- 204               		.stabs	"dmsGetTime:F(1,2)",36,0,187,dmsGetTime
- 205               	.global	dmsGetTime
- 206               		.type	dmsGetTime, @function
- 207               	dmsGetTime:
- 208               		.stabd	46,0,0
+ 201               		.size	init_dmsTimer, .-init_dmsTimer
+ 202               	.Lscope2:
+ 203               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 204               		.stabd	78,0,0
+ 205               		.stabs	"dmsGetTime:F(1,2)",36,0,187,dmsGetTime
+ 206               	.global	dmsGetTime
+ 207               		.type	dmsGetTime, @function
+ 208               	dmsGetTime:
+ 209               		.stabd	46,0,0
   86:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	//@@@#warning "timerCommon doesn't yet support frequency-setting!" (handled above, manually)
   87:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** }
   88:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 
@@ -357,10 +358,10 @@ GAS LISTING /tmp/ccNi6rFu.s 			page 1
  131:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 			//waitFn();
  132:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 			(*p_waitFn)();
  133:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 		}
+GAS LISTING /tmp/ccw0acXv.s 			page 7
+
+
  134:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 
-GAS LISTING /tmp/ccNi6rFu.s 			page 7
-
-
  135:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	}
  136:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 
  137:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** }
@@ -415,16 +416,16 @@ GAS LISTING /tmp/ccNi6rFu.s 			page 1
  186:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** #if !(_DMS_EXTERNALUPDATE_)
  187:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** dms4day_t dmsGetTime(void)
  188:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** {
- 209               		.stabn	68,0,188,.LM10-.LFBB3
- 210               	.LM10:
- 211               	.LFBB3:
-GAS LISTING /tmp/ccNi6rFu.s 			page 8
+ 210               		.stabn	68,0,188,.LM10-.LFBB3
+ 211               	.LM10:
+GAS LISTING /tmp/ccw0acXv.s 			page 8
 
 
- 212               	/* prologue: function */
- 213               	/* frame size = 0 */
- 214               	/* stack size = 0 */
- 215               	.L__stack_usage = 0
+ 212               	.LFBB3:
+ 213               	/* prologue: function */
+ 214               	/* frame size = 0 */
+ 215               	/* stack size = 0 */
+ 216               	.L__stack_usage = 0
  189:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** //#elif defined(__COMPILING_AVR_LIBC__)
  190:_commonCode_localized/dmsTimer/1.13/dmsTimer.c ****  #if defined(__AVR_ARCH__)
  191:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	dms4day_t time;
@@ -435,12 +436,12 @@ GAS LISTING /tmp/ccNi6rFu.s 			page 1
  196:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	//  since each byte is handled separately (?)
  197:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	// THIS IS NEW as of glTest and UNTESTED in AVR.
  198:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	dms_cli();
- 216               		.stabn	68,0,198,.LM11-.LFBB3
- 217               	.LM11:
- 218               	/* #APP */
- 219               	 ;  198 "_commonCode_localized/dmsTimer/1.13/dmsTimer.c" 1
- 220 006c F894      		cli
- 221               	 ;  0 "" 2
+ 217               		.stabn	68,0,198,.LM11-.LFBB3
+ 218               	.LM11:
+ 219               	/* #APP */
+ 220               	 ;  198 "_commonCode_localized/dmsTimer/1.13/dmsTimer.c" 1
+ 221 006c F894      		cli
+ 222               	 ;  0 "" 2
  199:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	//There's a *slight* possibility the CLI allows one clock-cycle for:
  200:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	// *interrupt-processing which *might* allow TCNT0 to increment dmsCount
  201:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	//  which would be OK...?
@@ -453,11 +454,11 @@ GAS LISTING /tmp/ccNi6rFu.s 			page 1
  208:_commonCode_localized/dmsTimer/1.13/dmsTimer.c ****    #warning "dmsFrac may not be properly-synced with dmsCount"
  209:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	#if defined(TCNT0)
  210:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	 dmsFrac = TCNT0;
- 222               		.stabn	68,0,210,.LM12-.LFBB3
- 223               	.LM12:
- 224               	/* #NOAPP */
- 225 006e 82B7      		in r24,0x32
- 226 0070 8093 0000 		sts dmsFrac,r24
+ 223               		.stabn	68,0,210,.LM12-.LFBB3
+ 224               	.LM12:
+ 225               	/* #NOAPP */
+ 226 006e 82B7      		in r24,0x32
+ 227 0070 8093 0000 		sts dmsFrac,r24
  211:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	#elif defined(TCNT0L)
  212:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	 //This isn't particularly all-encompassing...
  213:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	 // The Tiny861 uses TCNT0L alone in 8-bit mode (which should do)
@@ -467,22 +468,23 @@ GAS LISTING /tmp/ccNi6rFu.s 			page 1
  217:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	#endif
  218:_commonCode_localized/dmsTimer/1.13/dmsTimer.c ****   #endif
  219:_commonCode_localized/dmsTimer/1.13/dmsTimer.c ****    time=dmsCount;
- 227               		.stabn	68,0,219,.LM13-.LFBB3
- 228               	.LM13:
- 229 0074 6091 0000 		lds r22,dmsCount
- 230 0078 7091 0000 		lds r23,dmsCount+1
- 231 007c 8091 0000 		lds r24,dmsCount+2
- 232 0080 9091 0000 		lds r25,dmsCount+3
+ 228               		.stabn	68,0,219,.LM13-.LFBB3
+ 229               	.LM13:
+ 230 0074 6091 0000 		lds r22,dmsCount
+ 231 0078 7091 0000 		lds r23,dmsCount+1
+ 232 007c 8091 0000 		lds r24,dmsCount+2
+ 233 0080 9091 0000 		lds r25,dmsCount+3
  220:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	dms_sei();
- 233               		.stabn	68,0,220,.LM14-.LFBB3
- 234               	.LM14:
- 235               	/* #APP */
- 236               	 ;  220 "_commonCode_localized/dmsTimer/1.13/dmsTimer.c" 1
-GAS LISTING /tmp/ccNi6rFu.s 			page 9
+ 234               		.stabn	68,0,220,.LM14-.LFBB3
+ 235               	.LM14:
+ 236               	/* #APP */
+GAS LISTING /tmp/ccw0acXv.s 			page 9
 
 
- 237 0084 7894      		sei
- 238               	 ;  0 "" 2
+ 237               	 ;  220 "_commonCode_localized/dmsTimer/1.13/dmsTimer.c" 1
+ 238 0084 7894      		sei
+ 239               	 ;  0 "" 2
+ 240               	/* epilogue start */
  221:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 
  222:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	return time;
  223:_commonCode_localized/dmsTimer/1.13/dmsTimer.c ****  #else
@@ -500,97 +502,95 @@ GAS LISTING /tmp/ccNi6rFu.s 			page 1
  235:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	return (dms4day_t)((now.tv_sec*DMS_SEC) + (now.tv_usec/100));
  236:_commonCode_localized/dmsTimer/1.13/dmsTimer.c ****  #endif
  237:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** }
- 239               		.stabn	68,0,237,.LM15-.LFBB3
- 240               	.LM15:
- 241               	/* #NOAPP */
- 242 0086 0895      		ret
- 243               		.size	dmsGetTime, .-dmsGetTime
- 244               		.stabs	"time:r(1,2)",64,0,191,22
- 245               		.stabn	192,0,0,.LFBB3-.LFBB3
- 246               		.stabn	224,0,0,.Lscope3-.LFBB3
- 247               	.Lscope3:
- 248               		.stabs	"",36,0,0,.Lscope3-.LFBB3
- 249               		.stabd	78,0,0
- 250               		.stabs	"dmsWaitFn:F(0,49)",36,0,103,dmsWaitFn
- 251               		.stabs	"time:P(4,6)",64,0,103,8
- 252               		.stabs	"p_waitFn:P(0,50)=*(0,51)=f(0,49)",64,0,103,28
- 253               	.global	dmsWaitFn
- 254               		.type	dmsWaitFn, @function
- 255               	dmsWaitFn:
- 256               		.stabd	46,0,0
+ 241               		.stabn	68,0,237,.LM15-.LFBB3
+ 242               	.LM15:
+ 243               	/* #NOAPP */
+ 244 0086 0895      		ret
+ 245               		.size	dmsGetTime, .-dmsGetTime
+ 246               		.stabs	"time:r(1,2)",64,0,191,22
+ 247               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 248               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 249               	.Lscope3:
+ 250               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 251               		.stabd	78,0,0
+ 252               		.stabs	"dmsWaitFn:F(0,50)",36,0,103,dmsWaitFn
+ 253               		.stabs	"time:P(4,6)",64,0,103,8
+ 254               		.stabs	"p_waitFn:P(0,51)=*(0,52)=f(0,50)",64,0,103,28
+ 255               	.global	dmsWaitFn
+ 256               		.type	dmsWaitFn, @function
+ 257               	dmsWaitFn:
+ 258               		.stabd	46,0,0
  104:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	uint32_t startTime;
- 257               		.stabn	68,0,104,.LM16-.LFBB4
- 258               	.LM16:
- 259               	.LFBB4:
- 260 0088 8F92      		push r8
- 261 008a 9F92      		push r9
- 262 008c AF92      		push r10
- 263 008e BF92      		push r11
- 264 0090 CF92      		push r12
- 265 0092 DF92      		push r13
- 266 0094 EF92      		push r14
- 267 0096 FF92      		push r15
- 268 0098 CF93      		push r28
- 269 009a DF93      		push r29
- 270               	/* prologue: function */
- 271               	/* frame size = 0 */
- 272               	/* stack size = 10 */
- 273               	.L__stack_usage = 10
- 274 009c 4B01      		movw r8,r22
- 275 009e 5C01      		movw r10,r24
-GAS LISTING /tmp/ccNi6rFu.s 			page 10
+ 259               		.stabn	68,0,104,.LM16-.LFBB4
+ 260               	.LM16:
+ 261               	.LFBB4:
+ 262 0088 8F92      		push r8
+ 263 008a 9F92      		push r9
+ 264 008c AF92      		push r10
+ 265 008e BF92      		push r11
+ 266 0090 CF92      		push r12
+ 267 0092 DF92      		push r13
+ 268 0094 EF92      		push r14
+ 269 0096 FF92      		push r15
+ 270 0098 CF93      		push r28
+ 271 009a DF93      		push r29
+ 272               	/* prologue: function */
+ 273               	/* frame size = 0 */
+ 274               	/* stack size = 10 */
+ 275               	.L__stack_usage = 10
+GAS LISTING /tmp/ccw0acXv.s 			page 10
 
 
- 276 00a0 EA01      		movw r28,r20
+ 276 009c 4B01      		movw r8,r22
+ 277 009e 5C01      		movw r10,r24
+ 278 00a0 EA01      		movw r28,r20
  107:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	
- 277               		.stabn	68,0,107,.LM17-.LFBB4
- 278               	.LM17:
- 279 00a2 00D0      		rcall dmsGetTime
- 280 00a4 6B01      		movw r12,r22
- 281 00a6 7C01      		movw r14,r24
- 282               	.L6:
+ 279               		.stabn	68,0,107,.LM17-.LFBB4
+ 280               	.LM17:
+ 281 00a2 00D0      		rcall dmsGetTime
+ 282 00a4 6B01      		movw r12,r22
+ 283 00a6 7C01      		movw r14,r24
+ 284               	.L6:
  109:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	{
- 283               		.stabn	68,0,109,.LM18-.LFBB4
- 284               	.LM18:
- 285 00a8 00D0      		rcall dmsGetTime
- 286 00aa DC01      		movw r26,r24
- 287 00ac CB01      		movw r24,r22
- 288 00ae 8C19      		sub r24,r12
- 289 00b0 9D09      		sbc r25,r13
- 290 00b2 AE09      		sbc r26,r14
- 291 00b4 BF09      		sbc r27,r15
- 292 00b6 8815      		cp r24,r8
- 293 00b8 9905      		cpc r25,r9
- 294 00ba AA05      		cpc r26,r10
- 295 00bc BB05      		cpc r27,r11
- 296 00be 00F4      		brsh .L11
- 121:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 		{
- 297               		.stabn	68,0,121,.LM19-.LFBB4
- 298               	.LM19:
- 299 00c0 2097      		sbiw r28,0
- 300 00c2 01F0      		breq .L6
- 132:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 		}
- 301               		.stabn	68,0,132,.LM20-.LFBB4
- 302               	.LM20:
- 303 00c4 FE01      		movw r30,r28
- 304 00c6 0995      		icall
- 305 00c8 00C0      		rjmp .L6
- 306               	.L11:
- 307               	/* epilogue start */
+ 285               		.stabn	68,0,109,.LM18-.LFBB4
+ 286               	.LM18:
+ 287 00a8 00D0      		rcall dmsGetTime
+ 288 00aa 6C19      		sub r22,r12
+ 289 00ac 7D09      		sbc r23,r13
+ 290 00ae 8E09      		sbc r24,r14
+ 291 00b0 9F09      		sbc r25,r15
+ 292 00b2 6815      		cp r22,r8
+ 293 00b4 7905      		cpc r23,r9
+ 294 00b6 8A05      		cpc r24,r10
+ 295 00b8 9B05      		cpc r25,r11
+ 296 00ba 00F0      		brlo .L7
+ 297               	/* epilogue start */
  137:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** #endif
- 308               		.stabn	68,0,137,.LM21-.LFBB4
- 309               	.LM21:
- 310 00ca DF91      		pop r29
- 311 00cc CF91      		pop r28
- 312 00ce FF90      		pop r15
- 313 00d0 EF90      		pop r14
- 314 00d2 DF90      		pop r13
- 315 00d4 CF90      		pop r12
- 316 00d6 BF90      		pop r11
- 317 00d8 AF90      		pop r10
- 318 00da 9F90      		pop r9
- 319 00dc 8F90      		pop r8
- 320 00de 0895      		ret
+ 298               		.stabn	68,0,137,.LM19-.LFBB4
+ 299               	.LM19:
+ 300 00bc DF91      		pop r29
+ 301 00be CF91      		pop r28
+ 302 00c0 FF90      		pop r15
+ 303 00c2 EF90      		pop r14
+ 304 00c4 DF90      		pop r13
+ 305 00c6 CF90      		pop r12
+ 306 00c8 BF90      		pop r11
+ 307 00ca AF90      		pop r10
+ 308 00cc 9F90      		pop r9
+ 309 00ce 8F90      		pop r8
+ 310 00d0 0895      		ret
+ 311               	.L7:
+ 121:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 		{
+ 312               		.stabn	68,0,121,.LM20-.LFBB4
+ 313               	.LM20:
+ 314 00d2 2097      		sbiw r28,0
+ 315 00d4 01F0      		breq .L6
+ 132:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 		}
+ 316               		.stabn	68,0,132,.LM21-.LFBB4
+ 317               	.LM21:
+ 318 00d6 FE01      		movw r30,r28
+ 319 00d8 0995      		icall
+ 320 00da 00C0      		rjmp .L6
  321               		.size	dmsWaitFn, .-dmsWaitFn
  322               		.stabs	"startTime:r(4,6)",64,0,105,12
  323               		.stabn	192,0,0,.LFBB4-.LFBB4
@@ -598,7 +598,7 @@ GAS LISTING /tmp/ccNi6rFu.s 			page 1
  325               	.Lscope4:
  326               		.stabs	"",36,0,0,.Lscope4-.LFBB4
  327               		.stabd	78,0,0
-GAS LISTING /tmp/ccNi6rFu.s 			page 11
+GAS LISTING /tmp/ccw0acXv.s 			page 11
 
 
  328               		.stabs	"dmsGetFrac:F(4,2)",36,0,247,dmsGetFrac
@@ -627,78 +627,79 @@ GAS LISTING /tmp/ccNi6rFu.s 			page 1
  249:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** 	return (uint8_t)((uint16_t)(dmsFrac) * (uint16_t)100  / (uint16_t)dmsNumUpdates);
  340               		.stabn	68,0,249,.LM23-.LFBB5
  341               	.LM23:
- 342 00e0 8091 0000 		lds r24,dmsFrac
- 343 00e4 90E0      		ldi r25,0
- 344 00e6 64E6      		ldi r22,lo8(100)
- 345 00e8 70E0      		ldi r23,0
- 346 00ea 00D0      		rcall __mulhi3
- 347 00ec 6091 0000 		lds r22,dmsNumUpdates
- 348 00f0 70E0      		ldi r23,0
- 349 00f2 00D0      		rcall __udivmodhi4
- 350 00f4 862F      		mov r24,r22
+ 342 00dc 8091 0000 		lds r24,dmsFrac
+ 343 00e0 90E0      		ldi r25,0
+ 344 00e2 64E6      		ldi r22,lo8(100)
+ 345 00e4 70E0      		ldi r23,0
+ 346 00e6 00D0      		rcall __mulhi3
+ 347 00e8 6091 0000 		lds r22,dmsNumUpdates
+ 348 00ec 70E0      		ldi r23,0
+ 349 00ee 00D0      		rcall __udivmodhi4
+ 350 00f0 862F      		mov r24,r22
+ 351               	/* epilogue start */
  250:_commonCode_localized/dmsTimer/1.13/dmsTimer.c **** }
- 351               		.stabn	68,0,250,.LM24-.LFBB5
- 352               	.LM24:
- 353 00f6 0895      		ret
- 354               		.size	dmsGetFrac, .-dmsGetFrac
- 355               	.Lscope5:
- 356               		.stabs	"",36,0,0,.Lscope5-.LFBB5
- 357               		.stabd	78,0,0
- 358               	.global	dmsFrac
- 359               		.section .bss
- 360               		.type	dmsFrac, @object
- 361               		.size	dmsFrac, 1
- 362               	dmsFrac:
- 363 0000 00        		.zero	1
- 364               	.global	dmsIncrementSize
- 365               		.data
- 366               		.type	dmsIncrementSize, @object
- 367               		.size	dmsIncrementSize, 1
- 368               	dmsIncrementSize:
- 369 0000 01        		.byte	1
- 370               	.global	dmsNumUpdates
- 371               		.type	dmsNumUpdates, @object
-GAS LISTING /tmp/ccNi6rFu.s 			page 12
+ 352               		.stabn	68,0,250,.LM24-.LFBB5
+ 353               	.LM24:
+ 354 00f2 0895      		ret
+ 355               		.size	dmsGetFrac, .-dmsGetFrac
+ 356               	.Lscope5:
+ 357               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 358               		.stabd	78,0,0
+ 359               	.global	dmsFrac
+ 360               		.section .bss
+ 361               		.type	dmsFrac, @object
+ 362               		.size	dmsFrac, 1
+ 363               	dmsFrac:
+ 364 0000 00        		.zero	1
+ 365               		.stabs	"dmsFrac:G(0,53)=B(4,2)",32,0,26,0
+ 366               	.global	dmsIncrementSize
+ 367               		.data
+ 368               		.type	dmsIncrementSize, @object
+ 369               		.size	dmsIncrementSize, 1
+ 370               	dmsIncrementSize:
+ 371 0000 01        		.byte	1
+GAS LISTING /tmp/ccw0acXv.s 			page 12
 
 
- 372               		.size	dmsNumUpdates, 1
- 373               	dmsNumUpdates:
- 374 0001 64        		.byte	100
- 375               	.global	dmsCount
- 376               		.section .bss
- 377               		.type	dmsCount, @object
- 378               		.size	dmsCount, 4
- 379               	dmsCount:
- 380 0001 0000 0000 		.zero	4
- 381               		.stabs	"dmsCount:G(0,52)=B(4,6)",32,0,5,0
- 382               		.stabs	"dmsNumUpdates:G(4,2)",32,0,17,0
- 383               		.stabs	"dmsIncrementSize:G(4,2)",32,0,18,0
- 384               		.stabs	"dmsFrac:G(0,53)=B(4,2)",32,0,26,0
- 385               		.text
- 386               		.stabs	"",100,0,0,.Letext0
- 387               	.Letext0:
- 388               		.ident	"GCC: (GNU) 5.4.0"
- 389               	.global __do_copy_data
- 390               	.global __do_clear_bss
-GAS LISTING /tmp/ccNi6rFu.s 			page 13
+ 372               		.stabs	"dmsIncrementSize:G(4,2)",32,0,18,0
+ 373               	.global	dmsNumUpdates
+ 374               		.type	dmsNumUpdates, @object
+ 375               		.size	dmsNumUpdates, 1
+ 376               	dmsNumUpdates:
+ 377 0001 64        		.byte	100
+ 378               		.stabs	"dmsNumUpdates:G(4,2)",32,0,17,0
+ 379               	.global	dmsCount
+ 380               		.section .bss
+ 381               		.type	dmsCount, @object
+ 382               		.size	dmsCount, 4
+ 383               	dmsCount:
+ 384 0001 0000 0000 		.zero	4
+ 385               		.stabs	"dmsCount:G(0,54)=B(4,6)",32,0,5,0
+ 386               		.text
+ 387               		.stabs	"",100,0,0,.Letext0
+ 388               	.Letext0:
+ 389               		.ident	"GCC: (GNU) 7.3.0"
+ 390               	.global __do_copy_data
+ 391               	.global __do_clear_bss
+GAS LISTING /tmp/ccw0acXv.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 dmsTimer.c
-     /tmp/ccNi6rFu.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccNi6rFu.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccNi6rFu.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccNi6rFu.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccNi6rFu.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccNi6rFu.s:114    .text:0000000000000000 __vector_10
-     /tmp/ccNi6rFu.s:379    .bss:0000000000000001 dmsCount
-     /tmp/ccNi6rFu.s:164    .text:000000000000004a init_dmsTimer
-     /tmp/ccNi6rFu.s:373    .data:0000000000000001 dmsNumUpdates
-     /tmp/ccNi6rFu.s:368    .data:0000000000000000 dmsIncrementSize
-     /tmp/ccNi6rFu.s:207    .text:000000000000006c dmsGetTime
-     /tmp/ccNi6rFu.s:362    .bss:0000000000000000 dmsFrac
-     /tmp/ccNi6rFu.s:255    .text:0000000000000088 dmsWaitFn
-     /tmp/ccNi6rFu.s:331    .text:00000000000000e0 dmsGetFrac
+     /tmp/ccw0acXv.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccw0acXv.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccw0acXv.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccw0acXv.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccw0acXv.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccw0acXv.s:115    .text:0000000000000000 __vector_10
+     /tmp/ccw0acXv.s:383    .bss:0000000000000001 dmsCount
+     /tmp/ccw0acXv.s:165    .text:000000000000004a init_dmsTimer
+     /tmp/ccw0acXv.s:376    .data:0000000000000001 dmsNumUpdates
+     /tmp/ccw0acXv.s:370    .data:0000000000000000 dmsIncrementSize
+     /tmp/ccw0acXv.s:208    .text:000000000000006c dmsGetTime
+     /tmp/ccw0acXv.s:363    .bss:0000000000000000 dmsFrac
+     /tmp/ccw0acXv.s:257    .text:0000000000000088 dmsWaitFn
+     /tmp/ccw0acXv.s:331    .text:00000000000000dc dmsGetFrac
 
 UNDEFINED SYMBOLS
 timer_setWGM

@@ -28,7 +28,7 @@
 //  multiplies it by 2... so best not to have odd values here)
 // #define PIX_CLK_GPU	(100000000UL)
 //#define PIX_CLK_GPU	(84000000UL)
-#define PIX_CLK_GPU	(83910000UL)
+// #define PIX_CLK_GPU	(83910000UL)
 
 /*
 Bbsod1: laut wiki ist die richtige modeline für den beamer: "1280x800@60" 83.91 1280 1312 1624 1656 800 816 824 841
@@ -45,13 +45,13 @@ backPorch: 841 (17)
 
 */
 
-#define H_ACTIVE_GPU	(1280)		//Active pixels
+// #define H_ACTIVE_GPU	(1920)		//Active pixels
 // #define H_FP_GPU		(32)			//Front Porch
 // #define H_WIDTH_GPU	(312)			//Sync Width
 // #define H_BP_GPU		(32)			//Back Porch
-#define H_FP_GPU		(64)			//Front Porch
-#define H_WIDTH_GPU	(248)			//Sync Width
-#define H_BP_GPU		(64)			//Back Porch
+// #define H_FP_GPU		(64)			//Front Porch
+// #define H_WIDTH_GPU	(248)			//Sync Width
+// #define H_BP_GPU		(64)			//Back Porch
 //a/o v48:
 //Oddly, 16,16,64 worked with SwitchResX, but *here* they caused a
 // horizontal shift... 120 seems to have fixed it.
@@ -62,14 +62,28 @@ backPorch: 841 (17)
 // 16,16,120 seems to work, but every once in a while I see a glitch in
 // terminal (sharp contrast, I guess)
 
-#define V_ACTIVE_GPU	(800)		//Active Rows
+// #define V_ACTIVE_GPU	(1080)		//Active Rows
 // #define V_FP_GPU		(16)			//Front Porch
 // #define V_WIDTH_GPU	(8)			//Sync Rows
 // #define V_BP_GPU		(17)			//Back Porch
-#define V_FP_GPU		(15)			//Front Porch
-#define V_WIDTH_GPU	(8)			//Sync Rows
-#define V_BP_GPU		(17)			//Back Porch
+// #define V_FP_GPU		(15)			//Front Porch
+// #define V_WIDTH_GPU	(8)			//Sync Rows
+// #define V_BP_GPU		(17)			//Back Porch
 
+
+// realraum LoTHR BENQ beamer modeline by sinyria
+
+#define PIX_CLK_GPU (172800000UL)
+
+#define H_ACTIVE_GPU (1920) //Active pixels
+#define H_FP_GPU (120) //Front Porch
+#define H_WIDTH_GPU (208) //Sync Width
+#define H_BP_GPU (328) //Back Porch
+
+#define V_ACTIVE_GPU (1080) //Active Rows
+#define V_FP_GPU (1) //Front Porch
+#define V_WIDTH_GPU (3) //Sync Rows
+#define V_BP_GPU (34) //Back Porch
 
 
 //If you want to have alternate-timings available, set this TRUE and enter
@@ -783,7 +797,7 @@ uint8_t edidArray[EDIDARRAYLENGTH] =
 	[0x7F]=	0x75	// CHECKSUM
 						//SPWG: "The 1-byte sum of all 128 bytes in this panel
 						//       ID block shall = 0"
-};
+}	;
 
 
 uint8_t edidArrayIndex = 0;

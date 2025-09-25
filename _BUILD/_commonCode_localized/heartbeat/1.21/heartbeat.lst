@@ -1,4 +1,4 @@
-GAS LISTING /tmp/ccoXficz.s 			page 1
+GAS LISTING /tmp/cchqCp5Y.s 			page 1
 
 
    1               		.file	"heartbeat.c"
@@ -7,7 +7,7 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
    4               	__SREG__ = 0x3f
    5               	__tmp_reg__ = 0
    6               	__zero_reg__ = 1
-   7               		.stabs	"/home/bernhard/source/avr-edid-spoofer/",100,0,2,.Ltext0
+   7               		.stabs	"/home/bernhard/Dropbox/r3/edid_spoofing_cable/avr-edid-spoofer/",100,0,2,.Ltext0
    8               		.stabs	"_commonCode_localized/heartbeat/1.21/heartbeat.c",100,0,2,.Ltext0
    9               		.text
   10               	.Ltext0:
@@ -28,104 +28,105 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
   25               		.stabs	"float:t(0,14)=r(0,1);4;0;",128,0,0,0
   26               		.stabs	"double:t(0,15)=r(0,1);4;0;",128,0,0,0
   27               		.stabs	"long double:t(0,16)=r(0,1);4;0;",128,0,0,0
-  28               		.stabs	"short _Fract:t(0,17)=r(0,1);1;0;",128,0,0,0
-  29               		.stabs	"_Fract:t(0,18)=r(0,1);2;0;",128,0,0,0
-  30               		.stabs	"long _Fract:t(0,19)=r(0,1);4;0;",128,0,0,0
-  31               		.stabs	"long long _Fract:t(0,20)=r(0,1);8;0;",128,0,0,0
-  32               		.stabs	"unsigned short _Fract:t(0,21)=r(0,1);1;0;",128,0,0,0
-  33               		.stabs	"unsigned _Fract:t(0,22)=r(0,1);2;0;",128,0,0,0
-  34               		.stabs	"unsigned long _Fract:t(0,23)=r(0,1);4;0;",128,0,0,0
-  35               		.stabs	"unsigned long long _Fract:t(0,24)=r(0,1);8;0;",128,0,0,0
-  36               		.stabs	"_Sat short _Fract:t(0,25)=r(0,1);1;0;",128,0,0,0
-  37               		.stabs	"_Sat _Fract:t(0,26)=r(0,1);2;0;",128,0,0,0
-  38               		.stabs	"_Sat long _Fract:t(0,27)=r(0,1);4;0;",128,0,0,0
-  39               		.stabs	"_Sat long long _Fract:t(0,28)=r(0,1);8;0;",128,0,0,0
-  40               		.stabs	"_Sat unsigned short _Fract:t(0,29)=r(0,1);1;0;",128,0,0,0
-  41               		.stabs	"_Sat unsigned _Fract:t(0,30)=r(0,1);2;0;",128,0,0,0
-  42               		.stabs	"_Sat unsigned long _Fract:t(0,31)=r(0,1);4;0;",128,0,0,0
-  43               		.stabs	"_Sat unsigned long long _Fract:t(0,32)=r(0,1);8;0;",128,0,0,0
-  44               		.stabs	"short _Accum:t(0,33)=r(0,1);2;0;",128,0,0,0
-  45               		.stabs	"_Accum:t(0,34)=r(0,1);4;0;",128,0,0,0
-  46               		.stabs	"long _Accum:t(0,35)=r(0,1);8;0;",128,0,0,0
-  47               		.stabs	"long long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
-  48               		.stabs	"unsigned short _Accum:t(0,37)=r(0,1);2;0;",128,0,0,0
-  49               		.stabs	"unsigned _Accum:t(0,38)=r(0,1);4;0;",128,0,0,0
-  50               		.stabs	"unsigned long _Accum:t(0,39)=r(0,1);8;0;",128,0,0,0
-  51               		.stabs	"unsigned long long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
-  52               		.stabs	"_Sat short _Accum:t(0,41)=r(0,1);2;0;",128,0,0,0
-  53               		.stabs	"_Sat _Accum:t(0,42)=r(0,1);4;0;",128,0,0,0
-  54               		.stabs	"_Sat long _Accum:t(0,43)=r(0,1);8;0;",128,0,0,0
-  55               		.stabs	"_Sat long long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
-  56               		.stabs	"_Sat unsigned short _Accum:t(0,45)=r(0,1);2;0;",128,0,0,0
-  57               		.stabs	"_Sat unsigned _Accum:t(0,46)=r(0,1);4;0;",128,0,0,0
-GAS LISTING /tmp/ccoXficz.s 			page 2
+  28               		.stabs	"_Float32:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"short _Fract:t(0,18)=r(0,1);1;0;",128,0,0,0
+  30               		.stabs	"_Fract:t(0,19)=r(0,1);2;0;",128,0,0,0
+  31               		.stabs	"long _Fract:t(0,20)=r(0,1);4;0;",128,0,0,0
+  32               		.stabs	"long long _Fract:t(0,21)=r(0,1);8;0;",128,0,0,0
+  33               		.stabs	"unsigned short _Fract:t(0,22)=r(0,1);1;0;",128,0,0,0
+  34               		.stabs	"unsigned _Fract:t(0,23)=r(0,1);2;0;",128,0,0,0
+  35               		.stabs	"unsigned long _Fract:t(0,24)=r(0,1);4;0;",128,0,0,0
+  36               		.stabs	"unsigned long long _Fract:t(0,25)=r(0,1);8;0;",128,0,0,0
+  37               		.stabs	"_Sat short _Fract:t(0,26)=r(0,1);1;0;",128,0,0,0
+  38               		.stabs	"_Sat _Fract:t(0,27)=r(0,1);2;0;",128,0,0,0
+  39               		.stabs	"_Sat long _Fract:t(0,28)=r(0,1);4;0;",128,0,0,0
+  40               		.stabs	"_Sat long long _Fract:t(0,29)=r(0,1);8;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned short _Fract:t(0,30)=r(0,1);1;0;",128,0,0,0
+  42               		.stabs	"_Sat unsigned _Fract:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Sat unsigned long _Fract:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"_Sat unsigned long long _Fract:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"short _Accum:t(0,34)=r(0,1);2;0;",128,0,0,0
+  46               		.stabs	"_Accum:t(0,35)=r(0,1);4;0;",128,0,0,0
+  47               		.stabs	"long _Accum:t(0,36)=r(0,1);8;0;",128,0,0,0
+  48               		.stabs	"long long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned short _Accum:t(0,38)=r(0,1);2;0;",128,0,0,0
+  50               		.stabs	"unsigned _Accum:t(0,39)=r(0,1);4;0;",128,0,0,0
+  51               		.stabs	"unsigned long _Accum:t(0,40)=r(0,1);8;0;",128,0,0,0
+  52               		.stabs	"unsigned long long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat short _Accum:t(0,42)=r(0,1);2;0;",128,0,0,0
+  54               		.stabs	"_Sat _Accum:t(0,43)=r(0,1);4;0;",128,0,0,0
+  55               		.stabs	"_Sat long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
+  56               		.stabs	"_Sat long long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned short _Accum:t(0,46)=r(0,1);2;0;",128,0,0,0
+GAS LISTING /tmp/cchqCp5Y.s 			page 2
 
 
-  58               		.stabs	"_Sat unsigned long _Accum:t(0,47)=r(0,1);8;0;",128,0,0,0
-  59               		.stabs	"_Sat unsigned long long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
-  60               		.stabs	"void:t(0,49)=(0,49)",128,0,0,0
-  61               		.stabs	"_commonCode_localized/heartbeat/1.21/heartbeat.h",130,0,0,0
-  62               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
-  63               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
-  64               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
-  65               		.stabs	"/usr/lib/gcc/avr/5.4.0/include/stdint.h",130,0,0,0
-  66               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
-  67               		.stabs	"int8_t:t(6,1)=(0,12)",128,0,125,0
-  68               		.stabs	"uint8_t:t(6,2)=(0,13)",128,0,126,0
-  69               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,127,0
-  70               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,128,0
-  71               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,129,0
-  72               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,130,0
-  73               		.stabs	"int64_t:t(6,7)=(0,8)",128,0,132,0
-  74               		.stabs	"uint64_t:t(6,8)=(0,9)",128,0,133,0
-  75               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,146,0
-  76               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,151,0
-  77               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,163,0
-  78               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,168,0
-  79               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,173,0
-  80               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,178,0
-  81               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,183,0
-  82               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,188,0
-  83               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,196,0
-  84               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,203,0
-  85               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,217,0
-  86               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,222,0
-  87               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,227,0
-  88               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,232,0
-  89               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,237,0
-  90               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,242,0
-  91               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,250,0
-  92               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,257,0
-  93               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,277,0
-  94               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,282,0
-  95               		.stabn	162,0,0,0
+  58               		.stabs	"_Sat unsigned _Accum:t(0,47)=r(0,1);4;0;",128,0,0,0
+  59               		.stabs	"_Sat unsigned long _Accum:t(0,48)=r(0,1);8;0;",128,0,0,0
+  60               		.stabs	"_Sat unsigned long long _Accum:t(0,49)=r(0,1);8;0;",128,0,0,0
+  61               		.stabs	"void:t(0,50)=(0,50)",128,0,0,0
+  62               		.stabs	"_commonCode_localized/heartbeat/1.21/heartbeat.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  65               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  66               		.stabs	"/usr/lib/gcc/avr/7.3.0/include/stdint.h",130,0,0,0
+  67               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  68               		.stabs	"int8_t:t(6,1)=(0,12)",128,0,125,0
+  69               		.stabs	"uint8_t:t(6,2)=(0,13)",128,0,126,0
+  70               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,127,0
+  71               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,128,0
+  72               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,129,0
+  73               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,130,0
+  74               		.stabs	"int64_t:t(6,7)=(0,8)",128,0,132,0
+  75               		.stabs	"uint64_t:t(6,8)=(0,9)",128,0,133,0
+  76               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,146,0
+  77               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,151,0
+  78               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,163,0
+  79               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,168,0
+  80               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,173,0
+  81               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,178,0
+  82               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,183,0
+  83               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,188,0
+  84               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,196,0
+  85               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,203,0
+  86               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,217,0
+  87               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,222,0
+  88               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,227,0
+  89               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,232,0
+  90               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,237,0
+  91               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,242,0
+  92               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,250,0
+  93               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,257,0
+  94               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,277,0
+  95               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,282,0
   96               		.stabn	162,0,0,0
-  97               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
-  98               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
-  99               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  99               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
  100               		.stabn	162,0,0,0
- 101               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
- 102               		.stabs	"__fuse_t:t(7,1)=(7,2)=s3low:(0,13),0,8;high:(0,13),8,8;extended:(0,13),16,8;;",128,0,244,0
- 103               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 103               		.stabs	"__fuse_t:t(7,1)=(7,2)=s3low:(0,13),0,8;high:(0,13),8,8;extended:(0,13),16,8;;",128,0,244,0
  104               		.stabn	162,0,0,0
- 105               		.stabs	"./_commonCode_localized/hfModulation/1.00/hfModulation.h",130,0,0,0
- 106               		.stabs	"hfm_t:t(8,1)=(8,2)=B(8,3)=s4desiredSum:(6,3),0,16;maxPower:(6,2),16,8;power:(6,2),24,8;;",
- 107               		.stabn	162,0,0,0
- 108               		.stabs	"./_commonCode_localized/dmsTimer/1.13/dmsTimer.h",130,0,0,0
- 109               		.stabs	"dms6sec_t:t(9,1)=(6,4)",128,0,81,0
- 110               		.stabs	"dms4day_t:t(9,2)=(6,6)",128,0,83,0
- 111               		.stabs	"dmsMax_t:t(9,3)=(6,6)",128,0,84,0
- 112               		.stabn	162,0,0,0
+ 105               		.stabn	162,0,0,0
+ 106               		.stabs	"./_commonCode_localized/hfModulation/1.00/hfModulation.h",130,0,0,0
+ 107               		.stabs	"hfm_t:t(8,1)=(8,2)=B(8,3)=s4desiredSum:(6,3),0,16;maxPower:(6,2),16,8;power:(6,2),24,8;;",
+ 108               		.stabn	162,0,0,0
+ 109               		.stabs	"./_commonCode_localized/dmsTimer/1.13/dmsTimer.h",130,0,0,0
+ 110               		.stabs	"dms6sec_t:t(9,1)=(6,4)",128,0,81,0
+ 111               		.stabs	"dms4day_t:t(9,2)=(6,6)",128,0,83,0
+ 112               		.stabs	"dmsMax_t:t(9,3)=(6,6)",128,0,84,0
  113               		.stabn	162,0,0,0
- 114               		.stabs	"setHeartRate:F(0,49)",36,0,46,setHeartRate
-GAS LISTING /tmp/ccoXficz.s 			page 3
+ 114               		.stabn	162,0,0,0
+GAS LISTING /tmp/cchqCp5Y.s 			page 3
 
 
- 115               		.stabs	"rate:P(6,2)",64,0,46,24
- 116               	.global	setHeartRate
- 117               		.type	setHeartRate, @function
- 118               	setHeartRate:
- 119               		.stabd	46,0,0
+ 115               		.stabs	"setHeartRate:F(0,50)",36,0,46,setHeartRate
+ 116               		.stabs	"rate:P(6,2)",64,0,46,24
+ 117               	.global	setHeartRate
+ 118               		.type	setHeartRate, @function
+ 119               	setHeartRate:
+ 120               		.stabd	46,0,0
    1:_commonCode_localized/heartbeat/1.21/heartbeat.c **** //heartbeat 1.20
    2:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #include "heartbeat.h"
    3:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
@@ -173,96 +174,100 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
   45:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
   46:_commonCode_localized/heartbeat/1.21/heartbeat.c **** void setHeartRate(uint8_t rate)
   47:_commonCode_localized/heartbeat/1.21/heartbeat.c **** {
- 120               		.stabn	68,0,47,.LM0-.LFBB1
- 121               	.LM0:
- 122               	.LFBB1:
- 123               	/* prologue: function */
- 124               	/* frame size = 0 */
-GAS LISTING /tmp/ccoXficz.s 			page 4
+ 121               		.stabn	68,0,47,.LM0-.LFBB1
+ 122               	.LM0:
+ 123               	.LFBB1:
+ 124               	/* prologue: function */
+GAS LISTING /tmp/cchqCp5Y.s 			page 4
 
 
- 125               	/* stack size = 0 */
- 126               	.L__stack_usage = 0
+ 125               	/* frame size = 0 */
+ 126               	/* stack size = 0 */
+ 127               	.L__stack_usage = 0
   48:_commonCode_localized/heartbeat/1.21/heartbeat.c **** //	heartRate = rate;
   49:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	
   50:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	if(rate == 0)
- 127               		.stabn	68,0,50,.LM1-.LFBB1
- 128               	.LM1:
- 129 0000 8111      		cpse r24,__zero_reg__
- 130 0002 00C0      		rjmp .L2
+ 128               		.stabn	68,0,50,.LM1-.LFBB1
+ 129               	.LM1:
+ 130 0000 8111      		cpse r24,__zero_reg__
+ 131 0002 00C0      		rjmp .L2
   51:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		rate = 1;
- 131               		.stabn	68,0,51,.LM2-.LFBB1
- 132               	.LM2:
- 133 0004 81E0      		ldi r24,lo8(1)
- 134               	.L2:
+ 132               		.stabn	68,0,51,.LM2-.LFBB1
+ 133               	.LM2:
+ 134 0004 81E0      		ldi r24,lo8(1)
+ 135               	.L2:
   52:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		
   53:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	#if (_HEART_DMS_)
   54:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
   55:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #warning "Relevant Everywhere: dms6sec_t used in heartbeat, yet a full cycle is 8 seconds, and neve
   56:_commonCode_localized/heartbeat/1.21/heartbeat.c ****     heartStepTime = (HEARTSTEPTIME/rate);
- 135               		.stabn	68,0,56,.LM3-.LFBB1
- 136               	.LM3:
- 137 0006 682F      		mov r22,r24
- 138 0008 70E0      		ldi r23,0
- 139 000a 8CE9      		ldi r24,lo8(-100)
- 140 000c 90E0      		ldi r25,0
- 141 000e 00D0      		rcall __divmodhi4
- 142 0010 7093 0000 		sts heartStepTime+1,r23
- 143 0014 6093 0000 		sts heartStepTime,r22
- 144 0018 0895      		ret
- 145               		.size	setHeartRate, .-setHeartRate
- 146               	.Lscope1:
- 147               		.stabs	"",36,0,0,.Lscope1-.LFBB1
- 148               		.stabd	78,0,0
- 149               		.stabs	"getHeartRate:F(6,2)",36,0,63,getHeartRate
- 150               	.global	getHeartRate
- 151               		.type	getHeartRate, @function
- 152               	getHeartRate:
- 153               		.stabd	46,0,0
+ 136               		.stabn	68,0,56,.LM3-.LFBB1
+ 137               	.LM3:
+ 138 0006 682F      		mov r22,r24
+ 139 0008 70E0      		ldi r23,0
+ 140 000a 8CE9      		ldi r24,lo8(-100)
+ 141 000c 90E0      		ldi r25,0
+ 142 000e 00D0      		rcall __divmodhi4
+ 143 0010 7093 0000 		sts heartStepTime+1,r23
+ 144 0014 6093 0000 		sts heartStepTime,r22
+ 145               	/* epilogue start */
   57:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	#else
   58:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	 heartStepTime = (HEART_ITERATIONCOUNT/rate);
   59:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	#endif
   60:_commonCode_localized/heartbeat/1.21/heartbeat.c **** }
+ 146               		.stabn	68,0,60,.LM4-.LFBB1
+ 147               	.LM4:
+ 148 0018 0895      		ret
+ 149               		.size	setHeartRate, .-setHeartRate
+ 150               	.Lscope1:
+ 151               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 152               		.stabd	78,0,0
+ 153               		.stabs	"getHeartRate:F(6,2)",36,0,63,getHeartRate
+ 154               	.global	getHeartRate
+ 155               		.type	getHeartRate, @function
+ 156               	getHeartRate:
+ 157               		.stabd	46,0,0
   61:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
   62:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #if (!defined(HEART_GETRATE_UNUSED) || !HEART_GETRATE_UNUSED)
   63:_commonCode_localized/heartbeat/1.21/heartbeat.c **** uint8_t getHeartRate(void)
   64:_commonCode_localized/heartbeat/1.21/heartbeat.c **** {
- 154               		.stabn	68,0,64,.LM4-.LFBB2
- 155               	.LM4:
- 156               	.LFBB2:
- 157               	/* prologue: function */
- 158               	/* frame size = 0 */
- 159               	/* stack size = 0 */
- 160               	.L__stack_usage = 0
+ 158               		.stabn	68,0,64,.LM5-.LFBB2
+ 159               	.LM5:
+ 160               	.LFBB2:
+ 161               	/* prologue: function */
+ 162               	/* frame size = 0 */
+ 163               	/* stack size = 0 */
+ 164               	.L__stack_usage = 0
+GAS LISTING /tmp/cchqCp5Y.s 			page 5
+
+
   65:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	#if (_HEART_DMS_)
   66:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	 return HEARTSTEPTIME/heartStepTime;
- 161               		.stabn	68,0,66,.LM5-.LFBB2
- 162               	.LM5:
-GAS LISTING /tmp/ccoXficz.s 			page 5
-
-
- 163 001a 6091 0000 		lds r22,heartStepTime
- 164 001e 7091 0000 		lds r23,heartStepTime+1
- 165 0022 8CE9      		ldi r24,lo8(-100)
- 166 0024 90E0      		ldi r25,0
- 167 0026 00D0      		rcall __udivmodhi4
- 168 0028 862F      		mov r24,r22
+ 165               		.stabn	68,0,66,.LM6-.LFBB2
+ 166               	.LM6:
+ 167 001a 6091 0000 		lds r22,heartStepTime
+ 168 001e 7091 0000 		lds r23,heartStepTime+1
+ 169 0022 8CE9      		ldi r24,lo8(-100)
+ 170 0024 90E0      		ldi r25,0
+ 171 0026 00D0      		rcall __udivmodhi4
+ 172 0028 862F      		mov r24,r22
+ 173               	/* epilogue start */
   67:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	#else
   68:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	 return HEART_ITERATIONCOUNT/heartStepTime;
   69:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	#endif
   70:_commonCode_localized/heartbeat/1.21/heartbeat.c **** }
- 169               		.stabn	68,0,70,.LM6-.LFBB2
- 170               	.LM6:
- 171 002a 0895      		ret
- 172               		.size	getHeartRate, .-getHeartRate
- 173               	.Lscope2:
- 174               		.stabs	"",36,0,0,.Lscope2-.LFBB2
- 175               		.stabd	78,0,0
- 176               		.stabs	"heartClear:F(0,49)",36,0,80,heartClear
- 177               	.global	heartClear
- 178               		.type	heartClear, @function
- 179               	heartClear:
- 180               		.stabd	46,0,0
+ 174               		.stabn	68,0,70,.LM7-.LFBB2
+ 175               	.LM7:
+ 176 002a 0895      		ret
+ 177               		.size	getHeartRate, .-getHeartRate
+ 178               	.Lscope2:
+ 179               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 180               		.stabd	78,0,0
+ 181               		.stabs	"heartClear:F(0,50)",36,0,80,heartClear
+ 182               	.global	heartClear
+ 183               		.type	heartClear, @function
+ 184               	heartClear:
+ 185               		.stabd	46,0,0
   71:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #endif
   72:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
   73:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #if (!defined(DMS_WAITFN_UNUSED) || !DMS_WAITFN_UNUSED)
@@ -274,33 +279,33 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
   79:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
   80:_commonCode_localized/heartbeat/1.21/heartbeat.c **** void heartClear(void)
   81:_commonCode_localized/heartbeat/1.21/heartbeat.c **** {
- 181               		.stabn	68,0,81,.LM7-.LFBB3
- 182               	.LM7:
- 183               	.LFBB3:
- 184               	/* prologue: function */
- 185               	/* frame size = 0 */
- 186               	/* stack size = 0 */
- 187               	.L__stack_usage = 0
+ 186               		.stabn	68,0,81,.LM8-.LFBB3
+ 187               	.LM8:
+ 188               	.LFBB3:
+ 189               	/* prologue: function */
+ 190               	/* frame size = 0 */
+ 191               	/* stack size = 0 */
+ 192               	.L__stack_usage = 0
   82:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	hfm_setPower(&heartModulator, 0);
- 188               		.stabn	68,0,82,.LM8-.LFBB3
- 189               	.LM8:
- 190 002c 60E0      		ldi r22,0
- 191 002e 80E0      		ldi r24,lo8(heartModulator)
- 192 0030 90E0      		ldi r25,hi8(heartModulator)
- 193 0032 00C0      		rjmp hfm_setPower
- 194               		.size	heartClear, .-heartClear
- 195               	.Lscope3:
- 196               		.stabs	"",36,0,0,.Lscope3-.LFBB3
- 197               		.stabd	78,0,0
- 198               		.stabs	"init_heartBeat:F(0,49)",36,0,115,init_heartBeat
- 199               	.global	init_heartBeat
- 200               		.type	init_heartBeat, @function
- 201               	init_heartBeat:
- 202               		.stabd	46,0,0
+ 193               		.stabn	68,0,82,.LM9-.LFBB3
+ 194               	.LM9:
+ 195 002c 60E0      		ldi r22,0
+ 196 002e 80E0      		ldi r24,lo8(heartModulator)
+ 197 0030 90E0      		ldi r25,hi8(heartModulator)
+ 198 0032 00C0      		rjmp hfm_setPower
+ 199               		.size	heartClear, .-heartClear
+ 200               	.Lscope3:
+ 201               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 202               		.stabd	78,0,0
+ 203               		.stabs	"init_heartBeat:F(0,50)",36,0,115,init_heartBeat
+GAS LISTING /tmp/cchqCp5Y.s 			page 6
+
+
+ 204               	.global	init_heartBeat
+ 205               		.type	init_heartBeat, @function
+ 206               	init_heartBeat:
+ 207               		.stabd	46,0,0
   83:_commonCode_localized/heartbeat/1.21/heartbeat.c **** }
-GAS LISTING /tmp/ccoXficz.s 			page 6
-
-
   84:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
   85:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
   86:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #if (!defined(HEARTPIN_HARDCODED) || !HEARTPIN_HARDCODED)
@@ -334,33 +339,33 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  114:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #else
  115:_commonCode_localized/heartbeat/1.21/heartbeat.c **** void init_heartBeat(void)
  116:_commonCode_localized/heartbeat/1.21/heartbeat.c **** {
- 203               		.stabn	68,0,116,.LM9-.LFBB4
- 204               	.LM9:
- 205               	.LFBB4:
- 206               	/* prologue: function */
- 207               	/* frame size = 0 */
- 208               	/* stack size = 0 */
- 209               	.L__stack_usage = 0
+ 208               		.stabn	68,0,116,.LM10-.LFBB4
+ 209               	.LM10:
+ 210               	.LFBB4:
+ 211               	/* prologue: function */
+ 212               	/* frame size = 0 */
+ 213               	/* stack size = 0 */
+ 214               	.L__stack_usage = 0
  117:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	wdt_reset();
- 210               		.stabn	68,0,117,.LM10-.LFBB4
- 211               	.LM10:
- 212               	/* #APP */
- 213               	 ;  117 "_commonCode_localized/heartbeat/1.21/heartbeat.c" 1
- 214 0034 A895      		wdr
- 215               	 ;  0 "" 2
- 216               	/* #NOAPP */
- 217               	.LBB14:
- 218               	.LBB15:
- 219               		.stabs	"/usr/lib/avr/include/avr/wdt.h",132,0,0,.Ltext1
- 220               	.Ltext1:
+ 215               		.stabn	68,0,117,.LM11-.LFBB4
+ 216               	.LM11:
+ 217               	/* #APP */
+ 218               	 ;  117 "_commonCode_localized/heartbeat/1.21/heartbeat.c" 1
+ 219 0034 A895      		wdr
+ 220               	 ;  0 "" 2
+ 221               	/* #NOAPP */
+ 222               	.LBB14:
+ 223               	.LBB15:
+ 224               		.stabs	"/usr/lib/avr/include/avr/wdt.h",132,0,0,.Ltext1
+ 225               	.Ltext1:
+GAS LISTING /tmp/cchqCp5Y.s 			page 7
+
+
    1:/usr/lib/avr/include/avr/wdt.h **** /* Copyright (c) 2002, 2004 Marek Michalkiewicz
    2:/usr/lib/avr/include/avr/wdt.h ****    Copyright (c) 2005, 2006, 2007 Eric B. Weddington
    3:/usr/lib/avr/include/avr/wdt.h ****    All rights reserved.
    4:/usr/lib/avr/include/avr/wdt.h **** 
    5:/usr/lib/avr/include/avr/wdt.h ****    Redistribution and use in source and binary forms, with or without
-GAS LISTING /tmp/ccoXficz.s 			page 7
-
-
    6:/usr/lib/avr/include/avr/wdt.h ****    modification, are permitted provided that the following conditions are met:
    7:/usr/lib/avr/include/avr/wdt.h **** 
    8:/usr/lib/avr/include/avr/wdt.h ****    * Redistributions of source code must retain the above copyright
@@ -413,14 +418,14 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
   55:/usr/lib/avr/include/avr/wdt.h ****     the manipulation.
   56:/usr/lib/avr/include/avr/wdt.h **** 
   57:/usr/lib/avr/include/avr/wdt.h ****     \note Depending on the fuse configuration of the particular
+GAS LISTING /tmp/cchqCp5Y.s 			page 8
+
+
   58:/usr/lib/avr/include/avr/wdt.h ****     device, further restrictions might apply, in particular it might
   59:/usr/lib/avr/include/avr/wdt.h ****     be disallowed to turn off the watchdog timer.
   60:/usr/lib/avr/include/avr/wdt.h **** 
   61:/usr/lib/avr/include/avr/wdt.h ****     Note that for newer devices (ATmega88 and newer, effectively any
   62:/usr/lib/avr/include/avr/wdt.h ****     AVR that has the option to also generate interrupts), the watchdog
-GAS LISTING /tmp/ccoXficz.s 			page 8
-
-
   63:/usr/lib/avr/include/avr/wdt.h ****     timer remains active even after a system reset (except a power-on
   64:/usr/lib/avr/include/avr/wdt.h ****     condition), using the fastest prescaler value (approximately 15
   65:/usr/lib/avr/include/avr/wdt.h ****     ms).  It is therefore required to turn off the watchdog early
@@ -473,14 +478,14 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  112:/usr/lib/avr/include/avr/wdt.h **** #  define _WD_CONTROL_REG     WDTCR
  113:/usr/lib/avr/include/avr/wdt.h **** #else
  114:/usr/lib/avr/include/avr/wdt.h **** #  define _WD_CONTROL_REG     WDT
+GAS LISTING /tmp/cchqCp5Y.s 			page 9
+
+
  115:/usr/lib/avr/include/avr/wdt.h **** #endif
  116:/usr/lib/avr/include/avr/wdt.h **** 
  117:/usr/lib/avr/include/avr/wdt.h **** #if defined(WDTOE)
  118:/usr/lib/avr/include/avr/wdt.h **** #define _WD_CHANGE_BIT      WDTOE
  119:/usr/lib/avr/include/avr/wdt.h **** #else
-GAS LISTING /tmp/ccoXficz.s 			page 9
-
-
  120:/usr/lib/avr/include/avr/wdt.h **** #define _WD_CHANGE_BIT      WDCE
  121:/usr/lib/avr/include/avr/wdt.h **** #endif
  122:/usr/lib/avr/include/avr/wdt.h **** 
@@ -533,14 +538,14 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  169:/usr/lib/avr/include/avr/wdt.h **** 	"out %[ccp_reg], %[ioreg_cen_mask]" "\n\t" \
  170:/usr/lib/avr/include/avr/wdt.h **** 	"lds %[tmp], %[wdt_reg]"			"\n\t" \
  171:/usr/lib/avr/include/avr/wdt.h **** 	"cbr %[tmp], %[timeout_mask]"       "\n\t" \
+GAS LISTING /tmp/cchqCp5Y.s 			page 10
+
+
  172:/usr/lib/avr/include/avr/wdt.h **** 	"sts %[wdt_reg], %[tmp]"			"\n\t" \
  173:/usr/lib/avr/include/avr/wdt.h ****     : [tmp]            "=r" (temp) \
  174:/usr/lib/avr/include/avr/wdt.h ****     : [ccp_reg]        "I" (_SFR_IO_ADDR(CCP)),       \
  175:/usr/lib/avr/include/avr/wdt.h ****       [ioreg_cen_mask] "r" ((uint8_t)CCP_IOREG_gc),   \
  176:/usr/lib/avr/include/avr/wdt.h ****       [wdt_reg]        "n" (_SFR_MEM_ADDR(WDT_CTRLA)),\
-GAS LISTING /tmp/ccoXficz.s 			page 10
-
-
  177:/usr/lib/avr/include/avr/wdt.h ****       [timeout_mask]   "I" (WDT_PERIOD_gm) \
  178:/usr/lib/avr/include/avr/wdt.h **** ); \
  179:/usr/lib/avr/include/avr/wdt.h **** } while(0)
@@ -593,14 +598,14 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  226:/usr/lib/avr/include/avr/wdt.h ****     : \
  227:/usr/lib/avr/include/avr/wdt.h ****     : [rampd]             "I" (_SFR_IO_ADDR(RAMPD)),    \
  228:/usr/lib/avr/include/avr/wdt.h ****       [ccp_reg]           "I" (_SFR_IO_ADDR(CCP)),      \
+GAS LISTING /tmp/cchqCp5Y.s 			page 11
+
+
  229:/usr/lib/avr/include/avr/wdt.h ****       [ioreg_cen_mask]    "r" ((uint8_t)CCP_IOREG_gc),   \
  230:/usr/lib/avr/include/avr/wdt.h ****       [wdt_reg]           "n" (_SFR_MEM_ADDR(WDT_CTRL)), \
  231:/usr/lib/avr/include/avr/wdt.h ****       [disable_mask]      "r" ((uint8_t)((~WDT_ENABLE_bm) | WDT_CEN_bm)) \
  232:/usr/lib/avr/include/avr/wdt.h ****     : "r0" \
  233:/usr/lib/avr/include/avr/wdt.h **** );
-GAS LISTING /tmp/ccoXficz.s 			page 11
-
-
  234:/usr/lib/avr/include/avr/wdt.h **** 
  235:/usr/lib/avr/include/avr/wdt.h **** #endif // defined (WDT_CTRLA) && !defined(RAMPD)
  236:/usr/lib/avr/include/avr/wdt.h **** 
@@ -653,14 +658,14 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  283:/usr/lib/avr/include/avr/wdt.h **** {
  284:/usr/lib/avr/include/avr/wdt.h **** 	if (!_SFR_IO_REG_P (CCP) && !_SFR_IO_REG_P (_WD_CONTROL_REG))
  285:/usr/lib/avr/include/avr/wdt.h **** 	{
+GAS LISTING /tmp/cchqCp5Y.s 			page 12
+
+
  286:/usr/lib/avr/include/avr/wdt.h **** 		__asm__ __volatile__ (
  287:/usr/lib/avr/include/avr/wdt.h **** 			"in __tmp_reg__,__SREG__" "\n\t"
  288:/usr/lib/avr/include/avr/wdt.h **** 			"cli" "\n\t"
  289:/usr/lib/avr/include/avr/wdt.h **** 			"wdr" "\n\t"
  290:/usr/lib/avr/include/avr/wdt.h **** 			"sts %[CCPADDRESS],%[SIGNATURE]" "\n\t"
-GAS LISTING /tmp/ccoXficz.s 			page 12
-
-
  291:/usr/lib/avr/include/avr/wdt.h **** 			"sts %[WDTREG],%[WDVALUE]" "\n\t"
  292:/usr/lib/avr/include/avr/wdt.h **** 			"out __SREG__,__tmp_reg__" "\n\t"
  293:/usr/lib/avr/include/avr/wdt.h **** 			: /* no outputs */
@@ -713,14 +718,14 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  340:/usr/lib/avr/include/avr/wdt.h **** 		__asm__ __volatile__ (
  341:/usr/lib/avr/include/avr/wdt.h **** 			"in __tmp_reg__,__SREG__" "\n\t"
  342:/usr/lib/avr/include/avr/wdt.h **** 			"cli" "\n\t"
+GAS LISTING /tmp/cchqCp5Y.s 			page 13
+
+
  343:/usr/lib/avr/include/avr/wdt.h **** 			"wdr" "\n\t"
  344:/usr/lib/avr/include/avr/wdt.h **** 			"out %[CCPADDRESS],%[SIGNATURE]" "\n\t"
  345:/usr/lib/avr/include/avr/wdt.h **** 			"out %[WDTREG],%[WDVALUE]" "\n\t"
  346:/usr/lib/avr/include/avr/wdt.h **** 			"out __SREG__,__tmp_reg__" "\n\t"
  347:/usr/lib/avr/include/avr/wdt.h **** 			: /* no outputs */
-GAS LISTING /tmp/ccoXficz.s 			page 13
-
-
  348:/usr/lib/avr/include/avr/wdt.h **** 			: [CCPADDRESS] "I" (_SFR_IO_ADDR(CCP)),
  349:/usr/lib/avr/include/avr/wdt.h **** 			[SIGNATURE] "r" ((uint8_t)0xD8),
  350:/usr/lib/avr/include/avr/wdt.h **** 			[WDTREG] "I" (_SFR_IO_ADDR(_WD_CONTROL_REG)),
@@ -773,14 +778,14 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  397:/usr/lib/avr/include/avr/wdt.h **** 				[SIGNATURE] "r" ((uint8_t)0xD8),
  398:/usr/lib/avr/include/avr/wdt.h **** 				[WDTREG] "I" (_SFR_IO_ADDR(_WD_CONTROL_REG)),
  399:/usr/lib/avr/include/avr/wdt.h **** 				[TEMP_WD] "d" (temp_wd),
+GAS LISTING /tmp/cchqCp5Y.s 			page 14
+
+
  400:/usr/lib/avr/include/avr/wdt.h **** 				[WDVALUE] "n" (1 << WDE)
  401:/usr/lib/avr/include/avr/wdt.h **** 				: "r0"
  402:/usr/lib/avr/include/avr/wdt.h **** 				);
  403:/usr/lib/avr/include/avr/wdt.h **** 	}
  404:/usr/lib/avr/include/avr/wdt.h **** 	else if (_SFR_IO_REG_P (CCP) && !_SFR_IO_REG_P(_WD_CONTROL_REG))
-GAS LISTING /tmp/ccoXficz.s 			page 14
-
-
  405:/usr/lib/avr/include/avr/wdt.h **** 	{
  406:/usr/lib/avr/include/avr/wdt.h ****         uint8_t temp_wd;
  407:/usr/lib/avr/include/avr/wdt.h ****         __asm__ __volatile__ (
@@ -833,14 +838,14 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  454:/usr/lib/avr/include/avr/wdt.h **** 	if (_SFR_IO_REG_P (_WD_CONTROL_REG))
  455:/usr/lib/avr/include/avr/wdt.h **** 	{
  456:/usr/lib/avr/include/avr/wdt.h **** 		__asm__ __volatile__ (
+GAS LISTING /tmp/cchqCp5Y.s 			page 15
+
+
  457:/usr/lib/avr/include/avr/wdt.h **** 				"in __tmp_reg__,__SREG__" "\n\t"
  458:/usr/lib/avr/include/avr/wdt.h **** 				"cli" "\n\t"
  459:/usr/lib/avr/include/avr/wdt.h **** 				"wdr" "\n\t"
  460:/usr/lib/avr/include/avr/wdt.h **** 				"out %0, %1" "\n\t"
  461:/usr/lib/avr/include/avr/wdt.h **** 				"out __SREG__,__tmp_reg__" "\n\t"
-GAS LISTING /tmp/ccoXficz.s 			page 15
-
-
  462:/usr/lib/avr/include/avr/wdt.h **** 				"out %0, %2" "\n \t"
  463:/usr/lib/avr/include/avr/wdt.h **** 				: /* no outputs */
  464:/usr/lib/avr/include/avr/wdt.h **** 				: "I" (_SFR_IO_ADDR(_WD_CONTROL_REG)),
@@ -877,61 +882,61 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  495:/usr/lib/avr/include/avr/wdt.h **** 	{
  496:/usr/lib/avr/include/avr/wdt.h ****         uint8_t register temp_reg;
  497:/usr/lib/avr/include/avr/wdt.h **** 		__asm__ __volatile__ (
- 221               		.stabn	68,0,497,.LM11-.LFBB4
- 222               	.LM11:
- 223               	/* #APP */
- 224               	 ;  497 "/usr/lib/avr/include/avr/wdt.h" 1
- 225 0036 0FB6      		in __tmp_reg__,__SREG__
- 226 0038 F894      		cli
- 227 003a A895      		wdr
- 228 003c 81B5      		in  r24,33
- 229 003e 8861      		ori r24,24
- 230 0040 81BD      		out 33,r24
- 231 0042 11BC      		out 33,__zero_reg__
- 232 0044 0FBE      		out __SREG__,__tmp_reg__
- 233               		
- 234               	 ;  0 "" 2
- 235               	/* #NOAPP */
- 236               	.LBE15:
- 237               	.LBE14:
- 238               		.stabs	"_commonCode_localized/heartbeat/1.21/heartbeat.c",132,0,0,.Ltext2
- 239               	.Ltext2:
+ 226               		.stabn	68,0,497,.LM12-.LFBB4
+ 227               	.LM12:
+ 228               	/* #APP */
+ 229               	 ;  497 "/usr/lib/avr/include/avr/wdt.h" 1
+ 230 0036 0FB6      		in __tmp_reg__,__SREG__
+ 231 0038 F894      		cli
+ 232 003a A895      		wdr
+ 233 003c 81B5      		in  r24,33
+ 234 003e 8861      		ori r24,24
+ 235 0040 81BD      		out 33,r24
+ 236 0042 11BC      		out 33,__zero_reg__
+ 237 0044 0FBE      		out __SREG__,__tmp_reg__
+ 238               		
+ 239               	 ;  0 "" 2
+ 240               	/* #NOAPP */
+ 241               	.LBE15:
+GAS LISTING /tmp/cchqCp5Y.s 			page 16
+
+
+ 242               	.LBE14:
+ 243               		.stabs	"_commonCode_localized/heartbeat/1.21/heartbeat.c",132,0,0,.Ltext2
+ 244               	.Ltext2:
  118:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	wdt_disable();
  119:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	clrpinPORT(HEART_PINNUM, HEART_PINPORT);
-GAS LISTING /tmp/ccoXficz.s 			page 16
-
-
- 240               		.stabn	68,0,119,.LM12-.LFBB4
- 241               	.LM12:
- 242 0046 C198      		cbi 0x18,1
+ 245               		.stabn	68,0,119,.LM13-.LFBB4
+ 246               	.LM13:
+ 247 0046 C198      		cbi 0x18,1
  120:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	setoutPORT(HEART_PINNUM, HEART_PINPORT);
- 243               		.stabn	68,0,120,.LM13-.LFBB4
- 244               	.LM13:
- 245 0048 B99A      		sbi 0x17,1
+ 248               		.stabn	68,0,120,.LM14-.LFBB4
+ 249               	.LM14:
+ 250 0048 B99A      		sbi 0x17,1
  121:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #endif
  122:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  123:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  124:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  125:_commonCode_localized/heartbeat/1.21/heartbeat.c **** //	hfm_setPower(&heartModulator, 0);
  126:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	hfm_setup(&heartModulator, 0, HEART_MAXBRIGHT);
- 246               		.stabn	68,0,126,.LM14-.LFBB4
- 247               	.LM14:
- 248 004a 4FEF      		ldi r20,lo8(-1)
- 249 004c 60E0      		ldi r22,0
- 250 004e 80E0      		ldi r24,lo8(heartModulator)
- 251 0050 90E0      		ldi r25,hi8(heartModulator)
- 252 0052 00D0      		rcall hfm_setup
- 253               	.LBB16:
- 254               	.LBB17:
+ 251               		.stabn	68,0,126,.LM15-.LFBB4
+ 252               	.LM15:
+ 253 004a 4FEF      		ldi r20,lo8(-1)
+ 254 004c 60E0      		ldi r22,0
+ 255 004e 80E0      		ldi r24,lo8(heartModulator)
+ 256 0050 90E0      		ldi r25,hi8(heartModulator)
+ 257 0052 00D0      		rcall hfm_setup
+ 258               	.LBB16:
+ 259               	.LBB17:
   56:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	#else
- 255               		.stabn	68,0,56,.LM15-.LFBB4
- 256               	.LM15:
- 257 0054 8CE9      		ldi r24,lo8(-100)
- 258 0056 90E0      		ldi r25,0
- 259 0058 9093 0000 		sts heartStepTime+1,r25
- 260 005c 8093 0000 		sts heartStepTime,r24
- 261               	.LBE17:
- 262               	.LBE16:
+ 260               		.stabn	68,0,56,.LM16-.LFBB4
+ 261               	.LM16:
+ 262 0054 8CE9      		ldi r24,lo8(-100)
+ 263 0056 90E0      		ldi r25,0
+ 264 0058 9093 0000 		sts heartStepTime+1,r25
+ 265 005c 8093 0000 		sts heartStepTime,r24
+ 266               	.LBE17:
+ 267               	.LBE16:
  127:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  128:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	setHeartRate(0);
  129:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	
@@ -940,9 +945,9 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  132:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//dmsTimer should be initialized elsewhere based on the rate of dmsUpdate calls...
  133:_commonCode_localized/heartbeat/1.21/heartbeat.c ****  #else 
  134:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	init_dmsTimer();
- 263               		.stabn	68,0,134,.LM16-.LFBB4
- 264               	.LM16:
- 265 0060 00D0      		rcall init_dmsTimer
+ 268               		.stabn	68,0,134,.LM17-.LFBB4
+ 269               	.LM17:
+ 270 0060 00D0      		rcall init_dmsTimer
  135:_commonCode_localized/heartbeat/1.21/heartbeat.c ****  #endif
  136:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  137:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #endif
@@ -953,27 +958,27 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  142:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//!!!! This can happen even if the WDT is NEVER ENABLED
  143:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	// esp. if the bit is set during a brown-out...
  144:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//Could also check ! Power-On, and/or brownout... 
+GAS LISTING /tmp/cchqCp5Y.s 			page 17
+
+
  145:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	if(getbit(WDRF, MCUStatReg))
- 266               		.stabn	68,0,145,.LM17-.LFBB4
- 267               	.LM17:
- 268 0062 04B6      		in __tmp_reg__,0x34
- 269 0064 03FE      		sbrs __tmp_reg__,3
-GAS LISTING /tmp/ccoXficz.s 			page 17
-
-
- 270 0066 00C0      		rjmp .L7
- 271               	.LBB18:
- 272               	.LBB19:
+ 271               		.stabn	68,0,145,.LM18-.LFBB4
+ 272               	.LM18:
+ 273 0062 04B6      		in __tmp_reg__,0x34
+ 274 0064 03FE      		sbrs __tmp_reg__,3
+ 275 0066 00C0      		rjmp .L6
+ 276               	.LBB18:
+ 277               	.LBB19:
   56:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	#else
- 273               		.stabn	68,0,56,.LM18-.LFBB4
- 274               	.LM18:
- 275 0068 84E0      		ldi r24,lo8(4)
- 276 006a 90E0      		ldi r25,0
- 277 006c 9093 0000 		sts heartStepTime+1,r25
- 278 0070 8093 0000 		sts heartStepTime,r24
- 279               	.L7:
- 280               	.LBE19:
- 281               	.LBE18:
+ 278               		.stabn	68,0,56,.LM19-.LFBB4
+ 279               	.LM19:
+ 280 0068 84E0      		ldi r24,lo8(4)
+ 281 006a 90E0      		ldi r25,0
+ 282 006c 9093 0000 		sts heartStepTime+1,r25
+ 283 0070 8093 0000 		sts heartStepTime,r24
+ 284               	.L6:
+ 285               	.LBE19:
+ 286               	.LBE18:
  146:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	{
  147:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		setHeartRate(32);
  148:_commonCode_localized/heartbeat/1.21/heartbeat.c **** /*
@@ -988,55 +993,46 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  157:_commonCode_localized/heartbeat/1.21/heartbeat.c **** */
  158:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	}
  159:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	if(!getbit(PORF, MCUStatReg))
- 282               		.stabn	68,0,159,.LM19-.LFBB4
- 283               	.LM19:
- 284 0074 04B6      		in __tmp_reg__,0x34
- 285 0076 00FC      		sbrc __tmp_reg__,0
- 286 0078 00C0      		rjmp .L8
+ 287               		.stabn	68,0,159,.LM20-.LFBB4
+ 288               	.LM20:
+ 289 0074 04B6      		in __tmp_reg__,0x34
+ 290 0076 00FC      		sbrc __tmp_reg__,0
+ 291 0078 00C0      		rjmp .L7
  160:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	{
  161:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		//It seems unusual that a brown-out wouldn't occur on power-up... takes time to charge caps, etc.
  162:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		//only check this if PowerOnReset was already cleared from a previous run
  163:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		if(getbit(BORF, MCUStatReg))
- 287               		.stabn	68,0,163,.LM20-.LFBB4
- 288               	.LM20:
- 289 007a 04B6      		in __tmp_reg__,0x34
- 290 007c 02FE      		sbrs __tmp_reg__,2
- 291 007e 00C0      		rjmp .L8
- 292               	.LBB20:
- 293               	.LBB21:
+ 292               		.stabn	68,0,163,.LM21-.LFBB4
+ 293               	.LM21:
+ 294 007a 04B6      		in __tmp_reg__,0x34
+ 295 007c 02FE      		sbrs __tmp_reg__,2
+ 296 007e 00C0      		rjmp .L7
+ 297               	.LBB20:
+ 298               	.LBB21:
   56:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	#else
- 294               		.stabn	68,0,56,.LM21-.LFBB4
- 295               	.LM21:
- 296 0080 89E0      		ldi r24,lo8(9)
- 297 0082 90E0      		ldi r25,0
- 298 0084 9093 0000 		sts heartStepTime+1,r25
- 299 0088 8093 0000 		sts heartStepTime,r24
- 300               	.L8:
- 301               	.LBE21:
- 302               	.LBE20:
+ 299               		.stabn	68,0,56,.LM22-.LFBB4
+ 300               	.LM22:
+ 301 0080 89E0      		ldi r24,lo8(9)
+ 302 0082 90E0      		ldi r25,0
+ 303 0084 9093 0000 		sts heartStepTime+1,r25
+ 304 0088 8093 0000 		sts heartStepTime,r24
+ 305               	.L7:
+ 306               	.LBE21:
+GAS LISTING /tmp/cchqCp5Y.s 			page 18
+
+
+ 307               	.LBE20:
  164:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		{
  165:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 			setHeartRate(16);
  166:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		}
  167:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	}
-GAS LISTING /tmp/ccoXficz.s 			page 18
-
-
  168:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//Clear the reset flags so we can see next time...
  169:_commonCode_localized/heartbeat/1.21/heartbeat.c **** //	MCUSR = 0x0f;
  170:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	MCUStatReg = 0;
- 303               		.stabn	68,0,170,.LM22-.LFBB4
- 304               	.LM22:
- 305 008c 14BE      		out 0x34,__zero_reg__
- 306 008e 0895      		ret
- 307               		.size	init_heartBeat, .-init_heartBeat
- 308               	.Lscope4:
- 309               		.stabs	"",36,0,0,.Lscope4-.LFBB4
- 310               		.stabd	78,0,0
- 311               		.stabs	"getNextDesired:F(6,2)",36,0,190,getNextDesired
- 312               	.global	getNextDesired
- 313               		.type	getNextDesired, @function
- 314               	getNextDesired:
- 315               		.stabd	46,0,0
+ 308               		.stabn	68,0,170,.LM23-.LFBB4
+ 309               	.LM23:
+ 310 008c 14BE      		out 0x34,__zero_reg__
+ 311               	/* epilogue start */
  171:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	
  172:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//It's kinda handy to have the WDT run for a while so we can tell it crashed...
  173:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #if !defined(_WDT_DISABLE_)
@@ -1053,23 +1049,38 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  184:_commonCode_localized/heartbeat/1.21/heartbeat.c ****  #warning "WDT DISABLED"
  185:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #endif
  186:_commonCode_localized/heartbeat/1.21/heartbeat.c **** }
+ 312               		.stabn	68,0,186,.LM24-.LFBB4
+ 313               	.LM24:
+ 314 008e 0895      		ret
+ 315               		.size	init_heartBeat, .-init_heartBeat
+ 316               	.Lscope4:
+ 317               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 318               		.stabd	78,0,0
+ 319               		.stabs	"getNextDesired:F(6,2)",36,0,190,getNextDesired
+ 320               	.global	getNextDesired
+ 321               		.type	getNextDesired, @function
+ 322               	getNextDesired:
+ 323               		.stabd	46,0,0
  187:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  188:_commonCode_localized/heartbeat/1.21/heartbeat.c **** //Increment or decrement the heart brightness as appropriate
  189:_commonCode_localized/heartbeat/1.21/heartbeat.c **** // this is called periodically by heartUpdate...
  190:_commonCode_localized/heartbeat/1.21/heartbeat.c **** uint8_t getNextDesired(void)
  191:_commonCode_localized/heartbeat/1.21/heartbeat.c **** {
- 316               		.stabn	68,0,191,.LM23-.LFBB5
- 317               	.LM23:
- 318               	.LFBB5:
- 319               	/* prologue: function */
- 320               	/* frame size = 0 */
- 321               	/* stack size = 0 */
- 322               	.L__stack_usage = 0
+ 324               		.stabn	68,0,191,.LM25-.LFBB5
+ 325               	.LM25:
+ 326               	.LFBB5:
+ 327               	/* prologue: function */
+ 328               	/* frame size = 0 */
+ 329               	/* stack size = 0 */
+ 330               	.L__stack_usage = 0
  192:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//Don't set abs(direction) > 1 or we'll have wraparound errors!
  193:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	static int8_t direction = +1;
  194:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	int16_t desired;
  195:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  196:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
+GAS LISTING /tmp/cchqCp5Y.s 			page 19
+
+
  197:_commonCode_localized/heartbeat/1.21/heartbeat.c **** //Somehow it seems the program gets stuck with the heartbeat at half-brightness...
  198:_commonCode_localized/heartbeat/1.21/heartbeat.c **** //So main is still running, but the heart isn't incrementing!
  199:_commonCode_localized/heartbeat/1.21/heartbeat.c **** // So do the watchdog reset here...
@@ -1077,98 +1088,96 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  201:_commonCode_localized/heartbeat/1.21/heartbeat.c **** //!!! Check This with WDT...
  202:_commonCode_localized/heartbeat/1.21/heartbeat.c **** //#warning "at what heart_reset() rate will getNextDesired never be called?"
  203:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	wdt_reset();
- 323               		.stabn	68,0,203,.LM24-.LFBB5
-GAS LISTING /tmp/ccoXficz.s 			page 19
-
-
- 324               	.LM24:
- 325               	/* #APP */
- 326               	 ;  203 "_commonCode_localized/heartbeat/1.21/heartbeat.c" 1
- 327 0090 A895      		wdr
- 328               	 ;  0 "" 2
+ 331               		.stabn	68,0,203,.LM26-.LFBB5
+ 332               	.LM26:
+ 333               	/* #APP */
+ 334               	 ;  203 "_commonCode_localized/heartbeat/1.21/heartbeat.c" 1
+ 335 0090 A895      		wdr
+ 336               	 ;  0 "" 2
  204:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  205:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	desired = (uint8_t)(heartModulator.power);
- 329               		.stabn	68,0,205,.LM25-.LFBB5
- 330               	.LM25:
- 331               	/* #NOAPP */
- 332 0092 2091 0000 		lds r18,heartModulator+3
+ 337               		.stabn	68,0,205,.LM27-.LFBB5
+ 338               	.LM27:
+ 339               	/* #NOAPP */
+ 340 0092 8091 0000 		lds r24,heartModulator+3
  206:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  207:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	desired += direction;
- 333               		.stabn	68,0,207,.LM26-.LFBB5
- 334               	.LM26:
- 335 0096 8091 0000 		lds r24,direction.1717
- 336 009a 082E      		mov __tmp_reg__,r24
- 337 009c 000C      		lsl r0
- 338 009e 990B      		sbc r25,r25
- 339 00a0 820F      		add r24,r18
- 340 00a2 911D      		adc r25,__zero_reg__
+ 341               		.stabn	68,0,207,.LM28-.LFBB5
+ 342               	.LM28:
+ 343 0096 2091 0000 		lds r18,direction.1613
+ 344 009a 022E      		mov __tmp_reg__,r18
+ 345 009c 000C      		lsl r0
+ 346 009e 330B      		sbc r19,r19
+ 347 00a0 820F      		add r24,r18
+ 348 00a2 932F      		mov r25,r19
+ 349 00a4 911D      		adc r25,__zero_reg__
  208:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	
  209:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//Slightly slower not to have these internal to above, but also safer...
  210:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	
  211:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	if(desired >= HEART_MAXBRIGHT)
- 341               		.stabn	68,0,211,.LM27-.LFBB5
- 342               	.LM27:
- 343 00a4 8F3F      		cpi r24,-1
- 344 00a6 9105      		cpc r25,__zero_reg__
- 345 00a8 04F0      		brlt .L16
+ 350               		.stabn	68,0,211,.LM29-.LFBB5
+ 351               	.LM29:
+ 352 00a6 8F3F      		cpi r24,-1
+ 353 00a8 9105      		cpc r25,__zero_reg__
+ 354 00aa 04F0      		brlt .L15
  212:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	{
  213:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		desired = HEART_MAXBRIGHT;
  214:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		direction = -1;
- 346               		.stabn	68,0,214,.LM28-.LFBB5
- 347               	.LM28:
- 348 00aa 8FEF      		ldi r24,lo8(-1)
- 349 00ac 8093 0000 		sts direction.1717,r24
+ 355               		.stabn	68,0,214,.LM30-.LFBB5
+ 356               	.LM30:
+ 357 00ac 8FEF      		ldi r24,lo8(-1)
+ 358 00ae 8093 0000 		sts direction.1613,r24
  213:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		direction = -1;
- 350               		.stabn	68,0,213,.LM29-.LFBB5
- 351               	.LM29:
- 352 00b0 8FEF      		ldi r24,lo8(-1)
- 353 00b2 90E0      		ldi r25,0
- 354 00b4 0895      		ret
- 355               	.L16:
+ 359               		.stabn	68,0,213,.LM31-.LFBB5
+ 360               	.LM31:
+ 361 00b2 8FEF      		ldi r24,lo8(-1)
+ 362 00b4 90E0      		ldi r25,0
+ 363 00b6 0895      		ret
+ 364               	.L15:
  215:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	}	
  216:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  217:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	if(desired <= 0)
- 356               		.stabn	68,0,217,.LM30-.LFBB5
- 357               	.LM30:
- 358 00b6 1816      		cp __zero_reg__,r24
- 359 00b8 1906      		cpc __zero_reg__,r25
- 360 00ba 04F0      		brlt .L17
+ 365               		.stabn	68,0,217,.LM32-.LFBB5
+GAS LISTING /tmp/cchqCp5Y.s 			page 20
+
+
+ 366               	.LM32:
+ 367 00b8 1816      		cp __zero_reg__,r24
+ 368 00ba 1906      		cpc __zero_reg__,r25
+ 369 00bc 04F0      		brlt .L16
  218:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	{
  219:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		desired = 0;
  220:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		direction = +1;
- 361               		.stabn	68,0,220,.LM31-.LFBB5
- 362               	.LM31:
-GAS LISTING /tmp/ccoXficz.s 			page 20
-
-
- 363 00bc 81E0      		ldi r24,lo8(1)
- 364 00be 8093 0000 		sts direction.1717,r24
+ 370               		.stabn	68,0,220,.LM33-.LFBB5
+ 371               	.LM33:
+ 372 00be 81E0      		ldi r24,lo8(1)
+ 373 00c0 8093 0000 		sts direction.1613,r24
  219:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		direction = +1;
- 365               		.stabn	68,0,219,.LM32-.LFBB5
- 366               	.LM32:
- 367 00c2 80E0      		ldi r24,0
- 368 00c4 90E0      		ldi r25,0
- 369               	.L17:
+ 374               		.stabn	68,0,219,.LM34-.LFBB5
+ 375               	.LM34:
+ 376 00c4 80E0      		ldi r24,0
+ 377               	.L16:
+ 378               	/* epilogue start */
  221:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	}
  222:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	
  223:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	return (uint8_t)desired;
  224:_commonCode_localized/heartbeat/1.21/heartbeat.c **** }
- 370               		.stabn	68,0,224,.LM33-.LFBB5
- 371               	.LM33:
- 372 00c6 0895      		ret
- 373               		.size	getNextDesired, .-getNextDesired
- 374               		.stabs	"direction:V(6,1)",38,0,193,direction.1717
- 375               		.stabn	192,0,0,.LFBB5-.LFBB5
- 376               		.stabn	224,0,0,.Lscope5-.LFBB5
- 377               	.Lscope5:
- 378               		.stabs	"",36,0,0,.Lscope5-.LFBB5
- 379               		.stabd	78,0,0
- 380               		.stabs	"set_heartBlink:F(0,49)",36,0,234,set_heartBlink
- 381               		.stabs	"count:P(6,2)",64,0,234,24
- 382               	.global	set_heartBlink
- 383               		.type	set_heartBlink, @function
- 384               	set_heartBlink:
- 385               		.stabd	46,0,0
+ 379               		.stabn	68,0,224,.LM35-.LFBB5
+ 380               	.LM35:
+ 381 00c6 0895      		ret
+ 382               		.size	getNextDesired, .-getNextDesired
+ 383               		.stabs	"direction:V(6,1)",38,0,193,direction.1613
+ 384               		.stabn	192,0,0,.LFBB5-.LFBB5
+ 385               		.stabn	224,0,0,.Lscope5-.LFBB5
+ 386               	.Lscope5:
+ 387               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 388               		.stabd	78,0,0
+ 389               		.stabs	"set_heartBlink:F(0,50)",36,0,234,set_heartBlink
+ 390               		.stabs	"count:P(6,2)",64,0,234,24
+ 391               	.global	set_heartBlink
+ 392               		.type	set_heartBlink, @function
+ 393               	set_heartBlink:
+ 394               		.stabd	46,0,0
  225:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  226:_commonCode_localized/heartbeat/1.21/heartbeat.c **** //Used for error-indication...
  227:_commonCode_localized/heartbeat/1.21/heartbeat.c **** // when 0, the heart fades as usual
@@ -1180,32 +1189,35 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  233:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  234:_commonCode_localized/heartbeat/1.21/heartbeat.c **** void set_heartBlink(uint8_t count)
  235:_commonCode_localized/heartbeat/1.21/heartbeat.c **** {
- 386               		.stabn	68,0,235,.LM34-.LFBB6
- 387               	.LM34:
- 388               	.LFBB6:
- 389               	/* prologue: function */
- 390               	/* frame size = 0 */
- 391               	/* stack size = 0 */
- 392               	.L__stack_usage = 0
+ 395               		.stabn	68,0,235,.LM36-.LFBB6
+ 396               	.LM36:
+ 397               	.LFBB6:
+ 398               	/* prologue: function */
+ 399               	/* frame size = 0 */
+ 400               	/* stack size = 0 */
+ 401               	.L__stack_usage = 0
  236:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	heartBlink = count;
- 393               		.stabn	68,0,236,.LM35-.LFBB6
- 394               	.LM35:
- 395 00c8 8093 0000 		sts heartBlink,r24
- 396 00cc 0895      		ret
- 397               		.size	set_heartBlink, .-set_heartBlink
- 398               	.Lscope6:
- 399               		.stabs	"",36,0,0,.Lscope6-.LFBB6
- 400               		.stabd	78,0,0
- 401               		.stabs	"blinkHeart:F(6,2)",36,0,244,blinkHeart
- 402               		.stabs	"currentTime:P(9,1)",64,0,244,18
-GAS LISTING /tmp/ccoXficz.s 			page 21
+ 402               		.stabn	68,0,236,.LM37-.LFBB6
+GAS LISTING /tmp/cchqCp5Y.s 			page 21
 
 
- 403               	.global	blinkHeart
- 404               		.type	blinkHeart, @function
- 405               	blinkHeart:
- 406               		.stabd	46,0,0
+ 403               	.LM37:
+ 404 00c8 8093 0000 		sts heartBlink,r24
+ 405               	/* epilogue start */
  237:_commonCode_localized/heartbeat/1.21/heartbeat.c **** }
+ 406               		.stabn	68,0,237,.LM38-.LFBB6
+ 407               	.LM38:
+ 408 00cc 0895      		ret
+ 409               		.size	set_heartBlink, .-set_heartBlink
+ 410               	.Lscope6:
+ 411               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 412               		.stabd	78,0,0
+ 413               		.stabs	"blinkHeart:F(6,2)",36,0,244,blinkHeart
+ 414               		.stabs	"currentTime:P(9,1)",64,0,244,30
+ 415               	.global	blinkHeart
+ 416               		.type	blinkHeart, @function
+ 417               	blinkHeart:
+ 418               		.stabd	46,0,0
  238:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  239:_commonCode_localized/heartbeat/1.21/heartbeat.c **** //Called by heartUpdate... used internally, only
  240:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #if (_HEART_DMS_)
@@ -1214,18 +1226,14 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  243:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #warning "This may get cut, if the blink-rate is longer than 6sec!"
  244:_commonCode_localized/heartbeat/1.21/heartbeat.c **** uint8_t blinkHeart(dms6sec_t currentTime)
  245:_commonCode_localized/heartbeat/1.21/heartbeat.c **** {
- 407               		.stabn	68,0,245,.LM36-.LFBB7
- 408               	.LM36:
- 409               	.LFBB7:
- 410 00ce CF92      		push r12
- 411 00d0 DF92      		push r13
- 412 00d2 EF92      		push r14
- 413 00d4 FF92      		push r15
- 414               	/* prologue: function */
- 415               	/* frame size = 0 */
- 416               	/* stack size = 4 */
- 417               	.L__stack_usage = 4
- 418 00d6 9C01      		movw r18,r24
+ 419               		.stabn	68,0,245,.LM39-.LFBB7
+ 420               	.LM39:
+ 421               	.LFBB7:
+ 422               	/* prologue: function */
+ 423               	/* frame size = 0 */
+ 424               	/* stack size = 0 */
+ 425               	.L__stack_usage = 0
+ 426 00ce FC01      		movw r30,r24
  246:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	static dms6sec_t lastToggleTime = 0;
  247:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #else
  248:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #define TOGGLETIME   (2500)
@@ -1243,27 +1251,26 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  260:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	
  261:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  262:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	uint8_t thisNibble = heartBlink;
- 419               		.stabn	68,0,262,.LM37-.LFBB7
- 420               	.LM37:
- 421 00d8 8091 0000 		lds r24,heartBlink
- 422 00dc 482F      		mov r20,r24
- 423 00de 407F      		andi r20,lo8(-16)
- 424 00e0 982F      		mov r25,r24
- 425 00e2 9F70      		andi r25,lo8(15)
+ 427               		.stabn	68,0,262,.LM40-.LFBB7
+ 428               	.LM40:
+ 429 00d0 8091 0000 		lds r24,heartBlink
+ 430 00d4 282F      		mov r18,r24
+ 431 00d6 2F70      		andi r18,lo8(15)
  263:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  264:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//If both nibbles are filled, process them as specified
+GAS LISTING /tmp/cchqCp5Y.s 			page 22
+
+
  265:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	if((heartBlink & 0xf0) && (heartBlink & 0x0f))
- 426               		.stabn	68,0,265,.LM38-.LFBB7
- 427               	.LM38:
- 428 00e4 4423      		tst r20
- 429 00e6 01F0      		breq .L20
- 430               		.stabn	68,0,265,.LM39-.LFBB7
-GAS LISTING /tmp/ccoXficz.s 			page 22
-
-
- 431               	.LM39:
- 432 00e8 9111      		cpse r25,__zero_reg__
- 433 00ea 00C0      		rjmp .L21
+ 432               		.stabn	68,0,265,.LM41-.LFBB7
+ 433               	.LM41:
+ 434 00d8 982F      		mov r25,r24
+ 435 00da 907F      		andi r25,lo8(-16)
+ 436 00dc 01F0      		breq .L19
+ 437               		.stabn	68,0,265,.LM42-.LFBB7
+ 438               	.LM42:
+ 439 00de 2111      		cpse r18,__zero_reg__
+ 440 00e0 00C0      		rjmp .L20
  266:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	{	//Fall through and toggle...
  267:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	}
  268:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//Otherwise just process the one that's filled
@@ -1273,179 +1280,185 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  272:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		highNibble = 0;
  273:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	else if(heartBlink & 0xf0)
  274:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		highNibble = 1;
- 434               		.stabn	68,0,274,.LM40-.LFBB7
- 435               	.LM40:
- 436 00ec 41E0      		ldi r20,lo8(1)
- 437 00ee 4093 0000 		sts highNibble.1728,r20
- 438 00f2 00C0      		rjmp .L21
- 439               	.L20:
+ 441               		.stabn	68,0,274,.LM43-.LFBB7
+ 442               	.LM43:
+ 443 00e2 91E0      		ldi r25,lo8(1)
+ 444 00e4 9093 0000 		sts highNibble.1624,r25
+ 445 00e8 00C0      		rjmp .L20
+ 446               	.L19:
  271:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		highNibble = 0;
- 440               		.stabn	68,0,271,.LM41-.LFBB7
- 441               	.LM41:
- 442 00f4 9111      		cpse r25,__zero_reg__
+ 447               		.stabn	68,0,271,.LM44-.LFBB7
+ 448               	.LM44:
+ 449 00ea 2111      		cpse r18,__zero_reg__
  272:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	else if(heartBlink & 0xf0)
- 443               		.stabn	68,0,272,.LM42-.LFBB7
- 444               	.LM42:
- 445 00f6 1092 0000 		sts highNibble.1728,__zero_reg__
- 446               	.L21:
+ 450               		.stabn	68,0,272,.LM45-.LFBB7
+ 451               	.LM45:
+ 452 00ec 1092 0000 		sts highNibble.1624,__zero_reg__
+ 453               	.L20:
  275:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  276:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//Fill the appropriate nibble for blinking...
  277:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	if(highNibble)
- 447               		.stabn	68,0,277,.LM43-.LFBB7
- 448               	.LM43:
- 449 00fa 4091 0000 		lds r20,highNibble.1728
- 450 00fe 4423      		tst r20
- 451 0100 01F0      		breq .L24
+ 454               		.stabn	68,0,277,.LM46-.LFBB7
+ 455               	.LM46:
+ 456 00f0 3091 0000 		lds r19,highNibble.1624
+ 457 00f4 3323      		tst r19
+ 458 00f6 01F0      		breq .L22
  278:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		thisNibble = (thisNibble & 0xf0) >> 4;
- 452               		.stabn	68,0,278,.LM44-.LFBB7
- 453               	.LM44:
- 454 0102 982F      		mov r25,r24
- 455 0104 9295      		swap r25
- 456 0106 9F70      		andi r25,lo8(15)
- 457               	.L24:
+ 459               		.stabn	68,0,278,.LM47-.LFBB7
+ 460               	.LM47:
+ 461 00f8 282F      		mov r18,r24
+ 462 00fa 2295      		swap r18
+ 463 00fc 2F70      		andi r18,lo8(15)
+ 464               	.L22:
  279:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	else
  280:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		thisNibble = (thisNibble & 0x0f);
  281:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  282:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//Blink the proper number of times
  283:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	if((toggleCount>>1) < thisNibble)
- 458               		.stabn	68,0,283,.LM45-.LFBB7
- 459               	.LM45:
- 460 0108 8091 0000 		lds r24,toggleCount.1727
- 461 010c 582F      		mov r21,r24
- 462 010e 5695      		lsr r21
- 463 0110 6091 0000 		lds r22,lastToggleTime.1726
- 464 0114 7091 0000 		lds r23,lastToggleTime.1726+1
- 465 0118 5917      		cp r21,r25
- 466 011a 00F4      		brsh .L25
+ 465               		.stabn	68,0,283,.LM48-.LFBB7
+ 466               	.LM48:
+ 467 00fe 9091 0000 		lds r25,toggleCount.1623
+GAS LISTING /tmp/cchqCp5Y.s 			page 23
+
+
+ 468 0102 4091 0000 		lds r20,lastToggleTime.1622
+ 469 0106 5091 0000 		lds r21,lastToggleTime.1622+1
+ 470 010a BF01      		movw r22,r30
+ 471 010c 641B      		sub r22,r20
+ 472 010e 750B      		sbc r23,r21
+ 473 0110 AB01      		movw r20,r22
+ 474 0112 892F      		mov r24,r25
+ 475 0114 8695      		lsr r24
+ 476 0116 8217      		cp r24,r18
+ 477 0118 00F4      		brsh .L23
  284:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	{
-GAS LISTING /tmp/ccoXficz.s 			page 23
-
-
  285:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		if(currentTime - lastToggleTime > TOGGLETIME)
- 467               		.stabn	68,0,285,.LM46-.LFBB7
- 468               	.LM46:
- 469 011c A901      		movw r20,r18
- 470 011e 461B      		sub r20,r22
- 471 0120 570B      		sbc r21,r23
- 472 0122 453C      		cpi r20,-59
- 473 0124 5940      		sbci r21,9
- 474 0126 00F0      		brlo .L26
+ 478               		.stabn	68,0,285,.LM49-.LFBB7
+ 479               	.LM49:
+ 480 011a 453C      		cpi r20,-59
+ 481 011c 5940      		sbci r21,9
+ 482 011e 00F0      		brlo .L24
  286:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		{
  287:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 			lastToggleTime = currentTime;
- 475               		.stabn	68,0,287,.LM47-.LFBB7
- 476               	.LM47:
- 477 0128 3093 0000 		sts lastToggleTime.1726+1,r19
- 478 012c 2093 0000 		sts lastToggleTime.1726,r18
+ 483               		.stabn	68,0,287,.LM50-.LFBB7
+ 484               	.LM50:
+ 485 0120 F093 0000 		sts lastToggleTime.1622+1,r31
+ 486 0124 E093 0000 		sts lastToggleTime.1622,r30
  288:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 			toggleCount++;
- 479               		.stabn	68,0,288,.LM48-.LFBB7
- 480               	.LM48:
- 481 0130 8F5F      		subi r24,lo8(-(1))
- 482 0132 8093 0000 		sts toggleCount.1727,r24
- 483 0136 00C0      		rjmp .L26
- 484               	.L25:
+ 487               		.stabn	68,0,288,.LM51-.LFBB7
+ 488               	.LM51:
+ 489 0128 9F5F      		subi r25,lo8(-(1))
+ 490 012a 9093 0000 		sts toggleCount.1623,r25
+ 491               	.L24:
  289:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		}
  290:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	}
  291:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//Wait for a while
  292:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #warning "There may be some integer promotion issues here..."
  293:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	else if(currentTime - lastToggleTime > 
- 485               		.stabn	68,0,293,.LM49-.LFBB7
- 486               	.LM49:
- 487 0138 6901      		movw r12,r18
- 488 013a C61A      		sub r12,r22
- 489 013c D70A      		sbc r13,r23
- 490 013e E12C      		mov r14,__zero_reg__
- 491 0140 F12C      		mov r15,__zero_reg__
- 492 0142 80E2      		ldi r24,lo8(32)
- 493 0144 9EE4      		ldi r25,lo8(78)
- 494 0146 A0E0      		ldi r26,0
- 495 0148 B0E0      		ldi r27,0
- 496 014a 042E      		mov r0,r20
- 497 014c 00C0      		rjmp 2f
- 498               		1:
- 499 014e 880F      		lsl r24
- 500 0150 991F      		rol r25
- 501 0152 AA1F      		rol r26
- 502 0154 BB1F      		rol r27
- 503               		2:
- 504 0156 0A94      		dec r0
- 505 0158 02F4      		brpl 1b
- 506 015a 8C15      		cp r24,r12
- 507 015c 9D05      		cpc r25,r13
- 508 015e AE05      		cpc r26,r14
- 509 0160 BF05      		cpc r27,r15
- 510 0162 00F4      		brsh .L26
  294:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 						(((uint32_t)(TOGGLETIME * 8))<<(highNibble)))
  295:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	{
  296:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		toggleCount = 0;
- 511               		.stabn	68,0,296,.LM50-.LFBB7
-GAS LISTING /tmp/ccoXficz.s 			page 24
-
-
- 512               	.LM50:
- 513 0164 1092 0000 		sts toggleCount.1727,__zero_reg__
  297:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		lastToggleTime = currentTime;
- 514               		.stabn	68,0,297,.LM51-.LFBB7
- 515               	.LM51:
- 516 0168 3093 0000 		sts lastToggleTime.1726+1,r19
- 517 016c 2093 0000 		sts lastToggleTime.1726,r18
  298:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		//Only valid if both nibbles are filled (see above)
  299:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		highNibble = !highNibble;
- 518               		.stabn	68,0,299,.LM52-.LFBB7
- 519               	.LM52:
- 520 0170 81E0      		ldi r24,lo8(1)
- 521 0172 4111      		cpse r20,__zero_reg__
- 522 0174 80E0      		ldi r24,0
- 523               	.L27:
- 524 0176 8093 0000 		sts highNibble.1728,r24
- 525               	.L26:
- 526 017a 8091 0000 		lds r24,toggleCount.1727
- 527 017e 8095      		com r24
  300:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	}
  301:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  302:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//(actually, the new value, at this point... but will be the last soon)
  303:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	return !getbit(0, toggleCount);
+ 492               		.stabn	68,0,303,.LM52-.LFBB7
+ 493               	.LM52:
+ 494 012e 8091 0000 		lds r24,toggleCount.1623
+ 495 0132 8095      		com r24
  304:_commonCode_localized/heartbeat/1.21/heartbeat.c **** }
- 528               		.stabn	68,0,304,.LM53-.LFBB7
- 529               	.LM53:
- 530 0180 8170      		andi r24,lo8(1)
- 531               	/* epilogue start */
- 532 0182 FF90      		pop r15
- 533 0184 EF90      		pop r14
- 534 0186 DF90      		pop r13
- 535 0188 CF90      		pop r12
- 536 018a 0895      		ret
- 537               		.size	blinkHeart, .-blinkHeart
- 538               		.stabs	"lastToggleTime:V(9,1)",38,0,246,lastToggleTime.1726
- 539               		.stabs	"toggleCount:V(6,2)",38,0,254,toggleCount.1727
- 540               		.stabs	"highNibble:V(6,2)",38,0,259,highNibble.1728
- 541               		.stabn	192,0,0,.LFBB7-.LFBB7
- 542               		.stabn	224,0,0,.Lscope7-.LFBB7
- 543               	.Lscope7:
- 544               		.stabs	"",36,0,0,.Lscope7-.LFBB7
- 545               		.stabd	78,0,0
- 546               		.stabs	"heartUpdate:F(6,2)",36,0,307,heartUpdate
- 547               	.global	heartUpdate
- 548               		.type	heartUpdate, @function
- 549               	heartUpdate:
- 550               		.stabd	46,0,0
+ 496               		.stabn	68,0,304,.LM53-.LFBB7
+ 497               	.LM53:
+ 498 0134 8170      		andi r24,lo8(1)
+ 499               	/* epilogue start */
+ 500 0136 0895      		ret
+ 501               	.L23:
+ 293:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 						(((uint32_t)(TOGGLETIME * 8))<<(highNibble)))
+ 502               		.stabn	68,0,293,.LM54-.LFBB7
+GAS LISTING /tmp/cchqCp5Y.s 			page 24
+
+
+ 503               	.LM54:
+ 504 0138 70E0      		ldi r23,0
+ 505 013a 60E0      		ldi r22,0
+ 294:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	{
+ 506               		.stabn	68,0,294,.LM55-.LFBB7
+ 507               	.LM55:
+ 508 013c 80E2      		ldi r24,lo8(32)
+ 509 013e 9EE4      		ldi r25,lo8(78)
+ 510 0140 A0E0      		ldi r26,0
+ 511 0142 B0E0      		ldi r27,0
+ 512 0144 032E      		mov r0,r19
+ 513 0146 00C0      		rjmp 2f
+ 514               		1:
+ 515 0148 880F      		lsl r24
+ 516 014a 991F      		rol r25
+ 517 014c AA1F      		rol r26
+ 518 014e BB1F      		rol r27
+ 519               		2:
+ 520 0150 0A94      		dec r0
+ 521 0152 02F4      		brpl 1b
+ 293:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 						(((uint32_t)(TOGGLETIME * 8))<<(highNibble)))
+ 522               		.stabn	68,0,293,.LM56-.LFBB7
+ 523               	.LM56:
+ 524 0154 8417      		cp r24,r20
+ 525 0156 9507      		cpc r25,r21
+ 526 0158 A607      		cpc r26,r22
+ 527 015a B707      		cpc r27,r23
+ 528 015c 00F4      		brsh .L24
+ 296:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		lastToggleTime = currentTime;
+ 529               		.stabn	68,0,296,.LM57-.LFBB7
+ 530               	.LM57:
+ 531 015e 1092 0000 		sts toggleCount.1623,__zero_reg__
+ 297:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		//Only valid if both nibbles are filled (see above)
+ 532               		.stabn	68,0,297,.LM58-.LFBB7
+ 533               	.LM58:
+ 534 0162 F093 0000 		sts lastToggleTime.1622+1,r31
+ 535 0166 E093 0000 		sts lastToggleTime.1622,r30
+ 299:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	}
+ 536               		.stabn	68,0,299,.LM59-.LFBB7
+ 537               	.LM59:
+ 538 016a 81E0      		ldi r24,lo8(1)
+ 539 016c 3111      		cpse r19,__zero_reg__
+ 540 016e 80E0      		ldi r24,0
+ 541               	.L25:
+ 542 0170 8093 0000 		sts highNibble.1624,r24
+ 543 0174 00C0      		rjmp .L24
+ 544               		.size	blinkHeart, .-blinkHeart
+ 545               		.stabs	"lastToggleTime:V(9,1)",38,0,246,lastToggleTime.1622
+ 546               		.stabs	"toggleCount:V(6,2)",38,0,254,toggleCount.1623
+ 547               		.stabs	"highNibble:V(6,2)",38,0,259,highNibble.1624
+ 548               		.stabn	192,0,0,.LFBB7-.LFBB7
+ 549               		.stabn	224,0,0,.Lscope7-.LFBB7
+ 550               	.Lscope7:
+ 551               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 552               		.stabd	78,0,0
+ 553               		.stabs	"heartUpdate:F(6,2)",36,0,307,heartUpdate
+ 554               	.global	heartUpdate
+GAS LISTING /tmp/cchqCp5Y.s 			page 25
+
+
+ 555               		.type	heartUpdate, @function
+ 556               	heartUpdate:
+ 557               		.stabd	46,0,0
  305:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  306:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  307:_commonCode_localized/heartbeat/1.21/heartbeat.c **** uint8_t heartUpdate(void)
  308:_commonCode_localized/heartbeat/1.21/heartbeat.c **** {	
- 551               		.stabn	68,0,308,.LM54-.LFBB8
- 552               	.LM54:
- 553               	.LFBB8:
- 554 018c CF92      		push r12
- 555 018e DF92      		push r13
- 556 0190 EF92      		push r14
-GAS LISTING /tmp/ccoXficz.s 			page 25
-
-
- 557 0192 FF92      		push r15
- 558               	/* prologue: function */
- 559               	/* frame size = 0 */
- 560               	/* stack size = 4 */
- 561               	.L__stack_usage = 4
+ 558               		.stabn	68,0,308,.LM60-.LFBB8
+ 559               	.LM60:
+ 560               	.LFBB8:
+ 561 0176 CF92      		push r12
+ 562 0178 DF92      		push r13
+ 563 017a EF92      		push r14
+ 564 017c FF92      		push r15
+ 565               	/* prologue: function */
+ 566               	/* frame size = 0 */
+ 567               	/* stack size = 4 */
+ 568               	.L__stack_usage = 4
  309:_commonCode_localized/heartbeat/1.21/heartbeat.c **** //	static uint32_t lastTime = 0;
  310:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	
  311:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #if (_HEART_DMS_)
@@ -1455,11 +1468,10 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  315:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	dms6sec_t currentTime;
  316:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	
  317:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	currentTime = dmsGetTime();
- 562               		.stabn	68,0,317,.LM55-.LFBB8
- 563               	.LM55:
- 564 0194 00D0      		rcall dmsGetTime
- 565 0196 6B01      		movw r12,r22
- 566 0198 7C01      		movw r14,r24
+ 569               		.stabn	68,0,317,.LM61-.LFBB8
+ 570               	.LM61:
+ 571 017e 00D0      		rcall dmsGetTime
+ 572 0180 6B01      		movw r12,r22
  318:_commonCode_localized/heartbeat/1.21/heartbeat.c **** //	currentTime = dmsGet6sec();
  319:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	
  320:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//HEARTSTEPTIME isn't 100% accurate, especially if this isn't accessed often enough...
@@ -1478,37 +1490,37 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  333:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #endif
  334:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  335:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	if((currentTime - lastTime) > heartStepTime)
- 567               		.stabn	68,0,335,.LM56-.LFBB8
- 568               	.LM56:
- 569 019a 8091 0000 		lds r24,lastTime.1733
- 570 019e 9091 0000 		lds r25,lastTime.1733+1
- 571 01a2 9601      		movw r18,r12
- 572 01a4 281B      		sub r18,r24
- 573 01a6 390B      		sbc r19,r25
- 574 01a8 8091 0000 		lds r24,heartStepTime
- 575 01ac 9091 0000 		lds r25,heartStepTime+1
- 576 01b0 8217      		cp r24,r18
- 577 01b2 9307      		cpc r25,r19
- 578 01b4 00F4      		brsh .L39
+ 573               		.stabn	68,0,335,.LM62-.LFBB8
+ 574               	.LM62:
+ 575 0182 8091 0000 		lds r24,lastTime.1629
+ 576 0186 9091 0000 		lds r25,lastTime.1629+1
+ 577 018a 9601      		movw r18,r12
+ 578 018c 281B      		sub r18,r24
+ 579 018e 390B      		sbc r19,r25
+ 580 0190 8091 0000 		lds r24,heartStepTime
+GAS LISTING /tmp/cchqCp5Y.s 			page 26
+
+
+ 581 0194 9091 0000 		lds r25,heartStepTime+1
+ 582 0198 8217      		cp r24,r18
+ 583 019a 9307      		cpc r25,r19
+ 584 019c 00F4      		brsh .L37
  336:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	{
  337:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		lastTime = currentTime;
- 579               		.stabn	68,0,337,.LM57-.LFBB8
- 580               	.LM57:
- 581 01b6 D092 0000 		sts lastTime.1733+1,r13
- 582 01ba C092 0000 		sts lastTime.1733,r12
+ 585               		.stabn	68,0,337,.LM63-.LFBB8
+ 586               	.LM63:
+ 587 019e D092 0000 		sts lastTime.1629+1,r13
+ 588 01a2 C092 0000 		sts lastTime.1629,r12
  338:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  339:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		hfm_setPower(&heartModulator, getNextDesired());
-GAS LISTING /tmp/ccoXficz.s 			page 26
-
-
- 583               		.stabn	68,0,339,.LM58-.LFBB8
- 584               	.LM58:
- 585 01be 00D0      		rcall getNextDesired
- 586 01c0 682F      		mov r22,r24
- 587 01c2 80E0      		ldi r24,lo8(heartModulator)
- 588 01c4 90E0      		ldi r25,hi8(heartModulator)
- 589 01c6 00D0      		rcall hfm_setPower
- 590               	.L39:
+ 589               		.stabn	68,0,339,.LM64-.LFBB8
+ 590               	.LM64:
+ 591 01a6 00D0      		rcall getNextDesired
+ 592 01a8 682F      		mov r22,r24
+ 593 01aa 80E0      		ldi r24,lo8(heartModulator)
+ 594 01ac 90E0      		ldi r25,hi8(heartModulator)
+ 595 01ae 00D0      		rcall hfm_setPower
+ 596               	.L37:
  340:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	}
  341:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  342:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
@@ -1525,42 +1537,35 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  353:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	uint8_t ledVal;
  354:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  355:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	if(heartBlink)
- 591               		.stabn	68,0,355,.LM59-.LFBB8
- 592               	.LM59:
- 593 01c8 8091 0000 		lds r24,heartBlink
- 594 01cc 8823      		tst r24
- 595 01ce 01F0      		breq .L40
+ 597               		.stabn	68,0,355,.LM65-.LFBB8
+ 598               	.LM65:
+ 599 01b0 8091 0000 		lds r24,heartBlink
+ 600 01b4 8823      		tst r24
+ 601 01b6 01F0      		breq .L38
  356:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		ledVal = blinkHeart(currentTime);
- 596               		.stabn	68,0,356,.LM60-.LFBB8
- 597               	.LM60:
- 598 01d0 C601      		movw r24,r12
- 599 01d2 00D0      		rcall blinkHeart
- 600 01d4 00C0      		rjmp .L41
- 601               	.L40:
+ 602               		.stabn	68,0,356,.LM66-.LFBB8
+ 603               	.LM66:
+ 604 01b8 C601      		movw r24,r12
+ 605 01ba 00D0      		rcall blinkHeart
+ 606               	.L39:
  357:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		//ledVal = blinkHeart((dms6sec_t)currentTime);
  358:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	else
  359:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		ledVal = hfm_nextOutput(&heartModulator);
- 602               		.stabn	68,0,359,.LM61-.LFBB8
- 603               	.LM61:
- 604 01d6 80E0      		ldi r24,lo8(heartModulator)
- 605 01d8 90E0      		ldi r25,hi8(heartModulator)
- 606 01da 00D0      		rcall hfm_nextOutput
- 607               	.L41:
  360:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  361:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	if(ledVal)
- 608               		.stabn	68,0,361,.LM62-.LFBB8
- 609               	.LM62:
- 610 01dc 8823      		tst r24
- 611 01de 01F0      		breq .L42
- 612               	.LBB24:
+ 607               		.stabn	68,0,361,.LM67-.LFBB8
+ 608               	.LM67:
+ 609 01bc 8823      		tst r24
+ 610 01be 01F0      		breq .L40
+ 611               	.LBB24:
+GAS LISTING /tmp/cchqCp5Y.s 			page 27
+
+
  362:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	{
  363:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #if (!defined(HEARTPIN_HARDCODED) || !HEARTPIN_HARDCODED)
  364:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		if(ledConnection == LED_DIRECT_HIGH)
  365:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		{
  366:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 			//Set the direction first, so there's not a short short with the input switch
-GAS LISTING /tmp/ccoXficz.s 			page 27
-
-
  367:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 			//DDR = L,in
  368:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 			setinVar(heartBeatPin, heartPIN);
  369:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 			//PORT = H,pull-up
@@ -1575,17 +1580,17 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  378:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #else
  379:_commonCode_localized/heartbeat/1.21/heartbeat.c ****  #if (HEART_LEDCONNECTION == LED_DIRECT_HIGH)
  380:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		setinPORT(HEART_PINNUM, HEART_PINPORT);
- 613               		.stabn	68,0,380,.LM63-.LFBB8
- 614               	.LM63:
- 615 01e0 B998      		cbi 0x17,1
+ 612               		.stabn	68,0,380,.LM68-.LFBB8
+ 613               	.LM68:
+ 614 01c0 B998      		cbi 0x17,1
  381:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		setpuPORT(HEART_PINNUM, HEART_PINPORT);
- 616               		.stabn	68,0,381,.LM64-.LFBB8
- 617               	.LM64:
- 618 01e2 C19A      		sbi 0x18,1
- 619 01e4 81E0      		ldi r24,lo8(1)
- 620 01e6 00C0      		rjmp .L43
- 621               	.L42:
- 622               	.LBE24:
+ 615               		.stabn	68,0,381,.LM69-.LFBB8
+ 616               	.LM69:
+ 617 01c2 C19A      		sbi 0x18,1
+ 618 01c4 81E0      		ldi r24,lo8(1)
+ 619               	.L36:
+ 620               	/* epilogue start */
+ 621               	.LBE24:
  382:_commonCode_localized/heartbeat/1.21/heartbeat.c ****  #elif (HEART_LEDCONNECTION == LED_INVERTED)
  383:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		setoutPORT(HEART_PINNUM, HEART_PINPORT);
  384:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		setpinPORT(HEART_PINNUM, HEART_PINPORT);
@@ -1608,83 +1613,93 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  401:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		setoutVar(heartBeatPin, heartPIN);
  402:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #else
  403:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		clrpinPORT(HEART_PINNUM, HEART_PINPORT);
- 623               		.stabn	68,0,403,.LM65-.LFBB8
- 624               	.LM65:
- 625 01e8 C198      		cbi 0x18,1
  404:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		setoutPORT(HEART_PINNUM, HEART_PINPORT);
- 626               		.stabn	68,0,404,.LM66-.LFBB8
- 627               	.LM66:
- 628 01ea B99A      		sbi 0x17,1
  405:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #endif
  406:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		return FALSE;
- 629               		.stabn	68,0,406,.LM67-.LFBB8
-GAS LISTING /tmp/ccoXficz.s 			page 28
-
-
- 630               	.LM67:
- 631 01ec 80E0      		ldi r24,0
- 632               	.L43:
- 633               	/* epilogue start */
  407:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	}
  408:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
+GAS LISTING /tmp/cchqCp5Y.s 			page 28
+
+
  409:_commonCode_localized/heartbeat/1.21/heartbeat.c **** }
- 634               		.stabn	68,0,409,.LM68-.LFBB8
- 635               	.LM68:
- 636 01ee FF90      		pop r15
- 637 01f0 EF90      		pop r14
- 638 01f2 DF90      		pop r13
- 639 01f4 CF90      		pop r12
- 640 01f6 0895      		ret
- 641               		.size	heartUpdate, .-heartUpdate
- 642               		.stabs	"lastTime:V(9,1)",38,0,312,lastTime.1733
- 643               		.stabs	"ledVal:r(6,2)",64,0,353,24
- 644               		.stabn	192,0,0,.LFBB8-.LFBB8
- 645               		.stabn	224,0,0,.Lscope8-.LFBB8
- 646               	.Lscope8:
- 647               		.stabs	"",36,0,0,.Lscope8-.LFBB8
- 648               		.stabd	78,0,0
- 649               		.stabs	"heartupdate:F(0,49)",36,0,74,heartupdate
- 650               	.global	heartupdate
- 651               		.type	heartupdate, @function
- 652               	heartupdate:
- 653               		.stabd	46,0,0
+ 622               		.stabn	68,0,409,.LM70-.LFBB8
+ 623               	.LM70:
+ 624 01c6 FF90      		pop r15
+ 625 01c8 EF90      		pop r14
+ 626 01ca DF90      		pop r13
+ 627 01cc CF90      		pop r12
+ 628 01ce 0895      		ret
+ 629               	.L38:
+ 359:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
+ 630               		.stabn	68,0,359,.LM71-.LFBB8
+ 631               	.LM71:
+ 632 01d0 80E0      		ldi r24,lo8(heartModulator)
+ 633 01d2 90E0      		ldi r25,hi8(heartModulator)
+ 634 01d4 00D0      		rcall hfm_nextOutput
+ 635 01d6 00C0      		rjmp .L39
+ 636               	.L40:
+ 403:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		setoutPORT(HEART_PINNUM, HEART_PINPORT);
+ 637               		.stabn	68,0,403,.LM72-.LFBB8
+ 638               	.LM72:
+ 639 01d8 C198      		cbi 0x18,1
+ 404:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #endif
+ 640               		.stabn	68,0,404,.LM73-.LFBB8
+ 641               	.LM73:
+ 642 01da B99A      		sbi 0x17,1
+ 406:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	}
+ 643               		.stabn	68,0,406,.LM74-.LFBB8
+ 644               	.LM74:
+ 645 01dc 00C0      		rjmp .L36
+ 646               		.size	heartUpdate, .-heartUpdate
+ 647               		.stabs	"lastTime:V(9,1)",38,0,312,lastTime.1629
+ 648               		.stabs	"ledVal:r(6,2)",64,0,353,24
+ 649               		.stabn	192,0,0,.LFBB8-.LFBB8
+ 650               		.stabn	224,0,0,.Lscope8-.LFBB8
+ 651               	.Lscope8:
+ 652               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 653               		.stabd	78,0,0
+ 654               		.stabs	"heartupdate:F(0,50)",36,0,74,heartupdate
+ 655               	.global	heartupdate
+ 656               		.type	heartupdate, @function
+ 657               	heartupdate:
+ 658               		.stabd	46,0,0
   75:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	heartUpdate();
- 654               		.stabn	68,0,75,.LM69-.LFBB9
- 655               	.LM69:
- 656               	.LFBB9:
- 657               	/* prologue: function */
- 658               	/* frame size = 0 */
- 659               	/* stack size = 0 */
- 660               	.L__stack_usage = 0
+ 659               		.stabn	68,0,75,.LM75-.LFBB9
+ 660               	.LM75:
+ 661               	.LFBB9:
+ 662               	/* prologue: function */
+ 663               	/* frame size = 0 */
+ 664               	/* stack size = 0 */
+ 665               	.L__stack_usage = 0
   76:_commonCode_localized/heartbeat/1.21/heartbeat.c **** }
- 661               		.stabn	68,0,76,.LM70-.LFBB9
- 662               	.LM70:
- 663 01f8 00C0      		rjmp heartUpdate
- 664               		.size	heartupdate, .-heartupdate
- 665               	.Lscope9:
- 666               		.stabs	"",36,0,0,.Lscope9-.LFBB9
- 667               		.stabd	78,0,0
- 668               		.stabs	"heartPinInputPoll:F(6,2)",36,0,414,heartPinInputPoll
- 669               	.global	heartPinInputPoll
- 670               		.type	heartPinInputPoll, @function
- 671               	heartPinInputPoll:
- 672               		.stabd	46,0,0
+ 666               		.stabn	68,0,76,.LM76-.LFBB9
+ 667               	.LM76:
+ 668 01de 00C0      		rjmp heartUpdate
+ 669               		.size	heartupdate, .-heartupdate
+ 670               	.Lscope9:
+ 671               		.stabs	"",36,0,0,.Lscope9-.LFBB9
+GAS LISTING /tmp/cchqCp5Y.s 			page 29
+
+
+ 672               		.stabd	78,0,0
+ 673               		.stabs	"heartPinInputPoll:F(6,2)",36,0,414,heartPinInputPoll
+ 674               	.global	heartPinInputPoll
+ 675               		.type	heartPinInputPoll, @function
+ 676               	heartPinInputPoll:
+ 677               		.stabd	46,0,0
  410:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  411:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #if (!defined(HEART_INPUTPOLLING_UNUSED) || !HEART_INPUTPOLLING_UNUSED)
  412:_commonCode_localized/heartbeat/1.21/heartbeat.c **** // This value's arbitrary... works with tabletBluetoother 3...
  413:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #define HEART_PULLUP_DELAY 3
  414:_commonCode_localized/heartbeat/1.21/heartbeat.c **** uint8_t heartPinInputPoll(void)
  415:_commonCode_localized/heartbeat/1.21/heartbeat.c **** {
- 673               		.stabn	68,0,415,.LM71-.LFBB10
- 674               	.LM71:
- 675               	.LFBB10:
-GAS LISTING /tmp/ccoXficz.s 			page 29
-
-
- 676               	/* prologue: function */
- 677               	/* frame size = 0 */
- 678               	/* stack size = 0 */
- 679               	.L__stack_usage = 0
+ 678               		.stabn	68,0,415,.LM77-.LFBB10
+ 679               	.LM77:
+ 680               	.LFBB10:
+ 681               	/* prologue: function */
+ 682               	/* frame size = 0 */
+ 683               	/* stack size = 0 */
+ 684               	.L__stack_usage = 0
  416:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	uint8_t pinState;
  417:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	
  418:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #if (!defined(HEARTPIN_HARDCODED) || !HEARTPIN_HARDCODED)
@@ -1706,13 +1721,13 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  434:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	pinState = getpinVar(heartBeatPin, heartPIN);
  435:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #else
  436:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	setinPORT(HEART_PINNUM, HEART_PINPORT);
- 680               		.stabn	68,0,436,.LM72-.LFBB10
- 681               	.LM72:
- 682 01fa B998      		cbi 0x17,1
+ 685               		.stabn	68,0,436,.LM78-.LFBB10
+ 686               	.LM78:
+ 687 01e0 B998      		cbi 0x17,1
  437:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	setpuPORT(HEART_PINNUM, HEART_PINPORT);
- 683               		.stabn	68,0,437,.LM73-.LFBB10
- 684               	.LM73:
- 685 01fc C19A      		sbi 0x18,1
+ 688               		.stabn	68,0,437,.LM79-.LFBB10
+ 689               	.LM79:
+ 690 01e2 C19A      		sbi 0x18,1
  438:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  439:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//Insert a delay to allow the pull-up to rise...
  440:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	uint8_t delay;
@@ -1720,28 +1735,28 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  442:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	{
  443:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		//Necessary or this'll be optimised-out
  444:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 		asm("nop;");
- 686               		.stabn	68,0,444,.LM74-.LFBB10
- 687               	.LM74:
- 688               	/* #APP */
- 689               	 ;  444 "_commonCode_localized/heartbeat/1.21/heartbeat.c" 1
- 690 01fe 0000      		nop;
- 691               	 ;  0 "" 2
- 692               	 ;  444 "_commonCode_localized/heartbeat/1.21/heartbeat.c" 1
- 693 0200 0000      		nop;
- 694               	 ;  0 "" 2
- 695               	 ;  444 "_commonCode_localized/heartbeat/1.21/heartbeat.c" 1
- 696 0202 0000      		nop;
- 697               	 ;  0 "" 2
+ 691               		.stabn	68,0,444,.LM80-.LFBB10
+ 692               	.LM80:
+ 693               	/* #APP */
+GAS LISTING /tmp/cchqCp5Y.s 			page 30
+
+
+ 694               	 ;  444 "_commonCode_localized/heartbeat/1.21/heartbeat.c" 1
+ 695 01e4 0000      		nop;
+ 696               	 ;  0 "" 2
+ 697               	 ;  444 "_commonCode_localized/heartbeat/1.21/heartbeat.c" 1
+ 698 01e6 0000      		nop;
+ 699               	 ;  0 "" 2
+ 700               	 ;  444 "_commonCode_localized/heartbeat/1.21/heartbeat.c" 1
+ 701 01e8 0000      		nop;
+ 702               	 ;  0 "" 2
  445:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	}
  446:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  447:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	pinState = getpinPORT(HEART_PINNUM, HEART_PINPORT);
- 698               		.stabn	68,0,447,.LM75-.LFBB10
- 699               	.LM75:
- 700               	/* #NOAPP */
-GAS LISTING /tmp/ccoXficz.s 			page 30
-
-
- 701 0204 86B3      		in r24,0x16
+ 703               		.stabn	68,0,447,.LM81-.LFBB10
+ 704               	.LM81:
+ 705               	/* #NOAPP */
+ 706 01ea 86B3      		in r24,0x16
  448:_commonCode_localized/heartbeat/1.21/heartbeat.c **** #endif
  449:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  450:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	//Leave the pinstate to be updated with next heartUpdate
@@ -1751,78 +1766,87 @@ GAS LISTING /tmp/ccoXficz.s 			page 1
  454:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 
  455:_commonCode_localized/heartbeat/1.21/heartbeat.c **** 	return pinState;
  456:_commonCode_localized/heartbeat/1.21/heartbeat.c **** }
- 702               		.stabn	68,0,456,.LM76-.LFBB10
- 703               	.LM76:
- 704 0206 8695      		lsr r24
- 705 0208 8170      		andi r24,1
- 706 020a 0895      		ret
- 707               		.size	heartPinInputPoll, .-heartPinInputPoll
- 708               	.Lscope10:
- 709               		.stabs	"",36,0,0,.Lscope10-.LFBB10
- 710               		.stabd	78,0,0
- 711               		.local	lastTime.1733
- 712               		.comm	lastTime.1733,2,1
- 713               		.local	lastToggleTime.1726
- 714               		.comm	lastToggleTime.1726,2,1
- 715               		.local	toggleCount.1727
- 716               		.comm	toggleCount.1727,1,1
- 717               		.local	highNibble.1728
- 718               		.comm	highNibble.1728,1,1
- 719               		.data
- 720               		.type	direction.1717, @object
- 721               		.size	direction.1717, 1
- 722               	direction.1717:
- 723 0000 01        		.byte	1
- 724               	.global	heartBlink
- 725               		.section .bss
- 726               		.type	heartBlink, @object
- 727               		.size	heartBlink, 1
- 728               	heartBlink:
- 729 0000 00        		.zero	1
- 730               		.comm	heartModulator,4,1
- 731               	.global	heartStepTime
- 732               		.data
- 733               		.type	heartStepTime, @object
- 734               		.size	heartStepTime, 2
- 735               	heartStepTime:
- 736 0001 9C00      		.word	156
- 737               		.stabs	"heartStepTime:G(6,4)",32,0,9,0
- 738               		.stabs	"heartModulator:G(8,1)",32,0,28,0
- 739               		.stabs	"heartBlink:G(6,2)",32,0,231,0
- 740               		.text
- 741               		.stabs	"",100,0,0,.Letext0
- 742               	.Letext0:
- 743               		.ident	"GCC: (GNU) 5.4.0"
- 744               	.global __do_copy_data
- 745               	.global __do_clear_bss
-GAS LISTING /tmp/ccoXficz.s 			page 31
+ 707               		.stabn	68,0,456,.LM82-.LFBB10
+ 708               	.LM82:
+ 709 01ec 8695      		lsr r24
+ 710 01ee 8170      		andi r24,1
+ 711               	/* epilogue start */
+ 712 01f0 0895      		ret
+ 713               		.size	heartPinInputPoll, .-heartPinInputPoll
+ 714               	.Lscope10:
+ 715               		.stabs	"",36,0,0,.Lscope10-.LFBB10
+ 716               		.stabd	78,0,0
+ 717               		.local	lastTime.1629
+ 718               		.comm	lastTime.1629,2,1
+ 719               		.stabs	"lastTime:V(9,1)",38,0,312,lastTime.1629
+ 720               		.local	lastToggleTime.1622
+ 721               		.comm	lastToggleTime.1622,2,1
+ 722               		.stabs	"lastToggleTime:V(9,1)",38,0,246,lastToggleTime.1622
+ 723               		.local	toggleCount.1623
+ 724               		.comm	toggleCount.1623,1,1
+ 725               		.stabs	"toggleCount:V(6,2)",38,0,254,toggleCount.1623
+ 726               		.local	highNibble.1624
+ 727               		.comm	highNibble.1624,1,1
+ 728               		.stabs	"highNibble:V(6,2)",38,0,259,highNibble.1624
+ 729               		.data
+ 730               		.type	direction.1613, @object
+ 731               		.size	direction.1613, 1
+ 732               	direction.1613:
+ 733 0000 01        		.byte	1
+ 734               		.stabs	"direction:V(6,1)",38,0,193,direction.1613
+ 735               	.global	heartBlink
+ 736               		.section .bss
+ 737               		.type	heartBlink, @object
+ 738               		.size	heartBlink, 1
+GAS LISTING /tmp/cchqCp5Y.s 			page 31
+
+
+ 739               	heartBlink:
+ 740 0000 00        		.zero	1
+ 741               		.stabs	"heartBlink:G(6,2)",32,0,231,0
+ 742               		.comm	heartModulator,4,1
+ 743               		.stabs	"heartModulator:G(8,1)",32,0,28,0
+ 744               	.global	heartStepTime
+ 745               		.data
+ 746               		.type	heartStepTime, @object
+ 747               		.size	heartStepTime, 2
+ 748               	heartStepTime:
+ 749 0001 9C00      		.word	156
+ 750               		.stabs	"heartStepTime:G(6,4)",32,0,9,0
+ 751               		.text
+ 752               		.stabs	"",100,0,0,.Letext0
+ 753               	.Letext0:
+ 754               		.ident	"GCC: (GNU) 7.3.0"
+ 755               	.global __do_copy_data
+ 756               	.global __do_clear_bss
+GAS LISTING /tmp/cchqCp5Y.s 			page 32
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 heartbeat.c
-     /tmp/ccoXficz.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccoXficz.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccoXficz.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccoXficz.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccoXficz.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccoXficz.s:118    .text:0000000000000000 setHeartRate
-     /tmp/ccoXficz.s:735    .data:0000000000000001 heartStepTime
-     /tmp/ccoXficz.s:152    .text:000000000000001a getHeartRate
-     /tmp/ccoXficz.s:179    .text:000000000000002c heartClear
+     /tmp/cchqCp5Y.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cchqCp5Y.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cchqCp5Y.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cchqCp5Y.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cchqCp5Y.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cchqCp5Y.s:119    .text:0000000000000000 setHeartRate
+     /tmp/cchqCp5Y.s:748    .data:0000000000000001 heartStepTime
+     /tmp/cchqCp5Y.s:156    .text:000000000000001a getHeartRate
+     /tmp/cchqCp5Y.s:184    .text:000000000000002c heartClear
                             *COM*:0000000000000004 heartModulator
-     /tmp/ccoXficz.s:201    .text:0000000000000034 init_heartBeat
-     /tmp/ccoXficz.s:314    .text:0000000000000090 getNextDesired
-     /tmp/ccoXficz.s:722    .data:0000000000000000 direction.1717
-     /tmp/ccoXficz.s:384    .text:00000000000000c8 set_heartBlink
-     /tmp/ccoXficz.s:728    .bss:0000000000000000 heartBlink
-     /tmp/ccoXficz.s:405    .text:00000000000000ce blinkHeart
-     /tmp/ccoXficz.s:716    .bss:0000000000000006 highNibble.1728
-     /tmp/ccoXficz.s:714    .bss:0000000000000005 toggleCount.1727
-     /tmp/ccoXficz.s:712    .bss:0000000000000003 lastToggleTime.1726
-     /tmp/ccoXficz.s:549    .text:000000000000018c heartUpdate
-                             .bss:0000000000000001 lastTime.1733
-     /tmp/ccoXficz.s:652    .text:00000000000001f8 heartupdate
-     /tmp/ccoXficz.s:671    .text:00000000000001fa heartPinInputPoll
+     /tmp/cchqCp5Y.s:206    .text:0000000000000034 init_heartBeat
+     /tmp/cchqCp5Y.s:322    .text:0000000000000090 getNextDesired
+     /tmp/cchqCp5Y.s:732    .data:0000000000000000 direction.1613
+     /tmp/cchqCp5Y.s:393    .text:00000000000000c8 set_heartBlink
+     /tmp/cchqCp5Y.s:739    .bss:0000000000000000 heartBlink
+     /tmp/cchqCp5Y.s:417    .text:00000000000000ce blinkHeart
+     /tmp/cchqCp5Y.s:724    .bss:0000000000000006 highNibble.1624
+     /tmp/cchqCp5Y.s:721    .bss:0000000000000005 toggleCount.1623
+     /tmp/cchqCp5Y.s:718    .bss:0000000000000003 lastToggleTime.1622
+     /tmp/cchqCp5Y.s:556    .text:0000000000000176 heartUpdate
+                             .bss:0000000000000001 lastTime.1629
+     /tmp/cchqCp5Y.s:657    .text:00000000000001de heartupdate
+     /tmp/cchqCp5Y.s:676    .text:00000000000001e0 heartPinInputPoll
 
 UNDEFINED SYMBOLS
 __divmodhi4

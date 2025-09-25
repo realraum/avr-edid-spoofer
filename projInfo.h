@@ -8,18 +8,18 @@
  uint8_t __attribute__ ((progmem)) \
    header0[] = " /home/bernhard/Dropbox/r3/edid_spoofing_cable/avr-edid-spoofer ";
  uint8_t __attribute__ ((progmem)) \
-   header1[] = " Do Okt 11 01:28:50 CEST 2018 ";
+   header1[] = " 2025-09-25T22:12:53 CEST ";
  uint8_t __attribute__ ((progmem)) \
    headerOpt[] = " WDT_DIS=TRUE ";
 #else //projInfo Shortened
  uint8_t __attribute__ ((progmem)) \
-   const header[] = "LCDreIDer66 2018-10-11 01:28:50";
+   const header[] = "LCDreIDer66 2025-09-25 22:12:53";
 #endif
 
 //For internal use...
 //Currently only usable in main.c
 #define PROJ_VER 66
-#define COMPILE_YEAR 2018
+#define COMPILE_YEAR 2025
 
 #endif
 
