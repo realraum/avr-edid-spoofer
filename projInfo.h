@@ -8,12 +8,12 @@
  uint8_t __attribute__ ((progmem)) \
    header0[] = " /home/bernhard/Dropbox/r3/edid_spoofing_cable/avr-edid-spoofer ";
  uint8_t __attribute__ ((progmem)) \
-   header1[] = " 2025-09-25T22:12:53 CEST ";
+   header1[] = " 2025-09-25T22:56:59 CEST ";
  uint8_t __attribute__ ((progmem)) \
    headerOpt[] = " WDT_DIS=TRUE ";
 #else //projInfo Shortened
  uint8_t __attribute__ ((progmem)) \
-   const header[] = "LCDreIDer66 2025-09-25 22:12:53";
+   const header[] = "LCDreIDer66 2025-09-25 22:56:59";
 #endif
 
 //For internal use...
