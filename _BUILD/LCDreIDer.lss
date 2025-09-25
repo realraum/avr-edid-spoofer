@@ -3,27 +3,27 @@ _BUILD/LCDreIDer.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000aa8  00000000  00000000  00000094  2**1
+  0 .text         0000096c  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000088  00800060  00000aa8  00000b3c  2**0
+  1 .data         00000086  00800060  0000096c  00000a00  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          0000002a  008000e8  008000e8  00000bc4  2**0
+  2 .bss          0000001d  008000e6  008000e6  00000a86  2**0
                   ALLOC
-  3 .stab         0000342c  00000000  00000000  00000bc4  2**2
+  3 .stab         00003120  00000000  00000000  00000a88  2**2
                   CONTENTS, READONLY, DEBUGGING
-  4 .stabstr      00001977  00000000  00000000  00003ff0  2**0
+  4 .stabstr      00001910  00000000  00000000  00003ba8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .comment      00000011  00000000  00000000  00005967  2**0
+  5 .comment      00000011  00000000  00000000  000054b8  2**0
                   CONTENTS, READONLY
-  6 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00005978  2**2
+  6 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000054cc  2**2
                   CONTENTS, READONLY
-  7 .debug_info   00000420  00000000  00000000  000059b4  2**0
+  7 .debug_info   00000420  00000000  00000000  00005508  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_abbrev 000003e8  00000000  00000000  00005dd4  2**0
+  8 .debug_abbrev 000003e8  00000000  00000000  00005928  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_line   0000001a  00000000  00000000  000061bc  2**0
+  9 .debug_line   0000001a  00000000  00000000  00005d10  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000169  00000000  00000000  000061d6  2**0
+ 10 .debug_str    00000169  00000000  00000000  00005d2a  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -115,7 +115,7 @@ Disassembly of section .text:
 
 0000009f <header>:
   9f:	4c 43 44 72 65 49 44 65 72 36 36 20 32 30 32 35     LCDreIDer66 2025
-  af:	2d 30 39 2d 32 35 20 32 32 3a 35 36 3a 35 39 00     -09-25 22:56:59.
+  af:	2d 30 39 2d 32 36 20 30 30 3a 30 35 3a 30 30 00     -09-26 00:05:00.
   bf:	00                                                  .
 
 000000c0 <__ctors_end>:
@@ -130,18 +130,18 @@ Disassembly of section .text:
   cc:	10 e0       	ldi	r17, 0x00	; 0
   ce:	a0 e6       	ldi	r26, 0x60	; 96
   d0:	b0 e0       	ldi	r27, 0x00	; 0
-  d2:	e8 ea       	ldi	r30, 0xA8	; 168
-  d4:	fa e0       	ldi	r31, 0x0A	; 10
+  d2:	ec e6       	ldi	r30, 0x6C	; 108
+  d4:	f9 e0       	ldi	r31, 0x09	; 9
   d6:	02 c0       	rjmp	.+4      	; 0xdc <__do_copy_data+0x10>
   d8:	05 90       	lpm	r0, Z+
   da:	0d 92       	st	X+, r0
-  dc:	a8 3e       	cpi	r26, 0xE8	; 232
+  dc:	a6 3e       	cpi	r26, 0xE6	; 230
   de:	b1 07       	cpc	r27, r17
   e0:	d9 f7       	brne	.-10     	; 0xd8 <__do_copy_data+0xc>
 
 000000e2 <__do_clear_bss>:
   e2:	21 e0       	ldi	r18, 0x01	; 1
-  e4:	a8 ee       	ldi	r26, 0xE8	; 232
+  e4:	a6 ee       	ldi	r26, 0xE6	; 230
   e6:	b0 e0       	ldi	r27, 0x00	; 0
   e8:	01 c0       	rjmp	.+2      	; 0xec <.do_clear_bss_start>
 
@@ -149,11 +149,11 @@ Disassembly of section .text:
   ea:	1d 92       	st	X+, r1
 
 000000ec <.do_clear_bss_start>:
-  ec:	a2 31       	cpi	r26, 0x12	; 18
+  ec:	a3 30       	cpi	r26, 0x03	; 3
   ee:	b2 07       	cpc	r27, r18
   f0:	e1 f7       	brne	.-8      	; 0xea <.do_clear_bss_loop>
-  f2:	6d d4       	rcall	.+2266   	; 0x9ce <main>
-  f4:	d7 c4       	rjmp	.+2478   	; 0xaa4 <_exit>
+  f2:	f0 d3       	rcall	.+2016   	; 0x8d4 <main>
+  f4:	39 c4       	rjmp	.+2162   	; 0x968 <_exit>
 
 000000f6 <__bad_interrupt>:
   f6:	84 cf       	rjmp	.-248    	; 0x0 <__vectors>
@@ -167,7 +167,7 @@ theta_t quadrantizeTheta(theta_t theta)
 	theta %= SINE_2PI;
   f8:	60 e0       	ldi	r22, 0x00	; 0
   fa:	72 e0       	ldi	r23, 0x02	; 2
-  fc:	c0 d4       	rcall	.+2432   	; 0xa7e <__divmodhi4>
+  fc:	22 d4       	rcall	.+2116   	; 0x942 <__divmodhi4>
 
 	if(theta < 0)
   fe:	97 fd       	sbrc	r25, 7
@@ -291,7 +291,7 @@ void setHeartRate(uint8_t rate)
  150:	70 e0       	ldi	r23, 0x00	; 0
  152:	8c e9       	ldi	r24, 0x9C	; 156
  154:	90 e0       	ldi	r25, 0x00	; 0
- 156:	93 d4       	rcall	.+2342   	; 0xa7e <__divmodhi4>
+ 156:	f5 d3       	rcall	.+2026   	; 0x942 <__divmodhi4>
  158:	70 93 62 00 	sts	0x0062, r23	; 0x800062 <heartStepTime+0x1>
  15c:	60 93 61 00 	sts	0x0061, r22	; 0x800061 <heartStepTime>
 	#else
@@ -311,7 +311,7 @@ uint8_t getHeartRate(void)
  166:	70 91 62 00 	lds	r23, 0x0062	; 0x800062 <heartStepTime+0x1>
  16a:	8c e9       	ldi	r24, 0x9C	; 156
  16c:	90 e0       	ldi	r25, 0x00	; 0
- 16e:	73 d4       	rcall	.+2278   	; 0xa56 <__udivmodhi4>
+ 16e:	d5 d3       	rcall	.+1962   	; 0x91a <__udivmodhi4>
  170:	86 2f       	mov	r24, r22
 	#else
 	 return HEART_ITERATIONCOUNT/heartStepTime;
@@ -327,8 +327,8 @@ void heartClear(void)
 {
 	hfm_setPower(&heartModulator, 0);
  174:	60 e0       	ldi	r22, 0x00	; 0
- 176:	82 e0       	ldi	r24, 0x02	; 2
- 178:	91 e0       	ldi	r25, 0x01	; 1
+ 176:	8f ef       	ldi	r24, 0xFF	; 255
+ 178:	90 e0       	ldi	r25, 0x00	; 0
  17a:	df c0       	rjmp	.+446    	; 0x33a <hfm_setPower>
 
 0000017c <init_heartBeat>:
@@ -366,8 +366,8 @@ void wdt_disable (void)
 	hfm_setup(&heartModulator, 0, HEART_MAXBRIGHT);
  192:	4f ef       	ldi	r20, 0xFF	; 255
  194:	60 e0       	ldi	r22, 0x00	; 0
- 196:	82 e0       	ldi	r24, 0x02	; 2
- 198:	91 e0       	ldi	r25, 0x01	; 1
+ 196:	8f ef       	ldi	r24, 0xFF	; 255
+ 198:	90 e0       	ldi	r25, 0x00	; 0
  19a:	d8 d0       	rcall	.+432    	; 0x34c <hfm_setup>
 		rate = 1;
 		
@@ -456,7 +456,7 @@ void wdt_disable (void)
  1d8:	a8 95       	wdr
 
 	desired = (uint8_t)(heartModulator.power);
- 1da:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <heartModulator+0x3>
+ 1da:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <heartModulator+0x3>
 
 	desired += direction;
  1de:	20 91 60 00 	lds	r18, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
@@ -520,7 +520,7 @@ uint8_t heartBlink = 0;
 void set_heartBlink(uint8_t count)
 {
 	heartBlink = count;
- 210:	80 93 e8 00 	sts	0x00E8, r24	; 0x8000e8 <__data_end>
+ 210:	80 93 e6 00 	sts	0x00E6, r24	; 0x8000e6 <__data_end>
 }
  214:	08 95       	ret
 
@@ -538,7 +538,7 @@ uint8_t blinkHeart(dms6sec_t currentTime)
 	
 
 	uint8_t thisNibble = heartBlink;
- 218:	80 91 e8 00 	lds	r24, 0x00E8	; 0x8000e8 <__data_end>
+ 218:	80 91 e6 00 	lds	r24, 0x00E6	; 0x8000e6 <__data_end>
  21c:	28 2f       	mov	r18, r24
  21e:	2f 70       	andi	r18, 0x0F	; 15
 
@@ -556,7 +556,7 @@ uint8_t blinkHeart(dms6sec_t currentTime)
 	else if(heartBlink & 0xf0)
 		highNibble = 1;
  22a:	91 e0       	ldi	r25, 0x01	; 1
- 22c:	90 93 ee 00 	sts	0x00EE, r25	; 0x8000ee <highNibble.1624>
+ 22c:	90 93 ec 00 	sts	0x00EC, r25	; 0x8000ec <highNibble.1624>
  230:	03 c0       	rjmp	.+6      	; 0x238 <blinkHeart+0x22>
 	{	//Fall through and toggle...
 	}
@@ -566,13 +566,13 @@ uint8_t blinkHeart(dms6sec_t currentTime)
 	else if(heartBlink & 0x0f)
  232:	21 11       	cpse	r18, r1
 		highNibble = 0;
- 234:	10 92 ee 00 	sts	0x00EE, r1	; 0x8000ee <highNibble.1624>
+ 234:	10 92 ec 00 	sts	0x00EC, r1	; 0x8000ec <highNibble.1624>
 	else if(heartBlink & 0xf0)
 		highNibble = 1;
 
 	//Fill the appropriate nibble for blinking...
 	if(highNibble)
- 238:	30 91 ee 00 	lds	r19, 0x00EE	; 0x8000ee <highNibble.1624>
+ 238:	30 91 ec 00 	lds	r19, 0x00EC	; 0x8000ec <highNibble.1624>
  23c:	33 23       	and	r19, r19
  23e:	19 f0       	breq	.+6      	; 0x246 <blinkHeart+0x30>
 		thisNibble = (thisNibble & 0xf0) >> 4;
@@ -584,9 +584,9 @@ uint8_t blinkHeart(dms6sec_t currentTime)
 
 	//Blink the proper number of times
 	if((toggleCount>>1) < thisNibble)
- 246:	90 91 ed 00 	lds	r25, 0x00ED	; 0x8000ed <toggleCount.1623>
- 24a:	40 91 eb 00 	lds	r20, 0x00EB	; 0x8000eb <lastToggleTime.1622>
- 24e:	50 91 ec 00 	lds	r21, 0x00EC	; 0x8000ec <lastToggleTime.1622+0x1>
+ 246:	90 91 eb 00 	lds	r25, 0x00EB	; 0x8000eb <toggleCount.1623>
+ 24a:	40 91 e9 00 	lds	r20, 0x00E9	; 0x8000e9 <lastToggleTime.1622>
+ 24e:	50 91 ea 00 	lds	r21, 0x00EA	; 0x8000ea <lastToggleTime.1622+0x1>
  252:	bf 01       	movw	r22, r30
  254:	64 1b       	sub	r22, r20
  256:	75 0b       	sbc	r23, r21
@@ -602,18 +602,18 @@ uint8_t blinkHeart(dms6sec_t currentTime)
  266:	38 f0       	brcs	.+14     	; 0x276 <__stack+0x17>
 		{
 			lastToggleTime = currentTime;
- 268:	f0 93 ec 00 	sts	0x00EC, r31	; 0x8000ec <lastToggleTime.1622+0x1>
- 26c:	e0 93 eb 00 	sts	0x00EB, r30	; 0x8000eb <lastToggleTime.1622>
+ 268:	f0 93 ea 00 	sts	0x00EA, r31	; 0x8000ea <lastToggleTime.1622+0x1>
+ 26c:	e0 93 e9 00 	sts	0x00E9, r30	; 0x8000e9 <lastToggleTime.1622>
 			toggleCount++;
  270:	9f 5f       	subi	r25, 0xFF	; 255
- 272:	90 93 ed 00 	sts	0x00ED, r25	; 0x8000ed <toggleCount.1623>
+ 272:	90 93 eb 00 	sts	0x00EB, r25	; 0x8000eb <toggleCount.1623>
 		//Only valid if both nibbles are filled (see above)
 		highNibble = !highNibble;
 	}
 
 	//(actually, the new value, at this point... but will be the last soon)
 	return !getbit(0, toggleCount);
- 276:	80 91 ed 00 	lds	r24, 0x00ED	; 0x8000ed <toggleCount.1623>
+ 276:	80 91 eb 00 	lds	r24, 0x00EB	; 0x8000eb <toggleCount.1623>
  27a:	80 95       	com	r24
 }
  27c:	81 70       	andi	r24, 0x01	; 1
@@ -653,16 +653,16 @@ uint8_t blinkHeart(dms6sec_t currentTime)
 						(((uint32_t)(TOGGLETIME * 8))<<(highNibble)))
 	{
 		toggleCount = 0;
- 2a6:	10 92 ed 00 	sts	0x00ED, r1	; 0x8000ed <toggleCount.1623>
+ 2a6:	10 92 eb 00 	sts	0x00EB, r1	; 0x8000eb <toggleCount.1623>
 		lastToggleTime = currentTime;
- 2aa:	f0 93 ec 00 	sts	0x00EC, r31	; 0x8000ec <lastToggleTime.1622+0x1>
- 2ae:	e0 93 eb 00 	sts	0x00EB, r30	; 0x8000eb <lastToggleTime.1622>
+ 2aa:	f0 93 ea 00 	sts	0x00EA, r31	; 0x8000ea <lastToggleTime.1622+0x1>
+ 2ae:	e0 93 e9 00 	sts	0x00E9, r30	; 0x8000e9 <lastToggleTime.1622>
 		//Only valid if both nibbles are filled (see above)
 		highNibble = !highNibble;
  2b2:	81 e0       	ldi	r24, 0x01	; 1
  2b4:	31 11       	cpse	r19, r1
  2b6:	80 e0       	ldi	r24, 0x00	; 0
- 2b8:	80 93 ee 00 	sts	0x00EE, r24	; 0x8000ee <highNibble.1624>
+ 2b8:	80 93 ec 00 	sts	0x00EC, r24	; 0x8000ec <highNibble.1624>
  2bc:	dc cf       	rjmp	.-72     	; 0x276 <__stack+0x17>
 
 000002be <heartUpdate>:
@@ -690,8 +690,8 @@ uint8_t heartUpdate(void)
 #endif
 
 	if((currentTime - lastTime) > heartStepTime)
- 2ca:	80 91 e9 00 	lds	r24, 0x00E9	; 0x8000e9 <lastTime.1629>
- 2ce:	90 91 ea 00 	lds	r25, 0x00EA	; 0x8000ea <lastTime.1629+0x1>
+ 2ca:	80 91 e7 00 	lds	r24, 0x00E7	; 0x8000e7 <lastTime.1629>
+ 2ce:	90 91 e8 00 	lds	r25, 0x00E8	; 0x8000e8 <lastTime.1629+0x1>
  2d2:	96 01       	movw	r18, r12
  2d4:	28 1b       	sub	r18, r24
  2d6:	39 0b       	sbc	r19, r25
@@ -702,14 +702,14 @@ uint8_t heartUpdate(void)
  2e4:	48 f4       	brcc	.+18     	; 0x2f8 <heartUpdate+0x3a>
 	{
 		lastTime = currentTime;
- 2e6:	d0 92 ea 00 	sts	0x00EA, r13	; 0x8000ea <lastTime.1629+0x1>
- 2ea:	c0 92 e9 00 	sts	0x00E9, r12	; 0x8000e9 <lastTime.1629>
+ 2e6:	d0 92 e8 00 	sts	0x00E8, r13	; 0x8000e8 <lastTime.1629+0x1>
+ 2ea:	c0 92 e7 00 	sts	0x00E7, r12	; 0x8000e7 <lastTime.1629>
 
 		hfm_setPower(&heartModulator, getNextDesired());
  2ee:	74 df       	rcall	.-280    	; 0x1d8 <getNextDesired>
  2f0:	68 2f       	mov	r22, r24
- 2f2:	82 e0       	ldi	r24, 0x02	; 2
- 2f4:	91 e0       	ldi	r25, 0x01	; 1
+ 2f2:	8f ef       	ldi	r24, 0xFF	; 255
+ 2f4:	90 e0       	ldi	r25, 0x00	; 0
  2f6:	21 d0       	rcall	.+66     	; 0x33a <hfm_setPower>
 //				(If IN is tied LOW, the LED will be OFF)
 	//determine whether the LED should be on or off based on the HFM
@@ -717,7 +717,7 @@ uint8_t heartUpdate(void)
 	uint8_t ledVal;
 
 	if(heartBlink)
- 2f8:	80 91 e8 00 	lds	r24, 0x00E8	; 0x8000e8 <__data_end>
+ 2f8:	80 91 e6 00 	lds	r24, 0x00E6	; 0x8000e6 <__data_end>
  2fc:	88 23       	and	r24, r24
  2fe:	61 f0       	breq	.+24     	; 0x318 <heartUpdate+0x5a>
 		ledVal = blinkHeart(currentTime);
@@ -757,8 +757,8 @@ uint8_t heartUpdate(void)
 		//ledVal = blinkHeart((dms6sec_t)currentTime);
 	else
 		ledVal = hfm_nextOutput(&heartModulator);
- 318:	82 e0       	ldi	r24, 0x02	; 2
- 31a:	91 e0       	ldi	r25, 0x01	; 1
+ 318:	8f ef       	ldi	r24, 0xFF	; 255
+ 31a:	90 e0       	ldi	r25, 0x00	; 0
  31c:	1c d0       	rcall	.+56     	; 0x356 <hfm_nextOutput>
  31e:	f2 cf       	rjmp	.-28     	; 0x304 <heartUpdate+0x46>
 		//PORT = L
@@ -939,17 +939,17 @@ SIGNAL(TIMER0_COMPA_vect)
  396:	af 93       	push	r26
  398:	bf 93       	push	r27
 	dmsCount++;
- 39a:	80 91 f0 00 	lds	r24, 0x00F0	; 0x8000f0 <dmsCount>
- 39e:	90 91 f1 00 	lds	r25, 0x00F1	; 0x8000f1 <dmsCount+0x1>
- 3a2:	a0 91 f2 00 	lds	r26, 0x00F2	; 0x8000f2 <dmsCount+0x2>
- 3a6:	b0 91 f3 00 	lds	r27, 0x00F3	; 0x8000f3 <dmsCount+0x3>
+ 39a:	80 91 ee 00 	lds	r24, 0x00EE	; 0x8000ee <dmsCount>
+ 39e:	90 91 ef 00 	lds	r25, 0x00EF	; 0x8000ef <dmsCount+0x1>
+ 3a2:	a0 91 f0 00 	lds	r26, 0x00F0	; 0x8000f0 <dmsCount+0x2>
+ 3a6:	b0 91 f1 00 	lds	r27, 0x00F1	; 0x8000f1 <dmsCount+0x3>
  3aa:	01 96       	adiw	r24, 0x01	; 1
  3ac:	a1 1d       	adc	r26, r1
  3ae:	b1 1d       	adc	r27, r1
- 3b0:	80 93 f0 00 	sts	0x00F0, r24	; 0x8000f0 <dmsCount>
- 3b4:	90 93 f1 00 	sts	0x00F1, r25	; 0x8000f1 <dmsCount+0x1>
- 3b8:	a0 93 f2 00 	sts	0x00F2, r26	; 0x8000f2 <dmsCount+0x2>
- 3bc:	b0 93 f3 00 	sts	0x00F3, r27	; 0x8000f3 <dmsCount+0x3>
+ 3b0:	80 93 ee 00 	sts	0x00EE, r24	; 0x8000ee <dmsCount>
+ 3b4:	90 93 ef 00 	sts	0x00EF, r25	; 0x8000ef <dmsCount+0x1>
+ 3b8:	a0 93 f0 00 	sts	0x00F0, r26	; 0x8000f0 <dmsCount+0x2>
+ 3bc:	b0 93 f1 00 	sts	0x00F1, r27	; 0x8000f1 <dmsCount+0x3>
 }
  3c0:	bf 91       	pop	r27
  3c2:	af 91       	pop	r26
@@ -1015,17 +1015,17 @@ void init_dmsTimer(void)
 	#if defined(TCNT0)
 	 dmsFrac = TCNT0;
  3f6:	82 b7       	in	r24, 0x32	; 50
- 3f8:	80 93 ef 00 	sts	0x00EF, r24	; 0x8000ef <dmsFrac>
+ 3f8:	80 93 ed 00 	sts	0x00ED, r24	; 0x8000ed <dmsFrac>
 	 dmsFrac = TCNT0L;
 	#else
 	 #error "TCNT0 is not available... untested MCU!"
 	#endif
   #endif
    time=dmsCount;
- 3fc:	60 91 f0 00 	lds	r22, 0x00F0	; 0x8000f0 <dmsCount>
- 400:	70 91 f1 00 	lds	r23, 0x00F1	; 0x8000f1 <dmsCount+0x1>
- 404:	80 91 f2 00 	lds	r24, 0x00F2	; 0x8000f2 <dmsCount+0x2>
- 408:	90 91 f3 00 	lds	r25, 0x00F3	; 0x8000f3 <dmsCount+0x3>
+ 3fc:	60 91 ee 00 	lds	r22, 0x00EE	; 0x8000ee <dmsCount>
+ 400:	70 91 ef 00 	lds	r23, 0x00EF	; 0x8000ef <dmsCount+0x1>
+ 404:	80 91 f0 00 	lds	r24, 0x00F0	; 0x8000f0 <dmsCount+0x2>
+ 408:	90 91 f1 00 	lds	r25, 0x00F1	; 0x8000f1 <dmsCount+0x3>
 	dms_sei();
  40c:	78 94       	sei
 	dmsFrac = now.tv_usec%100;
@@ -1116,14 +1116,14 @@ void dmsWaitFn(uint32_t time, void (*p_waitFn)(void))		//Wait time deci-millisec
 uint8_t dmsGetFrac(void)
 {
 	return (uint8_t)((uint16_t)(dmsFrac) * (uint16_t)100  / (uint16_t)dmsNumUpdates);
- 464:	80 91 ef 00 	lds	r24, 0x00EF	; 0x8000ef <dmsFrac>
+ 464:	80 91 ed 00 	lds	r24, 0x00ED	; 0x8000ed <dmsFrac>
  468:	90 e0       	ldi	r25, 0x00	; 0
  46a:	64 e6       	ldi	r22, 0x64	; 100
  46c:	70 e0       	ldi	r23, 0x00	; 0
- 46e:	d6 d2       	rcall	.+1452   	; 0xa1c <__mulhi3>
+ 46e:	38 d2       	rcall	.+1136   	; 0x8e0 <__mulhi3>
  470:	60 91 64 00 	lds	r22, 0x0064	; 0x800064 <dmsNumUpdates>
  474:	70 e0       	ldi	r23, 0x00	; 0
- 476:	ef d2       	rcall	.+1502   	; 0xa56 <__udivmodhi4>
+ 476:	51 d2       	rcall	.+1186   	; 0x91a <__udivmodhi4>
  478:	86 2f       	mov	r24, r22
 }
  47a:	08 95       	ret
@@ -1823,7 +1823,7 @@ uint8_t timer_overflowIntEnable(uint8_t timerNum)
 void usi_i2c_awaitStart(void)
 {
 	usi_i2c_state = USI_STATE_AWAITING_START;
- 65e:	10 92 fb 00 	sts	0x00FB, r1	; 0x8000fb <usi_i2c_state>
+ 65e:	10 92 f9 00 	sts	0x00F9, r1	; 0x8000f9 <usi_i2c_state>
 
    //Clear the interrupt flags, etc. first...
 	// NOTE This will release SCL hold (i.e. different slave addressed)
@@ -1864,7 +1864,7 @@ void usi_i2c_awaitStartSCL(void)
 {
 	usi_i2c_state = USI_STATE_AWAITING_START_SCL;
  674:	81 e0       	ldi	r24, 0x01	; 1
- 676:	80 93 fb 00 	sts	0x00FB, r24	; 0x8000fb <usi_i2c_state>
+ 676:	80 93 f9 00 	sts	0x00F9, r24	; 0x8000f9 <usi_i2c_state>
 
 	//Before enabling the counter-overflow interrupt
 	// make sure the flag is clear
@@ -1932,9 +1932,9 @@ ISR(USI_START_vect)
 	// Should be fixed now, with the new AWAITING_START_SCL state
 
 	heartBlinkInternal++;
- 6ac:	80 91 f7 00 	lds	r24, 0x00F7	; 0x8000f7 <heartBlinkInternal>
+ 6ac:	80 91 f5 00 	lds	r24, 0x00F5	; 0x8000f5 <heartBlinkInternal>
  6b0:	8f 5f       	subi	r24, 0xFF	; 255
- 6b2:	80 93 f7 00 	sts	0x00F7, r24	; 0x8000f7 <heartBlinkInternal>
+ 6b2:	80 93 f5 00 	sts	0x00F5, r24	; 0x8000f5 <heartBlinkInternal>
 	//setinPORT(SDA_PIN, SDAPORT);
 	//USIDR = 0xff;	
 
@@ -2002,7 +2002,7 @@ ISR(USI_OVF_vect)
 	//These cases are the same as AWAITING, except if we're here,
 	// then we're no longer awaiting them...
 	switch(usi_i2c_state)
- 700:	80 91 fb 00 	lds	r24, 0x00FB	; 0x8000fb <usi_i2c_state>
+ 700:	80 91 f9 00 	lds	r24, 0x00F9	; 0x8000f9 <usi_i2c_state>
  704:	82 30       	cpi	r24, 0x02	; 2
  706:	09 f4       	brne	.+2      	; 0x70a <__vector_14+0x2c>
  708:	50 c0       	rjmp	.+160    	; 0x7aa <__vector_14+0xcc>
@@ -2017,7 +2017,7 @@ ISR(USI_OVF_vect)
 			usi_i2c_state = 0x77;
  710:	87 e7       	ldi	r24, 0x77	; 119
  712:	24 c0       	rjmp	.+72     	; 0x75c <__vector_14+0x7e>
- 714:	20 91 fa 00 	lds	r18, 0x00FA	; 0x8000fa <usi_i2c_readFromSlave>
+ 714:	20 91 f8 00 	lds	r18, 0x00F8	; 0x8000f8 <usi_i2c_readFromSlave>
 	// start condition.
 
 
@@ -2035,9 +2035,9 @@ ISR(USI_OVF_vect)
 			break;
 		case USI_STATE_BYTE_COMPLETE:  //BYTE transmitted/received
 			byteNum++;
- 722:	90 91 f5 00 	lds	r25, 0x00F5	; 0x8000f5 <byteNum>
+ 722:	90 91 f3 00 	lds	r25, 0x00F3	; 0x8000f3 <byteNum>
  726:	9f 5f       	subi	r25, 0xFF	; 255
- 728:	90 93 f5 00 	sts	0x00F5, r25	; 0x8000f5 <byteNum>
+ 728:	90 93 f3 00 	sts	0x00F3, r25	; 0x8000f3 <byteNum>
 			// Get the byte (if receiving)
 			if(!usi_i2c_readFromSlave)
  72c:	21 11       	cpse	r18, r1
@@ -2051,7 +2051,7 @@ ISR(USI_OVF_vect)
 void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 {
   if(usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS)
- 732:	20 91 f6 00 	lds	r18, 0x00F6	; 0x8000f6 <usi_i2c_requestedAddress>
+ 732:	20 91 f4 00 	lds	r18, 0x00F4	; 0x8000f4 <usi_i2c_requestedAddress>
  736:	20 35       	cpi	r18, 0x50	; 80
  738:	09 f0       	breq	.+2      	; 0x73c <__vector_14+0x5e>
  73a:	a1 c0       	rjmp	.+322    	; 0x87e <__vector_14+0x1a0>
@@ -2065,15 +2065,15 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 		//ledsControlled = FALSE;
 		setEDIDIndex(receivedByte);
  742:	8f 77       	andi	r24, 0x7F	; 127
- 744:	80 93 fc 00 	sts	0x00FC, r24	; 0x8000fc <edidArrayIndex>
+ 744:	80 93 fa 00 	sts	0x00FA, r24	; 0x8000fa <edidArrayIndex>
 			// Get the byte (if receiving)
 			if(!usi_i2c_readFromSlave)
 			{
 				processReceivedByte(USIDR, byteNum);
 				//usi_i2c_receivedByte = USIDR;
 				heartBlinkInternal = usi_i2c_receivedByte;
- 748:	80 91 f8 00 	lds	r24, 0x00F8	; 0x8000f8 <usi_i2c_receivedByte>
- 74c:	80 93 f7 00 	sts	0x00F7, r24	; 0x8000f7 <heartBlinkInternal>
+ 748:	80 91 f6 00 	lds	r24, 0x00F6	; 0x8000f6 <usi_i2c_receivedByte>
+ 74c:	80 93 f5 00 	sts	0x00F5, r24	; 0x8000f5 <heartBlinkInternal>
 				//set_heartBlink(heartBlinkInternal);
 //				heartClear();
 
@@ -2099,7 +2099,7 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 		//Shouldn't get here...
 		default:
 			usi_i2c_state = 0x77;
- 75c:	80 93 fb 00 	sts	0x00FB, r24	; 0x8000fb <usi_i2c_state>
+ 75c:	80 93 f9 00 	sts	0x00F9, r24	; 0x8000f9 <usi_i2c_state>
 			//set_heartBlink(0x77);
 			break;
  760:	05 c0       	rjmp	.+10     	; 0x76c <__vector_14+0x8e>
@@ -2110,7 +2110,7 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 	//		usi_i2c_awaitAddress();
 			usi_i2c_state = USI_STATE_AWAITING_ADDRESS;
  762:	82 e0       	ldi	r24, 0x02	; 2
- 764:	80 93 fb 00 	sts	0x00FB, r24	; 0x8000fb <usi_i2c_state>
+ 764:	80 93 f9 00 	sts	0x00F9, r24	; 0x8000f9 <usi_i2c_state>
 
 		   //Clear the Start-Condition flag to release SCL
 			// ALSO the Overflow flag for the same reason
@@ -2131,15 +2131,15 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 
 	//I want it to blink if it's not yet read the EDID...
 	if((usi_i2c_readFromSlave)
- 76c:	80 91 fa 00 	lds	r24, 0x00FA	; 0x8000fa <usi_i2c_readFromSlave>
+ 76c:	80 91 f8 00 	lds	r24, 0x00F8	; 0x8000f8 <usi_i2c_readFromSlave>
  770:	88 23       	and	r24, r24
  772:	51 f0       	breq	.+20     	; 0x788 <__vector_14+0xaa>
 		 && (usi_i2c_state == 4)
- 774:	80 91 fb 00 	lds	r24, 0x00FB	; 0x8000fb <usi_i2c_state>
+ 774:	80 91 f9 00 	lds	r24, 0x00F9	; 0x8000f9 <usi_i2c_state>
  778:	84 30       	cpi	r24, 0x04	; 4
  77a:	31 f4       	brne	.+12     	; 0x788 <__vector_14+0xaa>
 		 && (usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS))
- 77c:	80 91 f6 00 	lds	r24, 0x00F6	; 0x8000f6 <usi_i2c_requestedAddress>
+ 77c:	80 91 f4 00 	lds	r24, 0x00F4	; 0x8000f4 <usi_i2c_requestedAddress>
  780:	80 35       	cpi	r24, 0x50	; 80
  782:	11 f4       	brne	.+4      	; 0x788 <__vector_14+0xaa>
 		set_heartBlink(0);
@@ -2170,7 +2170,7 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 			{};
 
 			byteNum = 0;
- 7aa:	10 92 f5 00 	sts	0x00F5, r1	; 0x8000f5 <byteNum>
+ 7aa:	10 92 f3 00 	sts	0x00F3, r1	; 0x8000f3 <byteNum>
 			//heartClear();
 			//Check to see if it's ours...
 			uint8_t udrTemp = USIDR;
@@ -2180,10 +2180,10 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 			usi_i2c_readFromSlave = udrTemp & 0x01;
  7b0:	98 2f       	mov	r25, r24
  7b2:	91 70       	andi	r25, 0x01	; 1
- 7b4:	90 93 fa 00 	sts	0x00FA, r25	; 0x8000fa <usi_i2c_readFromSlave>
+ 7b4:	90 93 f8 00 	sts	0x00F8, r25	; 0x8000f8 <usi_i2c_readFromSlave>
 			usi_i2c_requestedAddress = udrTemp >> 1;
  7b8:	86 95       	lsr	r24
- 7ba:	80 93 f6 00 	sts	0x00F6, r24	; 0x8000f6 <usi_i2c_requestedAddress>
+ 7ba:	80 93 f4 00 	sts	0x00F4, r24	; 0x8000f4 <usi_i2c_requestedAddress>
 			
 			//From the manual:
 			// When the slave is addressed, it holds the SDA line low during 
@@ -2205,7 +2205,7 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 
 	         usi_i2c_state = USI_STATE_AWAITING_ACK;
  7ca:	83 e0       	ldi	r24, 0x03	; 3
- 7cc:	80 93 fb 00 	sts	0x00FB, r24	; 0x8000fb <usi_i2c_state>
+ 7cc:	80 93 f9 00 	sts	0x00F9, r24	; 0x8000f9 <usi_i2c_state>
 
 	         //FTM:
 	         // (The USI Counter Register is set to 14 before releasing SCL)
@@ -2235,7 +2235,7 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 
 			usi_i2c_state = USI_STATE_AWAITING_BYTE;
  7de:	84 e0       	ldi	r24, 0x04	; 4
- 7e0:	80 93 fb 00 	sts	0x00FB, r24	; 0x8000fb <usi_i2c_state>
+ 7e0:	80 93 f9 00 	sts	0x00F9, r24	; 0x8000f9 <usi_i2c_state>
 
 			USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(0);
  7e4:	80 e4       	ldi	r24, 0x40	; 64
@@ -2250,14 +2250,14 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
  7ea:	81 70       	andi	r24, 0x01	; 1
 
 				if(byteNum)// && !(USIDR & 0x01))
- 7ec:	90 91 f5 00 	lds	r25, 0x00F5	; 0x8000f5 <byteNum>
+ 7ec:	90 91 f3 00 	lds	r25, 0x00F3	; 0x8000f3 <byteNum>
  7f0:	99 23       	and	r25, r25
  7f2:	29 f0       	breq	.+10     	; 0x7fe <__vector_14+0x120>
 				{
 					heartBlinkInternal+= 0x10;
- 7f4:	90 91 f7 00 	lds	r25, 0x00F7	; 0x8000f7 <heartBlinkInternal>
+ 7f4:	90 91 f5 00 	lds	r25, 0x00F5	; 0x8000f5 <heartBlinkInternal>
  7f8:	90 5f       	subi	r25, 0xF0	; 240
- 7fa:	90 93 f7 00 	sts	0x00F7, r25	; 0x8000f7 <heartBlinkInternal>
+ 7fa:	90 93 f5 00 	sts	0x00F5, r25	; 0x8000f5 <heartBlinkInternal>
 				//USIDR = usi_i2c_byteToTransmit;
 
 				//if we load the next byte and its bit7 is 0
@@ -2272,27 +2272,27 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 //	return temp++;
 
   if(usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS)
- 802:	80 91 f6 00 	lds	r24, 0x00F6	; 0x8000f6 <usi_i2c_requestedAddress>
+ 802:	80 91 f4 00 	lds	r24, 0x00F4	; 0x8000f4 <usi_i2c_requestedAddress>
  806:	80 35       	cpi	r24, 0x50	; 80
  808:	a1 f4       	brne	.+40     	; 0x832 <__vector_14+0x154>
   {
 	uint8_t temp = edidArray[edidArrayIndex];
- 80a:	80 91 fc 00 	lds	r24, 0x00FC	; 0x8000fc <edidArrayIndex>
+ 80a:	80 91 fa 00 	lds	r24, 0x00FA	; 0x8000fa <edidArrayIndex>
  80e:	e8 2f       	mov	r30, r24
  810:	f0 e0       	ldi	r31, 0x00	; 0
- 812:	e8 59       	subi	r30, 0x98	; 152
+ 812:	ea 59       	subi	r30, 0x9A	; 154
  814:	ff 4f       	sbci	r31, 0xFF	; 255
  816:	90 81       	ld	r25, Z
 
 	ledsControlled = FALSE;
- 818:	10 92 f4 00 	sts	0x00F4, r1	; 0x8000f4 <ledsControlled>
+ 818:	10 92 f2 00 	sts	0x00F2, r1	; 0x8000f2 <ledsControlled>
 	if(masterACKed)
 	{
 		incrementEDIDIndex();
  81c:	8f 5f       	subi	r24, 0xFF	; 255
  81e:	80 38       	cpi	r24, 0x80	; 128
  820:	29 f0       	breq	.+10     	; 0x82c <__vector_14+0x14e>
- 822:	80 93 fc 00 	sts	0x00FC, r24	; 0x8000fc <edidArrayIndex>
+ 822:	80 93 fa 00 	sts	0x00FA, r24	; 0x8000fa <edidArrayIndex>
 
 				//if we load the next byte and its bit7 is 0
 				// it will hold SDA low when the master tries to 
@@ -2314,7 +2314,7 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 	if(masterACKed)
 	{
 		incrementEDIDIndex();
- 82c:	10 92 fc 00 	sts	0x00FC, r1	; 0x8000fc <edidArrayIndex>
+ 82c:	10 92 fa 00 	sts	0x00FA, r1	; 0x8000fa <edidArrayIndex>
  830:	fa cf       	rjmp	.-12     	; 0x826 <__vector_14+0x148>
 	return temp;
   }
@@ -2333,10 +2333,10 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
  836:	b9 f7       	brne	.-18     	; 0x826 <__vector_14+0x148>
   {
 	uint8_t temp = ledState[ledIndex];
- 838:	80 91 fd 00 	lds	r24, 0x00FD	; 0x8000fd <ledIndex>
+ 838:	80 91 fb 00 	lds	r24, 0x00FB	; 0x8000fb <ledIndex>
  83c:	e8 2f       	mov	r30, r24
  83e:	f0 e0       	ldi	r31, 0x00	; 0
- 840:	e2 50       	subi	r30, 0x02	; 2
+ 840:	e4 50       	subi	r30, 0x04	; 4
  842:	ff 4f       	sbci	r31, 0xFF	; 255
  844:	90 81       	ld	r25, Z
 
@@ -2346,9 +2346,9 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
  846:	8f 5f       	subi	r24, 0xFF	; 255
  848:	83 30       	cpi	r24, 0x03	; 3
  84a:	19 f0       	breq	.+6      	; 0x852 <__vector_14+0x174>
- 84c:	80 93 fd 00 	sts	0x00FD, r24	; 0x8000fd <ledIndex>
+ 84c:	80 93 fb 00 	sts	0x00FB, r24	; 0x8000fb <ledIndex>
  850:	ea cf       	rjmp	.-44     	; 0x826 <__vector_14+0x148>
- 852:	10 92 fd 00 	sts	0x00FD, r1	; 0x8000fd <ledIndex>
+ 852:	10 92 fb 00 	sts	0x00FB, r1	; 0x8000fb <ledIndex>
  856:	e7 cf       	rjmp	.-50     	; 0x826 <__vector_14+0x148>
 				// it will hold SDA low when the master tries to 
 				// pull it high for a stop-condition!
@@ -2365,10 +2365,10 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 	else
 	{
 		edidArray[edidArrayIndex] = receivedByte;
- 85e:	90 91 fc 00 	lds	r25, 0x00FC	; 0x8000fc <edidArrayIndex>
+ 85e:	90 91 fa 00 	lds	r25, 0x00FA	; 0x8000fa <edidArrayIndex>
  862:	e9 2f       	mov	r30, r25
  864:	f0 e0       	ldi	r31, 0x00	; 0
- 866:	e8 59       	subi	r30, 0x98	; 152
+ 866:	ea 59       	subi	r30, 0x9A	; 154
  868:	ff 4f       	sbci	r31, 0xFF	; 255
  86a:	80 83       	st	Z, r24
 
@@ -2376,9 +2376,9 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
  86c:	9f 5f       	subi	r25, 0xFF	; 255
  86e:	90 38       	cpi	r25, 0x80	; 128
  870:	19 f0       	breq	.+6      	; 0x878 <__vector_14+0x19a>
- 872:	90 93 fc 00 	sts	0x00FC, r25	; 0x8000fc <edidArrayIndex>
+ 872:	90 93 fa 00 	sts	0x00FA, r25	; 0x8000fa <edidArrayIndex>
  876:	68 cf       	rjmp	.-304    	; 0x748 <__vector_14+0x6a>
- 878:	10 92 fc 00 	sts	0x00FC, r1	; 0x8000fc <edidArrayIndex>
+ 878:	10 92 fa 00 	sts	0x00FA, r1	; 0x8000fa <edidArrayIndex>
  87c:	65 cf       	rjmp	.-310    	; 0x748 <__vector_14+0x6a>
 		//edidArrayIndex++;
 		//edidArrayIndex &= 0x07;
@@ -2392,7 +2392,7 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 	
 	ledsControlled = TRUE;
  884:	21 e0       	ldi	r18, 0x01	; 1
- 886:	20 93 f4 00 	sts	0x00F4, r18	; 0x8000f4 <ledsControlled>
+ 886:	20 93 f2 00 	sts	0x00F2, r18	; 0x8000f2 <ledsControlled>
 
 	if(byteNum == 1)
  88a:	91 30       	cpi	r25, 0x01	; 1
@@ -2400,13 +2400,13 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 	{
 		setLEDIndex(receivedByte);
  88e:	63 e0       	ldi	r22, 0x03	; 3
- 890:	d6 d0       	rcall	.+428    	; 0xa3e <__udivmodqi4>
+ 890:	38 d0       	rcall	.+112    	; 0x902 <__udivmodqi4>
 	}
 	else
 	{
 		ledState[ledIndex] = receivedByte;
 		incrementLEDIndex();
- 892:	90 93 fd 00 	sts	0x00FD, r25	; 0x8000fd <ledIndex>
+ 892:	90 93 fb 00 	sts	0x00FB, r25	; 0x8000fb <ledIndex>
  896:	58 cf       	rjmp	.-336    	; 0x748 <__vector_14+0x6a>
 	{
 		setLEDIndex(receivedByte);
@@ -2414,17 +2414,17 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 	else
 	{
 		ledState[ledIndex] = receivedByte;
- 898:	90 91 fd 00 	lds	r25, 0x00FD	; 0x8000fd <ledIndex>
+ 898:	90 91 fb 00 	lds	r25, 0x00FB	; 0x8000fb <ledIndex>
  89c:	e9 2f       	mov	r30, r25
  89e:	f0 e0       	ldi	r31, 0x00	; 0
- 8a0:	e2 50       	subi	r30, 0x02	; 2
+ 8a0:	e4 50       	subi	r30, 0x04	; 4
  8a2:	ff 4f       	sbci	r31, 0xFF	; 255
  8a4:	80 83       	st	Z, r24
 		incrementLEDIndex();
  8a6:	9f 5f       	subi	r25, 0xFF	; 255
  8a8:	93 30       	cpi	r25, 0x03	; 3
  8aa:	99 f7       	brne	.-26     	; 0x892 <__vector_14+0x1b4>
- 8ac:	10 92 fd 00 	sts	0x00FD, r1	; 0x8000fd <ledIndex>
+ 8ac:	10 92 fb 00 	sts	0x00FB, r1	; 0x8000fb <ledIndex>
  8b0:	4b cf       	rjmp	.-362    	; 0x748 <__vector_14+0x6a>
 				setoutPORT(SDA_PIN, SDAPORT);
 			}
@@ -2445,7 +2445,7 @@ void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
 
 void edid_checkSummer(void)
 {
- 8ba:	e8 e6       	ldi	r30, 0x68	; 104
+ 8ba:	e6 e6       	ldi	r30, 0x66	; 102
  8bc:	f0 e0       	ldi	r31, 0x00	; 0
 	uint8_t i;
 	uint8_t sum = 0;
@@ -2465,7 +2465,7 @@ void edid_checkSummer(void)
 	// it will be overwritten here...
 	for(i=0; i<0x7f; i++)
  8c4:	90 e0       	ldi	r25, 0x00	; 0
- 8c6:	e7 3e       	cpi	r30, 0xE7	; 231
+ 8c6:	e5 3e       	cpi	r30, 0xE5	; 229
  8c8:	f9 07       	cpc	r31, r25
  8ca:	d1 f7       	brne	.-12     	; 0x8c0 <edid_checkSummer+0x6>
 	{
@@ -2475,425 +2475,130 @@ void edid_checkSummer(void)
 	//Load the calculated checksum
 	edidArray[0x7f] = (uint8_t)((uint8_t)0 - (uint8_t)(sum));
  8cc:	81 95       	neg	r24
- 8ce:	80 93 e7 00 	sts	0x00E7, r24	; 0x8000e7 <edidArray+0x7f>
+ 8ce:	80 93 e5 00 	sts	0x00E5, r24	; 0x8000e5 <edidArray+0x7f>
 }
  8d2:	08 95       	ret
 
-000008d4 <updateLEDs>:
-	for(i=0; i<3; i++)
-	{
-	//	if(ledState[i] != lastState[i])
-		{
-		//	ledsControlled = TRUE;
-			lastState[i] = ledState[i];
- 8d4:	80 91 fe 00 	lds	r24, 0x00FE	; 0x8000fe <ledState>
-			hfm_setPower(&(ledHFM[i]), ledState[i]);
- 8d8:	60 91 fe 00 	lds	r22, 0x00FE	; 0x8000fe <ledState>
- 8dc:	86 e0       	ldi	r24, 0x06	; 6
- 8de:	91 e0       	ldi	r25, 0x01	; 1
- 8e0:	2c dd       	rcall	.-1448   	; 0x33a <hfm_setPower>
-	for(i=0; i<3; i++)
-	{
-	//	if(ledState[i] != lastState[i])
-		{
-		//	ledsControlled = TRUE;
-			lastState[i] = ledState[i];
- 8e2:	80 91 ff 00 	lds	r24, 0x00FF	; 0x8000ff <ledState+0x1>
-			hfm_setPower(&(ledHFM[i]), ledState[i]);
- 8e6:	60 91 ff 00 	lds	r22, 0x00FF	; 0x8000ff <ledState+0x1>
- 8ea:	8a e0       	ldi	r24, 0x0A	; 10
- 8ec:	91 e0       	ldi	r25, 0x01	; 1
- 8ee:	25 dd       	rcall	.-1462   	; 0x33a <hfm_setPower>
-	for(i=0; i<3; i++)
-	{
-	//	if(ledState[i] != lastState[i])
-		{
-		//	ledsControlled = TRUE;
-			lastState[i] = ledState[i];
- 8f0:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <ledState+0x2>
-			hfm_setPower(&(ledHFM[i]), ledState[i]);
- 8f4:	60 91 00 01 	lds	r22, 0x0100	; 0x800100 <ledState+0x2>
- 8f8:	8e e0       	ldi	r24, 0x0E	; 14
- 8fa:	91 e0       	ldi	r25, 0x01	; 1
- 8fc:	1e dd       	rcall	.-1476   	; 0x33a <hfm_setPower>
-	}
-	//hfm_setPower(&led_r, ledState[0]);
-	//hfm_setPower(&led_g, ledState[1]);
-
-
-	if(hfm_nextOutput(&(ledHFM[0])))
- 8fe:	86 e0       	ldi	r24, 0x06	; 6
- 900:	91 e0       	ldi	r25, 0x01	; 1
- 902:	29 dd       	rcall	.-1454   	; 0x356 <hfm_nextOutput>
- 904:	88 23       	and	r24, r24
- 906:	71 f0       	breq	.+28     	; 0x924 <updateLEDs+0x50>
-		clrpinPORT(LED_R, LED_PORT);
- 908:	c4 98       	cbi	0x18, 4	; 24
-	else
-		setpinPORT(LED_R, LED_PORT);
-
-	if(hfm_nextOutput(&(ledHFM[1])))
- 90a:	8a e0       	ldi	r24, 0x0A	; 10
- 90c:	91 e0       	ldi	r25, 0x01	; 1
- 90e:	23 dd       	rcall	.-1466   	; 0x356 <hfm_nextOutput>
- 910:	88 23       	and	r24, r24
- 912:	51 f0       	breq	.+20     	; 0x928 <updateLEDs+0x54>
-		clrpinPORT(LED_G, LED_PORT);
- 914:	c3 98       	cbi	0x18, 3	; 24
-	else
-		setpinPORT(LED_G, LED_PORT);
-
-	if(hfm_nextOutput(&(ledHFM[2])))
- 916:	8e e0       	ldi	r24, 0x0E	; 14
- 918:	91 e0       	ldi	r25, 0x01	; 1
- 91a:	1d dd       	rcall	.-1478   	; 0x356 <hfm_nextOutput>
- 91c:	88 23       	and	r24, r24
- 91e:	31 f0       	breq	.+12     	; 0x92c <updateLEDs+0x58>
-		clrpinPORT(LED_B, LED_PORT);
- 920:	c1 98       	cbi	0x18, 1	; 24
- 922:	08 95       	ret
-
-
-	if(hfm_nextOutput(&(ledHFM[0])))
-		clrpinPORT(LED_R, LED_PORT);
-	else
-		setpinPORT(LED_R, LED_PORT);
- 924:	c4 9a       	sbi	0x18, 4	; 24
- 926:	f1 cf       	rjmp	.-30     	; 0x90a <updateLEDs+0x36>
-
-	if(hfm_nextOutput(&(ledHFM[1])))
-		clrpinPORT(LED_G, LED_PORT);
-	else
-		setpinPORT(LED_G, LED_PORT);
- 928:	c3 9a       	sbi	0x18, 3	; 24
- 92a:	f5 cf       	rjmp	.-22     	; 0x916 <updateLEDs+0x42>
-
-	if(hfm_nextOutput(&(ledHFM[2])))
-		clrpinPORT(LED_B, LED_PORT);
-	else
-		setpinPORT(LED_B, LED_PORT);
- 92c:	c1 9a       	sbi	0x18, 1	; 24
-	//NYI:
-	//if(ledState[2])
-
-//	togglepinPORT(LED_R, LED_PORT);
-//	togglepinPORT(LED_G, LED_PORT);
-}
- 92e:	08 95       	ret
-
-00000930 <updateLEDFader>:
-void updateLEDFader(void)
-{
-	static uint8_t delay=0;
-	static theta_t theta=2; //test = 2;
-
-	delay++;
- 930:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <delay.1825>
- 934:	8f 5f       	subi	r24, 0xFF	; 255
- 936:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <delay.1825>
-	if(delay == 0xff)
- 93a:	8f 3f       	cpi	r24, 0xFF	; 255
- 93c:	49 f4       	brne	.+18     	; 0x950 <updateLEDFader+0x20>
-		theta++;
- 93e:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <theta.1826>
- 942:	90 91 66 00 	lds	r25, 0x0066	; 0x800066 <theta.1826+0x1>
- 946:	01 96       	adiw	r24, 0x01	; 1
- 948:	90 93 66 00 	sts	0x0066, r25	; 0x800066 <theta.1826+0x1>
- 94c:	80 93 65 00 	sts	0x0065, r24	; 0x800065 <theta.1826>
-
-	if(theta == SINE_PI*3)
- 950:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <theta.1826>
- 954:	90 91 66 00 	lds	r25, 0x0066	; 0x800066 <theta.1826+0x1>
- 958:	81 15       	cp	r24, r1
- 95a:	93 40       	sbci	r25, 0x03	; 3
- 95c:	21 f4       	brne	.+8      	; 0x966 <updateLEDFader+0x36>
-		theta = 0;
- 95e:	10 92 66 00 	sts	0x0066, r1	; 0x800066 <theta.1826+0x1>
- 962:	10 92 65 00 	sts	0x0065, r1	; 0x800065 <theta.1826>
-
-
-
-	if(theta < SINE_2PI)
- 966:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <theta.1826>
- 96a:	90 91 66 00 	lds	r25, 0x0066	; 0x800066 <theta.1826+0x1>
- 96e:	81 15       	cp	r24, r1
- 970:	42 e0       	ldi	r20, 0x02	; 2
- 972:	94 07       	cpc	r25, r20
- 974:	34 f4       	brge	.+12     	; 0x982 <updateLEDFader+0x52>
-		ledState[0] = \
-			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2) + (int16_t)127); 
- 976:	80 58       	subi	r24, 0x80	; 128
- 978:	91 09       	sbc	r25, r1
- 97a:	d7 db       	rcall	.-2130   	; 0x12a <sineRaw8>
- 97c:	81 58       	subi	r24, 0x81	; 129
-		theta = 0;
-
-
-
-	if(theta < SINE_2PI)
-		ledState[0] = \
- 97e:	80 93 fe 00 	sts	0x00FE, r24	; 0x8000fe <ledState>
-			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2) + (int16_t)127); 
-
-	if((theta > SINE_PI) && (theta < SINE_PI*3))
- 982:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <theta.1826>
- 986:	90 91 66 00 	lds	r25, 0x0066	; 0x800066 <theta.1826+0x1>
- 98a:	9c 01       	movw	r18, r24
- 98c:	21 50       	subi	r18, 0x01	; 1
- 98e:	31 40       	sbci	r19, 0x01	; 1
- 990:	2f 3f       	cpi	r18, 0xFF	; 255
- 992:	31 40       	sbci	r19, 0x01	; 1
- 994:	30 f4       	brcc	.+12     	; 0x9a2 <updateLEDFader+0x72>
-	  	ledState[1] = \
-		 	(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 - SINE_PI) 
- 996:	80 58       	subi	r24, 0x80	; 128
- 998:	91 40       	sbci	r25, 0x01	; 1
- 99a:	c7 db       	rcall	.-2162   	; 0x12a <sineRaw8>
- 99c:	81 58       	subi	r24, 0x81	; 129
-	if(theta < SINE_2PI)
-		ledState[0] = \
-			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2) + (int16_t)127); 
-
-	if((theta > SINE_PI) && (theta < SINE_PI*3))
-	  	ledState[1] = \
- 99e:	80 93 ff 00 	sts	0x00FF, r24	; 0x8000ff <ledState+0x1>
-		 	(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 - SINE_PI) 
-				+ (int16_t)127);	  
-
-	if(theta > SINE_2PI)
- 9a2:	80 91 65 00 	lds	r24, 0x0065	; 0x800065 <theta.1826>
- 9a6:	90 91 66 00 	lds	r25, 0x0066	; 0x800066 <theta.1826+0x1>
- 9aa:	81 30       	cpi	r24, 0x01	; 1
- 9ac:	22 e0       	ldi	r18, 0x02	; 2
- 9ae:	92 07       	cpc	r25, r18
- 9b0:	3c f0       	brlt	.+14     	; 0x9c0 <updateLEDFader+0x90>
-		ledState[2] = \
-			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 - SINE_2PI)
- 9b2:	80 58       	subi	r24, 0x80	; 128
- 9b4:	92 40       	sbci	r25, 0x02	; 2
-				+ (int16_t)127);
-	else if(theta < SINE_PI)
-		ledState[2] = \
-			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 + SINE_PI) 
- 9b6:	b9 db       	rcall	.-2190   	; 0x12a <sineRaw8>
- 9b8:	81 58       	subi	r24, 0x81	; 129
-	if(theta > SINE_2PI)
-		ledState[2] = \
-			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 - SINE_2PI)
-				+ (int16_t)127);
-	else if(theta < SINE_PI)
-		ledState[2] = \
- 9ba:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <ledState+0x2>
-	if(theta > SINE_2PI)
-		ledState[2] = ((sineRaw(theta - SINE_PI_2 - SINE_2PI)>>8) + 127);
-	else if(theta < SINE_PI)
-		ledState[2] = ((sineRaw(theta - SINE_PI_2 + SINE_PI)>>8) + 127);
-*/
-	updateLEDs();
- 9be:	8a cf       	rjmp	.-236    	; 0x8d4 <updateLEDs>
-
-	if(theta > SINE_2PI)
-		ledState[2] = \
-			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 - SINE_2PI)
-				+ (int16_t)127);
-	else if(theta < SINE_PI)
- 9c0:	8f 3f       	cpi	r24, 0xFF	; 255
- 9c2:	91 05       	cpc	r25, r1
- 9c4:	09 f0       	breq	.+2      	; 0x9c8 <updateLEDFader+0x98>
- 9c6:	dc f7       	brge	.-10     	; 0x9be <updateLEDFader+0x8e>
-		ledState[2] = \
-			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 + SINE_PI) 
- 9c8:	80 58       	subi	r24, 0x80	; 128
- 9ca:	9f 4f       	sbci	r25, 0xFF	; 255
- 9cc:	f4 cf       	rjmp	.-24     	; 0x9b6 <updateLEDFader+0x86>
-
-000009ce <main>:
-int main(void)
-{
-#if FADER_ENABLED
-	uint8_t i;
-	for(i=0; i<3; i++)
-		hfm_setup(&(ledHFM[i]), 0, 255);
- 9ce:	4f ef       	ldi	r20, 0xFF	; 255
- 9d0:	60 e0       	ldi	r22, 0x00	; 0
- 9d2:	86 e0       	ldi	r24, 0x06	; 6
- 9d4:	91 e0       	ldi	r25, 0x01	; 1
- 9d6:	ba dc       	rcall	.-1676   	; 0x34c <hfm_setup>
- 9d8:	4f ef       	ldi	r20, 0xFF	; 255
- 9da:	60 e0       	ldi	r22, 0x00	; 0
- 9dc:	8a e0       	ldi	r24, 0x0A	; 10
- 9de:	91 e0       	ldi	r25, 0x01	; 1
- 9e0:	b5 dc       	rcall	.-1686   	; 0x34c <hfm_setup>
- 9e2:	4f ef       	ldi	r20, 0xFF	; 255
- 9e4:	60 e0       	ldi	r22, 0x00	; 0
- 9e6:	8e e0       	ldi	r24, 0x0E	; 14
- 9e8:	91 e0       	ldi	r25, 0x01	; 1
- 9ea:	b0 dc       	rcall	.-1696   	; 0x34c <hfm_setup>
+000008d4 <main>:
 
 	//!!! WDT could cause problems... this probably should be inited earlier and called everywhere...
 	//INIT_HEARTBEAT(HEARTBEATPIN, HEARTBEAT, HEARTCONNECTION);
 
 
 	init_heartBeat();
- 9ec:	c7 db       	rcall	.-2162   	; 0x17c <init_heartBeat>
+ 8d4:	53 dc       	rcall	.-1882   	; 0x17c <init_heartBeat>
 
 	setHeartRate(0);	
- 9ee:	80 e0       	ldi	r24, 0x00	; 0
- 9f0:	ab db       	rcall	.-2218   	; 0x148 <setHeartRate>
-
-	//Blink until the EDID is read...
-	//This is hokey...
-	//set_heartBlink(1);
-
-	edid_checkSummer();
- 9f2:	63 df       	rcall	.-314    	; 0x8ba <edid_checkSummer>
+ 8d6:	80 e0       	ldi	r24, 0x00	; 0
+ 8d8:	37 dc       	rcall	.-1938   	; 0x148 <setHeartRate>
 
 
 
 void usi_i2c_slaveInit(void)
 {
 	usi_i2c_awaitStart();
- 9f4:	34 de       	rcall	.-920    	; 0x65e <usi_i2c_awaitStart>
-	edid_checkSummer();
-
-	usi_i2c_slaveInit();
-
-#if FADER_ENABLED
-	setoutPORT(LED_R, LED_PORT);
- 9f6:	bc 9a       	sbi	0x17, 4	; 23
-	setoutPORT(LED_G, LED_PORT);
- 9f8:	bb 9a       	sbi	0x17, 3	; 23
-	setpinPORT(LED_R, LED_PORT);
- 9fa:	c4 9a       	sbi	0x18, 4	; 24
-	setpinPORT(LED_G, LED_PORT);
- 9fc:	c3 9a       	sbi	0x18, 3	; 24
-//	set_heartBlink(retVal);
-
-	while(1)
-	{
-#if FADER_ENABLED
-		if(!ledsControlled)
- 9fe:	80 91 f4 00 	lds	r24, 0x00F4	; 0x8000f4 <ledsControlled>
- a02:	81 11       	cpse	r24, r1
- a04:	08 c0       	rjmp	.+16     	; 0xa16 <main+0x48>
-		{
-			extern uint8_t heartBlink; 
-
-			if(heartBlink)
- a06:	80 91 e8 00 	lds	r24, 0x00E8	; 0x8000e8 <__data_end>
- a0a:	88 23       	and	r24, r24
- a0c:	11 f0       	breq	.+4      	; 0xa12 <main+0x44>
-				heartUpdate();
- a0e:	57 dc       	rcall	.-1874   	; 0x2be <heartUpdate>
- a10:	f6 cf       	rjmp	.-20     	; 0x9fe <main+0x30>
-			else
-				updateLEDFader();
- a12:	8e df       	rcall	.-228    	; 0x930 <updateLEDFader>
- a14:	f4 cf       	rjmp	.-24     	; 0x9fe <main+0x30>
-		// 			(how did it start up again? Something to do with an
-		//           uninitialized value in HFM?)
-		else
-		{
-			// The heartbeat may have been in input (off) mode when switched
+ 8da:	c1 de       	rcall	.-638    	; 0x65e <usi_i2c_awaitStart>
 			setoutPORT(LED_B, LED_PORT);
- a16:	b9 9a       	sbi	0x17, 1	; 23
 
 			updateLEDs();
- a18:	5d df       	rcall	.-326    	; 0x8d4 <updateLEDs>
- a1a:	f1 cf       	rjmp	.-30     	; 0x9fe <main+0x30>
+		}
+#else
+		heartUpdate();
+ 8dc:	f0 dc       	rcall	.-1568   	; 0x2be <heartUpdate>
+ 8de:	fe cf       	rjmp	.-4      	; 0x8dc <main+0x8>
 
-00000a1c <__mulhi3>:
- a1c:	00 24       	eor	r0, r0
- a1e:	55 27       	eor	r21, r21
- a20:	04 c0       	rjmp	.+8      	; 0xa2a <__mulhi3+0xe>
- a22:	08 0e       	add	r0, r24
- a24:	59 1f       	adc	r21, r25
- a26:	88 0f       	add	r24, r24
- a28:	99 1f       	adc	r25, r25
- a2a:	00 97       	sbiw	r24, 0x00	; 0
- a2c:	29 f0       	breq	.+10     	; 0xa38 <__mulhi3+0x1c>
- a2e:	76 95       	lsr	r23
- a30:	67 95       	ror	r22
- a32:	b8 f3       	brcs	.-18     	; 0xa22 <__mulhi3+0x6>
- a34:	71 05       	cpc	r23, r1
- a36:	b9 f7       	brne	.-18     	; 0xa26 <__mulhi3+0xa>
- a38:	80 2d       	mov	r24, r0
- a3a:	95 2f       	mov	r25, r21
- a3c:	08 95       	ret
+000008e0 <__mulhi3>:
+ 8e0:	00 24       	eor	r0, r0
+ 8e2:	55 27       	eor	r21, r21
+ 8e4:	04 c0       	rjmp	.+8      	; 0x8ee <__mulhi3+0xe>
+ 8e6:	08 0e       	add	r0, r24
+ 8e8:	59 1f       	adc	r21, r25
+ 8ea:	88 0f       	add	r24, r24
+ 8ec:	99 1f       	adc	r25, r25
+ 8ee:	00 97       	sbiw	r24, 0x00	; 0
+ 8f0:	29 f0       	breq	.+10     	; 0x8fc <__mulhi3+0x1c>
+ 8f2:	76 95       	lsr	r23
+ 8f4:	67 95       	ror	r22
+ 8f6:	b8 f3       	brcs	.-18     	; 0x8e6 <__mulhi3+0x6>
+ 8f8:	71 05       	cpc	r23, r1
+ 8fa:	b9 f7       	brne	.-18     	; 0x8ea <__mulhi3+0xa>
+ 8fc:	80 2d       	mov	r24, r0
+ 8fe:	95 2f       	mov	r25, r21
+ 900:	08 95       	ret
 
-00000a3e <__udivmodqi4>:
- a3e:	99 1b       	sub	r25, r25
- a40:	79 e0       	ldi	r23, 0x09	; 9
- a42:	04 c0       	rjmp	.+8      	; 0xa4c <__udivmodqi4_ep>
+00000902 <__udivmodqi4>:
+ 902:	99 1b       	sub	r25, r25
+ 904:	79 e0       	ldi	r23, 0x09	; 9
+ 906:	04 c0       	rjmp	.+8      	; 0x910 <__udivmodqi4_ep>
 
-00000a44 <__udivmodqi4_loop>:
- a44:	99 1f       	adc	r25, r25
- a46:	96 17       	cp	r25, r22
- a48:	08 f0       	brcs	.+2      	; 0xa4c <__udivmodqi4_ep>
- a4a:	96 1b       	sub	r25, r22
+00000908 <__udivmodqi4_loop>:
+ 908:	99 1f       	adc	r25, r25
+ 90a:	96 17       	cp	r25, r22
+ 90c:	08 f0       	brcs	.+2      	; 0x910 <__udivmodqi4_ep>
+ 90e:	96 1b       	sub	r25, r22
 
-00000a4c <__udivmodqi4_ep>:
- a4c:	88 1f       	adc	r24, r24
- a4e:	7a 95       	dec	r23
- a50:	c9 f7       	brne	.-14     	; 0xa44 <__udivmodqi4_loop>
- a52:	80 95       	com	r24
- a54:	08 95       	ret
+00000910 <__udivmodqi4_ep>:
+ 910:	88 1f       	adc	r24, r24
+ 912:	7a 95       	dec	r23
+ 914:	c9 f7       	brne	.-14     	; 0x908 <__udivmodqi4_loop>
+ 916:	80 95       	com	r24
+ 918:	08 95       	ret
 
-00000a56 <__udivmodhi4>:
- a56:	aa 1b       	sub	r26, r26
- a58:	bb 1b       	sub	r27, r27
- a5a:	51 e1       	ldi	r21, 0x11	; 17
- a5c:	07 c0       	rjmp	.+14     	; 0xa6c <__udivmodhi4_ep>
+0000091a <__udivmodhi4>:
+ 91a:	aa 1b       	sub	r26, r26
+ 91c:	bb 1b       	sub	r27, r27
+ 91e:	51 e1       	ldi	r21, 0x11	; 17
+ 920:	07 c0       	rjmp	.+14     	; 0x930 <__udivmodhi4_ep>
 
-00000a5e <__udivmodhi4_loop>:
- a5e:	aa 1f       	adc	r26, r26
- a60:	bb 1f       	adc	r27, r27
- a62:	a6 17       	cp	r26, r22
- a64:	b7 07       	cpc	r27, r23
- a66:	10 f0       	brcs	.+4      	; 0xa6c <__udivmodhi4_ep>
- a68:	a6 1b       	sub	r26, r22
- a6a:	b7 0b       	sbc	r27, r23
+00000922 <__udivmodhi4_loop>:
+ 922:	aa 1f       	adc	r26, r26
+ 924:	bb 1f       	adc	r27, r27
+ 926:	a6 17       	cp	r26, r22
+ 928:	b7 07       	cpc	r27, r23
+ 92a:	10 f0       	brcs	.+4      	; 0x930 <__udivmodhi4_ep>
+ 92c:	a6 1b       	sub	r26, r22
+ 92e:	b7 0b       	sbc	r27, r23
 
-00000a6c <__udivmodhi4_ep>:
- a6c:	88 1f       	adc	r24, r24
- a6e:	99 1f       	adc	r25, r25
- a70:	5a 95       	dec	r21
- a72:	a9 f7       	brne	.-22     	; 0xa5e <__udivmodhi4_loop>
- a74:	80 95       	com	r24
- a76:	90 95       	com	r25
- a78:	bc 01       	movw	r22, r24
- a7a:	cd 01       	movw	r24, r26
- a7c:	08 95       	ret
+00000930 <__udivmodhi4_ep>:
+ 930:	88 1f       	adc	r24, r24
+ 932:	99 1f       	adc	r25, r25
+ 934:	5a 95       	dec	r21
+ 936:	a9 f7       	brne	.-22     	; 0x922 <__udivmodhi4_loop>
+ 938:	80 95       	com	r24
+ 93a:	90 95       	com	r25
+ 93c:	bc 01       	movw	r22, r24
+ 93e:	cd 01       	movw	r24, r26
+ 940:	08 95       	ret
 
-00000a7e <__divmodhi4>:
- a7e:	97 fb       	bst	r25, 7
- a80:	07 2e       	mov	r0, r23
- a82:	16 f4       	brtc	.+4      	; 0xa88 <__divmodhi4+0xa>
- a84:	00 94       	com	r0
- a86:	06 d0       	rcall	.+12     	; 0xa94 <__divmodhi4_neg1>
- a88:	77 fd       	sbrc	r23, 7
- a8a:	08 d0       	rcall	.+16     	; 0xa9c <__divmodhi4_neg2>
- a8c:	e4 df       	rcall	.-56     	; 0xa56 <__udivmodhi4>
- a8e:	07 fc       	sbrc	r0, 7
- a90:	05 d0       	rcall	.+10     	; 0xa9c <__divmodhi4_neg2>
- a92:	3e f4       	brtc	.+14     	; 0xaa2 <__divmodhi4_exit>
+00000942 <__divmodhi4>:
+ 942:	97 fb       	bst	r25, 7
+ 944:	07 2e       	mov	r0, r23
+ 946:	16 f4       	brtc	.+4      	; 0x94c <__divmodhi4+0xa>
+ 948:	00 94       	com	r0
+ 94a:	06 d0       	rcall	.+12     	; 0x958 <__divmodhi4_neg1>
+ 94c:	77 fd       	sbrc	r23, 7
+ 94e:	08 d0       	rcall	.+16     	; 0x960 <__divmodhi4_neg2>
+ 950:	e4 df       	rcall	.-56     	; 0x91a <__udivmodhi4>
+ 952:	07 fc       	sbrc	r0, 7
+ 954:	05 d0       	rcall	.+10     	; 0x960 <__divmodhi4_neg2>
+ 956:	3e f4       	brtc	.+14     	; 0x966 <__divmodhi4_exit>
 
-00000a94 <__divmodhi4_neg1>:
- a94:	90 95       	com	r25
- a96:	81 95       	neg	r24
- a98:	9f 4f       	sbci	r25, 0xFF	; 255
- a9a:	08 95       	ret
+00000958 <__divmodhi4_neg1>:
+ 958:	90 95       	com	r25
+ 95a:	81 95       	neg	r24
+ 95c:	9f 4f       	sbci	r25, 0xFF	; 255
+ 95e:	08 95       	ret
 
-00000a9c <__divmodhi4_neg2>:
- a9c:	70 95       	com	r23
- a9e:	61 95       	neg	r22
- aa0:	7f 4f       	sbci	r23, 0xFF	; 255
+00000960 <__divmodhi4_neg2>:
+ 960:	70 95       	com	r23
+ 962:	61 95       	neg	r22
+ 964:	7f 4f       	sbci	r23, 0xFF	; 255
 
-00000aa2 <__divmodhi4_exit>:
- aa2:	08 95       	ret
+00000966 <__divmodhi4_exit>:
+ 966:	08 95       	ret
 
-00000aa4 <_exit>:
- aa4:	f8 94       	cli
+00000968 <_exit>:
+ 968:	f8 94       	cli
 
-00000aa6 <__stop_program>:
- aa6:	ff cf       	rjmp	.-2      	; 0xaa6 <__stop_program>
+0000096a <__stop_program>:
+ 96a:	ff cf       	rjmp	.-2      	; 0x96a <__stop_program>

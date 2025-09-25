@@ -1,4 +1,4 @@
-GAS LISTING /tmp/cck3Rhtk.s 			page 1
+GAS LISTING /tmp/ccJKt8Hi.s 			page 1
 
 
    1               		.file	"hfModulation.c"
@@ -58,7 +58,7 @@ GAS LISTING /tmp/cck3Rhtk.s 			page 1
   55               		.stabs	"_Sat long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
   56               		.stabs	"_Sat long long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
   57               		.stabs	"_Sat unsigned short _Accum:t(0,46)=r(0,1);2;0;",128,0,0,0
-GAS LISTING /tmp/cck3Rhtk.s 			page 2
+GAS LISTING /tmp/ccJKt8Hi.s 			page 2
 
 
   58               		.stabs	"_Sat unsigned _Accum:t(0,47)=r(0,1);4;0;",128,0,0,0
@@ -118,7 +118,7 @@ GAS LISTING /tmp/cck3Rhtk.s 			page 1
    9:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 
   10:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 
   11:_commonCode_localized/hfModulation/1.00/hfModulation.c **** /* Basic algorithm concept:
-GAS LISTING /tmp/cck3Rhtk.s 			page 3
+GAS LISTING /tmp/ccJKt8Hi.s 			page 3
 
 
   12:_commonCode_localized/hfModulation/1.00/hfModulation.c ****  *	///increment numSteps (no longer necessary)
@@ -178,7 +178,7 @@ GAS LISTING /tmp/cck3Rhtk.s 			page 1
  114 0002 8281      		ldd r24,Z+2
  115 0004 8617      		cp r24,r22
  116 0006 00F0      		brlo .L2
-GAS LISTING /tmp/cck3Rhtk.s 			page 4
+GAS LISTING /tmp/ccJKt8Hi.s 			page 4
 
 
   56:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 		modulator->power = power;
@@ -238,7 +238,7 @@ GAS LISTING /tmp/cck3Rhtk.s 			page 1
  154               		.stabn	68,0,40,.LM7-.LFBB2
  155               	.LM7:
  156 0018 4283      		std Z+2,r20
-GAS LISTING /tmp/cck3Rhtk.s 			page 5
+GAS LISTING /tmp/ccJKt8Hi.s 			page 5
 
 
   41:_commonCode_localized/hfModulation/1.00/hfModulation.c **** }
@@ -298,7 +298,7 @@ GAS LISTING /tmp/cck3Rhtk.s 			page 1
   95:_commonCode_localized/hfModulation/1.00/hfModulation.c **** 		(modulator->desiredSum) -= (modulator->maxPower); //0xff;
  185               		.stabn	68,0,95,.LM11-.LFBB3
  186               	.LM11:
-GAS LISTING /tmp/cck3Rhtk.s 			page 6
+GAS LISTING /tmp/ccJKt8Hi.s 			page 6
 
 
  187 0028 2281      		ldd r18,Z+2
@@ -358,7 +358,7 @@ GAS LISTING /tmp/cck3Rhtk.s 			page 1
  215 004a 80E0      		ldi r24,0
  216 004c 00C0      		rjmp .L6
  217               		.size	hfm_nextOutput, .-hfm_nextOutput
-GAS LISTING /tmp/cck3Rhtk.s 			page 7
+GAS LISTING /tmp/ccJKt8Hi.s 			page 7
 
 
  218               		.stabs	"toReturn:r(3,2)",64,0,75,24
@@ -370,18 +370,18 @@ GAS LISTING /tmp/cck3Rhtk.s 			page 1
  224               		.stabs	"",100,0,0,.Letext0
  225               	.Letext0:
  226               		.ident	"GCC: (GNU) 7.3.0"
-GAS LISTING /tmp/cck3Rhtk.s 			page 8
+GAS LISTING /tmp/ccJKt8Hi.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 hfModulation.c
-     /tmp/cck3Rhtk.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/cck3Rhtk.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/cck3Rhtk.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/cck3Rhtk.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/cck3Rhtk.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/cck3Rhtk.s:102    .text:0000000000000000 hfm_setPower
-     /tmp/cck3Rhtk.s:140    .text:0000000000000012 hfm_setup
-     /tmp/cck3Rhtk.s:168    .text:000000000000001c hfm_nextOutput
+     /tmp/ccJKt8Hi.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccJKt8Hi.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccJKt8Hi.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccJKt8Hi.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccJKt8Hi.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccJKt8Hi.s:102    .text:0000000000000000 hfm_setPower
+     /tmp/ccJKt8Hi.s:140    .text:0000000000000012 hfm_setup
+     /tmp/ccJKt8Hi.s:168    .text:000000000000001c hfm_nextOutput
 
 NO UNDEFINED SYMBOLS

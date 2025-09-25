@@ -1,4 +1,4 @@
-GAS LISTING /tmp/ccJdqtDN.s 			page 1
+GAS LISTING /tmp/ccb3vnna.s 			page 1
 
 
    1               		.file	"timerCommon.c"
@@ -58,7 +58,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
   55               		.stabs	"_Sat long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
   56               		.stabs	"_Sat long long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
   57               		.stabs	"_Sat unsigned short _Accum:t(0,46)=r(0,1);2;0;",128,0,0,0
-GAS LISTING /tmp/ccJdqtDN.s 			page 2
+GAS LISTING /tmp/ccb3vnna.s 			page 2
 
 
   58               		.stabs	"_Sat unsigned _Accum:t(0,47)=r(0,1);4;0;",128,0,0,0
@@ -118,7 +118,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  112               		.stabs	"outputMode:P(7,2)",64,0,89,20
  113               	.global	timer_setOutputModes
  114               		.type	timer_setOutputModes, @function
-GAS LISTING /tmp/ccJdqtDN.s 			page 3
+GAS LISTING /tmp/ccb3vnna.s 			page 3
 
 
  115               	timer_setOutputModes:
@@ -178,7 +178,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
   53:_commonCode_localized/timerCommon/1.21/timerCommon.c ****  #define CSALT_DIV32	0x03
   54:_commonCode_localized/timerCommon/1.21/timerCommon.c ****  #define CSALT_DIV64	0x04
   55:_commonCode_localized/timerCommon/1.21/timerCommon.c ****  #define CSALT_DIV128	0x05
-GAS LISTING /tmp/ccJdqtDN.s 			page 4
+GAS LISTING /tmp/ccb3vnna.s 			page 4
 
 
   56:_commonCode_localized/timerCommon/1.21/timerCommon.c ****  #define CSALT_DIV256	0x06
@@ -238,7 +238,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  130               	.LM2:
  131 0006 6F30      		cpi r22,lo8(15)
  132 0008 00F0      		brlo .+2
-GAS LISTING /tmp/ccJdqtDN.s 			page 5
+GAS LISTING /tmp/ccb3vnna.s 			page 5
 
 
  133 000a 00C0      		rjmp .L11
@@ -298,7 +298,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  144:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #endif
  145:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #if defined(OUT_OC1A)
  146:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			case OUT_OC1A:
-GAS LISTING /tmp/ccJdqtDN.s 			page 6
+GAS LISTING /tmp/ccb3vnna.s 			page 6
 
 
  147:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				writeMasked((outputMode<<COMA_SHIFT), COMA_MASK, T1_COMReg);
@@ -358,7 +358,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  183               	.L12:
  153:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
  154:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		   #endif
-GAS LISTING /tmp/ccJdqtDN.s 			page 7
+GAS LISTING /tmp/ccb3vnna.s 			page 7
 
 
  155:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			#if defined(OUT_OC1D) //so far only on the Tiny861...
@@ -418,7 +418,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  204:_commonCode_localized/timerCommon/1.21/timerCommon.c **** }
  189               		.stabn	68,0,204,.LM11-.LFBB1
  190               	.LM11:
-GAS LISTING /tmp/ccJdqtDN.s 			page 8
+GAS LISTING /tmp/ccb3vnna.s 			page 8
 
 
  191 004a 0895      		ret
@@ -478,7 +478,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  237               		.stabn	68,0,147,.LM19-.LFBB1
  238               	.LM19:
  239 0078 90B7      		in r25,0x30
-GAS LISTING /tmp/ccJdqtDN.s 			page 9
+GAS LISTING /tmp/ccb3vnna.s 			page 9
 
 
  240 007a 9F73      		andi r25,lo8(63)
@@ -538,7 +538,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  208:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //Returns 0 unless an error occurs...
  209:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #if (!defined(TIMER_SELECTDIVISOR_UNUSED) || !TIMER_SELECTDIVISOR_UNUSED)
  210:_commonCode_localized/timerCommon/1.21/timerCommon.c **** uint8_t timer_selectDivisor(uint8_t timerNum, uint8_t clockDiv)
-GAS LISTING /tmp/ccJdqtDN.s 			page 10
+GAS LISTING /tmp/ccb3vnna.s 			page 10
 
 
  211:_commonCode_localized/timerCommon/1.21/timerCommon.c **** {
@@ -598,7 +598,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  236:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				break;
  237:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			default:
  238:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			  #if defined(CSOBS)
-GAS LISTING /tmp/ccJdqtDN.s 			page 11
+GAS LISTING /tmp/ccb3vnna.s 			page 11
 
 
  239:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 				if(IS_CSOBS(timerNum))	
@@ -658,7 +658,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  287:_commonCode_localized/timerCommon/1.21/timerCommon.c ****   #endif
  288:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	else 
  289:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		return 1;	
-GAS LISTING /tmp/ccJdqtDN.s 			page 12
+GAS LISTING /tmp/ccb3vnna.s 			page 12
 
 
  290:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
@@ -718,7 +718,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  295:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
  343               		.stabn	68,0,295,.LM35-.LFBB2
  344               	.LM35:
-GAS LISTING /tmp/ccJdqtDN.s 			page 13
+GAS LISTING /tmp/ccb3vnna.s 			page 13
 
 
  345 00b0 83B7      		in r24,0x33
@@ -778,7 +778,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  394               	timer_setWGM:
  395               		.stabd	46,0,0
  318:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #endif
-GAS LISTING /tmp/ccJdqtDN.s 			page 14
+GAS LISTING /tmp/ccb3vnna.s 			page 14
 
 
  319:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
@@ -838,7 +838,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  358:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #else
  359:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//This seems to be the "universal" WGM Timer0 settings
  360:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(WGM00, T0_WGMReg, wgmLb);
-GAS LISTING /tmp/ccJdqtDN.s 			page 15
+GAS LISTING /tmp/ccb3vnna.s 			page 15
 
 
  411               		.stabn	68,0,360,.LM44-.LFBB3
@@ -898,7 +898,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  366:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		//Also Timer1, since all devices I've explored have both T0 and T1...
  367:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 1:
  368:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #ifdef _AVR_IOTNx61_H_
-GAS LISTING /tmp/ccJdqtDN.s 			page 16
+GAS LISTING /tmp/ccb3vnna.s 			page 16
 
 
  369:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//TinyX61s' Timer1 is also an exception...
@@ -958,7 +958,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  419:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			//The "Universal" WGM settings for Timer1 are set here...
  420:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(WGM10, TCCR1A, wgmLb);
  421:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(WGM12, TCCR1B, wgmHb);
-GAS LISTING /tmp/ccJdqtDN.s 			page 17
+GAS LISTING /tmp/ccb3vnna.s 			page 17
 
 
  422:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			writeMasked(wgmLb, (1<<WGM10), TCCR1A);
@@ -1018,7 +1018,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  486 0102 C82F      		mov r28,r24
  487 0104 D62F      		mov r29,r22
  488               	.LBB18:
-GAS LISTING /tmp/ccJdqtDN.s 			page 18
+GAS LISTING /tmp/ccb3vnna.s 			page 18
 
 
   75:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		timer_setWGM(timerNum, wgm)	);
@@ -1078,7 +1078,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  451:_commonCode_localized/timerCommon/1.21/timerCommon.c **** #endif
  452:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 
  453:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //timer_intEnable(type) could be created, assuming similarities between OCIEn/OCFn and TOIEn/TOVn a
-GAS LISTING /tmp/ccJdqtDN.s 			page 19
+GAS LISTING /tmp/ccb3vnna.s 			page 19
 
 
  454:_commonCode_localized/timerCommon/1.21/timerCommon.c **** // Looks complicated since OCIEA/B for certain timers, and offsets don't seem particularly consiste
@@ -1138,7 +1138,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  562 0136 01F0      		breq .L52
  484:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		cli();
  563               		.stabn	68,0,484,.LM66-.LFBB5
-GAS LISTING /tmp/ccJdqtDN.s 			page 20
+GAS LISTING /tmp/ccb3vnna.s 			page 20
 
 
  564               	.LM66:
@@ -1198,7 +1198,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  523:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	   #endif
  524:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	   #if defined(OCIE1A)
  525:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 0x10:
-GAS LISTING /tmp/ccJdqtDN.s 			page 21
+GAS LISTING /tmp/ccb3vnna.s 			page 21
 
 
  526:_commonCode_localized/timerCommon/1.21/timerCommon.c **** //			setbit(OCIE1A, T1_TIMSK);
@@ -1258,7 +1258,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  580:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			writebit(OCIE3B, T3_TIMSK, enable);
  581:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(OCF3B, T3_TIFR);
  582:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
-GAS LISTING /tmp/ccJdqtDN.s 			page 22
+GAS LISTING /tmp/ccb3vnna.s 			page 22
 
 
  583:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 	   #endif
@@ -1318,7 +1318,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  614 015e 7894      		sei
  615               	 ;  0 "" 2
  595:_commonCode_localized/timerCommon/1.21/timerCommon.c **** }
-GAS LISTING /tmp/ccJdqtDN.s 			page 23
+GAS LISTING /tmp/ccb3vnna.s 			page 23
 
 
  616               		.stabn	68,0,595,.LM76-.LFBB5
@@ -1378,7 +1378,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  527:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(OCF1A, T1_TIFR);
  662               		.stabn	68,0,527,.LM85-.LFBB5
  663               	.LM85:
-GAS LISTING /tmp/ccJdqtDN.s 			page 24
+GAS LISTING /tmp/ccb3vnna.s 			page 24
 
 
  664 0188 89B7      		in r24,0x39
@@ -1438,7 +1438,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  711               		.stabs	"",36,0,0,.Lscope5-.LFBB5
  712               		.stabd	78,0,0
  713               		.stabs	"timer_overflowIntEnable:F(7,2)",36,0,601,timer_overflowIntEnable
-GAS LISTING /tmp/ccJdqtDN.s 			page 25
+GAS LISTING /tmp/ccb3vnna.s 			page 25
 
 
  714               		.stabs	"timerNum:P(7,2)",64,0,601,24
@@ -1498,7 +1498,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  626:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		#endif
  627:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		#if defined(T3_TIMSK)
  628:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 		case 3:
-GAS LISTING /tmp/ccJdqtDN.s 			page 26
+GAS LISTING /tmp/ccb3vnna.s 			page 26
 
 
  629:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			setbit(TOIE3, T3_TIMSK);
@@ -1558,7 +1558,7 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  775 01d8 8460      		ori r24,lo8(4)
  776 01da 89BF      		out 0x39,r24
  618:_commonCode_localized/timerCommon/1.21/timerCommon.c **** 			break;
-GAS LISTING /tmp/ccJdqtDN.s 			page 27
+GAS LISTING /tmp/ccb3vnna.s 			page 27
 
 
  777               		.stabn	68,0,618,.LM104-.LFBB6
@@ -1573,21 +1573,21 @@ GAS LISTING /tmp/ccJdqtDN.s 			page 1
  786               		.stabs	"",100,0,0,.Letext0
  787               	.Letext0:
  788               		.ident	"GCC: (GNU) 7.3.0"
-GAS LISTING /tmp/ccJdqtDN.s 			page 28
+GAS LISTING /tmp/ccb3vnna.s 			page 28
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 timerCommon.c
-     /tmp/ccJdqtDN.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccJdqtDN.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccJdqtDN.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccJdqtDN.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccJdqtDN.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccJdqtDN.s:115    .text:0000000000000000 timer_setOutputModes
-     /tmp/ccJdqtDN.s:285    .text:000000000000008a timer_selectDivisor
-     /tmp/ccJdqtDN.s:394    .text:00000000000000d2 timer_setWGM
-     /tmp/ccJdqtDN.s:475    .text:00000000000000fe timer_init
-     /tmp/ccJdqtDN.s:536    .text:0000000000000124 timer_compareMatchIntSetup
-     /tmp/ccJdqtDN.s:717    .text:00000000000001b6 timer_overflowIntEnable
+     /tmp/ccb3vnna.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccb3vnna.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccb3vnna.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccb3vnna.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccb3vnna.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccb3vnna.s:115    .text:0000000000000000 timer_setOutputModes
+     /tmp/ccb3vnna.s:285    .text:000000000000008a timer_selectDivisor
+     /tmp/ccb3vnna.s:394    .text:00000000000000d2 timer_setWGM
+     /tmp/ccb3vnna.s:475    .text:00000000000000fe timer_init
+     /tmp/ccb3vnna.s:536    .text:0000000000000124 timer_compareMatchIntSetup
+     /tmp/ccb3vnna.s:717    .text:00000000000001b6 timer_overflowIntEnable
 
 NO UNDEFINED SYMBOLS
