@@ -310,7 +310,7 @@ uint8_t ledIndex = 0;
 
 //Initial values stolen (and modified) from HV121P01-101
 // Notes from SPWG spec 3.8
-uint8_t edidArray[EDIDARRAYLENGTH] =
+/*uint8_t edidArray[EDIDARRAYLENGTH] =
 {
 	//Addr	Data	//Values		Notes
 //EDID Header
@@ -798,7 +798,20 @@ uint8_t edidArray[EDIDARRAYLENGTH] =
 						//SPWG: "The 1-byte sum of all 128 bytes in this panel
 						//       ID block shall = 0"
 }	;
+*/
 
+// change by sinyria - this is the working confirmed EDID by sally
+uint8_t edidArray[EDIDARRAYLENGTH] =
+{
+	00,ff,ff,ff,ff,ff,ff,00,31,d8,00,00,00,00,00,00,
+	05,16,01,03,6d,32,1c,78,ea,5e,c0,a4,59,4a,98,25,
+	20,50,54,00,00,00,d1,c0,01,01,01,01,01,01,01,01,
+	01,01,01,01,01,01,02,3a,80,18,71,38,2d,40,58,2c,
+	45,00,f4,19,11,00,00,1e,00,00,00,ff,00,4c,69,6e,
+	75,78,20,23,30,0a,20,20,20,20,00,00,00,fd,00,3b,
+	3d,42,44,0f,00,0a,20,20,20,20,20,20,00,00,00,fc,
+	00,4c,69,6e,75,78,20,46,48,44,0a,20,20,20,00,05
+}	;
 
 uint8_t edidArrayIndex = 0;
 //Called immediately by the i2c interrupts when a byte is received
