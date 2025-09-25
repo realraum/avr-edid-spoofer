@@ -1,4 +1,4 @@
-GAS LISTING /tmp/ccULZha7.s 			page 1
+GAS LISTING /tmp/ccCqnIUM.s 			page 1
 
 
    1               		.file	"main.c"
@@ -58,7 +58,7 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
   55               		.stabs	"_Sat long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
   56               		.stabs	"_Sat long long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
   57               		.stabs	"_Sat unsigned short _Accum:t(0,46)=r(0,1);2;0;",128,0,0,0
-GAS LISTING /tmp/ccULZha7.s 			page 2
+GAS LISTING /tmp/ccCqnIUM.s 			page 2
 
 
   58               		.stabs	"_Sat unsigned _Accum:t(0,47)=r(0,1);4;0;",128,0,0,0
@@ -118,12 +118,12 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  112               		.stabs	"dms4day_t:t(10,2)=(4,6)",128,0,83,0
  113               		.stabs	"dmsMax_t:t(10,3)=(4,6)",128,0,84,0
  114               		.stabn	162,0,0,0
-GAS LISTING /tmp/ccULZha7.s 			page 3
+GAS LISTING /tmp/ccCqnIUM.s 			page 3
 
 
  115               		.stabn	162,0,0,0
  116               		.stabn	162,0,0,0
- 117               		.stabs	"usi_i2c_awaitStart:F(0,50)",36,0,96,usi_i2c_awaitStart
+ 117               		.stabs	"usi_i2c_awaitStart:F(0,50)",36,0,101,usi_i2c_awaitStart
  118               	.global	usi_i2c_awaitStart
  119               		.type	usi_i2c_awaitStart, @function
  120               	usi_i2c_awaitStart:
@@ -166,276 +166,281 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
   36:main.c        **** // change by sinyria - this is the working confirmed EDID by sally
   37:main.c        **** uint8_t edidArray[EDIDARRAYLENGTH] =
   38:main.c        **** {
-  39:main.c        **** 0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x00, 0x31, 0xd8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-  40:main.c        **** 0x05, 0x16, 0x01, 0x03, 0x6d, 0x32, 0x1c, 0x78, 0xea, 0x5e, 0xc0, 0xa4, 0x59, 0x4a, 0x98, 0x25,
-  41:main.c        **** 0x20, 0x50, 0x54, 0x00, 0x00, 0x00, 0xd1, 0xc0, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,
-  42:main.c        **** 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x02, 0x3a, 0x80, 0x18, 0x71, 0x38, 0x2d, 0x40, 0x58, 0x2c,
-  43:main.c        **** 0x45, 0x00, 0xf4, 0x19, 0x11, 0x00, 0x00, 0x1e, 0x00, 0x00, 0x00, 0xff, 0x00, 0x4c, 0x69, 0x6e,
-  44:main.c        **** 0x75, 0x78, 0x20, 0x23, 0x30, 0x0a, 0x20, 0x20, 0x20, 0x20, 0x00, 0x00, 0x00, 0xfd, 0x00, 0x3b,
-  45:main.c        **** 0x3d, 0x42, 0x44, 0x0f, 0x00, 0x0a, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x00, 0x00, 0x00, 0xfc,
-  46:main.c        **** 0x00, 0x4c, 0x69, 0x6e, 0x75, 0x78, 0x20, 0x46, 0x48, 0x44, 0x0a, 0x20, 0x20, 0x20, 0x00, 0x07,
-  47:main.c        **** };
-  48:main.c        **** 
-  49:main.c        **** uint8_t edidArrayIndex = 0;
-  50:main.c        **** //Called immediately by the i2c interrupts when a byte is received
-GAS LISTING /tmp/ccULZha7.s 			page 4
+  39:main.c        **** 0x00,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0x00,0x09,0xD1,
+  40:main.c        **** 0x01,0x84,0x3A,0x00,0x00,0x00,0x09,0x11,0x01,0x03,
+  41:main.c        **** 0x80,0x00,0x00,0x78,0x2A,0x5F,0x9F,0xA9,0x55,0x50,
+  42:main.c        **** 0x92,0x24,0x0D,0x4A,0x4B,0xA5,0x4A,0x00,0x61,0x59,
+  43:main.c        **** 0xD1,0xC0,0x01,0x01,0x01,0x01,0x01,0x01,0x01,0x01,
+  44:main.c        **** 0x01,0x01,0x01,0x01,0x02,0x3A,0x80,0x18,0x71,0x38,
+  45:main.c        **** 0x2D,0x40,0x58,0x2C,0x45,0x00,0x00,0x00,0x00,0x00,
+  46:main.c        **** 0x00,0x1E,0x00,0x00,0x00,0xFD,0x00,0x30,0x58,0x18,
+  47:main.c        **** 0x51,0x0F,0x00,0x0A,0x20,0x20,0x20,0x20,0x20,0x20,
+  48:main.c        **** 0x00,0x00,0x00,0xFE,0x00,0x42,0x65,0x6E,0x51,0x0A,
+  49:main.c        **** 0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x20,0x00,0x00,
+  50:main.c        **** 0x00,0xFC,0x00,0x57,0x31,0x30,0x30,0x30,0x30,0x0A,
+GAS LISTING /tmp/ccCqnIUM.s 			page 4
 
 
-  51:main.c        **** static __inline__
-  52:main.c        **** void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
-  53:main.c        **** 	__attribute__((__always_inline__));
-  54:main.c        **** //Called immediately by the i2c interrupts when a byte is to be loaded
-  55:main.c        **** // for transmission
+  51:main.c        **** 0x20,0x20,0x20,0x20,0x20,0x20,0x01,0x2E,
+  52:main.c        **** };
+  53:main.c        **** 
+  54:main.c        **** uint8_t edidArrayIndex = 0;
+  55:main.c        **** //Called immediately by the i2c interrupts when a byte is received
   56:main.c        **** static __inline__
-  57:main.c        **** uint8_t nextByteToTransmit(uint8_t masterACKed)
-  58:main.c        **** 	__attribute__((__always_inline__));;
-  59:main.c        **** 
-  60:main.c        **** 
-  61:main.c        **** 
-  62:main.c        **** 
-  63:main.c        **** #define USICNT_MASK ((1<<USICNT3)|(1<<USICNT2)|(1<<USICNT1)|(1<<USICNT0))
-  64:main.c        **** // There are four basic states: 
-  65:main.c        **** //    Awaiting Start Condition
-  66:main.c        **** //    ACK Transmission
-  67:main.c        **** //		Address
-  68:main.c        **** //    Data (read/write)
-  69:main.c        **** // AWAITING values are set... others are read... (helps for readability)
-  70:main.c        **** #define USI_STATE_AWAITING_START		0
-  71:main.c        **** #define USI_STATE_AWAITING_START_SCL 1
-  72:main.c        **** #define USI_STATE_START_SCL_RECEIVED USI_STATE_AWAITING_START_SCL
-  73:main.c        **** #define USI_STATE_AWAITING_ADDRESS	2
-  74:main.c        **** #define USI_STATE_ADDRESS_RECEIVED 	USI_STATE_AWAITING_ADDRESS
-  75:main.c        **** #define USI_STATE_AWAITING_ACK		3
-  76:main.c        **** #define USI_STATE_ACK_COMPLETE		USI_STATE_AWAITING_ACK
-  77:main.c        **** #define USI_STATE_AWAITING_BYTE	   4
-  78:main.c        **** #define USI_STATE_BYTE_COMPLETE		USI_STATE_AWAITING_BYTE
-  79:main.c        **** 
-  80:main.c        **** //uint8_t usi_i2c_deviceAddressReceived = FALSE;
-  81:main.c        **** uint8_t usi_i2c_byteToTransmit = 0xff; //0xA5;
-  82:main.c        **** uint8_t usi_i2c_state = USI_STATE_AWAITING_START;
-  83:main.c        **** uint8_t usi_i2c_readFromSlave = 0;
-  84:main.c        **** uint8_t usi_i2c_requestedAddres = 0;
-  85:main.c        **** uint8_t usi_i2c_receivedByte = 0;
-  86:main.c        **** 
-  87:main.c        **** #define SDA_PIN	PB0
-  88:main.c        **** #define SCL_PIN	PB2
-  89:main.c        **** #define SDAPORT	PORTB
-  90:main.c        **** #define SCLPORT	PORTB
+  57:main.c        **** void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
+  58:main.c        **** 	__attribute__((__always_inline__));
+  59:main.c        **** //Called immediately by the i2c interrupts when a byte is to be loaded
+  60:main.c        **** // for transmission
+  61:main.c        **** static __inline__
+  62:main.c        **** uint8_t nextByteToTransmit(uint8_t masterACKed)
+  63:main.c        **** 	__attribute__((__always_inline__));;
+  64:main.c        **** 
+  65:main.c        **** 
+  66:main.c        **** 
+  67:main.c        **** 
+  68:main.c        **** #define USICNT_MASK ((1<<USICNT3)|(1<<USICNT2)|(1<<USICNT1)|(1<<USICNT0))
+  69:main.c        **** // There are four basic states: 
+  70:main.c        **** //    Awaiting Start Condition
+  71:main.c        **** //    ACK Transmission
+  72:main.c        **** //		Address
+  73:main.c        **** //    Data (read/write)
+  74:main.c        **** // AWAITING values are set... others are read... (helps for readability)
+  75:main.c        **** #define USI_STATE_AWAITING_START		0
+  76:main.c        **** #define USI_STATE_AWAITING_START_SCL 1
+  77:main.c        **** #define USI_STATE_START_SCL_RECEIVED USI_STATE_AWAITING_START_SCL
+  78:main.c        **** #define USI_STATE_AWAITING_ADDRESS	2
+  79:main.c        **** #define USI_STATE_ADDRESS_RECEIVED 	USI_STATE_AWAITING_ADDRESS
+  80:main.c        **** #define USI_STATE_AWAITING_ACK		3
+  81:main.c        **** #define USI_STATE_ACK_COMPLETE		USI_STATE_AWAITING_ACK
+  82:main.c        **** #define USI_STATE_AWAITING_BYTE	   4
+  83:main.c        **** #define USI_STATE_BYTE_COMPLETE		USI_STATE_AWAITING_BYTE
+  84:main.c        **** 
+  85:main.c        **** //uint8_t usi_i2c_deviceAddressReceived = FALSE;
+  86:main.c        **** uint8_t usi_i2c_byteToTransmit = 0xff; //0xA5;
+  87:main.c        **** uint8_t usi_i2c_state = USI_STATE_AWAITING_START;
+  88:main.c        **** uint8_t usi_i2c_readFromSlave = 0;
+  89:main.c        **** uint8_t usi_i2c_requestedAddres = 0;
+  90:main.c        **** uint8_t usi_i2c_receivedByte = 0;
   91:main.c        **** 
-  92:main.c        **** // This can be called in two cases:
-  93:main.c        **** //   upon INIT
-  94:main.c        **** //   and when a different slave has been addressed
-  95:main.c        **** //      from an overflow interrupt
-  96:main.c        **** void usi_i2c_awaitStart(void)
-  97:main.c        **** {
- 122               		.stabn	68,0,97,.LM0-.LFBB1
+  92:main.c        **** #define SDA_PIN	PB0
+  93:main.c        **** #define SCL_PIN	PB2
+  94:main.c        **** #define SDAPORT	PORTB
+  95:main.c        **** #define SCLPORT	PORTB
+  96:main.c        **** 
+  97:main.c        **** // This can be called in two cases:
+  98:main.c        **** //   upon INIT
+  99:main.c        **** //   and when a different slave has been addressed
+ 100:main.c        **** //      from an overflow interrupt
+ 101:main.c        **** void usi_i2c_awaitStart(void)
+ 102:main.c        **** {
+ 122               		.stabn	68,0,102,.LM0-.LFBB1
  123               	.LM0:
  124               	.LFBB1:
  125               	/* prologue: function */
  126               	/* frame size = 0 */
+GAS LISTING /tmp/ccCqnIUM.s 			page 5
+
+
  127               	/* stack size = 0 */
  128               	.L__stack_usage = 0
-  98:main.c        **** 	usi_i2c_state = USI_STATE_AWAITING_START;
- 129               		.stabn	68,0,98,.LM1-.LFBB1
+ 103:main.c        **** 	usi_i2c_state = USI_STATE_AWAITING_START;
+ 129               		.stabn	68,0,103,.LM1-.LFBB1
  130               	.LM1:
-GAS LISTING /tmp/ccULZha7.s 			page 5
-
-
  131 0000 1092 0000 		sts usi_i2c_state,__zero_reg__
-  99:main.c        **** 
- 100:main.c        ****    //Clear the interrupt flags, etc. first...
- 101:main.c        **** 	// NOTE This will release SCL hold (i.e. different slave addressed)
- 102:main.c        ****    USISR = (1<<USISIF) //Start Condition Interrupt Flag
- 132               		.stabn	68,0,102,.LM2-.LFBB1
+ 104:main.c        **** 
+ 105:main.c        ****    //Clear the interrupt flags, etc. first...
+ 106:main.c        **** 	// NOTE This will release SCL hold (i.e. different slave addressed)
+ 107:main.c        ****    USISR = (1<<USISIF) //Start Condition Interrupt Flag
+ 132               		.stabn	68,0,107,.LM2-.LFBB1
  133               	.LM2:
  134 0004 80EE      		ldi r24,lo8(-32)
  135 0006 8EB9      		out 0xe,r24
- 103:main.c        ****                        //  (ONLY cleared when written 1)
- 104:main.c        ****          | (1<<USIOIF) //Counter Overflow Interrupt Flag
- 105:main.c        ****                        //  (ONLY cleared when written 1)
- 106:main.c        ****          | (1<<USIPF)  //Stop Condition Flag (not an interrupt)
- 107:main.c        ****          | (0<<USIDC)  //Data Collision Flag (Read-Only, not an interrupt)
- 108:main.c        ****          | (USICNT_MASK & 0); //Clear the USI counter
- 109:main.c        **** 
- 110:main.c        **** 
- 111:main.c        ****    //Configure the USI to look for Start-Condition
- 112:main.c        ****    USICR = (1<<USISIE) //Enable the start-condition interrupt
- 136               		.stabn	68,0,112,.LM3-.LFBB1
+ 108:main.c        ****                        //  (ONLY cleared when written 1)
+ 109:main.c        ****          | (1<<USIOIF) //Counter Overflow Interrupt Flag
+ 110:main.c        ****                        //  (ONLY cleared when written 1)
+ 111:main.c        ****          | (1<<USIPF)  //Stop Condition Flag (not an interrupt)
+ 112:main.c        ****          | (0<<USIDC)  //Data Collision Flag (Read-Only, not an interrupt)
+ 113:main.c        ****          | (USICNT_MASK & 0); //Clear the USI counter
+ 114:main.c        **** 
+ 115:main.c        **** 
+ 116:main.c        ****    //Configure the USI to look for Start-Condition
+ 117:main.c        ****    USICR = (1<<USISIE) //Enable the start-condition interrupt
+ 136               		.stabn	68,0,117,.LM3-.LFBB1
  137               	.LM3:
  138 0008 88EA      		ldi r24,lo8(-88)
  139 000a 8DB9      		out 0xd,r24
- 113:main.c        ****          | (0<<USIOIE) //Disable the counter-overflow interrupt
- 114:main.c        ****          | (1<<USIWM1) //Enable two-wire mode 
- 115:main.c        **** 							  // with SCL hold during start-condition
- 116:main.c        ****          | (0<<USIWM0) // without SCL hold during overflow
- 117:main.c        **** 							  // will be set later
- 118:main.c        ****          | (1<<USICS1) //Select external clocking
- 119:main.c        ****          | (0<<USICS0) //  positive-edge
- 120:main.c        ****          | (0<<USICLK) //  4-bit counter counts on both external edges
- 121:main.c        ****          | (0<<USITC); // DON'T toggle the clock pin 
- 122:main.c        ****                        // (this should always be 0)
- 123:main.c        **** 
- 124:main.c        **** 	setpinPORT(SDA_PIN, SDAPORT);
- 140               		.stabn	68,0,124,.LM4-.LFBB1
+ 118:main.c        ****          | (0<<USIOIE) //Disable the counter-overflow interrupt
+ 119:main.c        ****          | (1<<USIWM1) //Enable two-wire mode 
+ 120:main.c        **** 							  // with SCL hold during start-condition
+ 121:main.c        ****          | (0<<USIWM0) // without SCL hold during overflow
+ 122:main.c        **** 							  // will be set later
+ 123:main.c        ****          | (1<<USICS1) //Select external clocking
+ 124:main.c        ****          | (0<<USICS0) //  positive-edge
+ 125:main.c        ****          | (0<<USICLK) //  4-bit counter counts on both external edges
+ 126:main.c        ****          | (0<<USITC); // DON'T toggle the clock pin 
+ 127:main.c        ****                        // (this should always be 0)
+ 128:main.c        **** 
+ 129:main.c        **** 	setpinPORT(SDA_PIN, SDAPORT);
+ 140               		.stabn	68,0,129,.LM4-.LFBB1
  141               	.LM4:
  142 000c C09A      		sbi 0x18,0
- 125:main.c        **** 	setpinPORT(SCL_PIN, SCLPORT);
- 143               		.stabn	68,0,125,.LM5-.LFBB1
+ 130:main.c        **** 	setpinPORT(SCL_PIN, SCLPORT);
+ 143               		.stabn	68,0,130,.LM5-.LFBB1
  144               	.LM5:
  145 000e C29A      		sbi 0x18,2
- 126:main.c        **** 
- 127:main.c        **** 	setinPORT(SDA_PIN, SDAPORT);
- 146               		.stabn	68,0,127,.LM6-.LFBB1
+ 131:main.c        **** 
+ 132:main.c        **** 	setinPORT(SDA_PIN, SDAPORT);
+ 146               		.stabn	68,0,132,.LM6-.LFBB1
  147               	.LM6:
  148 0010 B898      		cbi 0x17,0
- 128:main.c        **** 	//Enable SCL-hold during the start-condition 
- 129:main.c        **** 	setoutPORT(SCL_PIN, SCLPORT);
- 149               		.stabn	68,0,129,.LM7-.LFBB1
+ 133:main.c        **** 	//Enable SCL-hold during the start-condition 
+ 134:main.c        **** 	setoutPORT(SCL_PIN, SCLPORT);
+ 149               		.stabn	68,0,134,.LM7-.LFBB1
  150               	.LM7:
  151 0012 BA9A      		sbi 0x17,2
+GAS LISTING /tmp/ccCqnIUM.s 			page 6
+
+
  152               	/* epilogue start */
- 130:main.c        **** }
- 153               		.stabn	68,0,130,.LM8-.LFBB1
+ 135:main.c        **** }
+ 153               		.stabn	68,0,135,.LM8-.LFBB1
  154               	.LM8:
  155 0014 0895      		ret
-GAS LISTING /tmp/ccULZha7.s 			page 6
-
-
  156               		.size	usi_i2c_awaitStart, .-usi_i2c_awaitStart
  157               	.Lscope1:
  158               		.stabs	"",36,0,0,.Lscope1-.LFBB1
  159               		.stabd	78,0,0
- 160               		.stabs	"usi_i2c_awaitStartSCL:F(0,50)",36,0,143,usi_i2c_awaitStartSCL
+ 160               		.stabs	"usi_i2c_awaitStartSCL:F(0,50)",36,0,148,usi_i2c_awaitStartSCL
  161               	.global	usi_i2c_awaitStartSCL
  162               		.type	usi_i2c_awaitStartSCL, @function
  163               	usi_i2c_awaitStartSCL:
  164               		.stabd	46,0,0
- 131:main.c        **** 
- 132:main.c        **** 
- 133:main.c        **** 
- 134:main.c        **** //Initialize the counter to count
- 135:main.c        **** //Clear the counter-overflow flag to
- 136:main.c        **** //Release SCL
- 137:main.c        **** // 16 clock edges will signal 8 bits received (count=0)
- 138:main.c        **** // 2 clock edges will signal ACK transmitted (count=14)
- 139:main.c        **** #define USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(count) \
- 140:main.c        ****    (USISR = ((1<<USIOIF) | (USICNT_MASK & (count))))
- 141:main.c        **** 
- 142:main.c        **** //This is called after a start-condition
- 143:main.c        **** void usi_i2c_awaitStartSCL(void)
- 144:main.c        **** {
- 165               		.stabn	68,0,144,.LM9-.LFBB2
+ 136:main.c        **** 
+ 137:main.c        **** 
+ 138:main.c        **** 
+ 139:main.c        **** //Initialize the counter to count
+ 140:main.c        **** //Clear the counter-overflow flag to
+ 141:main.c        **** //Release SCL
+ 142:main.c        **** // 16 clock edges will signal 8 bits received (count=0)
+ 143:main.c        **** // 2 clock edges will signal ACK transmitted (count=14)
+ 144:main.c        **** #define USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(count) \
+ 145:main.c        ****    (USISR = ((1<<USIOIF) | (USICNT_MASK & (count))))
+ 146:main.c        **** 
+ 147:main.c        **** //This is called after a start-condition
+ 148:main.c        **** void usi_i2c_awaitStartSCL(void)
+ 149:main.c        **** {
+ 165               		.stabn	68,0,149,.LM9-.LFBB2
  166               	.LM9:
  167               	.LFBB2:
  168               	/* prologue: function */
  169               	/* frame size = 0 */
  170               	/* stack size = 0 */
  171               	.L__stack_usage = 0
- 145:main.c        **** 	usi_i2c_state = USI_STATE_AWAITING_START_SCL;
- 172               		.stabn	68,0,145,.LM10-.LFBB2
+ 150:main.c        **** 	usi_i2c_state = USI_STATE_AWAITING_START_SCL;
+ 172               		.stabn	68,0,150,.LM10-.LFBB2
  173               	.LM10:
  174 0016 81E0      		ldi r24,lo8(1)
  175 0018 8093 0000 		sts usi_i2c_state,r24
- 146:main.c        **** 
- 147:main.c        **** 	//Before enabling the counter-overflow interrupt
- 148:main.c        **** 	// make sure the flag is clear
- 149:main.c        **** 	// this will also clear the counter... watch out!
- 150:main.c        **** 	USISR = (1<<USIOIF);
- 176               		.stabn	68,0,150,.LM11-.LFBB2
+ 151:main.c        **** 
+ 152:main.c        **** 	//Before enabling the counter-overflow interrupt
+ 153:main.c        **** 	// make sure the flag is clear
+ 154:main.c        **** 	// this will also clear the counter... watch out!
+ 155:main.c        **** 	USISR = (1<<USIOIF);
+ 176               		.stabn	68,0,155,.LM11-.LFBB2
  177               	.LM11:
  178 001c 80E4      		ldi r24,lo8(64)
  179 001e 8EB9      		out 0xe,r24
- 151:main.c        **** 
- 152:main.c        ****    //Configure the USI to look for counter-overflow (start SCL received)
- 153:main.c        ****    USICR = (1<<USISIE) //Enable the start-condition interrupt
- 180               		.stabn	68,0,153,.LM12-.LFBB2
+ 156:main.c        **** 
+ 157:main.c        ****    //Configure the USI to look for counter-overflow (start SCL received)
+ 158:main.c        ****    USICR = (1<<USISIE) //Enable the start-condition interrupt
+ 180               		.stabn	68,0,158,.LM12-.LFBB2
  181               	.LM12:
  182 0020 88EF      		ldi r24,lo8(-8)
  183 0022 8DB9      		out 0xd,r24
- 154:main.c        ****          | (1<<USIOIE) //Enable the counter-overflow interrupt
- 155:main.c        ****                        // WE'RE READY!!!
- 156:main.c        ****          | (1<<USIWM1) //Enable two-wire mode
- 157:main.c        ****          | (1<<USIWM0) // with SCL hold during overflow
- 158:main.c        ****          | (1<<USICS1) //Select external clocking
- 159:main.c        ****          | (0<<USICS0) //  positive-edge
-GAS LISTING /tmp/ccULZha7.s 			page 7
+ 159:main.c        ****          | (1<<USIOIE) //Enable the counter-overflow interrupt
+GAS LISTING /tmp/ccCqnIUM.s 			page 7
 
 
- 160:main.c        ****          | (0<<USICLK) //  4-bit counter counts on both external edges
- 161:main.c        ****          | (0<<USITC); // DON'T toggle the clock pin 
- 162:main.c        ****                        // (this should always be 0)
- 163:main.c        **** 
- 164:main.c        **** 	//Don't clear the USISIF, SCL should be released AFTER it's received!
- 165:main.c        **** 	// ONE SCL change (high to low) should be counted before we're
- 166:main.c        **** 	//   before we're ready for 16 edges signalling address+r/w received
- 167:main.c        **** 	//APPARENTLY the USI_START_vect ISR is called until USISIF is cleared
- 168:main.c        **** 	// Unless the start-SCL occurs before the overflow interrupt is enabled
- 169:main.c        **** 	//  this should have the same effect (the overflow interrupt stalls SCL)
- 170:main.c        **** 	// However, if the start-SCL is too fast to detect, then we're screwed
- 171:main.c        **** 	// all of, what, an interrupt-jump and a few instructions?
- 172:main.c        **** 	//  Maybe revisit the zipped version (using a while loop instead of
- 173:main.c        **** 	//   states)
- 174:main.c        **** 	// also inline this function...
- 175:main.c        **** 	USISR = (1<<USISIF) | (USICNT_MASK & 15);
- 184               		.stabn	68,0,175,.LM13-.LFBB2
+ 160:main.c        ****                        // WE'RE READY!!!
+ 161:main.c        ****          | (1<<USIWM1) //Enable two-wire mode
+ 162:main.c        ****          | (1<<USIWM0) // with SCL hold during overflow
+ 163:main.c        ****          | (1<<USICS1) //Select external clocking
+ 164:main.c        ****          | (0<<USICS0) //  positive-edge
+ 165:main.c        ****          | (0<<USICLK) //  4-bit counter counts on both external edges
+ 166:main.c        ****          | (0<<USITC); // DON'T toggle the clock pin 
+ 167:main.c        ****                        // (this should always be 0)
+ 168:main.c        **** 
+ 169:main.c        **** 	//Don't clear the USISIF, SCL should be released AFTER it's received!
+ 170:main.c        **** 	// ONE SCL change (high to low) should be counted before we're
+ 171:main.c        **** 	//   before we're ready for 16 edges signalling address+r/w received
+ 172:main.c        **** 	//APPARENTLY the USI_START_vect ISR is called until USISIF is cleared
+ 173:main.c        **** 	// Unless the start-SCL occurs before the overflow interrupt is enabled
+ 174:main.c        **** 	//  this should have the same effect (the overflow interrupt stalls SCL)
+ 175:main.c        **** 	// However, if the start-SCL is too fast to detect, then we're screwed
+ 176:main.c        **** 	// all of, what, an interrupt-jump and a few instructions?
+ 177:main.c        **** 	//  Maybe revisit the zipped version (using a while loop instead of
+ 178:main.c        **** 	//   states)
+ 179:main.c        **** 	// also inline this function...
+ 180:main.c        **** 	USISR = (1<<USISIF) | (USICNT_MASK & 15);
+ 184               		.stabn	68,0,180,.LM13-.LFBB2
  185               	.LM13:
  186 0024 8FE8      		ldi r24,lo8(-113)
  187 0026 8EB9      		out 0xe,r24
  188               	/* epilogue start */
- 176:main.c        **** 	
- 177:main.c        **** //	USISR = (USICNT_MASK & 15);
- 178:main.c        **** //	static uint8_t callCount = 0;
- 179:main.c        **** //	if(callCount < 15)
- 180:main.c        **** //		callCount++;
- 181:main.c        **** //	set_heartBlink(callCount);
- 182:main.c        **** }
- 189               		.stabn	68,0,182,.LM14-.LFBB2
+ 181:main.c        **** 	
+ 182:main.c        **** //	USISR = (USICNT_MASK & 15);
+ 183:main.c        **** //	static uint8_t callCount = 0;
+ 184:main.c        **** //	if(callCount < 15)
+ 185:main.c        **** //		callCount++;
+ 186:main.c        **** //	set_heartBlink(callCount);
+ 187:main.c        **** }
+ 189               		.stabn	68,0,187,.LM14-.LFBB2
  190               	.LM14:
  191 0028 0895      		ret
  192               		.size	usi_i2c_awaitStartSCL, .-usi_i2c_awaitStartSCL
  193               	.Lscope2:
  194               		.stabs	"",36,0,0,.Lscope2-.LFBB2
  195               		.stabd	78,0,0
- 196               		.stabs	"usi_i2c_slaveInit:F(0,50)",36,0,186,usi_i2c_slaveInit
+ 196               		.stabs	"usi_i2c_slaveInit:F(0,50)",36,0,191,usi_i2c_slaveInit
  197               	.global	usi_i2c_slaveInit
  198               		.type	usi_i2c_slaveInit, @function
  199               	usi_i2c_slaveInit:
  200               		.stabd	46,0,0
- 183:main.c        **** 
- 184:main.c        **** 
- 185:main.c        **** 
- 186:main.c        **** void usi_i2c_slaveInit(void)
- 187:main.c        **** {
- 201               		.stabn	68,0,187,.LM15-.LFBB3
+ 188:main.c        **** 
+ 189:main.c        **** 
+ 190:main.c        **** 
+ 191:main.c        **** void usi_i2c_slaveInit(void)
+ 192:main.c        **** {
+ 201               		.stabn	68,0,192,.LM15-.LFBB3
  202               	.LM15:
  203               	.LFBB3:
  204               	/* prologue: function */
  205               	/* frame size = 0 */
  206               	/* stack size = 0 */
  207               	.L__stack_usage = 0
- 188:main.c        **** 	usi_i2c_awaitStart();
- 208               		.stabn	68,0,188,.LM16-.LFBB3
+GAS LISTING /tmp/ccCqnIUM.s 			page 8
+
+
+ 193:main.c        **** 	usi_i2c_awaitStart();
+ 208               		.stabn	68,0,193,.LM16-.LFBB3
  209               	.LM16:
  210 002a 00C0      		rjmp usi_i2c_awaitStart
  211               		.size	usi_i2c_slaveInit, .-usi_i2c_slaveInit
-GAS LISTING /tmp/ccULZha7.s 			page 8
-
-
  212               	.Lscope3:
  213               		.stabs	"",36,0,0,.Lscope3-.LFBB3
  214               		.stabd	78,0,0
- 215               		.stabs	"__vector_13:F(0,50)",36,0,193,__vector_13
+ 215               		.stabs	"__vector_13:F(0,50)",36,0,198,__vector_13
  216               	.global	__vector_13
  217               		.type	__vector_13, @function
  218               	__vector_13:
  219               		.stabd	46,0,0
- 189:main.c        **** }
- 190:main.c        **** 
- 191:main.c        **** uint8_t heartBlinkInternal = 0;
- 192:main.c        **** 
- 193:main.c        **** ISR(USI_START_vect)
- 194:main.c        **** {
- 220               		.stabn	68,0,194,.LM17-.LFBB4
+ 194:main.c        **** }
+ 195:main.c        **** 
+ 196:main.c        **** uint8_t heartBlinkInternal = 0;
+ 197:main.c        **** 
+ 198:main.c        **** ISR(USI_START_vect)
+ 199:main.c        **** {
+ 220               		.stabn	68,0,199,.LM17-.LFBB4
  221               	.LM17:
  222               	.LFBB4:
  223 002c 1F92      		push r1
@@ -459,67 +464,67 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  241               	/* frame size = 0 */
  242               	/* stack size = 15 */
  243               	.L__stack_usage = 15
- 195:main.c        **** 	// The start condition interrupt occurs when SDA is pulled low
- 196:main.c        **** 	//   WHEN SCL is high...
- 197:main.c        **** 	// Which means that the device will count an edge when SCL goes low...
- 198:main.c        **** 	//   Thus, the number of clock edges will be 17 for the first 8 bits!!!
- 199:main.c        **** 	//THIS IS A HACK AND SHOULD NOT BE IMPLEMENTED:
- 200:main.c        **** //	while(getpinPORT(SCL_PIN, SCLPORT))
- 201:main.c        **** //	{};
- 202:main.c        **** 	// Should be fixed now, with the new AWAITING_START_SCL state
- 203:main.c        **** 
- 204:main.c        **** 	heartBlinkInternal++;
- 244               		.stabn	68,0,204,.LM18-.LFBB4
+ 200:main.c        **** 	// The start condition interrupt occurs when SDA is pulled low
+ 201:main.c        **** 	//   WHEN SCL is high...
+ 202:main.c        **** 	// Which means that the device will count an edge when SCL goes low...
+ 203:main.c        **** 	//   Thus, the number of clock edges will be 17 for the first 8 bits!!!
+ 204:main.c        **** 	//THIS IS A HACK AND SHOULD NOT BE IMPLEMENTED:
+ 205:main.c        **** //	while(getpinPORT(SCL_PIN, SCLPORT))
+ 206:main.c        **** //	{};
+ 207:main.c        **** 	// Should be fixed now, with the new AWAITING_START_SCL state
+ 208:main.c        **** 
+ 209:main.c        **** 	heartBlinkInternal++;
+ 244               		.stabn	68,0,209,.LM18-.LFBB4
  245               	.LM18:
  246 004e 8091 0000 		lds r24,heartBlinkInternal
  247 0052 8F5F      		subi r24,lo8(-(1))
+GAS LISTING /tmp/ccCqnIUM.s 			page 9
+
+
  248 0054 8093 0000 		sts heartBlinkInternal,r24
- 205:main.c        **** 	//set_heartBlink(heartBlinkInternal);
- 206:main.c        **** 
- 207:main.c        **** 	//A Start-Detection has occurred
- 208:main.c        **** 	// The slaves (including this device) have pulled SCL low
-GAS LISTING /tmp/ccULZha7.s 			page 9
-
-
- 209:main.c        **** 	// (from the manual):
- 210:main.c        **** 	//  The start detector will hold the SCL line low after the master has
- 211:main.c        **** 	//  forced a negative edge on this line. This allows the slave to wake
- 212:main.c        **** 	//  up from sleep or complete other tasks before setting up the USI 
- 213:main.c        **** 	//  Data Register to receive the address. This is done by clearing the 
- 214:main.c        **** 	//  start condition flag and resetting the counter. 
- 215:main.c        **** 
- 216:main.c        **** 	//NOT CERTAIN this is necessary
- 217:main.c        **** 	// Shouldn't be, since the pin is set as an input...
- 218:main.c        **** 	//   unless a START is received in the middle of a slave-write???
- 219:main.c        **** 	// From the diagram showing the connections of the shift-registers
- 220:main.c        **** 	// it seems we need this to prevent data collision
- 221:main.c        **** 	//setinPORT(SDA_PIN, SDAPORT);
- 222:main.c        **** 	//USIDR = 0xff;	
- 223:main.c        **** 
- 224:main.c        **** 	//Set the pin directions...
- 225:main.c        **** 	// Make sure, just in case a start-condition interrupts a slave-write...
- 226:main.c        **** 	setinPORT(SDA_PIN, SDAPORT);
- 249               		.stabn	68,0,226,.LM19-.LFBB4
+ 210:main.c        **** 	//set_heartBlink(heartBlinkInternal);
+ 211:main.c        **** 
+ 212:main.c        **** 	//A Start-Detection has occurred
+ 213:main.c        **** 	// The slaves (including this device) have pulled SCL low
+ 214:main.c        **** 	// (from the manual):
+ 215:main.c        **** 	//  The start detector will hold the SCL line low after the master has
+ 216:main.c        **** 	//  forced a negative edge on this line. This allows the slave to wake
+ 217:main.c        **** 	//  up from sleep or complete other tasks before setting up the USI 
+ 218:main.c        **** 	//  Data Register to receive the address. This is done by clearing the 
+ 219:main.c        **** 	//  start condition flag and resetting the counter. 
+ 220:main.c        **** 
+ 221:main.c        **** 	//NOT CERTAIN this is necessary
+ 222:main.c        **** 	// Shouldn't be, since the pin is set as an input...
+ 223:main.c        **** 	//   unless a START is received in the middle of a slave-write???
+ 224:main.c        **** 	// From the diagram showing the connections of the shift-registers
+ 225:main.c        **** 	// it seems we need this to prevent data collision
+ 226:main.c        **** 	//setinPORT(SDA_PIN, SDAPORT);
+ 227:main.c        **** 	//USIDR = 0xff;	
+ 228:main.c        **** 
+ 229:main.c        **** 	//Set the pin directions...
+ 230:main.c        **** 	// Make sure, just in case a start-condition interrupts a slave-write...
+ 231:main.c        **** 	setinPORT(SDA_PIN, SDAPORT);
+ 249               		.stabn	68,0,231,.LM19-.LFBB4
  250               	.LM19:
  251 0058 B898      		cbi 0x17,0
- 227:main.c        **** 	// Leave the CLOCK pin active for SCL-hold at the first overflow
- 228:main.c        **** 	// (once we've received address/direction)
- 229:main.c        **** 	setoutPORT(SCL_PIN, SDAPORT);
- 252               		.stabn	68,0,229,.LM20-.LFBB4
+ 232:main.c        **** 	// Leave the CLOCK pin active for SCL-hold at the first overflow
+ 233:main.c        **** 	// (once we've received address/direction)
+ 234:main.c        **** 	setoutPORT(SCL_PIN, SDAPORT);
+ 252               		.stabn	68,0,234,.LM20-.LFBB4
  253               	.LM20:
  254 005a BA9A      		sbi 0x17,2
- 230:main.c        **** 
- 231:main.c        **** 	//Indicate that the address hasn't yet been received
- 232:main.c        **** 	// (it should be the first byte transmitted)
- 233:main.c        **** 	usi_i2c_awaitStartSCL();
- 255               		.stabn	68,0,233,.LM21-.LFBB4
+ 235:main.c        **** 
+ 236:main.c        **** 	//Indicate that the address hasn't yet been received
+ 237:main.c        **** 	// (it should be the first byte transmitted)
+ 238:main.c        **** 	usi_i2c_awaitStartSCL();
+ 255               		.stabn	68,0,238,.LM21-.LFBB4
  256               	.LM21:
  257 005c 00D0      		rcall usi_i2c_awaitStartSCL
  258               	/* epilogue start */
- 234:main.c        **** 
- 235:main.c        **** 	//heartClear();
- 236:main.c        **** }
- 259               		.stabn	68,0,236,.LM22-.LFBB4
+ 239:main.c        **** 
+ 240:main.c        **** 	//heartClear();
+ 241:main.c        **** }
+ 259               		.stabn	68,0,241,.LM22-.LFBB4
  260               	.LM22:
  261 005e FF91      		pop r31
  262 0060 EF91      		pop r30
@@ -533,43 +538,43 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  270 0070 4F91      		pop r20
  271 0072 3F91      		pop r19
  272 0074 2F91      		pop r18
+GAS LISTING /tmp/ccCqnIUM.s 			page 10
+
+
  273 0076 0F90      		pop r0
  274 0078 0FBE      		out __SREG__,r0
  275 007a 0F90      		pop r0
  276 007c 1F90      		pop r1
  277 007e 1895      		reti
-GAS LISTING /tmp/ccULZha7.s 			page 10
-
-
  278               		.size	__vector_13, .-__vector_13
  279               	.Lscope4:
  280               		.stabs	"",36,0,0,.Lscope4-.LFBB4
  281               		.stabd	78,0,0
- 282               		.stabs	"__vector_14:F(0,50)",36,0,254,__vector_14
+ 282               		.stabs	"__vector_14:F(0,50)",36,0,259,__vector_14
  283               	.global	__vector_14
  284               		.type	__vector_14, @function
  285               	__vector_14:
  286               		.stabd	46,0,0
- 237:main.c        **** 
- 238:main.c        **** //shifted right once to account for R/W bit...
- 239:main.c        **** #define USI_I2C_MYEDIDADDRESS 0x50
- 240:main.c        **** #define USI_I2C_MYLEDADDRESS	0x60
- 241:main.c        **** 
- 242:main.c        **** #define usi_i2c_isMyAddress(addr) \
- 243:main.c        **** 	( ((addr) == USI_I2C_MYEDIDADDRESS)\
- 244:main.c        **** 	| ((addr) == USI_I2C_MYLEDADDRESS) )
- 245:main.c        **** 
+ 242:main.c        **** 
+ 243:main.c        **** //shifted right once to account for R/W bit...
+ 244:main.c        **** #define USI_I2C_MYEDIDADDRESS 0x50
+ 245:main.c        **** #define USI_I2C_MYLEDADDRESS	0x60
  246:main.c        **** 
- 247:main.c        **** // In case this device handles multiple addresses... (NYI)
- 248:main.c        **** uint8_t usi_i2c_requestedAddress = 0;
- 249:main.c        **** 
- 250:main.c        **** uint8_t byteNum = 0;
+ 247:main.c        **** #define usi_i2c_isMyAddress(addr) \
+ 248:main.c        **** 	( ((addr) == USI_I2C_MYEDIDADDRESS)\
+ 249:main.c        **** 	| ((addr) == USI_I2C_MYLEDADDRESS) )
+ 250:main.c        **** 
  251:main.c        **** 
- 252:main.c        **** //Basically, everything after the start-condition
- 253:main.c        **** // ACK and bytes...
- 254:main.c        **** ISR(USI_OVF_vect)
- 255:main.c        **** {
- 287               		.stabn	68,0,255,.LM23-.LFBB5
+ 252:main.c        **** // In case this device handles multiple addresses... (NYI)
+ 253:main.c        **** uint8_t usi_i2c_requestedAddress = 0;
+ 254:main.c        **** 
+ 255:main.c        **** uint8_t byteNum = 0;
+ 256:main.c        **** 
+ 257:main.c        **** //Basically, everything after the start-condition
+ 258:main.c        **** // ACK and bytes...
+ 259:main.c        **** ISR(USI_OVF_vect)
+ 260:main.c        **** {
+ 287               		.stabn	68,0,260,.LM23-.LFBB5
  288               	.LM23:
  289               	.LFBB5:
  290 0080 1F92      		push r1
@@ -593,30 +598,30 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  308               	/* frame size = 0 */
  309               	/* stack size = 15 */
  310               	.L__stack_usage = 15
- 256:main.c        **** 	//The USI counter has overflowed... this occurs in a couple cases..
- 257:main.c        **** 	// First: After the address and r/w bit have been received
- 258:main.c        **** 	// Second: After the ACK bit has been transmitted (by the slave)
- 259:main.c        **** 	// Third: After the first data-byte has been received
- 260:main.c        **** 	// Fourth: After the ACK bit has been transmitted for it...
-GAS LISTING /tmp/ccULZha7.s 			page 11
+GAS LISTING /tmp/ccCqnIUM.s 			page 11
 
 
- 261:main.c        **** 	// and so on...
- 262:main.c        **** 
- 263:main.c        **** 	//The counter-overflow also pulls SCL Low (from the manual):
- 264:main.c        **** 	// After eight bits containing slave address and data direction 
- 265:main.c        **** 	// (read or write) have been transferred, the slave counter overflows 
- 266:main.c        **** 	// and the SCL line is forced low. 
+ 261:main.c        **** 	//The USI counter has overflowed... this occurs in a couple cases..
+ 262:main.c        **** 	// First: After the address and r/w bit have been received
+ 263:main.c        **** 	// Second: After the ACK bit has been transmitted (by the slave)
+ 264:main.c        **** 	// Third: After the first data-byte has been received
+ 265:main.c        **** 	// Fourth: After the ACK bit has been transmitted for it...
+ 266:main.c        **** 	// and so on...
  267:main.c        **** 
- 268:main.c        **** 	// If the slave is not the one the 
- 269:main.c        **** 	// master has addressed, it releases the SCL line and waits for a new 
- 270:main.c        **** 	// start condition.
- 271:main.c        **** 
+ 268:main.c        **** 	//The counter-overflow also pulls SCL Low (from the manual):
+ 269:main.c        **** 	// After eight bits containing slave address and data direction 
+ 270:main.c        **** 	// (read or write) have been transferred, the slave counter overflows 
+ 271:main.c        **** 	// and the SCL line is forced low. 
  272:main.c        **** 
- 273:main.c        **** 	//These cases are the same as AWAITING, except if we're here,
- 274:main.c        **** 	// then we're no longer awaiting them...
- 275:main.c        **** 	switch(usi_i2c_state)
- 311               		.stabn	68,0,275,.LM24-.LFBB5
+ 273:main.c        **** 	// If the slave is not the one the 
+ 274:main.c        **** 	// master has addressed, it releases the SCL line and waits for a new 
+ 275:main.c        **** 	// start condition.
+ 276:main.c        **** 
+ 277:main.c        **** 
+ 278:main.c        **** 	//These cases are the same as AWAITING, except if we're here,
+ 279:main.c        **** 	// then we're no longer awaiting them...
+ 280:main.c        **** 	switch(usi_i2c_state)
+ 311               		.stabn	68,0,280,.LM24-.LFBB5
  312               	.LM24:
  313 00a2 8091 0000 		lds r24,usi_i2c_state
  314 00a6 8230      		cpi r24,lo8(2)
@@ -627,167 +632,167 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  319 00b0 01F0      		breq .L9
  320               	.L6:
  321               	.LBB12:
- 276:main.c        **** 	{
- 277:main.c        **** 		// The start condition interrupt occurs immediately when SDA goes low
- 278:main.c        **** 		//  while SCL is high. The SCL line needs to go low once before
- 279:main.c        **** 		//  data can be transmitted (this was a BITCH to find)
- 280:main.c        **** 		//  in other words, there are 17 clock edges between the start-
- 281:main.c        **** 		//  condition and having fully received the r/w bit
- 282:main.c        **** 		case USI_STATE_START_SCL_RECEIVED:
- 283:main.c        **** 	//		usi_i2c_awaitAddress();
- 284:main.c        **** 			usi_i2c_state = USI_STATE_AWAITING_ADDRESS;
- 285:main.c        **** 
- 286:main.c        **** 		   //Clear the Start-Condition flag to release SCL
- 287:main.c        **** 			// ALSO the Overflow flag for the same reason
- 288:main.c        **** 			// ALSO: set the counter
- 289:main.c        **** 			//   16 clock edges will signal 8 bits received (address+r/w)
- 290:main.c        **** 			USISR = (1<<USISIF) //Start Condition Interrupt Flag
- 291:main.c        **** 										//  (ONLY cleared when written 1)
- 292:main.c        **** 					| (1<<USIOIF)	//Overflow flag 
- 293:main.c        **** 		         | (USICNT_MASK & 0); //Clear the USI counter
- 294:main.c        **** 
- 295:main.c        **** 			break;
- 296:main.c        **** 		case USI_STATE_ADDRESS_RECEIVED:
- 297:main.c        **** 			{};
- 298:main.c        **** 
- 299:main.c        **** 			byteNum = 0;
- 300:main.c        **** 			//heartClear();
- 301:main.c        **** 			//Check to see if it's ours...
- 302:main.c        **** 			uint8_t udrTemp = USIDR;
- 303:main.c        **** 			//1 = master-read (slave-writes to SDA)
- 304:main.c        **** 			//0 = master-write (slave-reads from SDA)
- 305:main.c        **** 			usi_i2c_readFromSlave = udrTemp & 0x01;
- 306:main.c        **** 			usi_i2c_requestedAddress = udrTemp >> 1;
-GAS LISTING /tmp/ccULZha7.s 			page 12
+ 281:main.c        **** 	{
+ 282:main.c        **** 		// The start condition interrupt occurs immediately when SDA goes low
+ 283:main.c        **** 		//  while SCL is high. The SCL line needs to go low once before
+ 284:main.c        **** 		//  data can be transmitted (this was a BITCH to find)
+ 285:main.c        **** 		//  in other words, there are 17 clock edges between the start-
+ 286:main.c        **** 		//  condition and having fully received the r/w bit
+ 287:main.c        **** 		case USI_STATE_START_SCL_RECEIVED:
+ 288:main.c        **** 	//		usi_i2c_awaitAddress();
+ 289:main.c        **** 			usi_i2c_state = USI_STATE_AWAITING_ADDRESS;
+ 290:main.c        **** 
+ 291:main.c        **** 		   //Clear the Start-Condition flag to release SCL
+ 292:main.c        **** 			// ALSO the Overflow flag for the same reason
+ 293:main.c        **** 			// ALSO: set the counter
+ 294:main.c        **** 			//   16 clock edges will signal 8 bits received (address+r/w)
+ 295:main.c        **** 			USISR = (1<<USISIF) //Start Condition Interrupt Flag
+ 296:main.c        **** 										//  (ONLY cleared when written 1)
+ 297:main.c        **** 					| (1<<USIOIF)	//Overflow flag 
+ 298:main.c        **** 		         | (USICNT_MASK & 0); //Clear the USI counter
+ 299:main.c        **** 
+ 300:main.c        **** 			break;
+ 301:main.c        **** 		case USI_STATE_ADDRESS_RECEIVED:
+ 302:main.c        **** 			{};
+ 303:main.c        **** 
+ 304:main.c        **** 			byteNum = 0;
+ 305:main.c        **** 			//heartClear();
+ 306:main.c        **** 			//Check to see if it's ours...
+GAS LISTING /tmp/ccCqnIUM.s 			page 12
 
 
- 307:main.c        **** 			
- 308:main.c        **** 			//From the manual:
- 309:main.c        **** 			// When the slave is addressed, it holds the SDA line low during 
- 310:main.c        **** 			// the acknowledgment cycle before holding the SCL line low again
- 311:main.c        **** 			if( usi_i2c_isMyAddress(usi_i2c_requestedAddress) )
- 312:main.c        **** 			{
- 313:main.c        **** 				// Send ACK:
- 314:main.c        **** 				// This is a hack:
- 315:main.c        **** 				//  We get to this point on a falling-edge
- 316:main.c        **** 				//  the USIDR bit 7 is loaded 0
- 317:main.c        **** 				//  then the next rising edge it changes to bit 6
- 318:main.c        **** 				//  the next falling edge triggers the AWAITING_ACK case below
- 319:main.c        **** 				//  which releases bit 6 from the SDA pin
- 320:main.c        **** 				//  The master pulls it low again for a STOP condition
- 321:main.c        **** 				// It might be wiser to just set the PORT value...
- 322:main.c        **** 				//USIDR = 0x3f; 
- 323:main.c        **** 				USIDR = 0x00;
- 324:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
- 325:main.c        **** 
- 326:main.c        **** 	         usi_i2c_state = USI_STATE_AWAITING_ACK;
- 327:main.c        **** 
- 328:main.c        **** 	         //FTM:
- 329:main.c        **** 	         // (The USI Counter Register is set to 14 before releasing SCL)
- 330:main.c        **** 				USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(14);
- 331:main.c        **** 			}
- 332:main.c        **** 			else //Another slave was addressed
- 333:main.c        **** 				usi_i2c_awaitStart();
- 334:main.c        **** 
- 335:main.c        **** 			break;
- 336:main.c        **** 		//ACK has been transmitted from/to this device...
- 337:main.c        **** 		case USI_STATE_ACK_COMPLETE:
- 338:main.c        **** 			if(!usi_i2c_readFromSlave)	//slaveRead
- 339:main.c        **** 			{
- 340:main.c        **** 				//Release SDA from the ACK (we'll be reading...)
- 341:main.c        **** 				setinPORT(SDA_PIN, SDAPORT);
- 342:main.c        **** 				//Shouldn't be necessary with above, but can't hurt...
- 343:main.c        **** 				//UDR = 0xff; 
- 344:main.c        **** 			}
- 345:main.c        **** 			else //slaveWrite
- 346:main.c        **** 			{
- 347:main.c        **** 				uint8_t masterACK;
- 348:main.c        **** 				// First ACK will be this device's response to address+r/w
- 349:main.c        **** 				// Read the master's ACK?
- 350:main.c        **** 				// I guess it'd be stupid to send a read request without
- 351:main.c        **** 				// actually reading a byte, but I've done it for testing...
- 352:main.c        **** 				// but if that's the case, then the byteToTransmit will be 
- 353:main.c        **** 				// decremented anyhow... Not sure how to handle this yet...
- 354:main.c        **** 				// OTOH: if a read is requested a byte MUST be transferred
- 355:main.c        **** 				// otherwise a bit-7 = 0 loaded would prevent a master-stop
- 356:main.c        **** 				masterACK = !(USIDR & 0x01);
- 357:main.c        **** 
- 358:main.c        **** 				if(byteNum)// && !(USIDR & 0x01))
- 359:main.c        **** 				{
- 360:main.c        **** 					heartBlinkInternal+= 0x10;
- 361:main.c        **** 					//set_heartBlink(heartBlinkInternal);
- 362:main.c        **** 				}
- 363:main.c        **** 
-GAS LISTING /tmp/ccULZha7.s 			page 13
+ 307:main.c        **** 			uint8_t udrTemp = USIDR;
+ 308:main.c        **** 			//1 = master-read (slave-writes to SDA)
+ 309:main.c        **** 			//0 = master-write (slave-reads from SDA)
+ 310:main.c        **** 			usi_i2c_readFromSlave = udrTemp & 0x01;
+ 311:main.c        **** 			usi_i2c_requestedAddress = udrTemp >> 1;
+ 312:main.c        **** 			
+ 313:main.c        **** 			//From the manual:
+ 314:main.c        **** 			// When the slave is addressed, it holds the SDA line low during 
+ 315:main.c        **** 			// the acknowledgment cycle before holding the SCL line low again
+ 316:main.c        **** 			if( usi_i2c_isMyAddress(usi_i2c_requestedAddress) )
+ 317:main.c        **** 			{
+ 318:main.c        **** 				// Send ACK:
+ 319:main.c        **** 				// This is a hack:
+ 320:main.c        **** 				//  We get to this point on a falling-edge
+ 321:main.c        **** 				//  the USIDR bit 7 is loaded 0
+ 322:main.c        **** 				//  then the next rising edge it changes to bit 6
+ 323:main.c        **** 				//  the next falling edge triggers the AWAITING_ACK case below
+ 324:main.c        **** 				//  which releases bit 6 from the SDA pin
+ 325:main.c        **** 				//  The master pulls it low again for a STOP condition
+ 326:main.c        **** 				// It might be wiser to just set the PORT value...
+ 327:main.c        **** 				//USIDR = 0x3f; 
+ 328:main.c        **** 				USIDR = 0x00;
+ 329:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
+ 330:main.c        **** 
+ 331:main.c        **** 	         usi_i2c_state = USI_STATE_AWAITING_ACK;
+ 332:main.c        **** 
+ 333:main.c        **** 	         //FTM:
+ 334:main.c        **** 	         // (The USI Counter Register is set to 14 before releasing SCL)
+ 335:main.c        **** 				USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(14);
+ 336:main.c        **** 			}
+ 337:main.c        **** 			else //Another slave was addressed
+ 338:main.c        **** 				usi_i2c_awaitStart();
+ 339:main.c        **** 
+ 340:main.c        **** 			break;
+ 341:main.c        **** 		//ACK has been transmitted from/to this device...
+ 342:main.c        **** 		case USI_STATE_ACK_COMPLETE:
+ 343:main.c        **** 			if(!usi_i2c_readFromSlave)	//slaveRead
+ 344:main.c        **** 			{
+ 345:main.c        **** 				//Release SDA from the ACK (we'll be reading...)
+ 346:main.c        **** 				setinPORT(SDA_PIN, SDAPORT);
+ 347:main.c        **** 				//Shouldn't be necessary with above, but can't hurt...
+ 348:main.c        **** 				//UDR = 0xff; 
+ 349:main.c        **** 			}
+ 350:main.c        **** 			else //slaveWrite
+ 351:main.c        **** 			{
+ 352:main.c        **** 				uint8_t masterACK;
+ 353:main.c        **** 				// First ACK will be this device's response to address+r/w
+ 354:main.c        **** 				// Read the master's ACK?
+ 355:main.c        **** 				// I guess it'd be stupid to send a read request without
+ 356:main.c        **** 				// actually reading a byte, but I've done it for testing...
+ 357:main.c        **** 				// but if that's the case, then the byteToTransmit will be 
+ 358:main.c        **** 				// decremented anyhow... Not sure how to handle this yet...
+ 359:main.c        **** 				// OTOH: if a read is requested a byte MUST be transferred
+ 360:main.c        **** 				// otherwise a bit-7 = 0 loaded would prevent a master-stop
+ 361:main.c        **** 				masterACK = !(USIDR & 0x01);
+ 362:main.c        **** 
+ 363:main.c        **** 				if(byteNum)// && !(USIDR & 0x01))
+GAS LISTING /tmp/ccCqnIUM.s 			page 13
 
 
- 364:main.c        **** 				//Load the byte to write to the master...
- 365:main.c        **** 				//USIDR = usi_i2c_byteToTransmit;
- 366:main.c        **** 
- 367:main.c        **** 				//if we load the next byte and its bit7 is 0
- 368:main.c        **** 				// it will hold SDA low when the master tries to 
- 369:main.c        **** 				// pull it high for a stop-condition!
- 370:main.c        **** 				if(masterACK)
- 371:main.c        **** 					USIDR = nextByteToTransmit(masterACK);
- 372:main.c        **** 				else
- 373:main.c        **** 					USIDR = 0xff;
- 374:main.c        **** 
- 375:main.c        **** 				//Decrement IF the master sent ACK...
- 376:main.c        **** 				//if(masterACK)
- 377:main.c        **** 				//	usi_i2c_byteToTransmit--;
- 378:main.c        **** 				
- 379:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
- 380:main.c        **** 			}
- 381:main.c        **** 
- 382:main.c        **** 			usi_i2c_state = USI_STATE_AWAITING_BYTE;
- 383:main.c        **** 
- 384:main.c        **** 			USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(0);
- 385:main.c        **** 			//heartClear();
- 386:main.c        **** 			break;
- 387:main.c        **** 		case USI_STATE_BYTE_COMPLETE:  //BYTE transmitted/received
- 388:main.c        **** 			byteNum++;
- 389:main.c        **** 			// Get the byte (if receiving)
- 390:main.c        **** 			if(!usi_i2c_readFromSlave)
- 391:main.c        **** 			{
- 392:main.c        **** 				processReceivedByte(USIDR, byteNum);
- 393:main.c        **** 				//usi_i2c_receivedByte = USIDR;
- 394:main.c        **** 				heartBlinkInternal = usi_i2c_receivedByte;
- 395:main.c        **** 				//set_heartBlink(heartBlinkInternal);
- 396:main.c        **** //				heartClear();
- 397:main.c        **** 
- 398:main.c        **** 				// Also, we need to send an ACK...
- 399:main.c        **** 				USIDR = 0x3f;
- 400:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
- 401:main.c        **** 			}
- 402:main.c        **** 			else //slaveWrite
- 403:main.c        **** 			{
- 404:main.c        **** 				// The master sends the ACK in this case...
- 405:main.c        **** 				setinPORT(SDA_PIN, SDAPORT);
- 406:main.c        **** 				USIDR = 0xff;
- 407:main.c        **** //				heartClear();
- 408:main.c        **** 			}
- 409:main.c        **** 
- 410:main.c        **** 			//Reload the counter to interrupt after the ACK
- 411:main.c        **** 			USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(14);
- 412:main.c        **** 
- 413:main.c        **** 			usi_i2c_state = USI_STATE_AWAITING_ACK;
- 414:main.c        **** 			//heartClear();
- 415:main.c        ****          break;
- 416:main.c        **** 		//Shouldn't get here...
- 417:main.c        **** 		default:
- 418:main.c        **** 			usi_i2c_state = 0x77;
- 322               		.stabn	68,0,418,.LM25-.LFBB5
+ 364:main.c        **** 				{
+ 365:main.c        **** 					heartBlinkInternal+= 0x10;
+ 366:main.c        **** 					//set_heartBlink(heartBlinkInternal);
+ 367:main.c        **** 				}
+ 368:main.c        **** 
+ 369:main.c        **** 				//Load the byte to write to the master...
+ 370:main.c        **** 				//USIDR = usi_i2c_byteToTransmit;
+ 371:main.c        **** 
+ 372:main.c        **** 				//if we load the next byte and its bit7 is 0
+ 373:main.c        **** 				// it will hold SDA low when the master tries to 
+ 374:main.c        **** 				// pull it high for a stop-condition!
+ 375:main.c        **** 				if(masterACK)
+ 376:main.c        **** 					USIDR = nextByteToTransmit(masterACK);
+ 377:main.c        **** 				else
+ 378:main.c        **** 					USIDR = 0xff;
+ 379:main.c        **** 
+ 380:main.c        **** 				//Decrement IF the master sent ACK...
+ 381:main.c        **** 				//if(masterACK)
+ 382:main.c        **** 				//	usi_i2c_byteToTransmit--;
+ 383:main.c        **** 				
+ 384:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
+ 385:main.c        **** 			}
+ 386:main.c        **** 
+ 387:main.c        **** 			usi_i2c_state = USI_STATE_AWAITING_BYTE;
+ 388:main.c        **** 
+ 389:main.c        **** 			USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(0);
+ 390:main.c        **** 			//heartClear();
+ 391:main.c        **** 			break;
+ 392:main.c        **** 		case USI_STATE_BYTE_COMPLETE:  //BYTE transmitted/received
+ 393:main.c        **** 			byteNum++;
+ 394:main.c        **** 			// Get the byte (if receiving)
+ 395:main.c        **** 			if(!usi_i2c_readFromSlave)
+ 396:main.c        **** 			{
+ 397:main.c        **** 				processReceivedByte(USIDR, byteNum);
+ 398:main.c        **** 				//usi_i2c_receivedByte = USIDR;
+ 399:main.c        **** 				heartBlinkInternal = usi_i2c_receivedByte;
+ 400:main.c        **** 				//set_heartBlink(heartBlinkInternal);
+ 401:main.c        **** //				heartClear();
+ 402:main.c        **** 
+ 403:main.c        **** 				// Also, we need to send an ACK...
+ 404:main.c        **** 				USIDR = 0x3f;
+ 405:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
+ 406:main.c        **** 			}
+ 407:main.c        **** 			else //slaveWrite
+ 408:main.c        **** 			{
+ 409:main.c        **** 				// The master sends the ACK in this case...
+ 410:main.c        **** 				setinPORT(SDA_PIN, SDAPORT);
+ 411:main.c        **** 				USIDR = 0xff;
+ 412:main.c        **** //				heartClear();
+ 413:main.c        **** 			}
+ 414:main.c        **** 
+ 415:main.c        **** 			//Reload the counter to interrupt after the ACK
+ 416:main.c        **** 			USI_I2C_OVERFLOW_RELEASE_SCL_AND_SET_COUNTER(14);
+ 417:main.c        **** 
+ 418:main.c        **** 			usi_i2c_state = USI_STATE_AWAITING_ACK;
+ 419:main.c        **** 			//heartClear();
+ 420:main.c        ****          break;
+GAS LISTING /tmp/ccCqnIUM.s 			page 14
+
+
+ 421:main.c        **** 		//Shouldn't get here...
+ 422:main.c        **** 		default:
+ 423:main.c        **** 			usi_i2c_state = 0x77;
+ 322               		.stabn	68,0,423,.LM25-.LFBB5
  323               	.LM25:
-GAS LISTING /tmp/ccULZha7.s 			page 14
-
-
  324 00b2 87E7      		ldi r24,lo8(119)
  325 00b4 00C0      		rjmp .L53
  326               	.L8:
  327 00b6 2091 0000 		lds r18,usi_i2c_readFromSlave
  328               	.LBE12:
- 275:main.c        **** 	{
- 329               		.stabn	68,0,275,.LM26-.LFBB5
+ 280:main.c        **** 	{
+ 329               		.stabn	68,0,280,.LM26-.LFBB5
  330               	.LM26:
  331 00ba 8330      		cpi r24,lo8(3)
  332 00bc 01F4      		brne .+2
@@ -795,184 +800,184 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  334 00c0 8430      		cpi r24,lo8(4)
  335 00c2 01F4      		brne .L6
  336               	.LBB25:
- 388:main.c        **** 			// Get the byte (if receiving)
- 337               		.stabn	68,0,388,.LM27-.LFBB5
+ 393:main.c        **** 			// Get the byte (if receiving)
+ 337               		.stabn	68,0,393,.LM27-.LFBB5
  338               	.LM27:
  339 00c4 9091 0000 		lds r25,byteNum
  340 00c8 9F5F      		subi r25,lo8(-(1))
  341 00ca 9093 0000 		sts byteNum,r25
- 390:main.c        **** 			{
- 342               		.stabn	68,0,390,.LM28-.LFBB5
+ 395:main.c        **** 			{
+ 342               		.stabn	68,0,395,.LM28-.LFBB5
  343               	.LM28:
  344 00ce 2111      		cpse r18,__zero_reg__
  345 00d0 00C0      		rjmp .L26
- 392:main.c        **** 				//usi_i2c_receivedByte = USIDR;
- 346               		.stabn	68,0,392,.LM29-.LFBB5
+ 397:main.c        **** 				//usi_i2c_receivedByte = USIDR;
+ 346               		.stabn	68,0,397,.LM29-.LFBB5
  347               	.LM29:
  348 00d2 8FB1      		in r24,0xf
  349               	.LBB13:
  350               	.LBB14:
- 419:main.c        **** 			//set_heartBlink(0x77);
- 420:main.c        **** 			break;
- 421:main.c        **** 	}
- 422:main.c        **** 
- 423:main.c        **** 
- 424:main.c        **** 	//I want it to blink if it's not yet read the EDID...
- 425:main.c        **** 	if((usi_i2c_readFromSlave)
- 426:main.c        **** 		 && (usi_i2c_state == 4)
- 427:main.c        **** 		 && (usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS))
- 428:main.c        **** 		set_heartBlink(0);
- 429:main.c        **** 	//set_heartBlink((!(usi_i2c_readFromSlave)<<4) | usi_i2c_state);
- 430:main.c        **** }
- 431:main.c        **** 
- 432:main.c        **** uint8_t ledsControlled = FALSE;
- 433:main.c        **** 
- 434:main.c        **** #define incrementEDIDIndex()	\
- 435:main.c        **** {\
- 436:main.c        **** 	edidArrayIndex++;\
- 437:main.c        **** 	if(edidArrayIndex == EDIDARRAYLENGTH) \
- 438:main.c        **** 		edidArrayIndex = 0; \
- 439:main.c        **** }
- 440:main.c        **** 
- 441:main.c        **** #define setEDIDIndex(index) \
- 442:main.c        **** {\
- 443:main.c        **** 	edidArrayIndex = index;\
- 444:main.c        **** 	edidArrayIndex%=EDIDARRAYLENGTH;\
-GAS LISTING /tmp/ccULZha7.s 			page 15
+ 424:main.c        **** 			//set_heartBlink(0x77);
+ 425:main.c        **** 			break;
+ 426:main.c        **** 	}
+ 427:main.c        **** 
+ 428:main.c        **** 
+ 429:main.c        **** 	//I want it to blink if it's not yet read the EDID...
+ 430:main.c        **** 	if((usi_i2c_readFromSlave)
+ 431:main.c        **** 		 && (usi_i2c_state == 4)
+ 432:main.c        **** 		 && (usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS))
+ 433:main.c        **** 		set_heartBlink(0);
+ 434:main.c        **** 	//set_heartBlink((!(usi_i2c_readFromSlave)<<4) | usi_i2c_state);
+ 435:main.c        **** }
+ 436:main.c        **** 
+ 437:main.c        **** uint8_t ledsControlled = FALSE;
+ 438:main.c        **** 
+ 439:main.c        **** #define incrementEDIDIndex()	\
+ 440:main.c        **** {\
+ 441:main.c        **** 	edidArrayIndex++;\
+ 442:main.c        **** 	if(edidArrayIndex == EDIDARRAYLENGTH) \
+ 443:main.c        **** 		edidArrayIndex = 0; \
+ 444:main.c        **** }
+GAS LISTING /tmp/ccCqnIUM.s 			page 15
 
 
- 445:main.c        **** }
- 446:main.c        **** 
- 447:main.c        **** #define incrementLEDIndex() \
- 448:main.c        **** {\
- 449:main.c        **** 	ledIndex++;\
- 450:main.c        **** 	if(ledIndex == 3)\
- 451:main.c        **** 		ledIndex = 0;\
- 452:main.c        **** }
- 453:main.c        **** 
- 454:main.c        **** 
- 455:main.c        **** //Interesting I haven't run into this before...
- 456:main.c        **** //	if(blah)
- 457:main.c        **** //		setLEDIndex(blah);
- 458:main.c        **** //	else
- 459:main.c        **** //	{ blah }
- 460:main.c        **** // APPARENTLY the semicolon causes the if statement to be closed (?)
- 461:main.c        **** #define setLEDIndex(index) \
- 462:main.c        **** {\
- 463:main.c        **** 	ledIndex = index;\
- 464:main.c        **** 	ledIndex %= 3;\
- 465:main.c        **** }
- 466:main.c        **** 
- 467:main.c        **** void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
- 468:main.c        **** {
- 469:main.c        ****   if(usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS)
- 351               		.stabn	68,0,469,.LM30-.LFBB5
+ 445:main.c        **** 
+ 446:main.c        **** #define setEDIDIndex(index) \
+ 447:main.c        **** {\
+ 448:main.c        **** 	edidArrayIndex = index;\
+ 449:main.c        **** 	edidArrayIndex%=EDIDARRAYLENGTH;\
+ 450:main.c        **** }
+ 451:main.c        **** 
+ 452:main.c        **** #define incrementLEDIndex() \
+ 453:main.c        **** {\
+ 454:main.c        **** 	ledIndex++;\
+ 455:main.c        **** 	if(ledIndex == 3)\
+ 456:main.c        **** 		ledIndex = 0;\
+ 457:main.c        **** }
+ 458:main.c        **** 
+ 459:main.c        **** 
+ 460:main.c        **** //Interesting I haven't run into this before...
+ 461:main.c        **** //	if(blah)
+ 462:main.c        **** //		setLEDIndex(blah);
+ 463:main.c        **** //	else
+ 464:main.c        **** //	{ blah }
+ 465:main.c        **** // APPARENTLY the semicolon causes the if statement to be closed (?)
+ 466:main.c        **** #define setLEDIndex(index) \
+ 467:main.c        **** {\
+ 468:main.c        **** 	ledIndex = index;\
+ 469:main.c        **** 	ledIndex %= 3;\
+ 470:main.c        **** }
+ 471:main.c        **** 
+ 472:main.c        **** void processReceivedByte(uint8_t receivedByte, uint8_t byteNum)
+ 473:main.c        **** {
+ 474:main.c        ****   if(usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS)
+ 351               		.stabn	68,0,474,.LM30-.LFBB5
  352               	.LM30:
  353 00d4 2091 0000 		lds r18,usi_i2c_requestedAddress
  354 00d8 2035      		cpi r18,lo8(80)
  355 00da 01F0      		breq .+2
  356 00dc 00C0      		rjmp .L27
- 470:main.c        ****   {
- 471:main.c        **** 	if(byteNum == 1)
- 357               		.stabn	68,0,471,.LM31-.LFBB5
+ 475:main.c        ****   {
+ 476:main.c        **** 	if(byteNum == 1)
+ 357               		.stabn	68,0,476,.LM31-.LFBB5
  358               	.LM31:
  359 00de 9130      		cpi r25,lo8(1)
  360 00e0 01F0      		breq .+2
  361 00e2 00C0      		rjmp .L28
- 472:main.c        **** 	{
- 473:main.c        **** 		// Could be that the EDID request doesn't send a byte-index...?
- 474:main.c        **** 		//ledsControlled = FALSE;
- 475:main.c        **** 		setEDIDIndex(receivedByte);
- 362               		.stabn	68,0,475,.LM32-.LFBB5
+ 477:main.c        **** 	{
+ 478:main.c        **** 		// Could be that the EDID request doesn't send a byte-index...?
+ 479:main.c        **** 		//ledsControlled = FALSE;
+ 480:main.c        **** 		setEDIDIndex(receivedByte);
+ 362               		.stabn	68,0,480,.LM32-.LFBB5
  363               	.LM32:
  364 00e4 8F77      		andi r24,lo8(127)
  365 00e6 8093 0000 		sts edidArrayIndex,r24
  366               	.L29:
  367               	.LBE14:
  368               	.LBE13:
- 394:main.c        **** 				//set_heartBlink(heartBlinkInternal);
- 369               		.stabn	68,0,394,.LM33-.LFBB5
+ 399:main.c        **** 				//set_heartBlink(heartBlinkInternal);
+ 369               		.stabn	68,0,399,.LM33-.LFBB5
  370               	.LM33:
+GAS LISTING /tmp/ccCqnIUM.s 			page 16
+
+
  371 00ea 8091 0000 		lds r24,usi_i2c_receivedByte
  372 00ee 8093 0000 		sts heartBlinkInternal,r24
- 399:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
- 373               		.stabn	68,0,399,.LM34-.LFBB5
+ 404:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
+ 373               		.stabn	68,0,404,.LM34-.LFBB5
  374               	.LM34:
-GAS LISTING /tmp/ccULZha7.s 			page 16
-
-
  375 00f2 8FE3      		ldi r24,lo8(63)
  376 00f4 8FB9      		out 0xf,r24
- 400:main.c        **** 			}
- 377               		.stabn	68,0,400,.LM35-.LFBB5
+ 405:main.c        **** 			}
+ 377               		.stabn	68,0,405,.LM35-.LFBB5
  378               	.LM35:
  379 00f6 B89A      		sbi 0x17,0
  380               	.L34:
- 411:main.c        **** 
- 381               		.stabn	68,0,411,.LM36-.LFBB5
+ 416:main.c        **** 
+ 381               		.stabn	68,0,416,.LM36-.LFBB5
  382               	.LM36:
  383 00f8 8EE4      		ldi r24,lo8(78)
  384 00fa 8EB9      		out 0xe,r24
- 413:main.c        **** 			//heartClear();
- 385               		.stabn	68,0,413,.LM37-.LFBB5
+ 418:main.c        **** 			//heartClear();
+ 385               		.stabn	68,0,418,.LM37-.LFBB5
  386               	.LM37:
  387 00fc 83E0      		ldi r24,lo8(3)
  388               	.L53:
- 418:main.c        **** 			//set_heartBlink(0x77);
- 389               		.stabn	68,0,418,.LM38-.LFBB5
+ 423:main.c        **** 			//set_heartBlink(0x77);
+ 389               		.stabn	68,0,423,.LM38-.LFBB5
  390               	.LM38:
  391 00fe 8093 0000 		sts usi_i2c_state,r24
- 420:main.c        **** 	}
- 392               		.stabn	68,0,420,.LM39-.LFBB5
+ 425:main.c        **** 	}
+ 392               		.stabn	68,0,425,.LM39-.LFBB5
  393               	.LM39:
  394 0102 00C0      		rjmp .L12
  395               	.L9:
- 284:main.c        **** 
- 396               		.stabn	68,0,284,.LM40-.LFBB5
+ 289:main.c        **** 
+ 396               		.stabn	68,0,289,.LM40-.LFBB5
  397               	.LM40:
  398 0104 82E0      		ldi r24,lo8(2)
  399 0106 8093 0000 		sts usi_i2c_state,r24
- 290:main.c        **** 										//  (ONLY cleared when written 1)
- 400               		.stabn	68,0,290,.LM41-.LFBB5
+ 295:main.c        **** 										//  (ONLY cleared when written 1)
+ 400               		.stabn	68,0,295,.LM41-.LFBB5
  401               	.LM41:
  402 010a 80EC      		ldi r24,lo8(-64)
  403               	.L52:
- 330:main.c        **** 			}
- 404               		.stabn	68,0,330,.LM42-.LFBB5
+ 335:main.c        **** 			}
+ 404               		.stabn	68,0,335,.LM42-.LFBB5
  405               	.LM42:
  406 010c 8EB9      		out 0xe,r24
  407               	.L12:
  408               	.LBE25:
- 425:main.c        **** 		 && (usi_i2c_state == 4)
- 409               		.stabn	68,0,425,.LM43-.LFBB5
+ 430:main.c        **** 		 && (usi_i2c_state == 4)
+ 409               		.stabn	68,0,430,.LM43-.LFBB5
  410               	.LM43:
  411 010e 8091 0000 		lds r24,usi_i2c_readFromSlave
  412 0112 8823      		tst r24
  413 0114 01F0      		breq .L5
- 426:main.c        **** 		 && (usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS))
- 414               		.stabn	68,0,426,.LM44-.LFBB5
+ 431:main.c        **** 		 && (usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS))
+ 414               		.stabn	68,0,431,.LM44-.LFBB5
  415               	.LM44:
  416 0116 8091 0000 		lds r24,usi_i2c_state
+GAS LISTING /tmp/ccCqnIUM.s 			page 17
+
+
  417 011a 8430      		cpi r24,lo8(4)
  418 011c 01F4      		brne .L5
- 427:main.c        **** 		set_heartBlink(0);
- 419               		.stabn	68,0,427,.LM45-.LFBB5
+ 432:main.c        **** 		set_heartBlink(0);
+ 419               		.stabn	68,0,432,.LM45-.LFBB5
  420               	.LM45:
-GAS LISTING /tmp/ccULZha7.s 			page 17
-
-
  421 011e 8091 0000 		lds r24,usi_i2c_requestedAddress
  422 0122 8035      		cpi r24,lo8(80)
  423 0124 01F4      		brne .L5
- 428:main.c        **** 	//set_heartBlink((!(usi_i2c_readFromSlave)<<4) | usi_i2c_state);
- 424               		.stabn	68,0,428,.LM46-.LFBB5
+ 433:main.c        **** 	//set_heartBlink((!(usi_i2c_readFromSlave)<<4) | usi_i2c_state);
+ 424               		.stabn	68,0,433,.LM46-.LFBB5
  425               	.LM46:
  426 0126 80E0      		ldi r24,0
  427 0128 00D0      		rcall set_heartBlink
  428               	.L5:
  429               	/* epilogue start */
- 430:main.c        **** 
- 430               		.stabn	68,0,430,.LM47-.LFBB5
+ 435:main.c        **** 
+ 430               		.stabn	68,0,435,.LM47-.LFBB5
  431               	.LM47:
  432 012a FF91      		pop r31
  433 012c EF91      		pop r30
@@ -993,158 +998,158 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  448 014a 1895      		reti
  449               	.L7:
  450               	.LBB26:
- 299:main.c        **** 			//heartClear();
- 451               		.stabn	68,0,299,.LM48-.LFBB5
+ 304:main.c        **** 			//heartClear();
+ 451               		.stabn	68,0,304,.LM48-.LFBB5
  452               	.LM48:
  453 014c 1092 0000 		sts byteNum,__zero_reg__
- 302:main.c        **** 			//1 = master-read (slave-writes to SDA)
- 454               		.stabn	68,0,302,.LM49-.LFBB5
+ 307:main.c        **** 			//1 = master-read (slave-writes to SDA)
+ 454               		.stabn	68,0,307,.LM49-.LFBB5
  455               	.LM49:
  456 0150 8FB1      		in r24,0xf
- 305:main.c        **** 			usi_i2c_requestedAddress = udrTemp >> 1;
- 457               		.stabn	68,0,305,.LM50-.LFBB5
+ 310:main.c        **** 			usi_i2c_requestedAddress = udrTemp >> 1;
+ 457               		.stabn	68,0,310,.LM50-.LFBB5
  458               	.LM50:
  459 0152 982F      		mov r25,r24
  460 0154 9170      		andi r25,lo8(1)
  461 0156 9093 0000 		sts usi_i2c_readFromSlave,r25
- 306:main.c        **** 			
- 462               		.stabn	68,0,306,.LM51-.LFBB5
+ 311:main.c        **** 			
+ 462               		.stabn	68,0,311,.LM51-.LFBB5
  463               	.LM51:
  464 015a 8695      		lsr r24
  465 015c 8093 0000 		sts usi_i2c_requestedAddress,r24
- 311:main.c        **** 			{
- 466               		.stabn	68,0,311,.LM52-.LFBB5
+ 316:main.c        **** 			{
+GAS LISTING /tmp/ccCqnIUM.s 			page 18
+
+
+ 466               		.stabn	68,0,316,.LM52-.LFBB5
  467               	.LM52:
  468 0160 8035      		cpi r24,lo8(80)
  469 0162 01F0      		breq .L37
  470 0164 8036      		cpi r24,lo8(96)
-GAS LISTING /tmp/ccULZha7.s 			page 18
-
-
  471 0166 01F4      		brne .L50
  472               	.L37:
- 323:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
- 473               		.stabn	68,0,323,.LM53-.LFBB5
+ 328:main.c        **** 				setoutPORT(SDA_PIN, SDAPORT);
+ 473               		.stabn	68,0,328,.LM53-.LFBB5
  474               	.LM53:
  475 0168 1FB8      		out 0xf,__zero_reg__
- 324:main.c        **** 
- 476               		.stabn	68,0,324,.LM54-.LFBB5
+ 329:main.c        **** 
+ 476               		.stabn	68,0,329,.LM54-.LFBB5
  477               	.LM54:
  478 016a B89A      		sbi 0x17,0
- 326:main.c        **** 
- 479               		.stabn	68,0,326,.LM55-.LFBB5
+ 331:main.c        **** 
+ 479               		.stabn	68,0,331,.LM55-.LFBB5
  480               	.LM55:
  481 016c 83E0      		ldi r24,lo8(3)
  482 016e 8093 0000 		sts usi_i2c_state,r24
- 330:main.c        **** 			}
- 483               		.stabn	68,0,330,.LM56-.LFBB5
+ 335:main.c        **** 			}
+ 483               		.stabn	68,0,335,.LM56-.LFBB5
  484               	.LM56:
  485 0172 8EE4      		ldi r24,lo8(78)
  486 0174 00C0      		rjmp .L52
  487               	.L50:
- 333:main.c        **** 
- 488               		.stabn	68,0,333,.LM57-.LFBB5
+ 338:main.c        **** 
+ 488               		.stabn	68,0,338,.LM57-.LFBB5
  489               	.LM57:
  490 0176 00D0      		rcall usi_i2c_awaitStart
  491 0178 00C0      		rjmp .L12
  492               	.L10:
- 338:main.c        **** 			{
- 493               		.stabn	68,0,338,.LM58-.LFBB5
+ 343:main.c        **** 			{
+ 493               		.stabn	68,0,343,.LM58-.LFBB5
  494               	.LM58:
  495 017a 2111      		cpse r18,__zero_reg__
  496 017c 00C0      		rjmp .L17
- 341:main.c        **** 				//Shouldn't be necessary with above, but can't hurt...
- 497               		.stabn	68,0,341,.LM59-.LFBB5
+ 346:main.c        **** 				//Shouldn't be necessary with above, but can't hurt...
+ 497               		.stabn	68,0,346,.LM59-.LFBB5
  498               	.LM59:
  499 017e B898      		cbi 0x17,0
  500               	.L18:
- 382:main.c        **** 
- 501               		.stabn	68,0,382,.LM60-.LFBB5
+ 387:main.c        **** 
+ 501               		.stabn	68,0,387,.LM60-.LFBB5
  502               	.LM60:
  503 0180 84E0      		ldi r24,lo8(4)
  504 0182 8093 0000 		sts usi_i2c_state,r24
- 384:main.c        **** 			//heartClear();
- 505               		.stabn	68,0,384,.LM61-.LFBB5
+ 389:main.c        **** 			//heartClear();
+ 505               		.stabn	68,0,389,.LM61-.LFBB5
  506               	.LM61:
  507 0186 80E4      		ldi r24,lo8(64)
  508 0188 00C0      		rjmp .L52
  509               	.L17:
  510               	.LBB16:
- 356:main.c        **** 
- 511               		.stabn	68,0,356,.LM62-.LFBB5
+ 361:main.c        **** 
+ 511               		.stabn	68,0,361,.LM62-.LFBB5
  512               	.LM62:
+GAS LISTING /tmp/ccCqnIUM.s 			page 19
+
+
  513 018a 8FB1      		in r24,0xf
  514 018c 8170      		andi r24,lo8(1)
- 358:main.c        **** 				{
- 515               		.stabn	68,0,358,.LM63-.LFBB5
+ 363:main.c        **** 				{
+ 515               		.stabn	68,0,363,.LM63-.LFBB5
  516               	.LM63:
-GAS LISTING /tmp/ccULZha7.s 			page 19
-
-
  517 018e 9091 0000 		lds r25,byteNum
  518 0192 9923      		tst r25
  519 0194 01F0      		breq .L19
- 360:main.c        **** 					//set_heartBlink(heartBlinkInternal);
- 520               		.stabn	68,0,360,.LM64-.LFBB5
+ 365:main.c        **** 					//set_heartBlink(heartBlinkInternal);
+ 520               		.stabn	68,0,365,.LM64-.LFBB5
  521               	.LM64:
  522 0196 9091 0000 		lds r25,heartBlinkInternal
  523 019a 905F      		subi r25,lo8(-(16))
  524 019c 9093 0000 		sts heartBlinkInternal,r25
  525               	.L19:
- 370:main.c        **** 					USIDR = nextByteToTransmit(masterACK);
- 526               		.stabn	68,0,370,.LM65-.LFBB5
+ 375:main.c        **** 					USIDR = nextByteToTransmit(masterACK);
+ 526               		.stabn	68,0,375,.LM65-.LFBB5
  527               	.LM65:
  528 01a0 8111      		cpse r24,__zero_reg__
  529 01a2 00C0      		rjmp .L20
  530               	.LBB17:
  531               	.LBB18:
- 476:main.c        **** //		edidArrayIndex = receivedByte;
- 477:main.c        **** 	}
- 478:main.c        **** 	else
- 479:main.c        **** 	{
- 480:main.c        **** 		edidArray[edidArrayIndex] = receivedByte;
- 481:main.c        **** 
- 482:main.c        **** 		incrementEDIDIndex();
- 483:main.c        **** 		//edidArrayIndex++;
- 484:main.c        **** 		//edidArrayIndex &= 0x07;
- 485:main.c        **** 	}
- 486:main.c        ****   }
- 487:main.c        ****   else if (usi_i2c_requestedAddress == USI_I2C_MYLEDADDRESS)
- 488:main.c        ****   {
- 489:main.c        **** 	
- 490:main.c        **** 	ledsControlled = TRUE;
- 491:main.c        **** 
- 492:main.c        **** 	if(byteNum == 1)
- 493:main.c        **** 	{
- 494:main.c        **** 		setLEDIndex(receivedByte);
- 495:main.c        **** 	}
- 496:main.c        **** 	else
- 497:main.c        **** 	{
- 498:main.c        **** 		ledState[ledIndex] = receivedByte;
- 499:main.c        **** 		incrementLEDIndex();
- 500:main.c        **** 	}	
- 501:main.c        ****   }
- 502:main.c        **** }
- 503:main.c        **** 
- 504:main.c        **** uint8_t nextByteToTransmit(uint8_t masterACKed)
- 505:main.c        **** {
- 506:main.c        **** //	static uint8_t temp = 0;
- 507:main.c        **** 
- 508:main.c        **** //	return temp++;
- 509:main.c        **** 
- 510:main.c        ****   if(usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS)
- 532               		.stabn	68,0,510,.LM66-.LFBB5
+ 481:main.c        **** //		edidArrayIndex = receivedByte;
+ 482:main.c        **** 	}
+ 483:main.c        **** 	else
+ 484:main.c        **** 	{
+ 485:main.c        **** 		edidArray[edidArrayIndex] = receivedByte;
+ 486:main.c        **** 
+ 487:main.c        **** 		incrementEDIDIndex();
+ 488:main.c        **** 		//edidArrayIndex++;
+ 489:main.c        **** 		//edidArrayIndex &= 0x07;
+ 490:main.c        **** 	}
+ 491:main.c        ****   }
+ 492:main.c        ****   else if (usi_i2c_requestedAddress == USI_I2C_MYLEDADDRESS)
+ 493:main.c        ****   {
+ 494:main.c        **** 	
+ 495:main.c        **** 	ledsControlled = TRUE;
+ 496:main.c        **** 
+ 497:main.c        **** 	if(byteNum == 1)
+ 498:main.c        **** 	{
+ 499:main.c        **** 		setLEDIndex(receivedByte);
+ 500:main.c        **** 	}
+ 501:main.c        **** 	else
+ 502:main.c        **** 	{
+ 503:main.c        **** 		ledState[ledIndex] = receivedByte;
+ 504:main.c        **** 		incrementLEDIndex();
+ 505:main.c        **** 	}	
+ 506:main.c        ****   }
+ 507:main.c        **** }
+ 508:main.c        **** 
+ 509:main.c        **** uint8_t nextByteToTransmit(uint8_t masterACKed)
+ 510:main.c        **** {
+ 511:main.c        **** //	static uint8_t temp = 0;
+ 512:main.c        **** 
+ 513:main.c        **** //	return temp++;
+ 514:main.c        **** 
+ 515:main.c        ****   if(usi_i2c_requestedAddress == USI_I2C_MYEDIDADDRESS)
+GAS LISTING /tmp/ccCqnIUM.s 			page 20
+
+
+ 532               		.stabn	68,0,515,.LM66-.LFBB5
  533               	.LM66:
  534 01a4 8091 0000 		lds r24,usi_i2c_requestedAddress
  535 01a8 8035      		cpi r24,lo8(80)
  536 01aa 01F4      		brne .L21
-GAS LISTING /tmp/ccULZha7.s 			page 20
-
-
  537               	.LBB19:
- 511:main.c        ****   {
- 512:main.c        **** 	uint8_t temp = edidArray[edidArrayIndex];
- 538               		.stabn	68,0,512,.LM67-.LFBB5
+ 516:main.c        ****   {
+ 517:main.c        **** 	uint8_t temp = edidArray[edidArrayIndex];
+ 538               		.stabn	68,0,517,.LM67-.LFBB5
  539               	.LM67:
  540 01ac 8091 0000 		lds r24,edidArrayIndex
  541 01b0 E82F      		mov r30,r24
@@ -1152,15 +1157,15 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  543 01b4 E050      		subi r30,lo8(-(edidArray))
  544 01b6 F040      		sbci r31,hi8(-(edidArray))
  545 01b8 9081      		ld r25,Z
- 513:main.c        **** 
- 514:main.c        **** 	ledsControlled = FALSE;
- 546               		.stabn	68,0,514,.LM68-.LFBB5
+ 518:main.c        **** 
+ 519:main.c        **** 	ledsControlled = FALSE;
+ 546               		.stabn	68,0,519,.LM68-.LFBB5
  547               	.LM68:
  548 01ba 1092 0000 		sts ledsControlled,__zero_reg__
- 515:main.c        **** 	if(masterACKed)
- 516:main.c        **** 	{
- 517:main.c        **** 		incrementEDIDIndex();
- 549               		.stabn	68,0,517,.LM69-.LFBB5
+ 520:main.c        **** 	if(masterACKed)
+ 521:main.c        **** 	{
+ 522:main.c        **** 		incrementEDIDIndex();
+ 549               		.stabn	68,0,522,.LM69-.LFBB5
  550               	.LM69:
  551 01be 8F5F      		subi r24,lo8(-(1))
  552 01c0 8038      		cpi r24,lo8(-128)
@@ -1170,13 +1175,13 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  556               	.LBE19:
  557               	.LBE18:
  558               	.LBE17:
- 371:main.c        **** 				else
- 559               		.stabn	68,0,371,.LM70-.LFBB5
+ 376:main.c        **** 				else
+ 559               		.stabn	68,0,376,.LM70-.LFBB5
  560               	.LM70:
  561 01c8 9FB9      		out 0xf,r25
  562               	.L25:
- 379:main.c        **** 			}
- 563               		.stabn	68,0,379,.LM71-.LFBB5
+ 384:main.c        **** 			}
+ 563               		.stabn	68,0,384,.LM71-.LFBB5
  564               	.LM71:
  565 01ca B89A      		sbi 0x17,0
  566 01cc 00C0      		rjmp .L18
@@ -1184,48 +1189,48 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  568               	.LBB23:
  569               	.LBB22:
  570               	.LBB20:
- 571               		.stabn	68,0,517,.LM72-.LFBB5
+ 571               		.stabn	68,0,522,.LM72-.LFBB5
  572               	.LM72:
  573 01ce 1092 0000 		sts edidArrayIndex,__zero_reg__
  574 01d2 00C0      		rjmp .L23
  575               	.L21:
  576               	.LBE20:
- 518:main.c        **** //		edidArrayIndex++;
- 519:main.c        **** 	}
- 520:main.c        **** 
- 521:main.c        **** //	edidArrayIndex &= 0x07;
- 522:main.c        **** 
- 523:main.c        **** 	return temp;
- 524:main.c        ****   }
- 525:main.c        ****   else if (usi_i2c_requestedAddress == USI_I2C_MYLEDADDRESS)
-GAS LISTING /tmp/ccULZha7.s 			page 21
+ 523:main.c        **** //		edidArrayIndex++;
+ 524:main.c        **** 	}
+ 525:main.c        **** 
+GAS LISTING /tmp/ccCqnIUM.s 			page 21
 
 
- 526:main.c        ****   {
- 527:main.c        **** 	uint8_t temp = ledState[ledIndex];
- 528:main.c        **** 
- 529:main.c        **** 	if(masterACKed)
- 530:main.c        **** 	{
- 531:main.c        **** 		incrementLEDIndex();
- 532:main.c        **** 	}
+ 526:main.c        **** //	edidArrayIndex &= 0x07;
+ 527:main.c        **** 
+ 528:main.c        **** 	return temp;
+ 529:main.c        ****   }
+ 530:main.c        ****   else if (usi_i2c_requestedAddress == USI_I2C_MYLEDADDRESS)
+ 531:main.c        ****   {
+ 532:main.c        **** 	uint8_t temp = ledState[ledIndex];
  533:main.c        **** 
- 534:main.c        **** 	return temp;
- 535:main.c        ****   }
- 536:main.c        **** 
- 537:main.c        ****   //Should only get here if we're not address
- 538:main.c        ****   // in which case we shouldn't even get here.
- 539:main.c        ****   return 0xff;
- 577               		.stabn	68,0,539,.LM73-.LFBB5
+ 534:main.c        **** 	if(masterACKed)
+ 535:main.c        **** 	{
+ 536:main.c        **** 		incrementLEDIndex();
+ 537:main.c        **** 	}
+ 538:main.c        **** 
+ 539:main.c        **** 	return temp;
+ 540:main.c        ****   }
+ 541:main.c        **** 
+ 542:main.c        ****   //Should only get here if we're not address
+ 543:main.c        ****   // in which case we shouldn't even get here.
+ 544:main.c        ****   return 0xff;
+ 577               		.stabn	68,0,544,.LM73-.LFBB5
  578               	.LM73:
  579 01d4 9FEF      		ldi r25,lo8(-1)
- 525:main.c        ****   {
- 580               		.stabn	68,0,525,.LM74-.LFBB5
+ 530:main.c        ****   {
+ 580               		.stabn	68,0,530,.LM74-.LFBB5
  581               	.LM74:
  582 01d6 8036      		cpi r24,lo8(96)
  583 01d8 01F4      		brne .L23
  584               	.LBB21:
- 527:main.c        **** 
- 585               		.stabn	68,0,527,.LM75-.LFBB5
+ 532:main.c        **** 
+ 585               		.stabn	68,0,532,.LM75-.LFBB5
  586               	.LM75:
  587 01da 8091 0000 		lds r24,ledIndex
  588 01de E82F      		mov r30,r24
@@ -1233,8 +1238,8 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  590 01e2 E050      		subi r30,lo8(-(ledState))
  591 01e4 F040      		sbci r31,hi8(-(ledState))
  592 01e6 9081      		ld r25,Z
- 531:main.c        **** 	}
- 593               		.stabn	68,0,531,.LM76-.LFBB5
+ 536:main.c        **** 	}
+ 593               		.stabn	68,0,536,.LM76-.LFBB5
  594               	.LM76:
  595 01e8 8F5F      		subi r24,lo8(-(1))
  596 01ea 8330      		cpi r24,lo8(3)
@@ -1248,21 +1253,21 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  604               	.LBE21:
  605               	.LBE22:
  606               	.LBE23:
- 373:main.c        **** 
- 607               		.stabn	68,0,373,.LM77-.LFBB5
+ 378:main.c        **** 
+ 607               		.stabn	68,0,378,.LM77-.LFBB5
  608               	.LM77:
  609 01fa 8FEF      		ldi r24,lo8(-1)
  610 01fc 8FB9      		out 0xf,r24
+GAS LISTING /tmp/ccCqnIUM.s 			page 22
+
+
  611 01fe 00C0      		rjmp .L25
  612               	.L28:
  613               	.LBE16:
  614               	.LBB24:
  615               	.LBB15:
-GAS LISTING /tmp/ccULZha7.s 			page 22
-
-
- 480:main.c        **** 
- 616               		.stabn	68,0,480,.LM78-.LFBB5
+ 485:main.c        **** 
+ 616               		.stabn	68,0,485,.LM78-.LFBB5
  617               	.LM78:
  618 0200 9091 0000 		lds r25,edidArrayIndex
  619 0204 E92F      		mov r30,r25
@@ -1270,8 +1275,8 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  621 0208 E050      		subi r30,lo8(-(edidArray))
  622 020a F040      		sbci r31,hi8(-(edidArray))
  623 020c 8083      		st Z,r24
- 482:main.c        **** 		//edidArrayIndex++;
- 624               		.stabn	68,0,482,.LM79-.LFBB5
+ 487:main.c        **** 		//edidArrayIndex++;
+ 624               		.stabn	68,0,487,.LM79-.LFBB5
  625               	.LM79:
  626 020e 9F5F      		subi r25,lo8(-(1))
  627 0210 9038      		cpi r25,lo8(-128)
@@ -1282,48 +1287,48 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  632 021a 1092 0000 		sts edidArrayIndex,__zero_reg__
  633 021e 00C0      		rjmp .L29
  634               	.L27:
- 487:main.c        ****   {
- 635               		.stabn	68,0,487,.LM80-.LFBB5
+ 492:main.c        ****   {
+ 635               		.stabn	68,0,492,.LM80-.LFBB5
  636               	.LM80:
  637 0220 2036      		cpi r18,lo8(96)
  638 0222 01F0      		breq .+2
  639 0224 00C0      		rjmp .L29
- 490:main.c        **** 
- 640               		.stabn	68,0,490,.LM81-.LFBB5
+ 495:main.c        **** 
+ 640               		.stabn	68,0,495,.LM81-.LFBB5
  641               	.LM81:
  642 0226 21E0      		ldi r18,lo8(1)
  643 0228 2093 0000 		sts ledsControlled,r18
- 492:main.c        **** 	{
- 644               		.stabn	68,0,492,.LM82-.LFBB5
+ 497:main.c        **** 	{
+ 644               		.stabn	68,0,497,.LM82-.LFBB5
  645               	.LM82:
  646 022c 9130      		cpi r25,lo8(1)
  647 022e 01F4      		brne .L32
- 494:main.c        **** 	}
- 648               		.stabn	68,0,494,.LM83-.LFBB5
+ 499:main.c        **** 	}
+ 648               		.stabn	68,0,499,.LM83-.LFBB5
  649               	.LM83:
  650 0230 63E0      		ldi r22,lo8(3)
  651 0232 00D0      		rcall __udivmodqi4
  652               	.L51:
- 499:main.c        **** 	}	
- 653               		.stabn	68,0,499,.LM84-.LFBB5
+ 504:main.c        **** 	}	
+ 653               		.stabn	68,0,504,.LM84-.LFBB5
  654               	.LM84:
  655 0234 9093 0000 		sts ledIndex,r25
  656 0238 00C0      		rjmp .L29
  657               	.L32:
- 498:main.c        **** 		incrementLEDIndex();
- 658               		.stabn	68,0,498,.LM85-.LFBB5
+ 503:main.c        **** 		incrementLEDIndex();
+ 658               		.stabn	68,0,503,.LM85-.LFBB5
  659               	.LM85:
+GAS LISTING /tmp/ccCqnIUM.s 			page 23
+
+
  660 023a 9091 0000 		lds r25,ledIndex
  661 023e E92F      		mov r30,r25
  662 0240 F0E0      		ldi r31,0
  663 0242 E050      		subi r30,lo8(-(ledState))
  664 0244 F040      		sbci r31,hi8(-(ledState))
-GAS LISTING /tmp/ccULZha7.s 			page 23
-
-
  665 0246 8083      		st Z,r24
- 499:main.c        **** 	}	
- 666               		.stabn	68,0,499,.LM86-.LFBB5
+ 504:main.c        **** 	}	
+ 666               		.stabn	68,0,504,.LM86-.LFBB5
  667               	.LM86:
  668 0248 9F5F      		subi r25,lo8(-(1))
  669 024a 9330      		cpi r25,lo8(3)
@@ -1333,54 +1338,54 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  673               	.L26:
  674               	.LBE15:
  675               	.LBE24:
- 405:main.c        **** 				USIDR = 0xff;
- 676               		.stabn	68,0,405,.LM87-.LFBB5
+ 410:main.c        **** 				USIDR = 0xff;
+ 676               		.stabn	68,0,410,.LM87-.LFBB5
  677               	.LM87:
  678 0254 B898      		cbi 0x17,0
- 406:main.c        **** //				heartClear();
- 679               		.stabn	68,0,406,.LM88-.LFBB5
+ 411:main.c        **** //				heartClear();
+ 679               		.stabn	68,0,411,.LM88-.LFBB5
  680               	.LM88:
  681 0256 8FEF      		ldi r24,lo8(-1)
  682 0258 8FB9      		out 0xf,r24
  683 025a 00C0      		rjmp .L34
  684               	.LBE26:
  685               		.size	__vector_14, .-__vector_14
- 686               		.stabs	"udrTemp:r(4,2)",64,0,302,24
+ 686               		.stabs	"udrTemp:r(4,2)",64,0,307,24
  687               		.stabn	192,0,0,.LBB12-.LFBB5
- 688               		.stabs	"temp:r(4,2)",64,0,512,25
+ 688               		.stabs	"temp:r(4,2)",64,0,517,25
  689               		.stabn	192,0,0,.LBB19-.LFBB5
  690               		.stabn	224,0,0,.LBE19-.LFBB5
- 691               		.stabs	"temp:r(4,2)",64,0,512,25
+ 691               		.stabs	"temp:r(4,2)",64,0,517,25
  692               		.stabn	192,0,0,.LBB20-.LFBB5
  693               		.stabn	224,0,0,.LBE20-.LFBB5
- 694               		.stabs	"temp:r(4,2)",64,0,527,25
+ 694               		.stabs	"temp:r(4,2)",64,0,532,25
  695               		.stabn	192,0,0,.LBB21-.LFBB5
  696               		.stabn	224,0,0,.LBE21-.LFBB5
  697               		.stabn	224,0,0,.LBE12-.LFBB5
- 698               		.stabs	"udrTemp:r(4,2)",64,0,302,24
+ 698               		.stabs	"udrTemp:r(4,2)",64,0,307,24
  699               		.stabn	192,0,0,.LBB25-.LFBB5
  700               		.stabn	224,0,0,.LBE25-.LFBB5
- 701               		.stabs	"udrTemp:r(4,2)",64,0,302,24
+ 701               		.stabs	"udrTemp:r(4,2)",64,0,307,24
  702               		.stabn	192,0,0,.LBB26-.LFBB5
  703               		.stabn	224,0,0,.LBE26-.LFBB5
  704               	.Lscope5:
  705               		.stabs	"",36,0,0,.Lscope5-.LFBB5
  706               		.stabd	78,0,0
- 707               		.stabs	"edid_checkSummer:F(0,50)",36,0,543,edid_checkSummer
+ 707               		.stabs	"edid_checkSummer:F(0,50)",36,0,548,edid_checkSummer
  708               	.global	edid_checkSummer
  709               		.type	edid_checkSummer, @function
  710               	edid_checkSummer:
  711               		.stabd	46,0,0
- 540:main.c        **** }
- 541:main.c        **** 
- 542:main.c        **** 
- 543:main.c        **** void edid_checkSummer(void)
- 544:main.c        **** {
- 712               		.stabn	68,0,544,.LM89-.LFBB6
+ 545:main.c        **** }
+ 546:main.c        **** 
+GAS LISTING /tmp/ccCqnIUM.s 			page 24
+
+
+ 547:main.c        **** 
+ 548:main.c        **** void edid_checkSummer(void)
+ 549:main.c        **** {
+ 712               		.stabn	68,0,549,.LM89-.LFBB6
  713               	.LM89:
-GAS LISTING /tmp/ccULZha7.s 			page 24
-
-
  714               	.LFBB6:
  715               	/* prologue: function */
  716               	/* frame size = 0 */
@@ -1388,302 +1393,302 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  718               	.L__stack_usage = 0
  719 025c E0E0      		ldi r30,lo8(edidArray)
  720 025e F0E0      		ldi r31,hi8(edidArray)
- 545:main.c        **** 	uint8_t i;
- 546:main.c        **** 	uint8_t sum = 0;
- 721               		.stabn	68,0,546,.LM90-.LFBB6
+ 550:main.c        **** 	uint8_t i;
+ 551:main.c        **** 	uint8_t sum = 0;
+ 721               		.stabn	68,0,551,.LM90-.LFBB6
  722               	.LM90:
  723 0260 80E0      		ldi r24,0
  724               	.L55:
- 547:main.c        **** 
- 548:main.c        **** 	// Don't include the garbage checksum value...
- 549:main.c        **** 	// it will be overwritten here...
- 550:main.c        **** 	for(i=0; i<0x7f; i++)
- 551:main.c        **** 	{
- 552:main.c        **** 		sum += edidArray[i];
- 725               		.stabn	68,0,552,.LM91-.LFBB6
+ 552:main.c        **** 
+ 553:main.c        **** 	// Don't include the garbage checksum value...
+ 554:main.c        **** 	// it will be overwritten here...
+ 555:main.c        **** 	for(i=0; i<0x7f; i++)
+ 556:main.c        **** 	{
+ 557:main.c        **** 		sum += edidArray[i];
+ 725               		.stabn	68,0,557,.LM91-.LFBB6
  726               	.LM91:
  727 0262 9191      		ld r25,Z+
  728 0264 890F      		add r24,r25
- 550:main.c        **** 	{
- 729               		.stabn	68,0,550,.LM92-.LFBB6
+ 555:main.c        **** 	{
+ 729               		.stabn	68,0,555,.LM92-.LFBB6
  730               	.LM92:
  731 0266 90E0      		ldi r25,hi8(edidArray+127)
  732 0268 E030      		cpi r30,lo8(edidArray+127)
  733 026a F907      		cpc r31,r25
  734 026c 01F4      		brne .L55
- 553:main.c        **** 	}
- 554:main.c        **** 
- 555:main.c        **** 	//Load the calculated checksum
- 556:main.c        **** 	edidArray[0x7f] = (uint8_t)((uint8_t)0 - (uint8_t)(sum));
- 735               		.stabn	68,0,556,.LM93-.LFBB6
+ 558:main.c        **** 	}
+ 559:main.c        **** 
+ 560:main.c        **** 	//Load the calculated checksum
+ 561:main.c        **** 	edidArray[0x7f] = (uint8_t)((uint8_t)0 - (uint8_t)(sum));
+ 735               		.stabn	68,0,561,.LM93-.LFBB6
  736               	.LM93:
  737 026e 8195      		neg r24
  738 0270 8093 0000 		sts edidArray+127,r24
  739               	/* epilogue start */
- 557:main.c        **** }
- 740               		.stabn	68,0,557,.LM94-.LFBB6
+ 562:main.c        **** }
+ 740               		.stabn	68,0,562,.LM94-.LFBB6
  741               	.LM94:
  742 0274 0895      		ret
  743               		.size	edid_checkSummer, .-edid_checkSummer
- 744               		.stabs	"sum:r(4,2)",64,0,546,24
+ 744               		.stabs	"sum:r(4,2)",64,0,551,24
  745               		.stabn	192,0,0,.LFBB6-.LFBB6
  746               		.stabn	224,0,0,.Lscope6-.LFBB6
  747               	.Lscope6:
  748               		.stabs	"",36,0,0,.Lscope6-.LFBB6
  749               		.stabd	78,0,0
  750               		.section	.text.startup,"ax",@progbits
- 751               		.stabs	"main:F(0,1)",36,0,689,main
+ 751               		.stabs	"main:F(0,1)",36,0,694,main
+GAS LISTING /tmp/ccCqnIUM.s 			page 25
+
+
  752               	.global	main
  753               		.type	main, @function
  754               	main:
  755               		.stabd	46,0,0
- 558:main.c        **** 
-GAS LISTING /tmp/ccULZha7.s 			page 25
-
-
- 559:main.c        **** 
- 560:main.c        **** 
- 561:main.c        **** 
- 562:main.c        **** #if FADER_ENABLED
- 563:main.c        **** //uint8_t ledsControlled = FALSE;
+ 563:main.c        **** 
  564:main.c        **** 
- 565:main.c        **** #define  LED_R PB4				// D4
- 566:main.c        **** #define  LED_G PB3				//	D5
- 567:main.c        **** #define	LED_B HEART_PINNUM   //	D2 after trace-change PB1 //NYI
- 568:main.c        **** #define LED_PORT PORTB
+ 565:main.c        **** 
+ 566:main.c        **** 
+ 567:main.c        **** #if FADER_ENABLED
+ 568:main.c        **** //uint8_t ledsControlled = FALSE;
  569:main.c        **** 
- 570:main.c        **** 
- 571:main.c        **** hfm_t ledHFM[3];
- 572:main.c        **** 
- 573:main.c        **** 
- 574:main.c        **** void updateLEDs(void);
+ 570:main.c        **** #define  LED_R PB4				// D4
+ 571:main.c        **** #define  LED_G PB3				//	D5
+ 572:main.c        **** #define	LED_B HEART_PINNUM   //	D2 after trace-change PB1 //NYI
+ 573:main.c        **** #define LED_PORT PORTB
+ 574:main.c        **** 
  575:main.c        **** 
- 576:main.c        **** void updateLEDFader(void)
- 577:main.c        **** {
- 578:main.c        **** 	static uint8_t delay=0;
- 579:main.c        **** 	static theta_t theta=2; //test = 2;
+ 576:main.c        **** hfm_t ledHFM[3];
+ 577:main.c        **** 
+ 578:main.c        **** 
+ 579:main.c        **** void updateLEDs(void);
  580:main.c        **** 
- 581:main.c        **** 	delay++;
- 582:main.c        **** 	if(delay == 0xff)
- 583:main.c        **** 		theta++;
- 584:main.c        **** 
- 585:main.c        **** 	if(theta == SINE_PI*3)
- 586:main.c        **** 		theta = 0;
- 587:main.c        **** 
- 588:main.c        **** 
+ 581:main.c        **** void updateLEDFader(void)
+ 582:main.c        **** {
+ 583:main.c        **** 	static uint8_t delay=0;
+ 584:main.c        **** 	static theta_t theta=2; //test = 2;
+ 585:main.c        **** 
+ 586:main.c        **** 	delay++;
+ 587:main.c        **** 	if(delay == 0xff)
+ 588:main.c        **** 		theta++;
  589:main.c        **** 
- 590:main.c        **** 	if(theta < SINE_2PI)
- 591:main.c        **** 		ledState[0] = \
- 592:main.c        **** 			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2) + (int16_t)127); 
+ 590:main.c        **** 	if(theta == SINE_PI*3)
+ 591:main.c        **** 		theta = 0;
+ 592:main.c        **** 
  593:main.c        **** 
- 594:main.c        **** 	if((theta > SINE_PI) && (theta < SINE_PI*3))
- 595:main.c        **** 	  	ledState[1] = \
- 596:main.c        **** 		 	(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 - SINE_PI) 
- 597:main.c        **** 				+ (int16_t)127);	  
+ 594:main.c        **** 
+ 595:main.c        **** 	if(theta < SINE_2PI)
+ 596:main.c        **** 		ledState[0] = \
+ 597:main.c        **** 			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2) + (int16_t)127); 
  598:main.c        **** 
- 599:main.c        **** 	if(theta > SINE_2PI)
- 600:main.c        **** 		ledState[2] = \
- 601:main.c        **** 			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 - SINE_2PI)
- 602:main.c        **** 				+ (int16_t)127);
- 603:main.c        **** 	else if(theta < SINE_PI)
- 604:main.c        **** 		ledState[2] = \
- 605:main.c        **** 			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 + SINE_PI) 
- 606:main.c        **** 				+ (int16_t)127);
- 607:main.c        **** //	ledState[1] = 0x07;
- 608:main.c        **** 	
- 609:main.c        **** //	ledState[2] = (uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2) + (int16_t)127);
- 610:main.c        **** 
- 611:main.c        **** 		//(uint32_t)(sineRaw(theta - SINE_PI_2))*127/SINE_MAX + 127;
- 612:main.c        **** 
- 613:main.c        **** 	/*
- 614:main.c        **** 	if(theta == 0xff)
- 615:main.c        **** 	{
-GAS LISTING /tmp/ccULZha7.s 			page 26
+ 599:main.c        **** 	if((theta > SINE_PI) && (theta < SINE_PI*3))
+ 600:main.c        **** 	  	ledState[1] = \
+ 601:main.c        **** 		 	(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 - SINE_PI) 
+ 602:main.c        **** 				+ (int16_t)127);	  
+ 603:main.c        **** 
+ 604:main.c        **** 	if(theta > SINE_2PI)
+ 605:main.c        **** 		ledState[2] = \
+ 606:main.c        **** 			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 - SINE_2PI)
+ 607:main.c        **** 				+ (int16_t)127);
+ 608:main.c        **** 	else if(theta < SINE_PI)
+ 609:main.c        **** 		ledState[2] = \
+ 610:main.c        **** 			(uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2 + SINE_PI) 
+ 611:main.c        **** 				+ (int16_t)127);
+ 612:main.c        **** //	ledState[1] = 0x07;
+ 613:main.c        **** 	
+ 614:main.c        **** //	ledState[2] = (uint8_t)((int16_t)sineRaw8(theta - SINE_PI_2) + (int16_t)127);
+ 615:main.c        **** 
+GAS LISTING /tmp/ccCqnIUM.s 			page 26
 
 
- 616:main.c        **** 		theta=0;
- 617:main.c        **** 		ledState[2]++; // = test; //2; //0x07; //theta;
- 618:main.c        **** 	}
- 619:main.c        **** */
- 620:main.c        **** //	ledState[0] = 0x07; //theta;
- 621:main.c        **** 
- 622:main.c        **** //	if(theta >= SINE_2PI) //*3)
- 623:main.c        **** //		theta -= SINE_2PI; //*3;
- 624:main.c        **** 
- 625:main.c        **** //	if(theta == SINE_2PI*8)
- 626:main.c        **** //	{
- 627:main.c        **** //		theta = 0;
- 628:main.c        **** //		togglebit(7, ledState[1]);
- 629:main.c        **** //	}
- 630:main.c        **** 
- 631:main.c        **** //	if(theta < SINE_2PI)
- 632:main.c        **** //		ledState[0] = (int32_t)theta*(int32_t)255/SINE_2PI;
- 633:main.c        **** //			(((int32_t)sineRaw(theta) * (int32_t)127) / 
- 634:main.c        **** //						 (int32_t)SINE_MAX) + 127;
- 635:main.c        **** 		//((int8_t)(sineRaw(theta - SINE_PI_2)>>8) + (int8_t)127);
- 636:main.c        **** 
- 637:main.c        **** /*	if((theta > SINE_PI) && (theta < SINE_PI*3))
- 638:main.c        **** 		ledState[1] = ((sineRaw(theta - SINE_PI_2 - SINE_PI)>>8) + 127);
- 639:main.c        **** 
- 640:main.c        **** 	if(theta > SINE_2PI)
- 641:main.c        **** 		ledState[2] = ((sineRaw(theta - SINE_PI_2 - SINE_2PI)>>8) + 127);
- 642:main.c        **** 	else if(theta < SINE_PI)
- 643:main.c        **** 		ledState[2] = ((sineRaw(theta - SINE_PI_2 + SINE_PI)>>8) + 127);
- 644:main.c        **** */
- 645:main.c        **** 	updateLEDs();
- 646:main.c        **** }
- 647:main.c        **** 
- 648:main.c        **** void updateLEDs(void)
- 649:main.c        **** {
- 650:main.c        **** 	static uint8_t lastState[3] = {0,0,0};
- 651:main.c        **** 
- 652:main.c        **** 	uint8_t i;
- 653:main.c        **** 	for(i=0; i<3; i++)
- 654:main.c        **** 	{
- 655:main.c        **** 	//	if(ledState[i] != lastState[i])
- 656:main.c        **** 		{
- 657:main.c        **** 		//	ledsControlled = TRUE;
- 658:main.c        **** 			lastState[i] = ledState[i];
- 659:main.c        **** 			hfm_setPower(&(ledHFM[i]), ledState[i]);
- 660:main.c        **** 		}
- 661:main.c        **** 	}
- 662:main.c        **** 	//hfm_setPower(&led_r, ledState[0]);
- 663:main.c        **** 	//hfm_setPower(&led_g, ledState[1]);
- 664:main.c        **** 
- 665:main.c        **** 
- 666:main.c        **** 	if(hfm_nextOutput(&(ledHFM[0])))
- 667:main.c        **** 		clrpinPORT(LED_R, LED_PORT);
- 668:main.c        **** 	else
- 669:main.c        **** 		setpinPORT(LED_R, LED_PORT);
+ 616:main.c        **** 		//(uint32_t)(sineRaw(theta - SINE_PI_2))*127/SINE_MAX + 127;
+ 617:main.c        **** 
+ 618:main.c        **** 	/*
+ 619:main.c        **** 	if(theta == 0xff)
+ 620:main.c        **** 	{
+ 621:main.c        **** 		theta=0;
+ 622:main.c        **** 		ledState[2]++; // = test; //2; //0x07; //theta;
+ 623:main.c        **** 	}
+ 624:main.c        **** */
+ 625:main.c        **** //	ledState[0] = 0x07; //theta;
+ 626:main.c        **** 
+ 627:main.c        **** //	if(theta >= SINE_2PI) //*3)
+ 628:main.c        **** //		theta -= SINE_2PI; //*3;
+ 629:main.c        **** 
+ 630:main.c        **** //	if(theta == SINE_2PI*8)
+ 631:main.c        **** //	{
+ 632:main.c        **** //		theta = 0;
+ 633:main.c        **** //		togglebit(7, ledState[1]);
+ 634:main.c        **** //	}
+ 635:main.c        **** 
+ 636:main.c        **** //	if(theta < SINE_2PI)
+ 637:main.c        **** //		ledState[0] = (int32_t)theta*(int32_t)255/SINE_2PI;
+ 638:main.c        **** //			(((int32_t)sineRaw(theta) * (int32_t)127) / 
+ 639:main.c        **** //						 (int32_t)SINE_MAX) + 127;
+ 640:main.c        **** 		//((int8_t)(sineRaw(theta - SINE_PI_2)>>8) + (int8_t)127);
+ 641:main.c        **** 
+ 642:main.c        **** /*	if((theta > SINE_PI) && (theta < SINE_PI*3))
+ 643:main.c        **** 		ledState[1] = ((sineRaw(theta - SINE_PI_2 - SINE_PI)>>8) + 127);
+ 644:main.c        **** 
+ 645:main.c        **** 	if(theta > SINE_2PI)
+ 646:main.c        **** 		ledState[2] = ((sineRaw(theta - SINE_PI_2 - SINE_2PI)>>8) + 127);
+ 647:main.c        **** 	else if(theta < SINE_PI)
+ 648:main.c        **** 		ledState[2] = ((sineRaw(theta - SINE_PI_2 + SINE_PI)>>8) + 127);
+ 649:main.c        **** */
+ 650:main.c        **** 	updateLEDs();
+ 651:main.c        **** }
+ 652:main.c        **** 
+ 653:main.c        **** void updateLEDs(void)
+ 654:main.c        **** {
+ 655:main.c        **** 	static uint8_t lastState[3] = {0,0,0};
+ 656:main.c        **** 
+ 657:main.c        **** 	uint8_t i;
+ 658:main.c        **** 	for(i=0; i<3; i++)
+ 659:main.c        **** 	{
+ 660:main.c        **** 	//	if(ledState[i] != lastState[i])
+ 661:main.c        **** 		{
+ 662:main.c        **** 		//	ledsControlled = TRUE;
+ 663:main.c        **** 			lastState[i] = ledState[i];
+ 664:main.c        **** 			hfm_setPower(&(ledHFM[i]), ledState[i]);
+ 665:main.c        **** 		}
+ 666:main.c        **** 	}
+ 667:main.c        **** 	//hfm_setPower(&led_r, ledState[0]);
+ 668:main.c        **** 	//hfm_setPower(&led_g, ledState[1]);
+ 669:main.c        **** 
  670:main.c        **** 
- 671:main.c        **** 	if(hfm_nextOutput(&(ledHFM[1])))
- 672:main.c        **** 		clrpinPORT(LED_G, LED_PORT);
-GAS LISTING /tmp/ccULZha7.s 			page 27
+ 671:main.c        **** 	if(hfm_nextOutput(&(ledHFM[0])))
+ 672:main.c        **** 		clrpinPORT(LED_R, LED_PORT);
+GAS LISTING /tmp/ccCqnIUM.s 			page 27
 
 
  673:main.c        **** 	else
- 674:main.c        **** 		setpinPORT(LED_G, LED_PORT);
+ 674:main.c        **** 		setpinPORT(LED_R, LED_PORT);
  675:main.c        **** 
- 676:main.c        **** 	if(hfm_nextOutput(&(ledHFM[2])))
- 677:main.c        **** 		clrpinPORT(LED_B, LED_PORT);
+ 676:main.c        **** 	if(hfm_nextOutput(&(ledHFM[1])))
+ 677:main.c        **** 		clrpinPORT(LED_G, LED_PORT);
  678:main.c        **** 	else
- 679:main.c        **** 		setpinPORT(LED_B, LED_PORT);
+ 679:main.c        **** 		setpinPORT(LED_G, LED_PORT);
  680:main.c        **** 
- 681:main.c        **** 	//NYI:
- 682:main.c        **** 	//if(ledState[2])
- 683:main.c        **** 
- 684:main.c        **** //	togglepinPORT(LED_R, LED_PORT);
- 685:main.c        **** //	togglepinPORT(LED_G, LED_PORT);
- 686:main.c        **** }
- 687:main.c        **** #endif
+ 681:main.c        **** 	if(hfm_nextOutput(&(ledHFM[2])))
+ 682:main.c        **** 		clrpinPORT(LED_B, LED_PORT);
+ 683:main.c        **** 	else
+ 684:main.c        **** 		setpinPORT(LED_B, LED_PORT);
+ 685:main.c        **** 
+ 686:main.c        **** 	//NYI:
+ 687:main.c        **** 	//if(ledState[2])
  688:main.c        **** 
- 689:main.c        **** int main(void)
- 690:main.c        **** {
- 756               		.stabn	68,0,690,.LM95-.LFBB7
+ 689:main.c        **** //	togglepinPORT(LED_R, LED_PORT);
+ 690:main.c        **** //	togglepinPORT(LED_G, LED_PORT);
+ 691:main.c        **** }
+ 692:main.c        **** #endif
+ 693:main.c        **** 
+ 694:main.c        **** int main(void)
+ 695:main.c        **** {
+ 756               		.stabn	68,0,695,.LM95-.LFBB7
  757               	.LM95:
  758               	.LFBB7:
  759               	/* prologue: function */
  760               	/* frame size = 0 */
  761               	/* stack size = 0 */
  762               	.L__stack_usage = 0
- 691:main.c        **** #if FADER_ENABLED
- 692:main.c        **** 	uint8_t i;
- 693:main.c        **** 	for(i=0; i<3; i++)
- 694:main.c        **** 		hfm_setup(&(ledHFM[i]), 0, 255);
- 695:main.c        **** 	//hfm_setup(&led_g, 0, 255);
- 696:main.c        **** #endif
- 697:main.c        **** 
- 698:main.c        **** //	uint16_t i;
- 699:main.c        **** //	for(i=0; i<256; i++)
- 700:main.c        **** //		edidArray[i] = i;
- 701:main.c        **** 
- 702:main.c        **** 	//Found experimentally: assuming the free-running ADC is always 13
- 703:main.c        **** 	// cycles per interrupt...
- 704:main.c        **** 	// The default value was read to be 0x9f
- 705:main.c        **** 	// This is of course device-specific
- 706:main.c        **** //	OSCCAL = 0x9a;
- 707:main.c        **** 
- 708:main.c        **** 	//*** Initializations ***
- 709:main.c        **** 
- 710:main.c        **** 	//!!! WDT could cause problems... this probably should be inited earlier and called everywhere...
- 711:main.c        **** 	//INIT_HEARTBEAT(HEARTBEATPIN, HEARTBEAT, HEARTCONNECTION);
+ 696:main.c        **** #if FADER_ENABLED
+ 697:main.c        **** 	uint8_t i;
+ 698:main.c        **** 	for(i=0; i<3; i++)
+ 699:main.c        **** 		hfm_setup(&(ledHFM[i]), 0, 255);
+ 700:main.c        **** 	//hfm_setup(&led_g, 0, 255);
+ 701:main.c        **** #endif
+ 702:main.c        **** 
+ 703:main.c        **** //	uint16_t i;
+ 704:main.c        **** //	for(i=0; i<256; i++)
+ 705:main.c        **** //		edidArray[i] = i;
+ 706:main.c        **** 
+ 707:main.c        **** 	//Found experimentally: assuming the free-running ADC is always 13
+ 708:main.c        **** 	// cycles per interrupt...
+ 709:main.c        **** 	// The default value was read to be 0x9f
+ 710:main.c        **** 	// This is of course device-specific
+ 711:main.c        **** //	OSCCAL = 0x9a;
  712:main.c        **** 
- 713:main.c        **** 
- 714:main.c        **** 	init_heartBeat();
- 763               		.stabn	68,0,714,.LM96-.LFBB7
+ 713:main.c        **** 	//*** Initializations ***
+ 714:main.c        **** 
+ 715:main.c        **** 	//!!! WDT could cause problems... this probably should be inited earlier and called everywhere...
+ 716:main.c        **** 	//INIT_HEARTBEAT(HEARTBEATPIN, HEARTBEAT, HEARTCONNECTION);
+ 717:main.c        **** 
+ 718:main.c        **** 
+ 719:main.c        **** 	init_heartBeat();
+ 763               		.stabn	68,0,719,.LM96-.LFBB7
  764               	.LM96:
  765 0000 00D0      		rcall init_heartBeat
- 715:main.c        **** 
- 716:main.c        **** 	setHeartRate(0);	
- 766               		.stabn	68,0,716,.LM97-.LFBB7
+GAS LISTING /tmp/ccCqnIUM.s 			page 28
+
+
+ 720:main.c        **** 
+ 721:main.c        **** 	setHeartRate(0);	
+ 766               		.stabn	68,0,721,.LM97-.LFBB7
  767               	.LM97:
  768 0002 80E0      		ldi r24,0
-GAS LISTING /tmp/ccULZha7.s 			page 28
-
-
  769 0004 00D0      		rcall setHeartRate
  770               	.LBB27:
  771               	.LBB28:
- 188:main.c        **** }
- 772               		.stabn	68,0,188,.LM98-.LFBB7
+ 193:main.c        **** }
+ 772               		.stabn	68,0,193,.LM98-.LFBB7
  773               	.LM98:
  774 0006 00D0      		rcall usi_i2c_awaitStart
  775               	.L58:
  776               	.LBE28:
  777               	.LBE27:
- 717:main.c        **** 
- 718:main.c        **** 	//Blink until the EDID is read...
- 719:main.c        **** 	//This is hokey...
- 720:main.c        **** 	//set_heartBlink(1);
- 721:main.c        **** 
- 722:main.c        **** 	// edid_checkSummer();
- 723:main.c        **** 
- 724:main.c        **** 	usi_i2c_slaveInit();
- 725:main.c        **** 
- 726:main.c        **** #if FADER_ENABLED
- 727:main.c        **** 	setoutPORT(LED_R, LED_PORT);
- 728:main.c        **** 	setoutPORT(LED_G, LED_PORT);
- 729:main.c        **** 	setpinPORT(LED_R, LED_PORT);
- 730:main.c        **** 	setpinPORT(LED_G, LED_PORT);
- 731:main.c        **** #endif
- 732:main.c        **** 
- 733:main.c        **** //	setoutPORT(LED_B, LED_PORT);
- 734:main.c        **** 
- 735:main.c        **** 	//This was only necessary for debugging timer initialization bugs...
- 736:main.c        **** 	// which have been resolved
- 737:main.c        **** //	set_heartBlink(retVal);
- 738:main.c        **** 
- 739:main.c        **** 	while(1)
- 740:main.c        **** 	{
- 741:main.c        **** #if FADER_ENABLED
- 742:main.c        **** 		if(!ledsControlled)
- 743:main.c        **** 		{
- 744:main.c        **** 			extern uint8_t heartBlink; 
- 745:main.c        **** 
- 746:main.c        **** 			if(heartBlink)
- 747:main.c        **** 				heartUpdate();
- 748:main.c        **** 			else
- 749:main.c        **** 				updateLEDFader();
- 750:main.c        **** 		}
- 751:main.c        **** 		//This was not previously elsed... how did the heart work at all?!
- 752:main.c        **** 		// at one point it didn't (and neither did updateLEDs()
- 753:main.c        **** 		// but somehow it started up again
- 754:main.c        **** 		// a/o v49: May have been a result of the hfm bug...
- 755:main.c        **** 		// 			(how did it start up again? Something to do with an
- 756:main.c        **** 		//           uninitialized value in HFM?)
- 757:main.c        **** 		else
- 758:main.c        **** 		{
- 759:main.c        **** 			// The heartbeat may have been in input (off) mode when switched
- 760:main.c        **** 			setoutPORT(LED_B, LED_PORT);
- 761:main.c        **** 
- 762:main.c        **** 			updateLEDs();
- 763:main.c        **** 		}
-GAS LISTING /tmp/ccULZha7.s 			page 29
+ 722:main.c        **** 
+ 723:main.c        **** 	//Blink until the EDID is read...
+ 724:main.c        **** 	//This is hokey...
+ 725:main.c        **** 	//set_heartBlink(1);
+ 726:main.c        **** 
+ 727:main.c        **** 	// edid_checkSummer();
+ 728:main.c        **** 
+ 729:main.c        **** 	usi_i2c_slaveInit();
+ 730:main.c        **** 
+ 731:main.c        **** #if FADER_ENABLED
+ 732:main.c        **** 	setoutPORT(LED_R, LED_PORT);
+ 733:main.c        **** 	setoutPORT(LED_G, LED_PORT);
+ 734:main.c        **** 	setpinPORT(LED_R, LED_PORT);
+ 735:main.c        **** 	setpinPORT(LED_G, LED_PORT);
+ 736:main.c        **** #endif
+ 737:main.c        **** 
+ 738:main.c        **** //	setoutPORT(LED_B, LED_PORT);
+ 739:main.c        **** 
+ 740:main.c        **** 	//This was only necessary for debugging timer initialization bugs...
+ 741:main.c        **** 	// which have been resolved
+ 742:main.c        **** //	set_heartBlink(retVal);
+ 743:main.c        **** 
+ 744:main.c        **** 	while(1)
+ 745:main.c        **** 	{
+ 746:main.c        **** #if FADER_ENABLED
+ 747:main.c        **** 		if(!ledsControlled)
+ 748:main.c        **** 		{
+ 749:main.c        **** 			extern uint8_t heartBlink; 
+ 750:main.c        **** 
+ 751:main.c        **** 			if(heartBlink)
+ 752:main.c        **** 				heartUpdate();
+ 753:main.c        **** 			else
+ 754:main.c        **** 				updateLEDFader();
+ 755:main.c        **** 		}
+ 756:main.c        **** 		//This was not previously elsed... how did the heart work at all?!
+ 757:main.c        **** 		// at one point it didn't (and neither did updateLEDs()
+ 758:main.c        **** 		// but somehow it started up again
+ 759:main.c        **** 		// a/o v49: May have been a result of the hfm bug...
+ 760:main.c        **** 		// 			(how did it start up again? Something to do with an
+ 761:main.c        **** 		//           uninitialized value in HFM?)
+ 762:main.c        **** 		else
+ 763:main.c        **** 		{
+GAS LISTING /tmp/ccCqnIUM.s 			page 29
 
 
- 764:main.c        **** #else
- 765:main.c        **** 		heartUpdate();
- 778               		.stabn	68,0,765,.LM99-.LFBB7
+ 764:main.c        **** 			// The heartbeat may have been in input (off) mode when switched
+ 765:main.c        **** 			setoutPORT(LED_B, LED_PORT);
+ 766:main.c        **** 
+ 767:main.c        **** 			updateLEDs();
+ 768:main.c        **** 		}
+ 769:main.c        **** #else
+ 770:main.c        **** 		heartUpdate();
+ 778               		.stabn	68,0,770,.LM99-.LFBB7
  779               	.LM99:
  780 0008 00D0      		rcall heartUpdate
  781 000a 00C0      		rjmp .L58
@@ -1697,66 +1702,66 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  789               		.size	ledsControlled, 1
  790               	ledsControlled:
  791 0000 00        		.zero	1
- 792               		.stabs	"ledsControlled:G(4,2)",32,0,432,0
+ 792               		.stabs	"ledsControlled:G(4,2)",32,0,437,0
  793               	.global	byteNum
  794               		.type	byteNum, @object
  795               		.size	byteNum, 1
  796               	byteNum:
  797 0001 00        		.zero	1
- 798               		.stabs	"byteNum:G(4,2)",32,0,250,0
+ 798               		.stabs	"byteNum:G(4,2)",32,0,255,0
  799               	.global	usi_i2c_requestedAddress
  800               		.type	usi_i2c_requestedAddress, @object
  801               		.size	usi_i2c_requestedAddress, 1
  802               	usi_i2c_requestedAddress:
  803 0002 00        		.zero	1
- 804               		.stabs	"usi_i2c_requestedAddress:G(4,2)",32,0,248,0
+ 804               		.stabs	"usi_i2c_requestedAddress:G(4,2)",32,0,253,0
  805               	.global	heartBlinkInternal
  806               		.type	heartBlinkInternal, @object
  807               		.size	heartBlinkInternal, 1
  808               	heartBlinkInternal:
  809 0003 00        		.zero	1
- 810               		.stabs	"heartBlinkInternal:G(4,2)",32,0,191,0
+ 810               		.stabs	"heartBlinkInternal:G(4,2)",32,0,196,0
  811               	.global	usi_i2c_receivedByte
  812               		.type	usi_i2c_receivedByte, @object
  813               		.size	usi_i2c_receivedByte, 1
  814               	usi_i2c_receivedByte:
  815 0004 00        		.zero	1
- 816               		.stabs	"usi_i2c_receivedByte:G(4,2)",32,0,85,0
+ 816               		.stabs	"usi_i2c_receivedByte:G(4,2)",32,0,90,0
  817               	.global	usi_i2c_requestedAddres
  818               		.type	usi_i2c_requestedAddres, @object
  819               		.size	usi_i2c_requestedAddres, 1
  820               	usi_i2c_requestedAddres:
  821 0005 00        		.zero	1
- 822               		.stabs	"usi_i2c_requestedAddres:G(4,2)",32,0,84,0
+ 822               		.stabs	"usi_i2c_requestedAddres:G(4,2)",32,0,89,0
  823               	.global	usi_i2c_readFromSlave
  824               		.type	usi_i2c_readFromSlave, @object
  825               		.size	usi_i2c_readFromSlave, 1
  826               	usi_i2c_readFromSlave:
  827 0006 00        		.zero	1
- 828               		.stabs	"usi_i2c_readFromSlave:G(4,2)",32,0,83,0
+GAS LISTING /tmp/ccCqnIUM.s 			page 30
+
+
+ 828               		.stabs	"usi_i2c_readFromSlave:G(4,2)",32,0,88,0
  829               	.global	usi_i2c_state
  830               		.type	usi_i2c_state, @object
  831               		.size	usi_i2c_state, 1
  832               	usi_i2c_state:
-GAS LISTING /tmp/ccULZha7.s 			page 30
-
-
  833 0007 00        		.zero	1
- 834               		.stabs	"usi_i2c_state:G(4,2)",32,0,82,0
+ 834               		.stabs	"usi_i2c_state:G(4,2)",32,0,87,0
  835               	.global	usi_i2c_byteToTransmit
  836               		.data
  837               		.type	usi_i2c_byteToTransmit, @object
  838               		.size	usi_i2c_byteToTransmit, 1
  839               	usi_i2c_byteToTransmit:
  840 0000 FF        		.byte	-1
- 841               		.stabs	"usi_i2c_byteToTransmit:G(4,2)",32,0,81,0
+ 841               		.stabs	"usi_i2c_byteToTransmit:G(4,2)",32,0,86,0
  842               	.global	edidArrayIndex
  843               		.section .bss
  844               		.type	edidArrayIndex, @object
  845               		.size	edidArrayIndex, 1
  846               	edidArrayIndex:
  847 0008 00        		.zero	1
- 848               		.stabs	"edidArrayIndex:G(4,2)",32,0,49,0
+ 848               		.stabs	"edidArrayIndex:G(4,2)",32,0,54,0
  849               	.global	edidArray
  850               		.data
  851               		.type	edidArray, @object
@@ -1770,43 +1775,43 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  859 0006 FF        		.byte	-1
  860 0007 FF        		.byte	-1
  861 0008 00        		.byte	0
- 862 0009 31        		.byte	49
- 863 000a D8        		.byte	-40
- 864 000b 00        		.byte	0
- 865 000c 00        		.byte	0
- 866 000d 00        		.byte	0
+ 862 0009 09        		.byte	9
+ 863 000a D1        		.byte	-47
+ 864 000b 01        		.byte	1
+ 865 000c 84        		.byte	-124
+ 866 000d 3A        		.byte	58
  867 000e 00        		.byte	0
  868 000f 00        		.byte	0
  869 0010 00        		.byte	0
- 870 0011 05        		.byte	5
- 871 0012 16        		.byte	22
+ 870 0011 09        		.byte	9
+ 871 0012 11        		.byte	17
  872 0013 01        		.byte	1
  873 0014 03        		.byte	3
- 874 0015 6D        		.byte	109
- 875 0016 32        		.byte	50
- 876 0017 1C        		.byte	28
+ 874 0015 80        		.byte	-128
+ 875 0016 00        		.byte	0
+ 876 0017 00        		.byte	0
  877 0018 78        		.byte	120
- 878 0019 EA        		.byte	-22
- 879 001a 5E        		.byte	94
- 880 001b C0        		.byte	-64
- 881 001c A4        		.byte	-92
- 882 001d 59        		.byte	89
- 883 001e 4A        		.byte	74
- 884 001f 98        		.byte	-104
- 885 0020 25        		.byte	37
- 886 0021 20        		.byte	32
- 887 0022 50        		.byte	80
- 888 0023 54        		.byte	84
- 889 0024 00        		.byte	0
-GAS LISTING /tmp/ccULZha7.s 			page 31
+ 878 0019 2A        		.byte	42
+ 879 001a 5F        		.byte	95
+ 880 001b 9F        		.byte	-97
+ 881 001c A9        		.byte	-87
+ 882 001d 55        		.byte	85
+ 883 001e 50        		.byte	80
+ 884 001f 92        		.byte	-110
+GAS LISTING /tmp/ccCqnIUM.s 			page 31
 
 
- 890 0025 00        		.byte	0
+ 885 0020 24        		.byte	36
+ 886 0021 0D        		.byte	13
+ 887 0022 4A        		.byte	74
+ 888 0023 4B        		.byte	75
+ 889 0024 A5        		.byte	-91
+ 890 0025 4A        		.byte	74
  891 0026 00        		.byte	0
- 892 0027 D1        		.byte	-47
- 893 0028 C0        		.byte	-64
- 894 0029 01        		.byte	1
- 895 002a 01        		.byte	1
+ 892 0027 61        		.byte	97
+ 893 0028 59        		.byte	89
+ 894 0029 D1        		.byte	-47
+ 895 002a C0        		.byte	-64
  896 002b 01        		.byte	1
  897 002c 01        		.byte	1
  898 002d 01        		.byte	1
@@ -1831,45 +1836,45 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  917 0040 2C        		.byte	44
  918 0041 45        		.byte	69
  919 0042 00        		.byte	0
- 920 0043 F4        		.byte	-12
- 921 0044 19        		.byte	25
- 922 0045 11        		.byte	17
+ 920 0043 00        		.byte	0
+ 921 0044 00        		.byte	0
+ 922 0045 00        		.byte	0
  923 0046 00        		.byte	0
  924 0047 00        		.byte	0
  925 0048 1E        		.byte	30
  926 0049 00        		.byte	0
  927 004a 00        		.byte	0
  928 004b 00        		.byte	0
- 929 004c FF        		.byte	-1
+ 929 004c FD        		.byte	-3
  930 004d 00        		.byte	0
- 931 004e 4C        		.byte	76
- 932 004f 69        		.byte	105
- 933 0050 6E        		.byte	110
- 934 0051 75        		.byte	117
- 935 0052 78        		.byte	120
- 936 0053 20        		.byte	32
- 937 0054 23        		.byte	35
- 938 0055 30        		.byte	48
- 939 0056 0A        		.byte	10
+ 931 004e 30        		.byte	48
+ 932 004f 58        		.byte	88
+ 933 0050 18        		.byte	24
+ 934 0051 51        		.byte	81
+ 935 0052 0F        		.byte	15
+ 936 0053 00        		.byte	0
+ 937 0054 0A        		.byte	10
+ 938 0055 20        		.byte	32
+ 939 0056 20        		.byte	32
  940 0057 20        		.byte	32
  941 0058 20        		.byte	32
+GAS LISTING /tmp/ccCqnIUM.s 			page 32
+
+
  942 0059 20        		.byte	32
  943 005a 20        		.byte	32
  944 005b 00        		.byte	0
  945 005c 00        		.byte	0
  946 005d 00        		.byte	0
-GAS LISTING /tmp/ccULZha7.s 			page 32
-
-
- 947 005e FD        		.byte	-3
+ 947 005e FE        		.byte	-2
  948 005f 00        		.byte	0
- 949 0060 3B        		.byte	59
- 950 0061 3D        		.byte	61
- 951 0062 42        		.byte	66
- 952 0063 44        		.byte	68
- 953 0064 0F        		.byte	15
- 954 0065 00        		.byte	0
- 955 0066 0A        		.byte	10
+ 949 0060 42        		.byte	66
+ 950 0061 65        		.byte	101
+ 951 0062 6E        		.byte	110
+ 952 0063 51        		.byte	81
+ 953 0064 0A        		.byte	10
+ 954 0065 20        		.byte	32
+ 955 0066 20        		.byte	32
  956 0067 20        		.byte	32
  957 0068 20        		.byte	32
  958 0069 20        		.byte	32
@@ -1881,21 +1886,21 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  964 006f 00        		.byte	0
  965 0070 FC        		.byte	-4
  966 0071 00        		.byte	0
- 967 0072 4C        		.byte	76
- 968 0073 69        		.byte	105
- 969 0074 6E        		.byte	110
- 970 0075 75        		.byte	117
- 971 0076 78        		.byte	120
- 972 0077 20        		.byte	32
- 973 0078 46        		.byte	70
- 974 0079 48        		.byte	72
- 975 007a 44        		.byte	68
- 976 007b 0A        		.byte	10
+ 967 0072 57        		.byte	87
+ 968 0073 31        		.byte	49
+ 969 0074 30        		.byte	48
+ 970 0075 30        		.byte	48
+ 971 0076 30        		.byte	48
+ 972 0077 30        		.byte	48
+ 973 0078 0A        		.byte	10
+ 974 0079 20        		.byte	32
+ 975 007a 20        		.byte	32
+ 976 007b 20        		.byte	32
  977 007c 20        		.byte	32
  978 007d 20        		.byte	32
  979 007e 20        		.byte	32
- 980 007f 00        		.byte	0
- 981 0080 07        		.byte	7
+ 980 007f 01        		.byte	1
+ 981 0080 2E        		.byte	46
  982               		.stabs	"edidArray:G(0,51)=ar(0,52)=r(0,52);0;0177777;;0;127;(4,2)",32,0,37,0
  983               	.global	ledIndex
  984               		.section .bss
@@ -1913,14 +1918,14 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  996               	.global	header
  997               		.section	.progmem.data,"a",@progbits
  998               		.type	header, @object
+GAS LISTING /tmp/ccCqnIUM.s 			page 33
+
+
  999               		.size	header, 32
  1000               	header:
- 1001 0000 4C43 4472 		.string	"LCDreIDer66 2025-09-26 00:05:00"
+ 1001 0000 4C43 4472 		.string	"LCDreIDer66 2025-09-26 00:15:32"
  1001      6549 4465 
  1001      7236 3620 
-GAS LISTING /tmp/ccULZha7.s 			page 33
-
-
  1001      3230 3235 
  1001      2D30 392D 
  1002               		.stabs	"header:G(0,55)=ar(0,52);0;31;(0,56)=k(4,2)",32,0,16,0
@@ -1930,37 +1935,37 @@ GAS LISTING /tmp/ccULZha7.s 			page 1
  1006               		.ident	"GCC: (GNU) 7.3.0"
  1007               	.global __do_copy_data
  1008               	.global __do_clear_bss
-GAS LISTING /tmp/ccULZha7.s 			page 34
+GAS LISTING /tmp/ccCqnIUM.s 			page 34
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-     /tmp/ccULZha7.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccULZha7.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccULZha7.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccULZha7.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccULZha7.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccULZha7.s:120    .text:0000000000000000 usi_i2c_awaitStart
-     /tmp/ccULZha7.s:832    .bss:0000000000000007 usi_i2c_state
-     /tmp/ccULZha7.s:163    .text:0000000000000016 usi_i2c_awaitStartSCL
-     /tmp/ccULZha7.s:199    .text:000000000000002a usi_i2c_slaveInit
-     /tmp/ccULZha7.s:218    .text:000000000000002c __vector_13
-     /tmp/ccULZha7.s:808    .bss:0000000000000003 heartBlinkInternal
-     /tmp/ccULZha7.s:285    .text:0000000000000080 __vector_14
-     /tmp/ccULZha7.s:826    .bss:0000000000000006 usi_i2c_readFromSlave
-     /tmp/ccULZha7.s:796    .bss:0000000000000001 byteNum
-     /tmp/ccULZha7.s:802    .bss:0000000000000002 usi_i2c_requestedAddress
-     /tmp/ccULZha7.s:846    .bss:0000000000000008 edidArrayIndex
-     /tmp/ccULZha7.s:814    .bss:0000000000000004 usi_i2c_receivedByte
-     /tmp/ccULZha7.s:853    .data:0000000000000001 edidArray
-     /tmp/ccULZha7.s:790    .bss:0000000000000000 ledsControlled
-     /tmp/ccULZha7.s:987    .bss:0000000000000009 ledIndex
-     /tmp/ccULZha7.s:993    .bss:000000000000000a ledState
-     /tmp/ccULZha7.s:710    .text:000000000000025c edid_checkSummer
-     /tmp/ccULZha7.s:754    .text.startup:0000000000000000 main
-     /tmp/ccULZha7.s:820    .bss:0000000000000005 usi_i2c_requestedAddres
-     /tmp/ccULZha7.s:839    .data:0000000000000000 usi_i2c_byteToTransmit
-     /tmp/ccULZha7.s:1000   .progmem.data:0000000000000000 header
+     /tmp/ccCqnIUM.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccCqnIUM.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccCqnIUM.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccCqnIUM.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccCqnIUM.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccCqnIUM.s:120    .text:0000000000000000 usi_i2c_awaitStart
+     /tmp/ccCqnIUM.s:832    .bss:0000000000000007 usi_i2c_state
+     /tmp/ccCqnIUM.s:163    .text:0000000000000016 usi_i2c_awaitStartSCL
+     /tmp/ccCqnIUM.s:199    .text:000000000000002a usi_i2c_slaveInit
+     /tmp/ccCqnIUM.s:218    .text:000000000000002c __vector_13
+     /tmp/ccCqnIUM.s:808    .bss:0000000000000003 heartBlinkInternal
+     /tmp/ccCqnIUM.s:285    .text:0000000000000080 __vector_14
+     /tmp/ccCqnIUM.s:826    .bss:0000000000000006 usi_i2c_readFromSlave
+     /tmp/ccCqnIUM.s:796    .bss:0000000000000001 byteNum
+     /tmp/ccCqnIUM.s:802    .bss:0000000000000002 usi_i2c_requestedAddress
+     /tmp/ccCqnIUM.s:846    .bss:0000000000000008 edidArrayIndex
+     /tmp/ccCqnIUM.s:814    .bss:0000000000000004 usi_i2c_receivedByte
+     /tmp/ccCqnIUM.s:853    .data:0000000000000001 edidArray
+     /tmp/ccCqnIUM.s:790    .bss:0000000000000000 ledsControlled
+     /tmp/ccCqnIUM.s:987    .bss:0000000000000009 ledIndex
+     /tmp/ccCqnIUM.s:993    .bss:000000000000000a ledState
+     /tmp/ccCqnIUM.s:710    .text:000000000000025c edid_checkSummer
+     /tmp/ccCqnIUM.s:754    .text.startup:0000000000000000 main
+     /tmp/ccCqnIUM.s:820    .bss:0000000000000005 usi_i2c_requestedAddres
+     /tmp/ccCqnIUM.s:839    .data:0000000000000000 usi_i2c_byteToTransmit
+     /tmp/ccCqnIUM.s:1000   .progmem.data:0000000000000000 header
 
 UNDEFINED SYMBOLS
 set_heartBlink

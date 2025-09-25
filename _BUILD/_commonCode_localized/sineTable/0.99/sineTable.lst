@@ -1,4 +1,4 @@
-GAS LISTING /tmp/ccddpbjV.s 			page 1
+GAS LISTING /tmp/cclj7uEo.s 			page 1
 
 
    1               		.file	"sineTable.c"
@@ -58,7 +58,7 @@ GAS LISTING /tmp/ccddpbjV.s 			page 1
   55               		.stabs	"_Sat long _Accum:t(0,44)=r(0,1);8;0;",128,0,0,0
   56               		.stabs	"_Sat long long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
   57               		.stabs	"_Sat unsigned short _Accum:t(0,46)=r(0,1);2;0;",128,0,0,0
-GAS LISTING /tmp/ccddpbjV.s 			page 2
+GAS LISTING /tmp/cclj7uEo.s 			page 2
 
 
   58               		.stabs	"_Sat unsigned _Accum:t(0,47)=r(0,1);4;0;",128,0,0,0
@@ -118,7 +118,7 @@ GAS LISTING /tmp/ccddpbjV.s 			page 1
  112               		.stabs	"quadrantizeTheta:F(1,1)",36,0,155,quadrantizeTheta
  113               		.stabs	"theta:P(1,1)",64,0,155,24
  114               	.global	quadrantizeTheta
-GAS LISTING /tmp/ccddpbjV.s 			page 3
+GAS LISTING /tmp/cclj7uEo.s 			page 3
 
 
  115               		.type	quadrantizeTheta, @function
@@ -178,7 +178,7 @@ GAS LISTING /tmp/ccddpbjV.s 			page 1
   52:_commonCode_localized/sineTable/0.99/sineTable.c **** 	 4410, 4808, 5205, 5602, 5998, \
   53:_commonCode_localized/sineTable/0.99/sineTable.c **** 	 6393, 6786, 7179, 7571, 7962, \
   54:_commonCode_localized/sineTable/0.99/sineTable.c **** 	 8351, 8739, 9126, 9512, 9896, \
-GAS LISTING /tmp/ccddpbjV.s 			page 4
+GAS LISTING /tmp/cclj7uEo.s 			page 4
 
 
   55:_commonCode_localized/sineTable/0.99/sineTable.c **** 	 10278, 10659, 11039, 11417, 11793, \
@@ -238,7 +238,7 @@ GAS LISTING /tmp/ccddpbjV.s 			page 1
  109:_commonCode_localized/sineTable/0.99/sineTable.c **** 		((int8_t)pgm_read_byte((int8_t *)(&(variable))+1))
  110:_commonCode_localized/sineTable/0.99/sineTable.c **** 
  111:_commonCode_localized/sineTable/0.99/sineTable.c **** #elif (_SINE_TYPE_ == 32)
-GAS LISTING /tmp/ccddpbjV.s 			page 5
+GAS LISTING /tmp/cclj7uEo.s 			page 5
 
 
  112:_commonCode_localized/sineTable/0.99/sineTable.c **** 
@@ -298,7 +298,7 @@ GAS LISTING /tmp/ccddpbjV.s 			page 1
  125               		.stabn	68,0,158,.LM1-.LFBB1
  126               	.LM1:
  127 0000 60E0      		ldi r22,0
-GAS LISTING /tmp/ccddpbjV.s 			page 6
+GAS LISTING /tmp/cclj7uEo.s 			page 6
 
 
  128 0002 72E0      		ldi r23,lo8(2)
@@ -358,7 +358,7 @@ GAS LISTING /tmp/ccddpbjV.s 			page 1
  160               	.LM7:
  161 0026 8038      		cpi r24,-128
  162 0028 51E0      		ldi r21,1
-GAS LISTING /tmp/ccddpbjV.s 			page 7
+GAS LISTING /tmp/cclj7uEo.s 			page 7
 
 
  163 002a 9507      		cpc r25,r21
@@ -418,7 +418,7 @@ GAS LISTING /tmp/ccddpbjV.s 			page 1
  214:_commonCode_localized/sineTable/0.99/sineTable.c **** 	theta %= SINE_2PI;
  215:_commonCode_localized/sineTable/0.99/sineTable.c **** 
  216:_commonCode_localized/sineTable/0.99/sineTable.c **** 	if(theta < 0)
-GAS LISTING /tmp/ccddpbjV.s 			page 8
+GAS LISTING /tmp/cclj7uEo.s 			page 8
 
 
  217:_commonCode_localized/sineTable/0.99/sineTable.c **** 		theta = SINE_2PI + theta;
@@ -478,7 +478,7 @@ GAS LISTING /tmp/ccddpbjV.s 			page 1
  185               	.LFBB2:
  186               	/* prologue: function */
  187               	/* frame size = 0 */
-GAS LISTING /tmp/ccddpbjV.s 			page 9
+GAS LISTING /tmp/cclj7uEo.s 			page 9
 
 
  188               	/* stack size = 0 */
@@ -538,7 +538,7 @@ GAS LISTING /tmp/ccddpbjV.s 			page 1
  214 0046 FC01      		movw r30,r24
  215               	/* #APP */
  216               	 ;  295 "_commonCode_localized/sineTable/0.99/sineTable.c" 1
-GAS LISTING /tmp/ccddpbjV.s 			page 10
+GAS LISTING /tmp/cclj7uEo.s 			page 10
 
 
  217 0048 8491      		lpm r24, Z
@@ -598,7 +598,7 @@ GAS LISTING /tmp/ccddpbjV.s 			page 1
  266 0012 1C        		.byte	28
  267 0013 1D        		.byte	29
  268 0014 1F        		.byte	31
-GAS LISTING /tmp/ccddpbjV.s 			page 11
+GAS LISTING /tmp/cclj7uEo.s 			page 11
 
 
  269 0015 20        		.byte	32
@@ -658,7 +658,7 @@ GAS LISTING /tmp/ccddpbjV.s 			page 1
  323 004b 65        		.byte	101
  324 004c 66        		.byte	102
  325 004d 67        		.byte	103
-GAS LISTING /tmp/ccddpbjV.s 			page 12
+GAS LISTING /tmp/cclj7uEo.s 			page 12
 
 
  326 004e 68        		.byte	104
@@ -717,19 +717,19 @@ GAS LISTING /tmp/ccddpbjV.s 			page 1
  379               		.stabs	"",100,0,0,.Letext0
  380               	.Letext0:
  381               		.ident	"GCC: (GNU) 7.3.0"
-GAS LISTING /tmp/ccddpbjV.s 			page 13
+GAS LISTING /tmp/cclj7uEo.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 sineTable.c
-     /tmp/ccddpbjV.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccddpbjV.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccddpbjV.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccddpbjV.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccddpbjV.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccddpbjV.s:116    .text:0000000000000000 quadrantizeTheta
-     /tmp/ccddpbjV.s:181    .text:0000000000000032 sineRaw8
-     /tmp/ccddpbjV.s:247    .progmem.data:0000000000000000 sineTable
+     /tmp/cclj7uEo.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cclj7uEo.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cclj7uEo.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cclj7uEo.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cclj7uEo.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cclj7uEo.s:116    .text:0000000000000000 quadrantizeTheta
+     /tmp/cclj7uEo.s:181    .text:0000000000000032 sineRaw8
+     /tmp/cclj7uEo.s:247    .progmem.data:0000000000000000 sineTable
 
 UNDEFINED SYMBOLS
 __divmodhi4
